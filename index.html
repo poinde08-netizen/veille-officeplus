@@ -43,7 +43,117 @@
   </header>
   <main>
     <!-- NOTES -->
-    <div class="empty-state">Aucune note de veille publiée pour le moment.</div>
+
+<article class="note" id="note-2026-04-30-veille-consolidee">
+  <div class="note-header">
+    <div class="note-meta">
+      <span class="badge badge-tech">Technologique — Multi-domaines</span>
+      <span class="note-cible">IA · Cybersécurité · Infra · Outils IA · AO NC</span>
+      <span class="note-date">30/04/2026 — Avril 2026</span>
+    </div>
+    <h2>NOTE DE VEILLE CONSOLIDÉE — Modèles IA · Cybersécurité · Infra · Outils IA · Appels d'offres NC — 30/04/2026</h2>
+  </div>
+  <div class="note-body">
+
+    <section>
+      <h3>Faits établis</h3>
+
+      <h4>Modèles IA — Releases d'avril 2026</h4>
+      <ul>
+        <li><strong>Anthropic — Claude Opus 4.7</strong> (16 avril 2026) : score SWE-bench Verified 87,6 %, SWE-bench Pro 64,3 %, MCP Atlas tool-use 79,1 %. Vision améliorée : résolution image 1,15 MP → 3,75 MP. Nouveau tokenizer (+1,0 à 1,35× sur le nombre de tokens). Concurrent direct de GPT-5.5 sur les tâches de développement logiciel.</li>
+        <li><strong>OpenAI — GPT-5.5</strong> (23 avril 2026) : première reconstruction architecturale complète depuis GPT-4.5. Score 60 sur l'Artificial Analysis Intelligence Index, 82,7 % sur Terminal-Bench 2.0. Génère 40 % de tokens de sortie en moins que son prédécesseur → réduction de coût d'inférence.</li>
+        <li><strong>Google — Gemini 3.1 Pro</strong> (19 février 2026) : mise à jour mid-cycle la plus significative de Google DeepMind. Tarif identique à Gemini 3 Pro.</li>
+        <li><strong>Google investit jusqu'à 40 Md$ dans Anthropic</strong> (24 avril 2026) en cash et compute (annonce TechCrunch). Signal fort de consolidation du marché autour d'Anthropic.</li>
+      </ul>
+
+      <h4>Outils IA — Microsoft 365 Copilot (mars–avril 2026)</h4>
+      <ul>
+        <li><strong>Agents autonomes M365 Copilot</strong> : surveillance de boîtes mail, analyse de demandes entrantes, mise à jour automatique CRM/ITSM/HRIS sans intervention humaine.</li>
+        <li><strong>Copilot Cowork</strong> : outil de gestion de tâches multi-étapes en autonomie, développé en collaboration avec Anthropic (preview annoncée).</li>
+        <li><strong>Researcher amélioré</strong> : utilise désormais deux modèles IA (planification + évaluation critique). Disponible via M365 Copilot.</li>
+        <li><strong>Intégration Claude d'Anthropic dans Copilot Chat</strong> : accès via le programme Frontier, aux côtés des modèles OpenAI.</li>
+        <li><strong>Réorganisation stratégique Microsoft</strong> : séparation IA grand public / IA entreprise en deux pôles distincts.</li>
+      </ul>
+
+      <h4>Infra / Réseau — Virtualisation (avril 2026)</h4>
+      <ul>
+        <li><strong>Scale Computing — remplacement VMware sur Dell VxRail</strong> (21 avril 2026) : HyperCore permet de réutiliser le matériel Dell VxRail existant sans licence VMware, dans un contexte de hausse des prix mémoire et serveurs.</li>
+        <li><strong>Scale Computing Velocity Partner Program</strong> : nouveau programme revendeur lancé lors de la conférence Platform//2026. Positionne Scale Computing comme alternative globale à VMware, pas seulement comme remplacement.</li>
+        <li><strong>DCIG TOP 5 VMware Alternative 2026-27</strong> : Scale Computing reconnu par le Data Center Intelligence Group.</li>
+        <li><strong>Broadcom/VMware — Kubernetes sur VCF</strong> (2 avril 2026) : Broadcom pousse le déploiement Kubernetes sur VMware Cloud Foundation. Hausse tarifaire VMware estimée entre +300 % et +1 000 % depuis l'acquisition Broadcom.</li>
+      </ul>
+
+      <h4>Cybersécurité — Fortinet &amp; CERT-FR (janvier–avril 2026)</h4>
+      <ul>
+        <li><strong>CVE-2026-24858 — FortiOS SSO authentication bypass</strong> : exploit actif en wild dès le 20 janvier 2026 (création de comptes admin locaux sur FortiGate). Inscrit au KEV CISA. Fortinet a désactivé FortiCloud SSO le 26 janvier, réactivé le 27 janvier avec correctif. Concerne FortiOS, FortiManager, FortiWeb, FortiProxy, FortiAnalyzer si FortiCloud SSO activé.</li>
+        <li><strong>CVE-2026-21643 — SQL injection critique FortiClient EMS</strong> (correctif 6 février 2026) : déclenchable à distance sans authentification, exécution de code arbitraire. Uniquement FortiClientEMS 7.4.4 — mise à jour vers 7.4.5+ impérative.</li>
+        <li><strong>CERT-FR — Alertes actives au 27 avril 2026</strong> :
+          <ul>
+            <li>CERTFR-2026-ALE-001 : Ivanti EPMM, CVE-2026-1281 &amp; CVE-2026-1340 — exploitation active.</li>
+            <li>CERTFR-2026-ALE-003 : campagnes ciblant les comptes de messagerie instantanée des secteurs régaliens.</li>
+            <li>CERTFR-2026-ALE-004 : F5 BIG-IP APM, CVE-2025-53521 — exploitation active confirmée le 29 mars 2026.</li>
+          </ul>
+        </li>
+        <li><strong>Vulnérabilités multiples fin avril</strong> : FoxIT (exécution code arbitraire à distance), Spring (élévation de privilèges, DoS), Microsoft (non spécifié), Microsoft Edge, Python (contournement politique sécurité).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Signaux faibles</h3>
+      <ul>
+        <li><strong>Appels d'offres NC — formation sécurité informatique</strong> : une consultation identifiée sur marchespublics.nc autour du pilotage/animation de la sécurité informatique et détection/traitement d'incidents. Aucun AO IT structurant identifié spécifiquement pour avril 2026 lors de cette veille — consultation directe de la plateforme recommandée.</li>
+        <li><strong>Anthropic — modèle "Mythos"</strong> : existence évoquée dans les médias tech (CNBC, avril 2026) sans annonce officielle. Statut : roadmap non confirmée.</li>
+        <li><strong>Montée en puissance des "agents IA"</strong> dans les offres M365 et des éditeurs IA : glissement du marché vers l'autonomie d'exécution plutôt que la seule assistance. Impact potentiel sur les propositions de valeur des ESN/infogérants.</li>
+        <li><strong>Pression tarifaire hardware</strong> : hausse des prix mémoire et serveurs signalée par Scale Computing en avril 2026, contexte défavorable pour les projets d'infrastructure clients NC.</li>
+      </ul>
+    </section>
+
+    <section class="alerte">
+      <h3>Points d'alerte</h3>
+      <ul>
+        <li><strong>ACTION IMMÉDIATE — FortiClientEMS 7.4.4</strong> : tout client Office Plus sous FortiClientEMS 7.4.4 doit migrer vers 7.4.5+. CVE-2026-21643 exploitable sans authentification.</li>
+        <li><strong>VÉRIFICATION — FortiCloud SSO</strong> : confirmer que les clients sous FortiGate ont bien appliqué le correctif CVE-2026-24858. Désactiver FortiCloud SSO si inutilisé.</li>
+        <li><strong>ALERTE CERT-FR active — Ivanti EPMM</strong> : si un client utilise Ivanti EPMM, vérifier CVE-2026-1281 et CVE-2026-1340 en urgence.</li>
+        <li><strong>ALERTE CERT-FR active — F5 BIG-IP APM</strong> : CVE-2025-53521 exploitée activement depuis fin mars 2026.</li>
+        <li><strong>Migration VMware</strong> : les clients encore sous VMware financé par Broadcom sont exposés à des augmentations de renouvellement massives. Opportunité Scale Computing HyperCore à anticiper.</li>
+      </ul>
+    </section>
+
+    <section class="opportunite">
+      <h3>Opportunités commerciales identifiées</h3>
+      <ul>
+        <li><strong>Migration VMware → Scale Computing</strong> : la solution HyperCore sur Dell VxRail existant est une offre de migration à zéro investissement matériel pour les clients NC équipés VxRail. Programme partenaire Velocity actif.</li>
+        <li><strong>Audit sécurité Fortinet</strong> : CVE-2026-24858 et CVE-2026-21643 sont des vecteurs d'entrée en relation pour proposer un audit de posture sécurité Fortinet aux clients.</li>
+        <li><strong>Déploiement M365 Copilot</strong> : l'arrivée des agents autonomes et de Copilot Cowork représente un argument commercial fort pour les clients M365 non encore sous licence Copilot. La licence Frontier avec accès à Claude d'Anthropic renforce la proposition.</li>
+        <li><strong>Positionnement expertise IA</strong> : la course aux modèles (Claude Opus 4.7, GPT-5.5) légitime une offre de conseil/accompagnement sur le choix et l'intégration des outils IA métier en entreprise NC.</li>
+        <li><strong>AO NC sécurité informatique</strong> : la consultation formation sécurité identifiée sur marchespublics.nc est à surveiller — positionnement possible si Office Plus dispose d'une offre formation/audit certifiée.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Sources consultées</h3>
+      <table>
+        <tr><th>Source</th><th>URL</th><th>Date d'accès</th></tr>
+        <tr><td>CNBC — Claude Opus 4.7</td><td><a href="https://www.cnbc.com/2026/04/16/anthropic-claude-opus-4-7-model-mythos.html" target="_blank">cnbc.com</a></td><td>30/04/2026</td></tr>
+        <tr><td>TechCrunch — GPT-5.5 / Google–Anthropic 40Md$</td><td><a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank">techcrunch.com</a></td><td>30/04/2026</td></tr>
+        <tr><td>BuildFastWithAI — Best AI Models April 2026</td><td><a href="https://www.buildfastwithai.com/blogs/best-ai-models-april-2026-comparison" target="_blank">buildfastwithai.com</a></td><td>30/04/2026</td></tr>
+        <tr><td>The Hacker News — CVE-2026-24858 Fortinet</td><td><a href="https://thehackernews.com/2026/01/fortinet-patches-cve-2026-24858-after.html" target="_blank">thehackernews.com</a></td><td>30/04/2026</td></tr>
+        <tr><td>CISA — CVE-2026-24858 advisory</td><td><a href="https://www.cisa.gov/news-events/alerts/2026/01/28/fortinet-releases-guidance-address-ongoing-exploitation-authentication-bypass-vulnerability-cve-2026" target="_blank">cisa.gov</a></td><td>30/04/2026</td></tr>
+        <tr><td>SOC Prime — CVE-2026-21643 FortiClient</td><td><a href="https://socprime.com/blog/cve-2026-21643-vulnerability/" target="_blank">socprime.com</a></td><td>30/04/2026</td></tr>
+        <tr><td>Polaris ST — Bulletin CERTFR-2026-ACT-019 (27 avril)</td><td><a href="https://www.polaris-st.com/2026/04/27/bulletin-dactualite-certfr-2026-act-019-27-avril-2026/" target="_blank">polaris-st.com</a></td><td>30/04/2026</td></tr>
+        <tr><td>Polaris ST — Bulletin CERTFR-2026-ACT-018 (20 avril)</td><td><a href="https://www.polaris-st.com/2026/04/20/bulletin-dactualite-certfr-2026-act-018-20-avril-2026/" target="_blank">polaris-st.com</a></td><td>30/04/2026</td></tr>
+        <tr><td>Scale Computing — VxRail replacement (PR Newswire)</td><td><a href="https://www.prnewswire.com/news-releases/scale-computing-enables-organizations-to-replace-vmware-on-dell-vxrail-appliances-to-reuse-existing-hardware-as-memory-and-server-prices-surge-302748921.html" target="_blank">prnewswire.com</a></td><td>30/04/2026</td></tr>
+        <tr><td>Techzine — Scale Computing Velocity Partner Program</td><td><a href="https://www.techzine.eu/news/infrastructure/140478/new-scale-computing-gets-new-velocity-partner-program/" target="_blank">techzine.eu</a></td><td>30/04/2026</td></tr>
+        <tr><td>Blog NVT — Microsoft Copilot agent mode 2026</td><td><a href="https://www.blog-nouvelles-technologies.fr/366697/microsoft-365-agent-mode-copilot-vibe-working-2026/" target="_blank">blog-nouvelles-technologies.fr</a></td><td>30/04/2026</td></tr>
+        <tr><td>Marchés publics NC</td><td><a href="https://marchespublics.nc/" target="_blank">marchespublics.nc</a></td><td>30/04/2026</td></tr>
+      </table>
+    </section>
+
+    <div class="confiance">Confiance globale : 0,82 / 1,0</div>
+  </div>
+</article>
+
+    
   </main>
   <footer>Office Plus SARL — Veille marché et technologique</footer>
 </body>
