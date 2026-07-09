@@ -1,0 +1,245 @@
+---
+name: veille-tech-quotidien
+description: >
+  Veille technologique automatisée quotidienne, limitée à 5 axes : Modèles IA,
+  Outils IA, Infra/Réseau, Cybersécurité, DATA. Conçue pour une exécution sans
+  supervision (Routine Claude Code planifiée à 08h00 UTC+11), pas pour un usage
+  conversationnel manuel. Distincte de `veille-marche` (10 axes, incluant les
+  volets commerciaux NC) : ne pas fusionner les deux, ne pas publier sur la
+  même page GitHub Pages.
+---
+
+# veille-tech-quotidien
+
+Note quotidienne courte, publiée automatiquement sur une page GitHub Pages dédiée, distincte de la veille commerciale complète.
+
+**Fenêtre temporelle** : 24 heures glissantes (pas 48h — cadence quotidienne, pas de recouvrement voulu). Si aucune information récente pour un axe : `Aucune information de moins de 24 h trouvée à la date du [DATE] [HEURE UTC+11].`
+
+**Accumulation** : contrairement à `veille-marche` (qui remplace tout à chaque run), cette note s'ajoute en tête de la page à chaque exécution. Les 14 dernières notes sont conservées ; au-delà, la plus ancienne est retirée.
+
+---
+
+## Périmètre (5 axes, sous-ensemble de veille-marche)
+
+| # | Axe | Focus |
+|---|-----|-------|
+| 1 | Modèles IA | OpenAI, Anthropic, Google, Mistral, Meta, benchmarks LLM |
+| 2 | Outils IA | Copilot M365, GitHub Copilot, Gemini Workspace, IA métier |
+| 3 | Infra / Réseau | Scale Computing, VMware, Dell, HP, Lenovo, Synology, Wi-Fi 6/7 |
+| 4 | Cybersécurité | Fortinet (firmware, CVE, FortiOS), SASE, Zero Trust, EDR, CERT |
+| 5 | DATA | Power BI, Microsoft Fabric, Databricks, gouvernance données |
+
+Axes exclus volontairement (hors périmètre de cette veille quotidienne, restent dans `veille-marche` sur demande) : Concurrentielle NC, Client NC, Sectorielle NC, AO NC, Réglementation.
+
+---
+
+## Configuration
+
+```
+GITHUB_USER   = "poinde08-netizen"
+GITHUB_REPO   = "veille-officeplus"
+PAGES_URL     = "https://poinde08-netizen.github.io/veille-officeplus"
+TARGET_FILE   = "veille-tech.html"
+MARKER_START  = "<!-- NOTES-TECH -->"
+MARKER_END    = "<!-- /NOTES-TECH -->"
+MAX_NOTES     = 14
+FUSEAU        = UTC+11 (Nouméa)
+```
+
+**Accès GitHub** : pas de token en clair dans ce fichier. Deux cas :
+- **Exécution via Routine Claude Code** : le dépôt est sélectionné à la création de la Routine ; l'accès en écriture est géré par la connexion GitHub native de la Routine. Aucun token à fournir ici.
+- **Test manuel ponctuel (chat claude.ai)** : exporter `GITHUB_TOKEN` comme variable d'environnement avant d'invoquer ce skill (fine-grained PAT, scope `contents:write` sur ce seul dépôt, jamais dans un fichier versionné).
+
+---
+
+## Déroulement d'exécution
+
+### 1. Initialisation
+
+Exécuter via `bash_tool` :
+
+```python
+from datetime import datetime, timezone, timedelta
+utc11 = timezone(timedelta(hours=11))
+now = datetime.now(utc11)
+seuil = now - timedelta(hours=24)
+print(f"MAINTENANT={now.strftime('%Y-%m-%d %H:%M UTC+11')}")
+print(f"SEUIL_24H={seuil.strftime('%Y-%m-%d %H:%M UTC+11')}")
+```
+
+Toute information antérieure à `SEUIL_24H` est écartée (sauf signal faible non daté, explicitement marqué comme tel).
+
+### 2. Collecte par axe
+
+Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
+
+### 3. Génération de la note du jour
+
+```
+NOTE_ID = note-tech-{YYYY-MM-DD}
+```
+
+```html
+<article class="note-tech" id="{NOTE_ID}">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">{DATE} {HEURE UTC+11} — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    {SECTION_MODELES_IA}
+    {SECTION_OUTILS_IA}
+    {SECTION_INFRA}
+    {SECTION_CYBERSECURITE}
+    {SECTION_DATA}
+    <div class="confiance">Confiance globale : {CONFIANCE} / 1,0</div>
+  </div>
+</article>
+```
+
+Chaque section :
+
+```html
+<section>
+  <h3>[Axe]</h3>
+  <h4>Faits établis (&lt; 24 h)</h4>
+  {FAITS_EN_HTML}
+  <h4>Signaux faibles</h4>
+  {SIGNAUX_EN_HTML}
+  <h4 class="alerte">Points d'alerte</h4>
+  {ALERTES_EN_HTML}
+  <p class="confiance-section">Confiance section : {CONFIANCE_SECTION} / 1,0</p>
+</section>
+```
+
+### 4. Publication — accumulation, pas remplacement
+
+Exécuter via `bash_tool` (adapter `{ARTICLE_HTML}` avec le bloc de l'étape 3) :
+
+```python
+import subprocess, os, tempfile, shutil, re
+
+GITHUB_USER  = "poinde08-netizen"
+GITHUB_REPO  = "veille-officeplus"
+TARGET_FILE  = "veille-tech.html"
+MARKER_START = "<!-- NOTES-TECH -->"
+MARKER_END   = "<!-- /NOTES-TECH -->"
+MAX_NOTES    = 14
+PAGES_URL    = f"https://{GITHUB_USER}.github.io/{GITHUB_REPO}"
+
+nouvel_article = """{ARTICLE_HTML}"""
+
+def is_git_repo(path):
+    return subprocess.run(["git", "rev-parse", "--show-toplevel"], cwd=path,
+                           capture_output=True, text=True).returncode == 0
+
+cwd = os.getcwd()
+cleanup_dir = None
+
+if is_git_repo(cwd):
+    # Contexte Routine Claude Code : le dépôt est déjà cloné par la plateforme,
+    # credentials git déjà en place. Ne pas recloner, ne pas reconstruire d'URL avec token.
+    workdir = subprocess.run(["git", "rev-parse", "--show-toplevel"], cwd=cwd,
+                              capture_output=True, text=True).stdout.strip()
+else:
+    # Contexte test manuel hors Routine (chat claude.ai) : GITHUB_TOKEN doit être
+    # exporté en variable d'environnement avant l'appel. Jamais en dur dans ce fichier.
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    if not token:
+        raise RuntimeError("GITHUB_TOKEN absent. Hors contexte Routine, exporter la variable avant d'invoquer ce skill.")
+    remote_url = f"https://{GITHUB_USER}:{token}@github.com/{GITHUB_USER}/{GITHUB_REPO}.git"
+    workdir = tempfile.mkdtemp()
+    cleanup_dir = workdir
+    subprocess.run(["git", "clone", "--depth", "1", remote_url, workdir], check=True, capture_output=True)
+
+try:
+    target_path = os.path.join(workdir, TARGET_FILE)
+
+    if os.path.exists(target_path):
+        with open(target_path, "r", encoding="utf-8") as f:
+            html = f.read()
+    else:
+        html = (
+            "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\">"
+            "<title>Veille technologique quotidienne — Office Plus</title></head>"
+            "<body><h1>Veille technologique quotidienne</h1>"
+            f"{MARKER_START}\n{MARKER_END}"
+            "</body></html>"
+        )
+
+    if MARKER_START not in html or MARKER_END not in html:
+        raise ValueError("Markers NOTES-TECH introuvables ou incomplets dans veille-tech.html")
+
+    # Extraire les articles existants, ajouter le nouveau en tête, tronquer à MAX_NOTES
+    bloc_pattern = re.compile(re.escape(MARKER_START) + r"(.*?)" + re.escape(MARKER_END), re.DOTALL)
+    match = bloc_pattern.search(html)
+    contenu_existant = match.group(1)
+    articles_existants = re.findall(r"<article class=\"note-tech\".*?</article>", contenu_existant, re.DOTALL)
+
+    articles = [nouvel_article] + articles_existants
+    articles = articles[:MAX_NOTES]
+
+    nouveau_bloc = MARKER_START + "\n" + "\n".join(articles) + "\n" + MARKER_END
+    html = bloc_pattern.sub(nouveau_bloc, html)
+
+    with open(target_path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+    subprocess.run(["git", "config", "user.email", "veille@officeplus.nc"], cwd=workdir, check=True)
+    subprocess.run(["git", "config", "user.name", "Office Plus Veille Tech"], cwd=workdir, check=True)
+    subprocess.run(["git", "add", TARGET_FILE], cwd=workdir, check=True)
+
+    note_id = nouvel_article.split('id="')[1].split('"')[0]
+    subprocess.run(["git", "commit", "-m", f"veille-tech: {note_id}"], cwd=workdir, check=True)
+
+    result = subprocess.run(["git", "push"], cwd=workdir, capture_output=True, text=True)
+    if result.returncode != 0:
+        raise RuntimeError(result.stderr)
+
+    print(f"SUCCES|{PAGES_URL}/{TARGET_FILE}#{note_id}")
+
+except Exception as e:
+    print(f"ERREUR|{e}")
+finally:
+    if cleanup_dir:
+        shutil.rmtree(cleanup_dir, ignore_errors=True)
+```
+
+Lire la sortie :
+- `SUCCES|...` : confirmer l'URL.
+- `ERREUR|...` : afficher l'erreur brute, livrer la note en texte, ne pas interrompre l'exécution.
+
+### 5. Retour
+
+```
+Veille tech publiée : {PAGES_URL}/{TARGET_FILE}#{NOTE_ID}
+```
+
+---
+
+## Sources prioritaires par axe
+
+**Modèles IA :** https://openai.com/blog, https://anthropic.com/news, https://blog.google, https://mistral.ai/news, Hugging Face leaderboard, Papers with Code
+
+**Outils IA :** https://techcommunity.microsoft.com, blogs officiels éditeurs
+
+**Infra / Réseau :** sites constructeurs Dell, HP, Lenovo, Scale Computing, Synology, Cisco ; VMware by Broadcom blog, NetworkWorld
+
+**Cybersécurité :** https://www.fortinet.com/blog, https://www.cert.ssi.gouv.fr, CVE Details, Bleeping Computer, Krebs on Security, CISA Alerts
+
+**DATA :** https://learn.microsoft.com, Databricks blog, dbt Labs blog, Towards Data Science, Data Engineering Weekly
+
+---
+
+## Règles de confiance
+
+- Recency stricte : 24h, pas 48h.
+- Distinguer fait établi / inférence / signal faible.
+- Distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur.
+- Ne jamais présenter une inférence comme un fait établi.
+- Classer les sources par pertinence décroissante.
+- Confiance par section + confiance globale (0,0 à 1,0).
+
+---
+
+Créé pour Office Plus SARL, Nouméa (Nouvelle-Calédonie).
+Sous-ensemble technologique de `veille-marche`, à usage automatisé exclusivement.
