@@ -1,0 +1,36 @@
+name: Auto-merge veille-tech
+
+on:
+  push:
+    branches:
+      - 'claude/**'
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Vérifier le périmètre et fusionner si conforme
+        run: |
+          git fetch origin "${{ github.ref_name }}"
+          CHANGED=$(git diff --name-only origin/main.."origin/${{ github.ref_name }}")
+          echo "Fichiers modifiés sur la branche : $CHANGED"
+
+          if [ "$CHANGED" = "veille-tech.html" ]; then
+            git config user.email "veille@officeplus.nc"
+            git config user.name "Auto-merge veille-tech"
+            git merge --no-ff "origin/${{ github.ref_name }}" -m "auto-merge: veille-tech.html (${{ github.ref_name }})"
+            git push origin main
+            echo "Fusionné dans main."
+          else
+            echo "Hors périmètre autorisé (attendu : veille-tech.html seul). Pas de fusion automatique — intervention manuelle requise sur la branche ${{ github.ref_name }}."
+            exit 1
+          fi
