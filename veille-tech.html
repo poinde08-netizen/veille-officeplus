@@ -1,11 +1,241 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Veille technologique quotidienne — Office Plus</title></head><body><h1>Veille technologique quotidienne</h1><!-- NOTES-TECH -->
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veille technologique quotidienne — Office Plus</title>
+<style>
+  :root{
+    --c-modeles:#4F46E5;
+    --c-outils:#2563EB;
+    --c-infra:#0D9488;
+    --c-cyber:#DC2626;
+    --c-data:#059669;
+    --bg:#f5f6f8;
+    --card-bg:#ffffff;
+    --text:#1a1d29;
+    --text-muted:#5b6270;
+    --border:#e2e4ea;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14161c;
+      --card-bg:#1c1f28;
+      --text:#e9eaef;
+      --text-muted:#9aa0ad;
+      --border:#2c303c;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    padding:0 16px 48px;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+  }
+  .page-header{
+    max-width:880px;
+    margin:0 auto;
+    padding:32px 0 16px;
+  }
+  .page-header h1{
+    font-size:1.6rem;
+    margin:0 0 4px;
+  }
+  .page-header .subtitle{
+    color:var(--text-muted);
+    font-size:0.9rem;
+    margin:0 0 20px;
+  }
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    max-width:880px;
+    margin:0 auto 8px;
+  }
+  .legend-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:0.8rem;
+    color:var(--text-muted);
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:4px 10px;
+  }
+  .legend-dot{
+    width:9px;height:9px;border-radius:50%;flex:none;
+  }
+  .legend-item.modeles .legend-dot{background:var(--c-modeles);}
+  .legend-item.outils .legend-dot{background:var(--c-outils);}
+  .legend-item.infra .legend-dot{background:var(--c-infra);}
+  .legend-item.cyber .legend-dot{background:var(--c-cyber);}
+  .legend-item.data .legend-dot{background:var(--c-data);}
+
+  .note-tech{
+    max-width:880px;
+    margin:24px auto;
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 1px 3px rgba(0,0,0,0.06);
+  }
+  .note-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:14px 20px;
+    border-bottom:1px solid var(--border);
+    background:linear-gradient(90deg, rgba(79,70,229,0.08), rgba(5,150,105,0.08));
+  }
+  .badge{
+    display:inline-block;
+    font-size:0.7rem;
+    font-weight:700;
+    letter-spacing:0.04em;
+    padding:4px 10px;
+    border-radius:999px;
+  }
+  .badge-tech{
+    background:var(--text);
+    color:var(--card-bg);
+  }
+  .note-date{
+    font-size:0.82rem;
+    color:var(--text-muted);
+  }
+  .note-body{
+    padding:8px 20px 20px;
+  }
+  .note-body > section{
+    border-left:4px solid var(--border);
+    border-radius:8px;
+    background:transparent;
+    padding:14px 16px;
+    margin:16px 0;
+  }
+  .note-body section.axis-modeles{ border-left-color:var(--c-modeles); background:color-mix(in srgb, var(--c-modeles) 5%, transparent); }
+  .note-body section.axis-outils{ border-left-color:var(--c-outils); background:color-mix(in srgb, var(--c-outils) 5%, transparent); }
+  .note-body section.axis-infra{ border-left-color:var(--c-infra); background:color-mix(in srgb, var(--c-infra) 5%, transparent); }
+  .note-body section.axis-cyber{ border-left-color:var(--c-cyber); background:color-mix(in srgb, var(--c-cyber) 5%, transparent); }
+  .note-body section.axis-data{ border-left-color:var(--c-data); background:color-mix(in srgb, var(--c-data) 5%, transparent); }
+
+  .note-body section h3{
+    margin:0 0 10px;
+    font-size:1.05rem;
+  }
+  .axis-modeles h3{color:var(--c-modeles);}
+  .axis-outils h3{color:var(--c-outils);}
+  .axis-infra h3{color:var(--c-infra);}
+  .axis-cyber h3{color:var(--c-cyber);}
+  .axis-data h3{color:var(--c-data);}
+
+  .note-body section h4{
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--text-muted);
+    margin:14px 0 6px;
+  }
+  .note-body section h4.alerte{
+    color:var(--c-cyber);
+  }
+  .note-body section ul{
+    margin:0;
+    padding-left:20px;
+  }
+  .note-body section li{
+    margin:0 0 6px;
+    font-size:0.92rem;
+  }
+  .note-body section p{
+    margin:0;
+    font-size:0.92rem;
+  }
+  .note-body section h4.alerte + ul,
+  .note-body section h4.alerte + p{
+    background:color-mix(in srgb, var(--c-cyber) 8%, transparent);
+    border:1px solid color-mix(in srgb, var(--c-cyber) 25%, transparent);
+    border-radius:6px;
+    padding:10px 12px;
+  }
+
+  .conf-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:14px;
+  }
+  .conf-label{
+    font-size:0.75rem;
+    color:var(--text-muted);
+    white-space:nowrap;
+  }
+  .conf-bar{
+    flex:1;
+    height:6px;
+    border-radius:999px;
+    background:var(--border);
+    overflow:hidden;
+  }
+  .conf-fill{
+    height:100%;
+    border-radius:999px;
+  }
+  .axis-modeles .conf-fill{background:var(--c-modeles);}
+  .axis-outils .conf-fill{background:var(--c-outils);}
+  .axis-infra .conf-fill{background:var(--c-infra);}
+  .axis-cyber .conf-fill{background:var(--c-cyber);}
+  .axis-data .conf-fill{background:var(--c-data);}
+  .conf-value{
+    font-size:0.78rem;
+    font-weight:600;
+    white-space:nowrap;
+  }
+
+  .confiance{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:20px 0 0;
+    padding:12px 16px;
+    border-radius:8px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    font-weight:600;
+    font-size:0.9rem;
+  }
+  .confiance .conf-bar{max-width:220px;}
+  .confiance .conf-fill{background:linear-gradient(90deg,var(--c-cyber),var(--c-data));}
+</style>
+</head>
+<body>
+<div class="page-header">
+  <h1>Veille technologique quotidienne — Office Plus</h1>
+  <p class="subtitle">Note automatisée, fenêtre glissante de 24 h, publiée chaque matin. Les 14 dernières notes sont conservées.</p>
+  <div class="legend">
+    <span class="legend-item modeles"><span class="legend-dot"></span>Modèles IA</span>
+    <span class="legend-item outils"><span class="legend-dot"></span>Outils IA</span>
+    <span class="legend-item infra"><span class="legend-dot"></span>Infra / Réseau</span>
+    <span class="legend-item cyber"><span class="legend-dot"></span>Cybersécurité</span>
+    <span class="legend-item data"><span class="legend-dot"></span>DATA</span>
+  </div>
+</div>
+<!-- NOTES-TECH -->
 <article class="note-tech" id="note-tech-2026-07-10">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
     <span class="note-date">10/07/2026 14:23 UTC+11 — Fenêtre 24 h</span>
   </div>
   <div class="note-body">
-    <section>
+    <section class="axis-modeles">
       <h3>1. Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -16,10 +246,14 @@
       <p>Aucun signal faible distinct de moins de 24&nbsp;h identifié pour cet axe.</p>
       <h4 class="alerte">Points d'alerte</h4>
       <p>Aucun point d'alerte identifié.</p>
-      <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
     </section>
 
-    <section>
+    <section class="axis-outils">
       <h3>2. Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -29,10 +263,14 @@
       <p>Aucun signal faible distinct de moins de 24&nbsp;h identifié pour cet axe.</p>
       <h4 class="alerte">Points d'alerte</h4>
       <p>Aucun point d'alerte identifié.</p>
-      <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
     </section>
 
-    <section>
+    <section class="axis-infra">
       <h3>3. Infra / Réseau</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 10/07/2026 14:23 UTC+11.</p>
@@ -40,10 +278,14 @@
       <p>Aucun signal faible identifié.</p>
       <h4 class="alerte">Points d'alerte</h4>
       <p>Aucun point d'alerte identifié.</p>
-      <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
     </section>
 
-    <section>
+    <section class="axis-cyber">
       <h3>4. Cybersécurité</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -58,10 +300,14 @@
       <ul>
         <li>La plateforme « Forg365 » cible directement l'écosystème Microsoft 365, largement déployé chez les clients d'Office Plus&nbsp;: vigilance recommandée sur le MFA résistant au phishing et la sensibilisation aux attaques par device code.</li>
       </ul>
-      <p class="confiance-section">Confiance section : 0,7 / 1,0</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
     </section>
 
-    <section>
+    <section class="axis-data">
       <h3>5. DATA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 10/07/2026 14:23 UTC+11.</p>
@@ -69,10 +315,20 @@
       <p>Publications récentes mais hors fenêtre stricte (7-8 juillet 2026) sur le blog Databricks — notamment gouvernance des agents IA (« Contextual Policies in Omnigent ») et migration Synapse vers Databricks — à considérer pour la veille de demain si la tendance se confirme.</p>
       <h4 class="alerte">Points d'alerte</h4>
       <p>Aucun point d'alerte identifié.</p>
-      <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
     </section>
 
-    <div class="confiance">Confiance globale : 0,55 / 1,0</div>
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+      <span class="conf-value">0,55 / 1,0</span>
+    </div>
   </div>
 </article>
-<!-- /NOTES-TECH --></body></html>
+<!-- /NOTES-TECH -->
+</body>
+</html>
