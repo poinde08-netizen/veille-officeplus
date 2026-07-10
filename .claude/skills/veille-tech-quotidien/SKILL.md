@@ -91,29 +91,49 @@ NOTE_ID = note-tech-{YYYY-MM-DD}
     {SECTION_INFRA}
     {SECTION_CYBERSECURITE}
     {SECTION_DATA}
-    <div class="confiance">Confiance globale : {CONFIANCE} / 1,0</div>
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:{CONFIANCE_PCT}%"></span></span>
+      <span class="conf-value">{CONFIANCE} / 1,0</span>
+    </div>
   </div>
 </article>
 ```
 
-Chaque section :
+Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà présent dans le `<head>` de `veille-tech.html` pour distinguer visuellement chaque thématique — ne pas retirer ce `<head>` lors des publications, le script de l'étape 4 ne touche que le bloc entre les marqueurs) :
+
+| Axe | Classe |
+|---|---|
+| 1. Modèles IA | `axis-modeles` |
+| 2. Outils IA | `axis-outils` |
+| 3. Infra / Réseau | `axis-infra` |
+| 4. Cybersécurité | `axis-cyber` |
+| 5. DATA | `axis-data` |
 
 ```html
-<section>
-  <h3>[Axe]</h3>
+<section class="{AXIS_CLASS}">
+  <h3>[N]. [Axe]</h3>
   <h4>Faits établis (&lt; 24 h)</h4>
   {FAITS_EN_HTML}
   <h4>Signaux faibles</h4>
   {SIGNAUX_EN_HTML}
   <h4 class="alerte">Points d'alerte</h4>
   {ALERTES_EN_HTML}
-  <p class="confiance-section">Confiance section : {CONFIANCE_SECTION} / 1,0</p>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:{CONFIANCE_SECTION_PCT}%"></span></span>
+    <span class="conf-value">{CONFIANCE_SECTION} / 1,0</span>
+  </div>
 </section>
 ```
+
+`{CONFIANCE_SECTION_PCT}` et `{CONFIANCE_PCT}` sont la confiance (0,0–1,0) multipliée par 100, arrondie à l'entier (ex. 0,6 → `60`).
 
 ### 4. Publication — accumulation, pas remplacement
 
 Exécuter via `bash_tool` (adapter `{ARTICLE_HTML}` avec le bloc de l'étape 3) :
+
+**Important** : la mise en forme (CSS par thématique, légende de couleurs, barres de confiance) vit dans le `<head>` et le début du `<body>` de `veille-tech.html`, en dehors des marqueurs `NOTES-TECH` — le script ci-dessous ne touche jamais cette zone. Ne pas la régénérer sauf si `veille-tech.html` n'existe pas encore (squelette de secours ci-dessous), auquel cas reprendre le `<head>`/légende déjà déployés sur `https://poinde08-netizen.github.io/veille-officeplus/veille-tech.html` (vue source) pour ne pas perdre le style.
 
 ```python
 import subprocess, os, tempfile, shutil, re
