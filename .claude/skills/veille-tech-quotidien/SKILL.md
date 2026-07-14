@@ -2,20 +2,21 @@
 name: veille-tech-quotidien
 description: >
   Veille technologique automatisée quotidienne, limitée à 5 axes : Modèles IA,
-  Outils IA, Infra/Réseau, Cybersécurité, DATA. Conçue pour une exécution sans
-  supervision (Routine Claude Code planifiée à 08h00 UTC+11), pas pour un usage
-  conversationnel manuel. Distincte de `veille-marche` (10 axes, incluant les
-  volets commerciaux NC) : ne pas fusionner les deux, ne pas publier sur la
-  même page GitHub Pages.
+  Outils IA, Infra/Réseau, Cybersécurité, DATA. Fenêtre glissante de 72 heures ;
+  chaque exécution écrase la note précédente (pas d'accumulation). Conçue pour
+  une exécution sans supervision (Routine Claude Code planifiée à 08h00 UTC+11),
+  pas pour un usage conversationnel manuel. Distincte de `veille-marche` (10 axes,
+  incluant les volets commerciaux NC) : ne pas fusionner les deux, ne pas publier
+  sur la même page GitHub Pages.
 ---
 
 # veille-tech-quotidien
 
 Note quotidienne courte, publiée automatiquement sur une page GitHub Pages dédiée, distincte de la veille commerciale complète.
 
-**Fenêtre temporelle** : 24 heures glissantes (pas 48h — cadence quotidienne, pas de recouvrement voulu). Si aucune information récente pour un axe : `Aucune information de moins de 24 h trouvée à la date du [DATE] [HEURE UTC+11].`
+**Fenêtre temporelle** : 72 heures glissantes (cadence d'exécution quotidienne, mais fenêtre de recherche élargie à 72h pour couvrir les week-ends et jours sans actualité). Si aucune information récente pour un axe : `Aucune information de moins de 72 h trouvée à la date du [DATE] [HEURE UTC+11].`
 
-**Accumulation** : contrairement à `veille-marche` (qui remplace tout à chaque run), cette note s'ajoute en tête de la page à chaque exécution. Les 14 dernières notes sont conservées ; au-delà, la plus ancienne est retirée.
+**Accumulation** : comme `veille-marche`, cette note remplace intégralement la note précédente à chaque exécution — pas d'historique conservé. Une seule note est visible sur la page à tout moment.
 
 ---
 
@@ -42,7 +43,6 @@ PAGES_URL     = "https://poinde08-netizen.github.io/veille-officeplus"
 TARGET_FILE   = "veille-tech.html"
 MARKER_START  = "<!-- NOTES-TECH -->"
 MARKER_END    = "<!-- /NOTES-TECH -->"
-MAX_NOTES     = 14
 FUSEAU        = UTC+11 (Nouméa)
 ```
 
@@ -62,16 +62,16 @@ Exécuter via `bash_tool` :
 from datetime import datetime, timezone, timedelta
 utc11 = timezone(timedelta(hours=11))
 now = datetime.now(utc11)
-seuil = now - timedelta(hours=24)
+seuil = now - timedelta(hours=72)
 print(f"MAINTENANT={now.strftime('%Y-%m-%d %H:%M UTC+11')}")
-print(f"SEUIL_24H={seuil.strftime('%Y-%m-%d %H:%M UTC+11')}")
+print(f"SEUIL_72H={seuil.strftime('%Y-%m-%d %H:%M UTC+11')}")
 ```
 
-Toute information antérieure à `SEUIL_24H` est écartée (sauf signal faible non daté, explicitement marqué comme tel).
+Toute information antérieure à `SEUIL_72H` est écartée (sauf signal faible non daté, explicitement marqué comme tel).
 
 ### 2. Collecte par axe
 
-Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
+Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_72H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
 
 ### 3. Génération de la note du jour
 
@@ -83,7 +83,7 @@ NOTE_ID = note-tech-{YYYY-MM-DD}
 <article class="note-tech" id="{NOTE_ID}">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">{DATE} {HEURE UTC+11} — Fenêtre 24 h</span>
+    <span class="note-date">{DATE} {HEURE UTC+11} — Fenêtre 72 h</span>
   </div>
   <div class="note-body">
     {SECTION_MODELES_IA}
@@ -113,7 +113,7 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
 ```html
 <section class="{AXIS_CLASS}">
   <h3>[N]. [Axe]</h3>
-  <h4>Faits établis (&lt; 24 h)</h4>
+  <h4>Faits établis (&lt; 72 h)</h4>
   {FAITS_EN_HTML}
   <h4>Signaux faibles</h4>
   {SIGNAUX_EN_HTML}
@@ -129,11 +129,13 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
 
 `{CONFIANCE_SECTION_PCT}` et `{CONFIANCE_PCT}` sont la confiance (0,0–1,0) multipliée par 100, arrondie à l'entier (ex. 0,6 → `60`).
 
-### 4. Publication — accumulation, pas remplacement
+### 4. Publication — remplacement, pas accumulation
 
 Exécuter via `bash_tool` (adapter `{ARTICLE_HTML}` avec le bloc de l'étape 3) :
 
 **Important** : la mise en forme (CSS par thématique, légende de couleurs, barres de confiance) vit dans le `<head>` et le début du `<body>` de `veille-tech.html`, en dehors des marqueurs `NOTES-TECH` — le script ci-dessous ne touche jamais cette zone. Ne pas la régénérer sauf si `veille-tech.html` n'existe pas encore (squelette de secours ci-dessous), auquel cas reprendre le `<head>`/légende déjà déployés sur `https://poinde08-netizen.github.io/veille-officeplus/veille-tech.html` (vue source) pour ne pas perdre le style.
+
+**Comportement** : le bloc entre les marqueurs `NOTES-TECH` est intégralement remplacé par la nouvelle note — la note précédente n'est pas conservée, il n'y a pas d'historique.
 
 ```python
 import subprocess, os, tempfile, shutil, re
@@ -143,7 +145,6 @@ GITHUB_REPO  = "veille-officeplus"
 TARGET_FILE  = "veille-tech.html"
 MARKER_START = "<!-- NOTES-TECH -->"
 MARKER_END   = "<!-- /NOTES-TECH -->"
-MAX_NOTES    = 14
 PAGES_URL    = f"https://{GITHUB_USER}.github.io/{GITHUB_REPO}"
 
 nouvel_article = """{ARTICLE_HTML}"""
@@ -189,16 +190,9 @@ try:
     if MARKER_START not in html or MARKER_END not in html:
         raise ValueError("Markers NOTES-TECH introuvables ou incomplets dans veille-tech.html")
 
-    # Extraire les articles existants, ajouter le nouveau en tête, tronquer à MAX_NOTES
+    # Remplacer intégralement le contenu entre les marqueurs par la nouvelle note
     bloc_pattern = re.compile(re.escape(MARKER_START) + r"(.*?)" + re.escape(MARKER_END), re.DOTALL)
-    match = bloc_pattern.search(html)
-    contenu_existant = match.group(1)
-    articles_existants = re.findall(r"<article class=\"note-tech\".*?</article>", contenu_existant, re.DOTALL)
-
-    articles = [nouvel_article] + articles_existants
-    articles = articles[:MAX_NOTES]
-
-    nouveau_bloc = MARKER_START + "\n" + "\n".join(articles) + "\n" + MARKER_END
+    nouveau_bloc = MARKER_START + "\n" + nouvel_article + "\n" + MARKER_END
     html = bloc_pattern.sub(nouveau_bloc, html)
 
     with open(target_path, "w", encoding="utf-8") as f:
@@ -252,7 +246,7 @@ Veille tech publiée : {PAGES_URL}/{TARGET_FILE}#{NOTE_ID}
 
 ## Règles de confiance
 
-- Recency stricte : 24h, pas 48h.
+- Recency stricte : 72h glissantes.
 - Distinguer fait établi / inférence / signal faible.
 - Distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur.
 - Ne jamais présenter une inférence comme un fait établi.
