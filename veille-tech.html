@@ -313,6 +313,388 @@
     <div class="confiance">Confiance globale : 0,4 / 1,0 — Journée pauvre en annonces strictement datées dans la fenêtre de 24 h ; axe Cybersécurité le mieux documenté grâce à un avis CERT-FR daté du jour. Plusieurs sources officielles (OpenAI news, blog.google) ne publient pas d'horodatage exploitable, limitant la vérification stricte de la fenêtre pour les axes Modèles IA et Outils IA.</div>
   </div>
 </article>
+<article class="note-tech" id="note-tech-2026-07-15">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">2026-07-15 08:08 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Anthropic</strong> lance <em>Claude for Teachers</em>, une offre dédiée aux enseignants (annonce officielle, 14/07/2026). Source : anthropic.com/news</li>
+        <li><strong>Anthropic</strong> annonce un engagement de 10 M$ pour la recherche en IA au Canada (annonce officielle, 14/07/2026). Source : anthropic.com/news</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucun signal faible distinct identifié pour cet axe sur la fenêtre. Aucune annonce OpenAI, Google DeepMind, Mistral ou Meta datée de moins de 24 h n'a été retrouvée (dernières publications confirmées : GPT-5.6 le 09/07, Gemini 3 Deep Think le 12/02, partenariat Anthropic/Google/Broadcom le 06/04 — hors fenêtre).</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun point d'alerte identifié.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,8 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>GitHub Copilot</strong> : les revues de sécurité sont désormais disponibles directement dans l'application GitHub Copilot, permettant de lancer une revue sur des modifications de code en cours (annonce officielle / disponibilité générale, 14/07/2026). Source : github.blog/changelog</li>
+        <li><strong>GitHub Code Scanning</strong> intègre désormais des détections de sécurité assistées par IA directement sur les pull requests (annonce officielle, 14/07/2026). Source : github.blog/changelog</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Dependabot introduit un délai de "cooldown" par défaut de 3 jours avant d'appliquer une mise à jour de version (changement de comportement par défaut, 14/07/2026) — impact indirect sur les workflows outillés par IA (Dependabot/Copilot). Source : github.blog/changelog</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun point d'alerte identifié.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <p>Aucune information de moins de 24 h trouvée à la date du 15/07/2026 08:08 UTC+11.</p>
+      <p>Recherches effectuées sur Dell, HP, Lenovo, Scale Computing, Synology, VMware by Broadcom : les dernières actualités identifiées (Dell Private Cloud/Nutanix, programme Velocity de Scale Computing, VMware Telco Cloud Platform 9) sont toutes antérieures à la fenêtre de 24 h.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
+        <span class="conf-value">0,0 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Fortinet</strong> a publié 4 nouveaux avis PSIRT le 14/07/2026 (source officielle : fortiguard.com/psirt) :
+          <ul>
+            <li>FG-IR-26-154 — CVE-2025-43892 — sévérité Moyenne — lecture hors limites (buffer over-read) sur FortiOS/FortiProxy/FortiSASE 7.2 à 7.6</li>
+            <li>FG-IR-26-151 — CVE-2026-59839 — sévérité Moyenne — traversée de chemin (path traversal) permettant la suppression du système de fichiers racine sur FortiOS/FortiPAM/FortiProxy</li>
+            <li>FG-IR-26-152 — CVE-2025-62675 — sévérité Faible — injection CRLF / HTTP response splitting sur FortiOS/FortiProxy</li>
+            <li>FG-IR-26-153 — CVE-2025-62826 — sévérité Faible — injection CRLF / HTTP response splitting sur FortiOS/FortiProxy</li>
+          </ul>
+        </li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Bulletin d'actualité CERT-FR CERTFR-2026-ACT-030 (daté du 13/07/2026, horodatage précis non confirmé, à la limite de la fenêtre de 24 h) recensant des vulnérabilités critiques de la semaine 28 : Juniper Junos OS Evolved (CVE-2020-7450, CVSS 9,8), IBM WebSphere (CVE-2026-11546 et CVE-2026-11714, CVSS 9,8), hyperviseurs KVM x86 « Januscape » (CVE-2026-53359, évasion invité vers hôte). Mentionné à titre de signal faible en raison du chevauchement possible avec le seuil des 24 h.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>FG-IR-26-151 (CVE-2026-59839) : bien que classée sévérité « Moyenne », cette vulnérabilité de traversée de chemin permet la suppression du système de fichiers racine sur des produits Fortinet largement déployés (FortiOS, FortiPAM, FortiProxy) — patch à prioriser.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+        <span class="conf-value">0,85 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <p>Aucune information de moins de 24 h trouvée à la date du 15/07/2026 08:08 UTC+11.</p>
+      <p>Recherches effectuées sur Power BI, Microsoft Fabric, Databricks : seules des sessions communautaires programmées (Microsoft Data Days 2026) ont été identifiées ce jour, sans annonce produit ou éditoriale substantielle datée de moins de 24 h.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
+        <span class="conf-value">0,0 / 1,0</span>
+      </div>
+    </section>
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:48%"></span></span>
+      <span class="conf-value">0,48 / 1,0</span>
+    </div>
+  </div>
+</article>
+<article class="note-tech" id="note-tech-2026-07-14">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">14 juillet 2026, 08:07 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>OpenAI a temporairement assoupli les limites d'usage de GPT-5.6 Sol (annonce officielle relayée le 13/07 vers 00h44 UTC). <em>Source : BleepingComputer.</em></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucun signal faible distinct identifié dans la fenêtre.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Le blog officiel openai.com/news était inaccessible (HTTP 403) pendant la collecte : impossible de confirmer l'absence d'autres annonces OpenAI sur la période. Anthropic et Google n'ont publié aucune actualité datée sur leurs blogs officiels dans la fenêtre 24 h (dernier post Anthropic : 9 juillet).</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 14 juillet 2026 08h07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Néant.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Les dernières publications identifiées sur le blog Microsoft 365 Copilot datent du 9 juillet (GPT-5.6 dans Copilot) et du 2 juillet (Claude Sonnet 5 dans Copilot) — hors fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 14 juillet 2026 08h07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Néant.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucune annonce datée trouvée chez Dell, HP, Lenovo, Synology, Scale Computing ou VMware/Broadcom sur la période ; les dernières actualités constructeurs identifiées remontent à avril-mai 2026.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>CISA alerte sur l'exploitation active de failles RCE dans les extensions Joomla iCagenda et Balbooa Forms, ajoutées au catalogue KEV (13/07, alerte officielle).</li>
+        <li>Lidl confirme une violation de données de sa boutique en ligne (Allemagne, Belgique, Pays-Bas) suite au piratage d'un prestataire (13/07, annonce officielle de l'entreprise).</li>
+        <li>Un package npm lié à Jscrambler a été compromis pour diffuser un infostealer ; la version malveillante a été téléchargée près de 1 500 fois (13/07).</li>
+        <li>Nouveau malware macOS « CrashStealer », se faisant passer pour l'outil de rapport de crash d'Apple, ciblant identifiants, trousseau et portefeuilles crypto (13/07).</li>
+        <li>Nihon Kotsu, premier opérateur de taxis japonais, a arrêté une partie de ses systèmes après une cyberattaque (13/07, annonce de l'entreprise).</li>
+        <li>L'UE et le Royaume-Uni sanctionnent conjointement des pirates du GRU russe pour des cyberattaques (13/07, action gouvernementale officielle).</li>
+        <li>Le Royaume-Uni inculpe des suspects liés à la plateforme d'usurpation d'appels « Russian Coms » (1,8 million d'appels frauduleux) (13/07, action judiciaire officielle).</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucun signal faible distinct au-delà des faits ci-dessus.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Volume inhabituellement élevé d'incidents en 24 h (violation de données Lidl, supply chain npm compromise, malware macOS ciblant les identifiants) : vigilance recommandée sur la chaîne d'approvisionnement logicielle (npm) et les postes macOS. Aucune faille FortiOS/Fortinet nouvellement datée dans la fenêtre ; le catalogue PSIRT Fortinet le plus récent consulté (FG-IR-26-143, 9 juin 2026) reste hors fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 14 juillet 2026 08h07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>dbt Labs mentionnerait la bêta d'un « Workspace-level Private Link » pour Microsoft Fabric et une nouvelle expérience de catalogue « dbt Docs v2 » — date de publication exacte non confirmée dans la fenêtre 24 h (agrégateur tiers Releasebot, à vérifier auprès de la source officielle).</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucune annonce datée trouvée sur les blogs officiels Power BI / Microsoft Fabric / Databricks pour la période ; les dernières publications confirmées (Databricks) remontent au 10 juillet 2026, hors fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:35%"></span></span>
+        <span class="conf-value">0,35 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:48%"></span></span>
+      <span class="conf-value">0,48 / 1,0</span>
+    </div>
+  </div>
+</article>
+<article class="note-tech" id="note-tech-2026-07-13">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">2026-07-13 08:07 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Anthropic a mis fin à l'accès promotionnel gratuit à Claude Fable 5 pour les abonnés payants, échéance fixée au 12 juillet 2026 23:59:59 PT (soit le 13 juillet en UTC+11) — annonce officielle.</p>
+      <h4>Signaux faibles</h4>
+      <p>Non datés précisément dans la fenêtre, à confirmer : Meta aurait dévoilé « Muse Spark 1.1 » pour agents autonomes et développement logiciel ; Mistral aurait présenté « Leanstral 1.5 » (vérification formelle de code via Lean 4) ; OpenAI évoquerait une gamme de modèles spécialisés (Sol/Terra/Luna) en remplacement d'un modèle généraliste unique — roadmap non confirmée.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 13 juillet 2026 08:07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Microsoft aurait déployé plus de 40 mises à jour Copilot 365 en juillet 2026, dont l'intégration de Claude dans Copilot Chat, la disponibilité générale de Copilot Cowork et des filigranes de contenu IA — annonce officielle Microsoft mais date précise dans la fenêtre stricte non confirmée. Côté GitHub Copilot : disponibilité générale de Kimi K2.7 Code et de Copilot Vision (dates précises non confirmées).</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Dépréciation annoncée de Gemini 2.5 Pro et Gemini 3 Flash dans GitHub Copilot à compter du 31 juillet 2026 (roadmap confirmée, échéance future) — à anticiper pour les postes utilisant ces modèles.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 13 juillet 2026 08:07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Rumeur non datée précisément et non confirmée : HP et Lenovo valideraient l'accélérateur IA Samsung Gaia pour PC.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:20%"></span></span>
+        <span class="conf-value">0,2 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 13 juillet 2026 08:07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Aucun signal faible non daté identifié pour cet axe aujourd'hui.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Le Patch Tuesday Fortinet de juillet (2ᵉ mardi du mois, le 14/07) n'a pas encore eu lieu à la date de cette note : publication d'avis PSIRT à surveiller sous peu. Pour mémoire (hors fenêtre des 24 h, donc non compté comme fait du jour) : le CVE-2026-24858 (contournement SSO FortiOS, CVSS 9,4) reste activement exploité et sous surveillance CISA.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 13 juillet 2026 08:07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Poursuite non datée précisément de l'intégration Fabric/Databricks (Unity Catalog mirroré dans OneLake, moteur temps réel Lakehouse//RT) issue des annonces du sommet Data+AI — aucune nouvelle annonce identifiée dans les dernières 24 h.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:20%"></span></span>
+        <span class="conf-value">0,2 / 1,0</span>
+      </div>
+    </section>
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+      <span class="conf-value">0,3 / 1,0</span>
+    </div>
+  </div>
+</article>
+<article class="note-tech" id="note-tech-2026-07-12">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">2026-07-12 08:07 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>OpenAI a lancé <strong>ChatGPT Work</strong>, fusionnant ChatGPT et Codex en une application unique à trois modes (Chat / Codex / Work), propulsée par GPT-5.6, pour l'automatisation de tâches bureautiques multi-étapes. Positionnement concurrentiel direct face à Claude Cowork (Anthropic), Muse Spark (Meta) et Grok Build (xAI). Annonce officielle, déploiement en cours (desktop puis Plus/Pro/Business/Enterprise/Edu, web et mobile).</li>
+        <li>Apple a confirmé que la nouvelle Siri utilisera Gemini de Google plutôt que ChatGPT, marquant la fin de la coopération opérationnelle Apple–OpenAI ; Apple a par ailleurs déposé une plainte pour vol de secrets commerciaux contre OpenAI en lien avec l'acquisition d'IO Products.</li>
+        <li>Meta a lancé <strong>Muse Spark 1.1</strong>, son premier modèle payant (4,25 $/M tokens en sortie), avec support des intégrations MCP.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>OpenAI a présenté en avant-première GPT-5.6 Sol (modèle flagship développeurs/entreprises), ainsi que Terra et Luna (modèles économiques) — statut roadmap/preview, disponibilité générale non confirmée.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun point d'alerte spécifique identifié dans la fenêtre de 24 h.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>Le lancement de <strong>ChatGPT Work</strong> par OpenAI (cf. axe Modèles IA) concerne directement les outils IA « métier » : automatisation de tâches multi-étapes en environnement de travail, en concurrence avec Copilot M365 et Cowork.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucun signal faible distinct identifié pour Copilot M365, GitHub Copilot ou Gemini Workspace dans la fenêtre de 24 h (dernière release notable : Copilot CLI v1.0.69 du 7 juillet ; dépréciation Gemini 2.5 Pro/3 Flash annoncée le 2 juillet — hors fenêtre).</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun point d'alerte identifié dans la fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 12/07/2026 08:07 UTC+11 pour Scale Computing, VMware, Dell, HP, Lenovo, Synology ou Wi-Fi 6/7 (dernières actualités constructeurs identifiées : partenariat Scale Computing/Lenovo et remplacement VMware sur Dell VxRail, toutes antérieures à la fenêtre).</p>
+      <h4>Signaux faibles</h4>
+      <p>Néant.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>Des chercheurs ont révélé le 11 juillet 2026 une campagne de cyberespionnage soutenue visant plusieurs services de police pakistanais (dont une compromission des serveurs de la police du Balochistan), attribuée à des acteurs présumés liés à la Chine et à l'Inde, active entre février 2024 et avril 2026.</li>
+        <li>Une faille critique a été signalée dans le client web classique de Zimbra (XSS stockée pouvant mener à une exécution de code arbitraire via des e-mails piégés) — vulnérabilité rendue publique, exploitation active non confirmée dans les sources consultées.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>CISA a publié une alerte le 10 juillet 2026 ; le contenu détaillé n'a pas pu être récupéré (page cisa.gov/news-events/cybersecurity-advisories inaccessible, erreur HTTP 403 lors de la collecte) — à revérifier lors du prochain cycle.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucune nouvelle publication PSIRT Fortinet dans la fenêtre de 24 h (dernière advisory FG-IR-25-1052 du 4 juillet, hors fenêtre). Source cisa.gov partiellement inaccessible lors de cette collecte : vérification manuelle recommandée.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>Databricks a annoncé le 10 juillet 2026 la préversion publique (public preview) de <strong>Feature Views</strong>, un framework managé de développement de features ML : définition unique de la logique de feature, réutilisable pour l'entraînement et l'inférence temps réel (streaming Kafka, latence de bout en bout ~200 ms), avec gouvernance intégrée via Unity Catalog (lineage complet).</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucun signal faible distinct identifié pour Power BI / Microsoft Fabric dans la fenêtre (rollout « PBIR activé par défaut » évoqué pour juillet/août 2026, mais date d'annonce non confirmée dans la fenêtre de 24 h — exclu par prudence).</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun point d'alerte identifié.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
+        <span class="conf-value">0,65 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+      <span class="conf-value">0,6 / 1,0</span>
+    </div>
+  </div>
+</article>
 <article class="note-tech" id="note-tech-2026-07-11">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
