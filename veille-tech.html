@@ -214,6 +214,55 @@
   }
   .confiance .conf-bar{max-width:220px;}
   .confiance .conf-fill{background:linear-gradient(90deg,var(--c-cyber),var(--c-data));}
+
+  .filter-bar{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:8px;
+    max-width:880px;
+    margin:0 auto 24px;
+  }
+  .filter-bar .filter-label{
+    font-size:0.78rem;
+    color:var(--text-muted);
+    margin-right:2px;
+  }
+  .filter-btn{
+    font:inherit;
+    font-size:0.85rem;
+    font-weight:600;
+    padding:6px 14px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background:var(--card-bg);
+    color:var(--text);
+    cursor:pointer;
+  }
+  .filter-btn:hover{ border-color:var(--text-muted); }
+  .filter-btn.active{
+    background:var(--text);
+    color:var(--card-bg);
+    border-color:var(--text);
+  }
+  .note-body section .sources{
+    margin-top:12px;
+    padding-top:8px;
+    border-top:1px dashed var(--border);
+    font-size:0.78rem;
+    color:var(--text-muted);
+  }
+  .note-body section .sources a{
+    color:inherit;
+  }
+  .no-results{
+    max-width:880px;
+    margin:24px auto;
+    text-align:center;
+    color:var(--text-muted);
+    font-size:0.9rem;
+    display:none;
+  }
 </style>
 </head>
 <body>
@@ -227,7 +276,15 @@
     <span class="legend-item cyber"><span class="legend-dot"></span>Cybersécurité</span>
     <span class="legend-item data"><span class="legend-dot"></span>DATA</span>
   </div>
+  <div class="filter-bar" role="group" aria-label="Filtrer par catégorie">
+    <span class="filter-label">Filtrer :</span>
+    <button type="button" class="filter-btn active" data-filter="all">Tout afficher</button>
+    <button type="button" class="filter-btn" data-filter="ia">IA</button>
+    <button type="button" class="filter-btn" data-filter="infra">Infrastructure</button>
+    <button type="button" class="filter-btn" data-filter="data">DATA</button>
+  </div>
 </div>
+<p class="no-results">Aucune section ne correspond à ce filtre sur les notes conservées.</p>
 <!-- NOTES-TECH -->
 <article class="note-tech" id="note-tech-2026-07-22">
   <div class="note-header">
@@ -250,6 +307,7 @@
       <p>Aucun point d'alerte identifié sur cet axe dans la fenêtre.</p>
       <h4>Implication métier</h4>
       <p>Le règlement Anthropic clarifie (partiellement) le risque juridique lié à l'entraînement des modèles sur des contenus protégés : un point à surveiller pour toute entreprise qui exploite des outils IA sur des documents propriétaires ou clients. Gemini 3.6 Flash n'apporte pas de rupture d'usage immédiate mais confirme le rythme soutenu de mise à jour des modèles — pas d'action à court terme, juste rester informé avant tout choix de fournisseur.</p>
+      <div class="sources">Sources consultées : <a href="https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/" target="_blank" rel="noopener">GitHub Changelog — Gemini 3.6 Flash</a> · <a href="https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/" target="_blank" rel="noopener">TechCrunch — règlement Anthropic</a> · <a href="https://www.euronews.com/next/2026/07/21/anthropic-to-pay-13bn-in-biggest-copyright-settlement-on-record" target="_blank" rel="noopener">Euronews — règlement Anthropic</a> · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-21-2026" target="_blank" rel="noopener">BuildFastWithAI — cadre de revue sécurité nationale</a></div>
       <div class="conf-row">
         <span class="conf-label">Confiance section</span>
         <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
@@ -269,6 +327,7 @@
       <p>Aucun point d'alerte identifié sur cet axe dans la fenêtre.</p>
       <h4>Implication métier</h4>
       <p>Contexte à connaître (hors fenêtre 24 h, effectif depuis le 1er juillet 2026) : Microsoft a relevé les tarifs de la plupart des abonnements Microsoft 365 (+8 % côté entreprise, jusqu'à +33 % sur les plans « travailleurs de terrain »), tandis que Business Standard/Premium avec Copilot deviennent des offres permanentes pour les PME — boîte mail portée à 100 Go, protection des liens en temps réel, et un nouveau tableau de bord « Copilot Chat Analytics » permettant à un dirigeant de voir quelles équipes utilisent réellement l'IA. À anticiper au prochain renouvellement de contrat Microsoft 365 : revoir le mix de licences et vérifier si l'adoption réelle de Copilot justifie son coût.</p>
+      <div class="sources">Sources consultées : <a href="https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/" target="_blank" rel="noopener">GitHub Changelog — Gemini 3.6 Flash dans Copilot</a> · <a href="https://www.havoptic.com/tools/github-copilot" target="_blank" rel="noopener">Havoptic — Copilot CLI v1.0.73</a> · <a href="https://foxpilot.io/blog/microsoft-365-hausse-prix-juillet-2026-pme" target="_blank" rel="noopener">Foxpilot — hausse tarifs M365 juillet 2026</a> · <a href="https://agilly.net/5-nouvelles-fonctionnalites-microsoft-365-que-vos-equipes-vont-recevoir-gratuitement-en-juillet-2026/" target="_blank" rel="noopener">Agilly — nouvelles fonctionnalités M365</a></div>
       <div class="conf-row">
         <span class="conf-label">Confiance section</span>
         <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
@@ -287,6 +346,7 @@
       <p>Aucun point d'alerte identifié sur cet axe dans la fenêtre.</p>
       <h4>Implication métier</h4>
       <p>L'ouverture d'HyperCore aux serveurs AMD élargit le choix matériel pour les entreprises qui envisagent de remplacer une infrastructure VMware vieillissante : plus d'options fournisseur, potentiellement des coûts matériels réduits sur un renouvellement de serveurs. Pas d'urgence : à évaluer au moment d'un prochain projet de renouvellement d'infrastructure, pas une décision à prendre dans l'immédiat.</p>
+      <div class="sources">Sources consultées : <a href="https://www.hpcwire.com/off-the-wire/scale-computing-extends-amd-cpu-support-for-edge-and-virtualization-workloads/" target="_blank" rel="noopener">HPCwire — Scale Computing / support AMD</a></div>
       <div class="conf-row">
         <span class="conf-label">Confiance section</span>
         <span class="conf-bar"><span class="conf-fill" style="width:35%"></span></span>
@@ -305,6 +365,7 @@
       </ul>
       <h4>Implication métier</h4>
       <p>Deux vérifications concrètes à faire cette semaine si ce n'est pas déjà fait : (1) confirmer que tout pare-feu Fortinet est sur le dernier firmware (26 vulnérabilités activement exploitées à ce jour) ; (2) confirmer qu'un SharePoint on-premise éventuel est patché contre les CVE de juillet. Au-delà, la bascule vers le Zero Trust / SASE n'est plus réservée aux grands groupes : proposé désormais en mode SaaS, donc accessible aux PME sans grosse équipe IT dédiée — un point à mettre à l'agenda d'une revue de sécurité annuelle plutôt qu'une urgence du jour.</p>
+      <div class="sources">Sources consultées : <a href="https://senserva.com/exploited/fortinet.html" target="_blank" rel="noopener">Senserva — 26 CVE Fortinet au KEV</a> · <a href="https://www.fortiguard.com/psirt" target="_blank" rel="noopener">FortiGuard PSIRT</a> · <a href="https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations" target="_blank" rel="noopener">CISA — SharePoint hardening</a> · <a href="https://www.calyo-consulting.fr/ressources/03-cybersecurite-zero-trust-2026" target="_blank" rel="noopener">Calyo Consulting — Zero Trust 2026 (statistiques à prendre avec prudence, source non primaire)</a></div>
       <div class="conf-row">
         <span class="conf-label">Confiance section</span>
         <span class="conf-bar"><span class="conf-fill" style="width:35%"></span></span>
@@ -323,6 +384,7 @@
       <p>Aucun point d'alerte identifié sur cet axe dans la fenêtre.</p>
       <h4>Implication métier</h4>
       <p>Le message qui revient chez tous les éditeurs (Microsoft en tête) : l'IA générative dans les outils de reporting (Copilot dans Power BI) ne compense pas des données mal organisées — elle amplifie le résultat, bon ou mauvais. Avant d'investir dans des fonctions IA de pilotage (questions en langage naturel, synthèses automatiques), le prérequis reste la qualité et la gouvernance des données sources : un chantier interne souvent plus rentable à court terme que l'ajout d'une nouvelle brique IA.</p>
+      <div class="sources">Sources consultées : <a href="https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-BI-June-2026-Feature-Summary/ba-p/5193264" target="_blank" rel="noopener">Microsoft Fabric Community — Power BI June 2026</a> · <a href="https://exponentiel-mag.fr/outils-ia/guide-microsoft-copilot-entreprise/" target="_blank" rel="noopener">Exponentiel Magazine — gouvernance données/IA en entreprise</a></div>
       <div class="conf-row">
         <span class="conf-label">Confiance section</span>
         <span class="conf-bar"><span class="conf-fill" style="width:35%"></span></span>
@@ -342,7 +404,7 @@
     <span class="note-date">21 juillet 2026 08:07 UTC+11 — Fenêtre 24 h</span>
   </div>
   <div class="note-body">
-    <section>
+    <section class="axis-modeles">
       <h3>Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 21 juillet 2026 08:07 UTC+11.</p>
@@ -354,7 +416,7 @@
       <p>Aucun.</p>
       <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
     </section>
-    <section>
+    <section class="axis-outils">
       <h3>Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -369,7 +431,7 @@
       <p>Aucun.</p>
       <p class="confiance-section">Confiance section : 0,8 / 1,0</p>
     </section>
-    <section>
+    <section class="axis-infra">
       <h3>Infra / Réseau</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 21 juillet 2026 08:07 UTC+11.</p>
@@ -381,7 +443,7 @@
       <p>Aucun.</p>
       <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
     </section>
-    <section>
+    <section class="axis-cyber">
       <h3>Cybersécurité</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -398,7 +460,7 @@
       </ul>
       <p class="confiance-section">Confiance section : 0,75 / 1,0</p>
     </section>
-    <section>
+    <section class="axis-data">
       <h3>DATA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 21 juillet 2026 08:07 UTC+11.</p>
@@ -419,7 +481,7 @@
     <span class="note-date">2026-07-20 08:08 UTC+11 — Fenêtre 24 h</span>
   </div>
   <div class="note-body">
-    <section>
+    <section class="axis-modeles">
       <h3>Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -433,7 +495,7 @@
       <p>Aucun.</p>
       <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
     </section>
-    <section>
+    <section class="axis-outils">
       <h3>Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -447,7 +509,7 @@
       <p>Aucun.</p>
       <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
     </section>
-    <section>
+    <section class="axis-infra">
       <h3>Infra / Réseau</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 2026-07-20 08:08 UTC+11.</p>
@@ -457,7 +519,7 @@
       <p>Aucun.</p>
       <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
     </section>
-    <section>
+    <section class="axis-cyber">
       <h3>Cybersécurité</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -474,7 +536,7 @@
       </ul>
       <p class="confiance-section">Confiance section : 0,75 / 1,0</p>
     </section>
-    <section>
+    <section class="axis-data">
       <h3>DATA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 2026-07-20 08:08 UTC+11.</p>
@@ -495,7 +557,7 @@
     <span class="note-date">2026-07-19 08:07 UTC+11 — Fenêtre 24 h</span>
   </div>
   <div class="note-body">
-    <section>
+    <section class="axis-modeles">
       <h3>1. Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucun fait établi confirmé par une annonce officielle (OpenAI, Anthropic, Google DeepMind, Mistral, Meta) n'a été identifié dans la fenêtre des 24 dernières heures. Le dernier billet officiel du newsroom Anthropic date du 14 juillet 2026 (Claude for Teachers, financement recherche IA au Canada) et le dernier lancement majeur confirmé (Meta Muse Spark 1.1) du 9 juillet 2026 — tous deux hors fenêtre stricte.</p>
@@ -506,7 +568,7 @@
       <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-outils">
       <h3>2. Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -521,7 +583,7 @@
       <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-infra">
       <h3>3. Infra / Réseau</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 2026-07-19 08:07 UTC+11 pour Dell, HP/HPE, Lenovo, Synology, Scale Computing, VMware/Broadcom ou Cisco.</p>
@@ -532,7 +594,7 @@
       <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-cyber">
       <h3>4. Cybersécurité</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -547,7 +609,7 @@
       <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-data">
       <h3>5. DATA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 2026-07-19 08:07 UTC+11 pour Power BI, Microsoft Fabric, Databricks, dbt Labs ou la gouvernance des données.</p>
@@ -567,7 +629,7 @@
     <span class="note-date">2026-07-18 08:07 UTC+11 — Fenêtre 24 h</span>
   </div>
   <div class="note-body">
-    <section>
+    <section class="axis-modeles">
       <h3>1. Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucun fait établi confirmé par une annonce officielle (OpenAI, Anthropic, Google, Mistral, Meta) n'a été identifié dans la fenêtre des 24 dernières heures. Le dernier billet officiel du newsroom Anthropic date du 14 juillet 2026 (Claude for Teachers).</p>
@@ -580,7 +642,7 @@
       <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-outils">
       <h3>2. Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -594,7 +656,7 @@
       <p class="confiance-section">Confiance section : 0,7 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-infra">
       <h3>3. Infra / Réseau</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 2026-07-18 08:07 UTC+11 pour Dell, HP/HPE, Lenovo, Synology, Scale Computing, VMware/Broadcom ou Cisco.</p>
@@ -605,7 +667,7 @@
       <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-cyber">
       <h3>4. Cybersécurité</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucun nouvel avis PSIRT Fortinet ni nouvelle entrée CISA KEV strictement datée du 17 juillet 2026 n'a été identifié. Le dernier lot d'avis FortiGuard (7 vulnérabilités FortiOS/FortiProxy/FortiPAM/FortiSandbox) date du 15 juillet 2026 et les dernières entrées CISA KEV liées à Fortinet FortiSandbox (CVE-2026-25089, CVE-2026-39808) du 16 juillet 2026 — toutes deux hors fenêtre stricte des 24 h.</p>
@@ -618,7 +680,7 @@
       <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-data">
       <h3>5. DATA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 2026-07-18 08:07 UTC+11 pour Power BI, Microsoft Fabric, Databricks, dbt Labs ou la gouvernance des données.</p>
@@ -638,7 +700,7 @@
     <span class="note-date">17/07/2026 08:07 UTC+11 — Fenêtre 24 h (16/07/2026 08:07 → 17/07/2026 08:07 UTC+11)</span>
   </div>
   <div class="note-body">
-    <section>
+    <section class="axis-modeles">
       <h3>1. Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -655,7 +717,7 @@
       <p class="confiance-section">Confiance section : 0,55 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-outils">
       <h3>2. Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 17/07/2026 08:07 UTC+11.</p>
@@ -669,7 +731,7 @@
       <p class="confiance-section">Confiance section : 0,25 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-infra">
       <h3>3. Infra / Réseau</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -685,7 +747,7 @@
       <p class="confiance-section">Confiance section : 0,55 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-cyber">
       <h3>4. Cybersécurité</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -701,7 +763,7 @@
       <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-data">
       <h3>5. DATA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 17/07/2026 08:07 UTC+11.</p>
@@ -724,7 +786,7 @@
     <span class="note-date">16/07/2026 08:07 UTC+11 — Fenêtre 24 h (15/07/2026 08:07 → 16/07/2026 08:07 UTC+11)</span>
   </div>
   <div class="note-body">
-    <section>
+    <section class="axis-modeles">
       <h3>1. Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -741,7 +803,7 @@
       <p class="confiance-section">Confiance section : 0,4 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-outils">
       <h3>2. Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -757,7 +819,7 @@
       <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-infra">
       <h3>3. Infra / Réseau</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 16/07/2026 08:07 UTC+11.</p>
@@ -771,7 +833,7 @@
       <p class="confiance-section">Confiance section : 0,2 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-cyber">
       <h3>4. Cybersécurité</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
@@ -785,7 +847,7 @@
       <p class="confiance-section">Confiance section : 0,65 / 1,0</p>
     </section>
 
-    <section>
+    <section class="axis-data">
       <h3>5. DATA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <p>Aucune information de moins de 24 h trouvée à la date du 16/07/2026 08:07 UTC+11.</p>
@@ -1397,5 +1459,47 @@
   </div>
 </article>
 <!-- /NOTES-TECH -->
+<script>
+(function(){
+  var CAT_MAP = {
+    'axis-modeles': 'ia',
+    'axis-outils': 'ia',
+    'axis-infra': 'infra',
+    'axis-cyber': 'infra',
+    'axis-data': 'data'
+  };
+
+  function categoryOf(section){
+    for (var i = 0; i < section.classList.length; i++){
+      if (CAT_MAP[section.classList[i]]) return CAT_MAP[section.classList[i]];
+    }
+    return null;
+  }
+
+  function applyFilter(filter){
+    var noResults = document.querySelector('.no-results');
+    var anyArticleVisible = false;
+    document.querySelectorAll('.note-tech').forEach(function(article){
+      var anyVisible = false;
+      article.querySelectorAll('.note-body > section').forEach(function(sec){
+        var show = (filter === 'all') || (categoryOf(sec) === filter);
+        sec.style.display = show ? '' : 'none';
+        if (show) anyVisible = true;
+      });
+      article.style.display = anyVisible ? '' : 'none';
+      if (anyVisible) anyArticleVisible = true;
+    });
+    if (noResults) noResults.style.display = anyArticleVisible ? 'none' : 'block';
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+})();
+</script>
 </body>
 </html>

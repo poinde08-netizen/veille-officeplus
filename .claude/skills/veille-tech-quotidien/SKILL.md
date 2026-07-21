@@ -108,13 +108,15 @@ NOTE_ID = note-tech-{YYYY-MM-DD}
 
 Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà présent dans le `<head>` de `veille-tech.html` pour distinguer visuellement chaque thématique — ne pas retirer ce `<head>` lors des publications, le script de l'étape 4 ne touche que le bloc entre les marqueurs) :
 
-| Axe | Classe |
-|---|---|
-| 1. Modèles IA | `axis-modeles` |
-| 2. Outils IA | `axis-outils` |
-| 3. Infra / Réseau | `axis-infra` |
-| 4. Cybersécurité | `axis-cyber` |
-| 5. DATA | `axis-data` |
+| Axe | Classe | Catégorie de filtre (page) |
+|---|---|---|
+| 1. Modèles IA | `axis-modeles` | IA |
+| 2. Outils IA | `axis-outils` | IA |
+| 3. Infra / Réseau | `axis-infra` | Infrastructure |
+| 4. Cybersécurité | `axis-cyber` | Infrastructure |
+| 5. DATA | `axis-data` | DATA |
+
+**Important — ne jamais renommer ou retirer une classe `axis-*`** : la page publie un filtre interactif (boutons « IA / Infrastructure / DATA » dans le `<body>`, script en fin de page) qui déduit la catégorie de chaque `<section>` uniquement à partir de sa classe `axis-*` (table `CAT_MAP` dans le `<script>`). Une section sans classe `axis-*` reconnue devient invisible dès qu'un filtre autre que « Tout afficher » est actif.
 
 ```html
 <section class="{AXIS_CLASS}">
@@ -127,6 +129,7 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
   {ALERTES_EN_HTML}
   <h4>Implication métier</h4>
   <p>{IMPLICATION_METIER}</p>
+  <div class="sources">Sources consultées : {LIENS_SOURCES_HTML}</div>
   <div class="conf-row">
     <span class="conf-label">Confiance section</span>
     <span class="conf-bar"><span class="conf-fill" style="width:{CONFIANCE_SECTION_PCT}%"></span></span>
@@ -137,11 +140,13 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
 
 `{CONFIANCE_SECTION_PCT}` et `{CONFIANCE_PCT}` sont la confiance (0,0–1,0) multipliée par 100, arrondie à l'entier (ex. 0,6 → `60`).
 
+**Liens sources (obligatoire)** : `{LIENS_SOURCES_HTML}` est une liste de liens cliquables vers les pages effectivement consultées pour cette section, séparés par ` · `, au format `<a href="URL" target="_blank" rel="noopener">Nom court de la source</a>`. Une source par affirmation citée dans « Faits établis » et « Signaux faibles » (l'URL réelle retournée par la recherche, jamais une URL reconstituée de mémoire). Si une section n'a aucun fait ni signal (texte standard « Aucune information... »), omettre le bloc `.sources` plutôt que de le laisser vide.
+
 ### 4. Publication — accumulation, pas remplacement
 
 Exécuter via `bash_tool` (adapter `{ARTICLE_HTML}` avec le bloc de l'étape 3) :
 
-**Important** : la mise en forme (CSS par thématique, légende de couleurs, barres de confiance) vit dans le `<head>` et le début du `<body>` de `veille-tech.html`, en dehors des marqueurs `NOTES-TECH` — le script ci-dessous ne touche jamais cette zone. Ne pas la régénérer sauf si `veille-tech.html` n'existe pas encore (squelette de secours ci-dessous), auquel cas reprendre le `<head>`/légende déjà déployés sur `https://poinde08-netizen.github.io/veille-officeplus/veille-tech.html` (vue source) pour ne pas perdre le style.
+**Important** : la mise en forme (CSS par thématique, légende de couleurs, barres de confiance), la barre de filtres interactive (boutons IA/Infrastructure/DATA) et le `<script>` de filtrage vivent dans le `<head>`, le début et la fin du `<body>` de `veille-tech.html`, en dehors des marqueurs `NOTES-TECH` — le script Python ci-dessous ne touche jamais cette zone. Ne pas la régénérer sauf si `veille-tech.html` n'existe pas encore (squelette de secours ci-dessous), auquel cas reprendre intégralement le `<head>` + barre de filtres + `<script>` déjà déployés sur `https://poinde08-netizen.github.io/veille-officeplus/veille-tech.html` (vue source) pour ne pas perdre le style ni casser le filtre.
 
 ```python
 import subprocess, os, tempfile, shutil, re
