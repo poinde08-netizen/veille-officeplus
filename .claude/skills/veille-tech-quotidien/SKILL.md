@@ -73,6 +73,12 @@ Toute information antérieure à `SEUIL_24H` est écartée (sauf signal faible n
 
 Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
 
+**Orientation métier (obligatoire)** : cette veille est lue par un dirigeant/responsable, pas par un ingénieur. Pour chaque axe :
+- Faire au moins deux passes de recherche : une technique (annonce, changelog, CVE) et une orientée usage/business (« pour PME », « entreprise », « adoption », « impact tarifaire », « ROI », « cas d'usage métier ») — la seule requête technique appauvrit systématiquement le contenu.
+- Ne pas se limiter à la liste brute de faits : chaque section se termine par un paragraphe `Implication métier` qui traduit ce qui précède en langage décisionnel — qu'est-ce que ça change pour l'entreprise (outil disponible dès maintenant, budget à anticiper, risque à traiter, décision à envisager) ? 2-4 phrases, factuel, sans emphase commerciale artificielle.
+- Un contexte utile mais hors fenêtre 24 h (ex. hausse tarifaire entrée en vigueur le mois précédent, tendance d'adoption sectorielle) peut être cité dans `Implication métier` à condition d'être explicitement daté et non présenté comme un fait du jour — il sert à éclairer, pas à combler artificiellement l'absence d'actualité fraîche.
+- Si un axe reste réellement sans rien de neuf ni de contextualisable, garder la phrase standard sans forcer du contenu creux.
+
 ### 3. Génération de la note du jour
 
 ```
@@ -119,6 +125,8 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
   {SIGNAUX_EN_HTML}
   <h4 class="alerte">Points d'alerte</h4>
   {ALERTES_EN_HTML}
+  <h4>Implication métier</h4>
+  <p>{IMPLICATION_METIER}</p>
   <div class="conf-row">
     <span class="conf-label">Confiance section</span>
     <span class="conf-bar"><span class="conf-fill" style="width:{CONFIANCE_SECTION_PCT}%"></span></span>
