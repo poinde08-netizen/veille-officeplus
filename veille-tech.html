@@ -229,6 +229,75 @@
   </div>
 </div>
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-08-02">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">2026-08-02 08:07 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section>
+      <h3>Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 2026-08-02 08:07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Néant. Les éléments récents identifiés (annonce Anthropic du 31/07 sur des incidents Claude en environnement de test, baisse de tarifs OpenAI GPT-5.6 du 31/07) sont antérieurs au seuil de 24 h retenu ici et ont déjà été couverts par la note du 2026-08-01.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant identifié.</p>
+      <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
+    </section>
+    <section>
+      <h3>Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>Microsoft a rendu disponible le 01/08 l'offre "Copilot in 30" (essai Microsoft 365 Copilot Business de 25 utilisateurs / 30 jours, destiné aux organisations de moins de 300 employés) via le canal CSP (Cloud Solution Provider). (Source : Microsoft Learn — Partner Center announcements)</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Néant de nouveau distinct de la fenêtre 24 h ; le retrait des modèles Gemini 2.5 Pro / Gemini 3 Flash dans GitHub Copilot, daté du 31/07, a déjà été couvert par la note du 2026-08-01.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant identifié.</p>
+      <p class="confiance-section">Confiance section : 0,7 / 1,0</p>
+    </section>
+    <section>
+      <h3>Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 2026-08-02 08:07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Néant confirmé pour Dell, HP, Lenovo, Scale Computing, Synology ou VMware/Broadcom dans la fenêtre stricte de 24 h.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant identifié.</p>
+      <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
+    </section>
+    <section>
+      <h3>Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>BleepingComputer a publié le 01/08 (10h20) une analyse détaillée de CVE-2026-66066 (Rails Active Storage / libvips) : lecture arbitraire de fichiers non authentifiée pouvant mener à une exécution de code à distance sur les applications Rails utilisant libvips comme moteur de variantes d'image (par défaut depuis Rails 7.0). CVSS v4 9,5 (score attribué par GitHub en tant que CNA). Vulnérabilité initialement divulguée le 29/07 par l'équipe sécurité Ruby on Rails — correctifs disponibles : 7.2.3.2, 8.0.5.1, 8.1.3.1. (Source : BleepingComputer, Rails Security Announcements)</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Une faille critique CVSS 10,0 dans Adobe Campaign Classic (CVE-2026-48449, exécution de code sans interaction utilisateur via un défaut d'autorisation) fait l'objet d'articles datés du 01/08 (dont TheHackerNews) ; le correctif Adobe lui-même remonte à un bulletin de juillet 2026, la date exacte de la première divulgation n'a pas pu être confirmée avec certitude — à traiter comme rappel plutôt que fait nouveau tant que la date n'est pas vérifiée à la source Adobe PSIRT.</li>
+        <li>Plusieurs articles BleepingComputer (compromission de la chaîne d'approvisionnement Adform par des scripts de vol de cryptomonnaies, exposition de données Amgen via des systèmes cloud tiers, alerte CISA sur les automates exposés des réseaux d'eau) sont horodatés le 31/07 en fin de journée US, à la limite du seuil des 24 h retenu ici ; l'heure exacte de publication vs le seuil UTC n'a pas pu être confirmée avec une précision suffisante pour les classer en fait établi.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>CVE-2026-66066 (Rails Active Storage) : exploitation triviale par simple upload d'image sur toute application Rails utilisant libvips par défaut ; recommandation de patcher en priorité et de faire tourner les secrets exposés (secret_key_base et identifiants tiers) en cas de doute sur une compromission antérieure.</li>
+        <li>Sources consultées sans accès direct (403) : cisa.gov/news-events/cybersecurity-advisories, openai.com/news — contenu non vérifié à la source primaire pour ces deux pages, non inventé.</li>
+      </ul>
+      <p class="confiance-section">Confiance section : 0,65 / 1,0</p>
+    </section>
+    <section>
+      <h3>DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 2026-08-02 08:07 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <p>Néant confirmé pour Microsoft Fabric, Power BI ou Databricks dans la fenêtre stricte de 24 h.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant identifié.</p>
+      <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
+    </section>
+    <div class="confiance">Confiance globale : 0,59 / 1,0</div>
+  </div>
+</article>
 <article class="note-tech" id="note-tech-2026-08-01">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -1179,78 +1248,6 @@
       <p>Aucun.</p>
       <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
     </section>
-    <div class="confiance">Confiance globale : 0,5 / 1,0</div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-07-19">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">2026-07-19 08:07 UTC+11 — Fenêtre 24 h</span>
-  </div>
-  <div class="note-body">
-    <section>
-      <h3>1. Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucun fait établi confirmé par une annonce officielle (OpenAI, Anthropic, Google DeepMind, Mistral, Meta) n'a été identifié dans la fenêtre des 24 dernières heures. Le dernier billet officiel du newsroom Anthropic date du 14 juillet 2026 (Claude for Teachers, financement recherche IA au Canada) et le dernier lancement majeur confirmé (Meta Muse Spark 1.1) du 9 juillet 2026 — tous deux hors fenêtre stricte.</p>
-      <h4>Signaux faibles</h4>
-      <p>Aucun signal faible suffisamment fiable identifié. Une mention d'un outil de sécurité IA multi-modèles Microsoft (« Project Perception ») circulait sur des agrégateurs de faible qualité éditoriale sans confirmation par une source primaire (blog officiel Microsoft, communiqué) ; écartée de cette note faute de vérifiabilité.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <p class="confiance-section">Confiance section : 0,3 / 1,0</p>
-    </section>
-
-    <section>
-      <h3>2. Outils IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul>
-        <li><strong>[Annonce officielle]</strong> GitHub a annoncé le 17 juillet 2026 la disponibilité générale des métriques d'usage GitHub Copilot au niveau dépôt (repository-level usage metrics), permettant un suivi de l'adoption par dépôt avec intégration à la gestion d'entreprise.</li>
-        <li><strong>[Annonce officielle]</strong> GitHub a annoncé le 17 juillet 2026 l'ajout de l'application GitHub Copilot dans l'API de métriques d'usage, élargissant l'accès programmatique aux données de consommation.</li>
-        <li><strong>[Annonce officielle]</strong> GitHub a annoncé le 17 juillet 2026 des améliorations de personnalisation pour la revue de code Copilot (Copilot code review), offrant plus de flexibilité de configuration.</li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
-    </section>
-
-    <section>
-      <h3>3. Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-07-19 08:07 UTC+11 pour Dell, HP/HPE, Lenovo, Synology, Scale Computing, VMware/Broadcom ou Cisco.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
-    </section>
-
-    <section>
-      <h3>4. Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul>
-        <li><strong>[Annonce officielle]</strong> Le CERT-FR a publié le 17 juillet 2026 six avis de sécurité : produits IBM (CERTFR-2026-AVI-0901, exécution de code à distance, élévation de privilèges, déni de service), noyau Linux SUSE (AVI-0900), noyau Linux Red Hat (AVI-0899), noyau Linux Ubuntu (AVI-0898), Google Chrome (AVI-0897) et produits Microsoft (AVI-0896, atteinte à la confidentialité des données, contournement de politique de sécurité).</li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>Aucun nouvel avis PSIRT Fortinet identifié dans la fenêtre 24 h (le dernier lot de 7 vulnérabilités FortiOS/FortiProxy/FortiPAM/FortiSandbox reste daté du 14 juillet 2026, hors fenêtre).</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <ul>
-        <li><strong>[Échéance à surveiller]</strong> La date limite fixée par CISA pour la remédiation des CVE-2026-25089 et CVE-2026-39808 (FortiSandbox, exploitation active confirmée, agences fédérales US) tombe autour du 19 juillet 2026. Point utile à rappeler aux clients Office Plus exploitant FortiSandbox si le correctif n'a pas encore été appliqué.</li>
-      </ul>
-      <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
-    </section>
-
-    <section>
-      <h3>5. DATA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-07-19 08:07 UTC+11 pour Power BI, Microsoft Fabric, Databricks, dbt Labs ou la gouvernance des données.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <p class="confiance-section">Confiance section : 0,4 / 1,0</p>
-    </section>
-
     <div class="confiance">Confiance globale : 0,5 / 1,0</div>
   </div>
 </article>
