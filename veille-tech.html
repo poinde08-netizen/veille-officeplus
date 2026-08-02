@@ -238,9 +238,14 @@
     <section>
       <h3>Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-08-02 08:07 UTC+11.</p>
+      <p>Aucun élément distinct daté du 31/07 (soir) ou du 01/08 identifié après consultation directe des sources suivies.</p>
       <h4>Signaux faibles</h4>
-      <p>Néant. Les éléments récents identifiés (annonce Anthropic du 31/07 sur des incidents Claude en environnement de test, baisse de tarifs OpenAI GPT-5.6 du 31/07) sont antérieurs au seuil de 24 h retenu ici et ont déjà été couverts par la note du 2026-08-01.</p>
+      <ul>
+        <li>Anthropic (anthropic.com/news, consulté directement) : dernier article publié le 30/07 ("Investigating three real-world incidents in our cybersecurity evaluations"), déjà repris par la note du 2026-08-01 ; rien de nouveau depuis.</li>
+        <li>Google (blog.google, section IA) : aucun article distinctement daté au-delà du "Gemini Drop" de juillet et de l'intégration Gemini Spark/Chrome, sans horodatage précis permettant de les situer dans la fenêtre.</li>
+        <li>Mistral AI (mistral.ai/news) : blog au ralenti, dernière publication le 09/07 ("Your Prompts and Skills need a system of record") ; rien depuis.</li>
+        <li>Hugging Face (Chatbot Arena leaderboard) : page consultée, aucun changement de classement récent visible dans le contenu accessible.</li>
+      </ul>
       <h4 class="alerte">Points d'alerte</h4>
       <p>Néant identifié.</p>
       <p class="confiance-section">Confiance section : 0,6 / 1,0</p>
@@ -249,53 +254,66 @@
       <h3>Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
-        <li>Microsoft a rendu disponible le 01/08 l'offre "Copilot in 30" (essai Microsoft 365 Copilot Business de 25 utilisateurs / 30 jours, destiné aux organisations de moins de 300 employés) via le canal CSP (Cloud Solution Provider). (Source : Microsoft Learn — Partner Center announcements)</li>
+        <li>Microsoft a publié le 31/07 son récapitulatif mensuel "What's New in Microsoft 365 Copilot | July 2026" : évolutions des agents Copilot, améliorations de Copilot Chat, et intégrations renforcées dans Excel, Outlook et PowerPoint (13 min de lecture, 7,6 k vues). (Source : Microsoft 365 Copilot Blog, TechCommunity)</li>
+        <li>L'offre d'essai "Copilot in 30" (Microsoft 365 Copilot Business, 25 utilisateurs / 30 jours, ciblant les organisations de moins de 300 employés) est devenue disponible via le canal CSP (Cloud Solution Provider) à compter du 01/08. (Source : Microsoft Learn — Partner Center announcements)</li>
       </ul>
       <h4>Signaux faibles</h4>
-      <p>Néant de nouveau distinct de la fenêtre 24 h ; le retrait des modèles Gemini 2.5 Pro / Gemini 3 Flash dans GitHub Copilot, daté du 31/07, a déjà été couvert par la note du 2026-08-01.</p>
+      <p>Néant de nouveau ; le retrait des modèles Gemini 2.5 Pro / Gemini 3 Flash dans GitHub Copilot (31/07) et le contrôle de domaine pour le web grounding Copilot (28/07) ont déjà été couverts par une note précédente.</p>
       <h4 class="alerte">Points d'alerte</h4>
       <p>Néant identifié.</p>
-      <p class="confiance-section">Confiance section : 0,7 / 1,0</p>
+      <p class="confiance-section">Confiance section : 0,75 / 1,0</p>
     </section>
     <section>
       <h3>Infra / Réseau</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-08-02 08:07 UTC+11.</p>
+      <ul>
+        <li>Broadcom a corrigé le 29/07 cinq vulnérabilités affectant l'ensemble de la gamme VMware (vCenter, ESXi, Workstation, Fusion), largement relayées le 31/07 : CVE-2026-59309 et CVE-2026-59310 (contournement d'authentification sur VMware Directory Service et exécution de code arbitraire via le serveur Syslog de vCenter, CVSS 9,8 chacune) ; CVE-2026-47876 (évasion de VM via l'adaptateur réseau virtuel VMXNET3 sur ESXi, permettant à un attaquant disposant de privilèges admin sur une VM d'exécuter du code sur l'hôte ESXi, CVSS 9,3) ; CVE-2026-41703 (divulgation d'information / déni de service sur ESXi, Workstation, Fusion) et CVE-2026-41709 (contournement de journalisation des actions admin sur ESXi). (Sources : NetworkWorld, TheHackerNews, Broadcom Security Advisories)</li>
+      </ul>
       <h4>Signaux faibles</h4>
-      <p>Néant confirmé pour Dell, HP, Lenovo, Scale Computing, Synology ou VMware/Broadcom dans la fenêtre stricte de 24 h.</p>
+      <ul>
+        <li>Dell (newsroom), Synology (company/news) et Scale Computing (press-releases) consultés directement : aucune annonce produit ou communiqué constructeur publié dans la fenêtre 24 h (derniers éléments trouvés datés du 22/07 pour Scale Computing et Synology).</li>
+        <li>NetworkWorld a également signalé le 31/07 une levée de fonds de 100 M$ pour Groundcover (observabilité d'infrastructure orientée IA, nouveau mode "Agent" de dépannage automatisé des logs/traces) et un rapport Infoblox sur les enregistrements DNS "dangling" exploités par des attaquants (plus de 22 % des nouveaux domaines analysés présentent des signes de détournement) — signal tangentiel infra/sécurité, non approfondi ici.</li>
+      </ul>
       <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant identifié.</p>
-      <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
+      <p>Les vulnérabilités VMware vCenter/ESXi ci-dessus (deux CVSS 9,8, une CVSS 9,3) justifient une vérification prioritaire des correctifs sur les infrastructures de virtualisation des clients concernés.</p>
+      <p class="confiance-section">Confiance section : 0,7 / 1,0</p>
     </section>
     <section>
       <h3>Cybersécurité</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
-        <li>BleepingComputer a publié le 01/08 (10h20) une analyse détaillée de CVE-2026-66066 (Rails Active Storage / libvips) : lecture arbitraire de fichiers non authentifiée pouvant mener à une exécution de code à distance sur les applications Rails utilisant libvips comme moteur de variantes d'image (par défaut depuis Rails 7.0). CVSS v4 9,5 (score attribué par GitHub en tant que CNA). Vulnérabilité initialement divulguée le 29/07 par l'équipe sécurité Ruby on Rails — correctifs disponibles : 7.2.3.2, 8.0.5.1, 8.1.3.1. (Source : BleepingComputer, Rails Security Announcements)</li>
+        <li>Le script publicitaire d'Adform ("trackpoint-async.js", servi depuis s2.adform.net et intégré à un grand nombre de sites tiers) a été compromis dans le cadre d'une attaque de chaîne d'approvisionnement : le code injecté surveille en continu le presse-papiers des visiteurs et remplace toute adresse de portefeuille crypto (Bitcoin, Ethereum, TRON) copiée par une adresse contrôlée par l'attaquant. Découverte par le chercheur Kevin Beaumont ; les visiteurs de sites intégrant ce script depuis le 27/07 sont concernés ; recommandation : vider les cookies du navigateur. Couverture élargie le 01/08. (Sources : BleepingComputer, TheHackerNews)</li>
+        <li>BleepingComputer a publié le 01/08 (10h20) une analyse détaillée de CVE-2026-66066 (Rails Active Storage / libvips) : lecture arbitraire de fichiers non authentifiée pouvant mener à une exécution de code à distance sur toute application Rails utilisant libvips comme moteur de variantes d'image (par défaut depuis Rails 7.0). CVSS v4 9,5 (score attribué par GitHub en tant que CNA). Divulguée le 29/07 par l'équipe sécurité Ruby on Rails ; correctifs disponibles : 7.2.3.2, 8.0.5.1, 8.1.3.1 ; recommandation de faire tourner tout secret potentiellement exposé (secret_key_base, identifiants tiers).</li>
+        <li>Le laboratoire pharmaceutique Amgen a confirmé le 29/07 le caractère matériel d'une exfiltration de données de santé de patients (PHI) et de données propriétaires depuis des environnements cloud tiers non précisés ; incident détecté en juillet, plan de réponse activé, expertise judiciaire indépendante engagée. Plusieurs indices concordants (dont une alerte Health-ISAC du 24/07 sur le groupe ShinyHunters ciblant le secteur santé) pointent vers ce groupe, sans confirmation officielle d'Amgen à ce stade. Couverture reprise le 01/08. (Sources : BleepingComputer, TechTimes, DataBreaches.net)</li>
       </ul>
       <h4>Signaux faibles</h4>
       <ul>
-        <li>Une faille critique CVSS 10,0 dans Adobe Campaign Classic (CVE-2026-48449, exécution de code sans interaction utilisateur via un défaut d'autorisation) fait l'objet d'articles datés du 01/08 (dont TheHackerNews) ; le correctif Adobe lui-même remonte à un bulletin de juillet 2026, la date exacte de la première divulgation n'a pas pu être confirmée avec certitude — à traiter comme rappel plutôt que fait nouveau tant que la date n'est pas vérifiée à la source Adobe PSIRT.</li>
-        <li>Plusieurs articles BleepingComputer (compromission de la chaîne d'approvisionnement Adform par des scripts de vol de cryptomonnaies, exposition de données Amgen via des systèmes cloud tiers, alerte CISA sur les automates exposés des réseaux d'eau) sont horodatés le 31/07 en fin de journée US, à la limite du seuil des 24 h retenu ici ; l'heure exacte de publication vs le seuil UTC n'a pas pu être confirmée avec une précision suffisante pour les classer en fait établi.</li>
+        <li>Une faille critique CVSS 10,0 dans Adobe Campaign Classic (CVE-2026-48449, exécution de code sans interaction utilisateur via un défaut d'autorisation) et une faille SQLi associée (CVE-2026-48448, CVSS 8,6, lecture de fichiers arbitraire) font l'objet d'articles datés du 01/08 ; le bulletin Adobe d'origine remonte toutefois à un correctif de juillet et la date exacte de première divulgation n'a pas pu être confirmée à la source Adobe PSIRT — à traiter comme rappel plutôt que fait strictement nouveau.</li>
+        <li>cert.ssi.gouv.fr (consulté directement, page /avis/) a publié le 31/07 une série d'avis : IBM (CERTFR-2026-AVI-0958), noyaux Linux Debian LTS/SUSE/Red Hat/Ubuntu (0957/0956/0955/0954), Microsoft Azure (0953), PHP (0952) et Progress MOVEit Transfer (0951). L'horodatage précis de publication (probablement en journée, heure de Paris) place ces avis à la limite ou en amont du seuil strict des 24 h retenu ici ; mentionnés pour la complétude de la source, non comptés comme faits du jour.</li>
+        <li>Fortinet Blog et Krebs on Security, consultés directement : aucun nouvel article publié depuis respectivement le 14/07 (FortiEndpoint, ère IA) et le 30/07 (fraude publicitaire via clés TV H96 exploitant un réseau chinois de fraude publicitaire) — rien de nouveau distinct de la fenêtre 24 h.</li>
       </ul>
       <h4 class="alerte">Points d'alerte</h4>
       <ul>
-        <li>CVE-2026-66066 (Rails Active Storage) : exploitation triviale par simple upload d'image sur toute application Rails utilisant libvips par défaut ; recommandation de patcher en priorité et de faire tourner les secrets exposés (secret_key_base et identifiants tiers) en cas de doute sur une compromission antérieure.</li>
-        <li>Sources consultées sans accès direct (403) : cisa.gov/news-events/cybersecurity-advisories, openai.com/news — contenu non vérifié à la source primaire pour ces deux pages, non inventé.</li>
+        <li>CVE-2026-66066 (Rails Active Storage) : exploitation triviale par simple upload d'image sur toute application vulnérable ; patcher en priorité.</li>
+        <li>Voir axe Infra/Réseau : CVE-2026-59309/59310 (VMware vCenter, CVSS 9,8) à corriger en priorité côté clients utilisant cette plateforme.</li>
+        <li>Sources consultées sans accès direct (403) : cisa.gov/news-events/alerts, cisa.gov/news-events/cybersecurity-advisories — contenu non vérifié à la source primaire, non inventé.</li>
       </ul>
-      <p class="confiance-section">Confiance section : 0,65 / 1,0</p>
+      <p class="confiance-section">Confiance section : 0,75 / 1,0</p>
     </section>
     <section>
       <h3>DATA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-08-02 08:07 UTC+11.</p>
+      <p>Aucune publication distinctement datée du 31/07 (soir) ou du 01/08 identifiée après consultation directe des sources suivies.</p>
       <h4>Signaux faibles</h4>
-      <p>Néant confirmé pour Microsoft Fabric, Power BI ou Databricks dans la fenêtre stricte de 24 h.</p>
+      <ul>
+        <li>Databricks Blog (consulté directement) : article le plus récent daté du 31/07 ("Backstage with Lakebase, part 3", contenu partenaire, peu substantiel) ; le 30/07, Databricks a publié "Convert proprietary code to open ANSI SQL with Genie Code" (conversion de code legacy vers SQL ANSI standard) — hors fenêtre stricte, mentionné pour mémoire.</li>
+        <li>Microsoft Fabric Blog (learn.microsoft.com / microsoft.com/microsoft-fabric/blog) : rien de publié depuis le 29/06 ("Why data teams are emerging as leaders in AI agent adoption").</li>
+      </ul>
       <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant identifié.</p>
-      <p class="confiance-section">Confiance section : 0,5 / 1,0</p>
+      <p>Source non vérifiable : getdbt.com/blog a renvoyé une erreur 404 au moment de la consultation ; contenu non consulté, non inventé.</p>
+      <p class="confiance-section">Confiance section : 0,55 / 1,0</p>
     </section>
-    <div class="confiance">Confiance globale : 0,59 / 1,0</div>
+    <div class="confiance">Confiance globale : 0,67 / 1,0</div>
   </div>
 </article>
 <article class="note-tech" id="note-tech-2026-08-01">
