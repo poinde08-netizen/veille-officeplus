@@ -238,15 +238,15 @@ Veille tech publiée : {PAGES_URL}/{TARGET_FILE}#{NOTE_ID}
 
 ## Sources prioritaires par axe
 
-**Modèles IA :** https://openai.com/blog, https://anthropic.com/news, https://blog.google, https://mistral.ai/news, Hugging Face leaderboard, Papers with Code
+**Modèles IA :** https://intelligence-artificielle.com, https://www.usine-digitale.fr
 
-**Outils IA :** https://techcommunity.microsoft.com, blogs officiels éditeurs
+**Outils IA :** https://www.journaldunet.com (JDN), https://www.lemondeinformatique.fr
 
-**Infra / Réseau :** sites constructeurs Dell, HP, Lenovo, Scale Computing, Synology, Cisco ; VMware by Broadcom blog, NetworkWorld
+**Infra / Réseau :** https://www.lemagit.fr/actualites/Virtualisation-de-serveurs, https://www.silicon.fr, https://www.itpro.fr
 
-**Cybersécurité :** https://www.fortinet.com/blog, https://www.cert.ssi.gouv.fr, CVE Details, Bleeping Computer, Krebs on Security, CISA Alerts
+**Cybersécurité :** https://www.journaldunet.com (rubrique cybersécurité), https://www.silicon.fr, https://www.itpro.fr
 
-**DATA :** https://learn.microsoft.com, Databricks blog, dbt Labs blog, Towards Data Science, Data Engineering Weekly
+**DATA :** https://www.lemondeinformatique.fr, https://www.silicon.fr, https://www.journaldunet.com
 
 ---
 
