@@ -73,6 +73,8 @@ Toute information antérieure à `SEUIL_24H` est écartée (sauf signal faible n
 
 Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
 
+**Traçabilité des sources** : chaque information retenue (fait établi, signal faible ou point d'alerte) doit pointer vers l'article exact qui la source — jamais la page d'accueil du site. Dans le HTML de la note, envelopper la mention de la source par un lien : `<a href="URL_ARTICLE_EXACT" target="_blank" rel="noopener">Nom du site</a>`. Ne jamais fabriquer une URL non vérifiée : si l'URL précise de l'article n'a pas pu être confirmée, citer le nom du site sans lien plutôt que d'inventer un lien.
+
 ### 3. Génération de la note du jour
 
 ```

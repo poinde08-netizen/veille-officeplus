@@ -235,65 +235,100 @@
     <span class="note-date">2026-08-05 08:09 UTC+11 — Fenêtre 24 h</span>
   </div>
   <div class="note-body">
-    <section>
-      <h3>Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Anthropic annonce (04/08/2026) l'arrivée de Mariano-Florentino (Tino) Cuéllar au poste de Chief Global Affairs Officer. Annonce officielle, de nature institutionnelle (pas de nouveau modèle associé).</p>
-      <h4>Signaux faibles</h4>
-      <p>Aucun signal faible distinct identifié sur la fenêtre.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <p class="confiance-section">Confiance section : 0,5 / 1,0 — pas de sortie de modèle majeure dans la fenêtre 24 h (dernières sorties notables hors fenêtre : Claude Opus 5 le 24/07, Gemini 3.6 Flash le 21/07).</p>
-    </section>
-    <section>
-      <h3>Outils IA</h3>
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
-        <li>GitHub Changelog (04/08/2026) : retrait annoncé de l'app « Copilot Billing Preview ».</li>
-        <li>GitHub Changelog (04/08/2026) : dépréciation à venir de GitHub Spark sur github.com — catégorie Copilot.</li>
-        <li>GitHub Changelog (04/08/2026) : personnalisation à grande échelle de la configuration par défaut du code scanning.</li>
-        <li>GitHub Changelog (04/08/2026) : CodeQL 2.26.2 ajoute le support Swift 6.3.3 et Kotlin 2.4.10.</li>
+        <li><strong>Annonce/analyse</strong> — <a href="https://www.silicon.fr/business-1367/pourquoi-microsoft-prend-ses-distances-avec-openai-228622" target="_blank" rel="noopener">Silicon.fr</a> : Microsoft prend ses distances vis-à-vis d'OpenAI, signe d'une diversification de sa dépendance modèle.</li>
+        <li><strong>Fait établi</strong> — <a href="https://www.silicon.fr/business-1367/comment-google-finance-les-infrastructures-anthropic-228657" target="_blank" rel="noopener">Silicon.fr</a> : détail du montage financier par lequel Google garantit environ 150 Md$ de puces TPU louées (et non achetées) à Anthropic, via un véhicule financier associant Broadcom, Morgan Stanley, Apollo et Blackstone.</li>
+        <li><strong>Fait établi</strong> — <a href="https://www.silicon.fr/data-ia-1372/amazon-nova-228662" target="_blank" rel="noopener">Silicon.fr</a> : plusieurs modèles de la famille Amazon Nova sont désormais considérés comme legacy.</li>
       </ul>
       <h4>Signaux faibles</h4>
-      <p>Aucun.</p>
+      <p>Aucun signal faible distinct au-delà des faits ci-dessus.</p>
       <h4 class="alerte">Points d'alerte</h4>
       <p>Aucun.</p>
-      <p class="confiance-section">Confiance section : 0,7 / 1,0 — annonces officielles issues directement du changelog GitHub, horodatage journalier non garanti à la minute près.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
     </section>
-    <section>
-      <h3>Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-08-05 08:09 UTC+11.</p>
-      <h4>Signaux faibles</h4>
-      <p>Aucun.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <p class="confiance-section">Confiance section : 1,0 / 1,0 — absence confirmée après recherche sur Dell, HP, Lenovo, Synology, Scale Computing, VMware/Broadcom.</p>
-    </section>
-    <section>
-      <h3>Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-08-05 08:09 UTC+11 concernant Fortinet/FortiOS (dernier avis PSIRT recensé : 14/07/2026 ; aucun nouvel avis CERT-FR dans la fenêtre, dernier avis pertinent le 03/08/2026, hors fenêtre).</p>
-      <h4>Signaux faibles</h4>
-      <p>Aucun.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Hors périmètre Fortinet mais à surveiller par prudence (information antérieure à la fenêtre 24 h, signalée à titre exceptionnel) : exploitation active en cours de CVE-2026-18577 (contournement d'authentification N-able N-central, CVSS 8.2), ajoutée au catalogue CISA KEV le 03/08/2026. Aucun lien confirmé avec les produits Fortinet du périmètre Office Plus.</p>
-      <p class="confiance-section">Confiance section : 0,6 / 1,0 — absence de nouveauté Fortinet confirmée sur plusieurs sources croisées (FortiGuard PSIRT, CERT-FR).</p>
-    </section>
-    <section>
-      <h3>DATA</h3>
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
       <h4>Faits établis (&lt; 24 h)</h4>
       <ul>
-        <li>Databricks Blog (04/08/2026) : disponibilité générale (GA) d'« Unity AI Gateway ».</li>
-        <li>Databricks Blog (04/08/2026) : Databricks rejoint l'« Open Secure AI Alliance » pour la sécurité et la sûreté de l'IA.</li>
+        <li><strong>Fait établi</strong> — <a href="https://www.silicon.fr/business-1367/linkedin-degaine-son-bouton-anti-slop-ia-228639" target="_blank" rel="noopener">Silicon.fr</a> : LinkedIn déploie un bouton permettant de filtrer le « slop IA » (contenus générés en masse et jugés de faible qualité) dans le fil d'actualité.</li>
+        <li><strong>Analyse (04/08/2026)</strong> — <a href="https://www.lemagit.fr/actualites/366647199/LIA-agentique-menace-plus-de-230-milliards-du-marche-SaaS-dici-2030" target="_blank" rel="noopener">LeMagIT</a> : l'IA agentique (outils/agents autonomes en entreprise) menacerait plus de 230 Md$ du marché SaaS traditionnel d'ici 2030.</li>
+        <li><strong>Fait établi</strong> — <a href="https://www.itpro.fr/le-tournant-mythos-les-entreprises-devront-opposer-des-agents-ia-a-des-agents-ia" target="_blank" rel="noopener">ITpro.fr</a> : les entreprises devront de plus en plus opposer leurs propres agents IA à des agents IA malveillants (« tournant Mythos »).</li>
       </ul>
       <h4>Signaux faibles</h4>
-      <p>Aucun.</p>
+      <p>Aucun signal faible distinct.</p>
       <h4 class="alerte">Points d'alerte</h4>
       <p>Aucun.</p>
-      <p class="confiance-section">Confiance section : 0,7 / 1,0 — annonces officielles issues directement du blog Databricks ; pas de nouveauté Power BI/Microsoft Fabric identifiée dans la fenêtre stricte (dernier récapitulatif Power BI daté de juillet 2026, hors fenêtre).</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
     </section>
-    <div class="confiance">Confiance globale : 0,7 / 1,0 — Source inaccessible signalée : openai.com/news (HTTP 403, non consultable depuis cet environnement) ; les autres sources prioritaires ont été consultées avec succès.</div>
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Fait établi</strong> — <a href="https://www.silicon.fr/cloud-1370/broadcom-cispe-voies-recours-228328" target="_blank" rel="noopener">Silicon.fr</a> : le contentieux Broadcom/VMware vs CISPE se poursuit — de nombreux recours engagés par les fournisseurs cloud européens, mais peu d'effets concrets à ce stade sur la politique de licence VMware.</li>
+        <li><strong>Fait établi</strong> — <a href="https://www.silicon.fr/data-ia-1372/infrastructure-ia-cloud-magic-quadrant-2026-228633" target="_blank" rel="noopener">Silicon.fr</a> : le Magic Quadrant 2026 « Infrastructures cloud pour l'IA » de Gartner positionne notamment OVHcloud et Scaleway aux côtés des grands hyperscalers.</li>
+        <li><strong>Contenu partenaire</strong> — <a href="https://www.itpro.fr/en-route-vers-windows-11-concevoir-un-poste-de-travail-moderne-securise-et-resilient-avec-lenovo-et-inmac-wstore" target="_blank" rel="noopener">ITpro.fr</a> : accompagnement Lenovo / inmac wstore pour la migration de postes de travail vers Windows 11 (poste moderne, sécurisé et résilient).</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucun signal faible distinct.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Fait établi</strong> — <a href="https://www.silicon.fr/cybersecurite-1371/sase-magic-quadrant-2026-228654" target="_blank" rel="noopener">Silicon.fr</a> : le Magic Quadrant Gartner 2026 pointe un risque de « surplateformisation » du marché SASE (extension fonctionnelle continue — NDR, XDR — au risque de s'éloigner du besoin réel des acheteurs) ; les approches mono-fournisseur progressent (35 % des achats 2026, 75 % projetés en 2029).</li>
+        <li><strong>Fait établi</strong> — <a href="https://www.itpro.fr/ransomware-les-identites-compromises-a-lorigine-de-79-des-attaques" target="_blank" rel="noopener">ITpro.fr</a> : les identités compromises seraient à l'origine de 79 % des attaques par rançongiciel.</li>
+        <li><strong>Fait établi</strong> — <a href="https://www.itpro.fr/attaques-ia-un-active-directory-peut-etre-compromis-en-40-minutes" target="_blank" rel="noopener">ITpro.fr</a> : des attaques assistées par IA permettraient de compromettre un Active Directory en 40 minutes.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucune actualité Fortinet/FortiOS spécifique dans la fenêtre (dernier avis PSIRT recensé : 14/07/2026 ; aucun nouvel avis CERT-FR dans la fenêtre).</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun point d'alerte Fortinet. Pour mémoire, hors fenêtre stricte : exploitation active en cours de CVE-2026-18577 (contournement d'authentification N-able N-central), sans lien confirmé avec le périmètre Fortinet.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Annonce officielle (04/08/2026)</strong> — <a href="https://www.databricks.com/blog/unity-ai-gateway-generally-available" target="_blank" rel="noopener">Databricks Blog</a> : disponibilité générale (GA) d'Unity AI Gateway, la couche de gouvernance runtime pour modèles, agents et serveurs MCP (contrôles de coûts, garde-fous, observabilité).</li>
+        <li><strong>Annonce officielle (04/08/2026)</strong> — <a href="https://www.databricks.com/blog/databricks-joins-open-secure-ai-alliance-advance-ai-safety-and-security" target="_blank" rel="noopener">Databricks Blog</a> : Databricks rejoint comme membre fondateur l'« Open Secure AI Alliance » (avec NVIDIA notamment), apportant Omnigent, DASF 3.0, DAGF et BlackIce en open source pour la sécurité de l'IA.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucune nouveauté Power BI / Microsoft Fabric identifiée dans la fenêtre stricte (dernier récapitulatif Power BI daté de juillet 2026, hors fenêtre).</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,8 / 1,0</span>
+      </div>
+    </section>
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+      <span class="conf-value">0,7 / 1,0</span>
+    </div>
   </div>
 </article>
 
