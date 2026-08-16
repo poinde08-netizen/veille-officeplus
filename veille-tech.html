@@ -229,6 +229,116 @@
   </div>
 </div>
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-08-17">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">2026-08-17 08:10 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 17/08/2026 08:10 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li><strong>Hors fenêtre (contexte, 15/08/2026)</strong> — Anthropic a détaillé publiquement le fonctionnement du filigrane invisible de Claude (mécanisme SynthID-Text de Google DeepMind) : résistance à l'édition légère, couverture réduite sur le code généré, et arrivée annoncée d'une API de détection. Annonce officielle. Source : <a href="https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/" target="_blank" rel="noopener">TechCrunch</a>.</li>
+        <li><strong>Hors fenêtre (contexte, 14/08/2026)</strong> — Anthropic a publié son Risk Report d'août 2026 : relèvement de l'estimation de risque de « désalignement catastrophique » de « très faible » à « faible » (Responsible Scaling Policy v3.4), confirmation qu'un modèle interne plus capable n'est pas prévu au déploiement externe, et mention d'une faille passée (classifieurs de sécurité biologique désactivés ~11 mois sur 133 M d'échanges de feedback). Annonce officielle (rapport Anthropic), reprise par Axios.</li>
+        <li><strong>Hors fenêtre, signal faible (14/08/2026)</strong> — Un agent IA basé sur Claude Sonnet 4.6 (projet « Luna », Andon Labs) aurait pris la décision de licencier un employé humain, validée ensuite par un humain — première documentée de ce type dans la presse. À traiter comme signal, non comme fait généralisable.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Pour les usages Office Plus/clients de Claude en production de contenu (devis, rapports, code) : le filigrane invisible peut persister après édition légère du texte — point de vigilance si le contenu est présenté comme rédigé sans assistance IA. Le relèvement (hors fenêtre) du risque de désalignement par Anthropic elle-même est un signal à suivre dans la durée pour les déploiements agentiques (Claude Code, Cowork), sans lien direct annoncé avec les modèles commerciaux actuellement déployés.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 17/08/2026 08:10 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li><strong>Hors fenêtre (contexte, 14/08/2026)</strong> — GitHub Copilot intègre le modèle xAI Grok 4.6 pour le codage agentique (annonce officielle). Source : <a href="https://github.blog/changelog/" target="_blank" rel="noopener">GitHub Changelog</a>.</li>
+        <li><strong>Hors fenêtre (contexte, 12/08/2026)</strong> — GitHub Copilot Agent Plugins passe en disponibilité générale (VS Code, Copilot CLI, SDK, app Copilot) — gestion unifiée des plugins entre outils. Annonce officielle.</li>
+        <li><strong>Hors fenêtre (contexte, 10–13/08/2026)</strong> — Google déploie « Sheets canvas » dans Google Workspace (bêta publique, Rapid Release) : transforme une feuille Sheets en application interactive pilotée par prompts Gemini. Source : <a href="https://workspaceupdates.googleblog.com/" target="_blank" rel="noopener">Google Workspace Updates</a>.</li>
+        <li><strong>Signal faible, statut incertain (daté « août 2026 » sans horodatage précis, sources secondaires non officielles)</strong> — plusieurs blogs évoquent une vague de nouveautés Microsoft 365 Copilot (génération de visuels dans PowerPoint, extension des notebooks Copilot, renommage possible de l'app en « Microsoft Copilot »). Non confirmé par une source officielle Microsoft datée dans la fenêtre — à revérifier lors des prochaines veilles.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Rythme soutenu des mises à jour de modèles dans GitHub Copilot (plusieurs changements de modèles en deux semaines) avec des dépréciations annoncées au 1er septembre 2026 — à anticiper pour les clients Office Plus sous GitHub Copilot Business/Enterprise. Le renommage évoqué de Microsoft 365 Copilot reste non confirmé dans la fenêtre : ne pas communiquer aux clients avant confirmation officielle.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 17/08/2026 08:10 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li><strong>Hors fenêtre (contexte, 05–07/08/2026)</strong> — Scale Computing lance SC//HyperCore Imaging Service, permettant de déployer l'hyperviseur HyperCore sur du matériel existant qualifié, pour contourner les délais d'approvisionnement matériel. Annonce officielle (communiqué Scale Computing).</li>
+        <li><strong>Hors fenêtre (contexte, 07/08/2026)</strong> — Synology présente la gamme DiskStation neo+ (DS1825neo+, DS1525neo+, DS925neo+, DS725neo+) : NAS d'entrée de gamme, CPU AMD, chiffrement matériel. Annonce officielle Synology.</li>
+        <li><strong>Hors fenêtre (contexte, 13/08/2026)</strong> — Lenovo publie des résultats trimestriels record côté infrastructure (chiffre d'affaires quasi doublé, 8,51 Md$), entraînant une hausse anticipée des actions HPE (+8 %), Dell (+4 %) et HP (+6,5 %) avant les résultats HPE attendus le 02/09/2026. Fait établi (résultats financiers officiels) mais hors fenêtre.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Dynamique commerciale forte de Lenovo sur l'infra serveur, avec anticipation d'un bon trimestre HPE le 02/09/2026 — élément à suivre pour les arbitrages fournisseurs à moyen terme. Le dossier tarifaire VMware/Broadcom (hausses rapportées par le Cigref) reste un point de vigilance permanent pour les clients PME encore sous vSphere, sans nouvel élément dans cette fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 17/08/2026 08:10 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li><strong>Hors fenêtre (contexte, 13/08/2026)</strong> — CERT-FR (avis CERTFR-2026-AVI-1015) et Fortinet PSIRT (FG-IR-26-156 à -163) publient conjointement 8 nouveaux CVE affectant FortiOS, FortiProxy, FortiManager, FortiWeb, FortiClient Windows, FortiPAM, FortiSIEM et FortiSwitchManager (exécution de code à distance, déni de service, contournement de sécurité, SSRF, élévation de privilèges). Annonce officielle. Sources : <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1015/" target="_blank" rel="noopener">CERT-FR</a>, <a href="https://www.globalsecuritymag.fr/multiples-vulnerabilites-dans-les-produits-fortinet-13-aout-2026.html" target="_blank" rel="noopener">Global Security Mag</a>.</li>
+        <li><strong>Hors fenêtre (contexte, 10/08/2026)</strong> — Avis conjoint FBI/CISA/NSA/US Secret Service (AA26-222A) : le rançongiciel Gunra exploite des failles connues sur des appliances FortiOS/FortiProxy exposées à Internet (CVE-2024-55591, CVE-2025-24472) pour contourner le MFA et déployer un ransomware en double extorsion. Annonce officielle. Sources : <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a" target="_blank" rel="noopener">CISA</a>, <a href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html" target="_blank" rel="noopener">The Hacker News</a>.</li>
+        <li><strong>Hors fenêtre (contexte, 12/08/2026)</strong> — Rapport Sophos 2026 : l'IA accélère les attaques et expose davantage les identités non gouvernées (Zero Trust/gouvernance des identités). Source : <a href="https://www.itpro.fr/lia-accelere-les-attaques-et-expose-les-identites-non-gouvernees" target="_blank" rel="noopener">ITPro.fr</a>.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Recommandation toujours valable et renforcée par les 8 nouveaux CVE Fortinet du 13/08 : prioriser le déploiement des correctifs sur l'ensemble du parc Fortinet exposé (FortiOS, FortiProxy, FortiManager, FortiWeb, FortiClient Windows, FortiPAM, FortiSIEM, FortiSwitchManager), restreindre l'accès de gestion depuis Internet, et vérifier l'authentification multifacteur — dans la continuité directe de la campagne Gunra (CVE-2024-55591, CVE-2025-24472) signalée par CISA/FBI le 10/08.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 17/08/2026 08:10 UTC+11.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li><strong>Hors fenêtre (contexte, 13/08/2026)</strong> — Databricks annonce une levée de fonds de 5 Md$ (tour mené par Coatue, avec Blackstone, MGX, T. Rowe Price, Sixth Street Growth) à une valorisation de 190 Md$, avec un ARR dépassant 7 Md$ (+80 % sur un an). Annonce officielle, largement reprise par la presse financière.</li>
+        <li><strong>Hors fenêtre (contexte, 03–14/08/2026)</strong> — Databricks a fait passer en disponibilité générale plusieurs briques de gouvernance des données (Unity AI Gateway, connecteur SharePoint) et étendu son offre Governance Hub / Genie — consolidation de sa position face à Microsoft Fabric.</li>
+        <li><strong>Signal faible, roadmap non confirmée</strong> — le format PBIR (Power BI Enhanced Report Format) deviendrait le format par défaut de Power BI Desktop, bascule annoncée « juillet–août 2026 » sans date précise confirmée à ce jour.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>La montée en puissance financière et fonctionnelle de Databricks (gouvernance, valorisation) est un élément utile pour argumenter des choix de plateforme DATA auprès de clients, sans urgence d'action. La bascule du format PBIR par défaut (non confirmée) mérite un point de vigilance pour les clients ayant des rapports Power BI versionnés sous Git — à revérifier lors d'une prochaine veille dès que la date sera confirmée.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:34%"></span></span>
+      <span class="conf-value">0,34 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <article class="note-tech" id="note-tech-2026-08-16">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -319,7 +429,6 @@
     </div>
   </div>
 </article>
-
 <article class="note-tech" id="note-tech-2026-08-15">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -1225,69 +1334,6 @@
       <p class="confiance-section">Confiance section : 0,7 / 1,0 — annonces officielles issues directement du blog Databricks ; pas de nouveauté Power BI/Microsoft Fabric identifiée dans la fenêtre stricte (dernier récapitulatif Power BI daté de juillet 2026, hors fenêtre).</p>
     </section>
     <div class="confiance">Confiance globale : 0,7 / 1,0 — Source inaccessible signalée : openai.com/news (HTTP 403, non consultable depuis cet environnement) ; les autres sources prioritaires ont été consultées avec succès.</div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-08-04">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">2026-08-04 08:10 UTC+11 — Fenêtre 24 h</span>
-  </div>
-  <div class="note-body">
-    <section>
-      <h3>Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul>
-        <li><strong>Annonce officielle</strong> — OpenAI a dévoilé <em>Astra</em>, présenté comme son « prochain modèle majeur », dans un billet de blog publié le 2 août 2026 à 18h31 (heure US, ~22h31 UTC — dans la fenêtre des 24h). Une version interne aurait résolu 10 problèmes mathématiques non résolus depuis au moins une décennie (théorie des groupes, complexité quantique, combinatoire extrémale, empilement de sphères). OpenAI indique ne pas avoir encore tranché entre une sortie sous le nom GPT-5.7, GPT-6 ou un autre nom. <em>Point de vigilance méthodologique : ces résultats sont auto-rapportés par OpenAI, non vérifiés par un tiers indépendant à ce stade.</em> (Source : Bleeping Computer relayant le blog OpenAI)</li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>Aucun signal faible distinct identifié pour cet axe dans la fenêtre de 24 h (au-delà de l'annonce Astra ci-dessus).</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun point d'alerte identifié.</p>
-      <p class="confiance-section">Confiance section : 0,6 / 1,0 (source secondaire relayant des affirmations non vérifiées par un tiers)</p>
-    </section>
-    <section>
-      <h3>Outils IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 04/08/2026 08:10 UTC+11.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <p class="confiance-section">Confiance section : 1,0 / 1,0 (absence confirmée par recherches ciblées multiples sur Copilot M365, GitHub Copilot, Gemini Workspace)</p>
-    </section>
-    <section>
-      <h3>Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 04/08/2026 08:10 UTC+11.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <p class="confiance-section">Confiance section : 1,0 / 1,0 (absence confirmée sur Scale Computing, VMware, Dell, HP, Lenovo, Synology)</p>
-    </section>
-    <section>
-      <h3>Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h concernant spécifiquement Fortinet/FortiOS, SASE, Zero Trust ou EDR trouvée à la date du 04/08/2026 08:10 UTC+11. Les dernières avancées PSIRT Fortinet connues (FG-IR-26-152/153/154) datent du 14 juillet 2026, hors fenêtre.</p>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Hors périmètre strict mais contexte sécurité pertinent (publié aujourd'hui sur The Hacker News, non vérifié indépendamment ici) : une vulnérabilité critique CVSS 10.0 (CVE-2026-48449) dans Adobe Campaign Classic, et un contournement d'authentification (CVE-2026-18577) dans l'outil de gestion à distance N-able N-central, activement exploité via des tunnels Cloudflare. Ces produits ne font pas partie du périmètre vendeurs de cette veille (Fortinet) mais peuvent concerner des environnements clients en gestion d'infrastructure/MSP.</li>
-      </ul>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun point d'alerte Fortinet dans la fenêtre. Rappel : la CVE-2026-25089 (FortiSandbox, injection de commande OS, exploitation active confirmée) reste d'actualité opérationnelle mais a été ajoutée au catalogue CISA KEV le 16 juillet 2026 — hors fenêtre de 24h, mentionnée ici pour mémoire uniquement.</p>
-      <p class="confiance-section">Confiance section : 0,7 / 1,0</p>
-    </section>
-    <section>
-      <h3>DATA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 04/08/2026 08:10 UTC+11.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <p class="confiance-section">Confiance section : 1,0 / 1,0 (absence confirmée sur Power BI, Microsoft Fabric, Databricks, gouvernance des données)</p>
-    </section>
-    <div class="confiance">Confiance globale : 0,8 / 1,0</div>
   </div>
 </article>
 <!-- /NOTES-TECH -->
