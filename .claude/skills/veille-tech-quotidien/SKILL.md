@@ -13,7 +13,9 @@ description: >
 
 Note quotidienne courte, publiée automatiquement sur une page GitHub Pages dédiée, distincte de la veille commerciale complète.
 
-**Fenêtre temporelle** : 24 heures glissantes (pas 48h — cadence quotidienne, pas de recouvrement voulu). Si aucune information récente pour un axe : `Aucune information de moins de 24 h trouvée à la date du [DATE] [HEURE UTC+11].`
+**Fenêtre temporelle** : 24 heures glissantes (pas 48h — cadence quotidienne, pas de recouvrement voulu).
+
+**Repli si aucune nouveauté (jamais d'axe vide)** : si, après recherche élargie (voir « Sources prioritaires par axe »), aucune information < 24h n'est trouvée pour un axe, ne pas afficher un axe vide. Chercher la dernière information disponible pour cet axe, sans limite de date, et la reprendre sous une sous-section dédiée « Dernière information connue (hors fenêtre 24 h) », avec sa date réelle de publication et sa source, clairement distinguée des faits établis < 24h (voir gabarit à l'étape 3). Ce n'est qu'à défaut de toute information exploitable, même ancienne, que la mention `Aucune information trouvée pour cet axe à la date du [DATE] [HEURE UTC+11].` est utilisée.
 
 **Accumulation** : contrairement à `veille-marche` (qui remplace tout à chaque run), cette note s'ajoute en tête de la page à chaque exécution. Les 14 dernières notes sont conservées ; au-delà, la plus ancienne est retirée.
 
@@ -71,7 +73,11 @@ Toute information antérieure à `SEUIL_24H` est écartée (sauf signal faible n
 
 ### 2. Collecte par axe
 
-Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
+Pour chacun des 5 axes : interroger l'ensemble des sources listées dans « Sources prioritaires par axe » (pas seulement les deux ou trois premières — le ratissage large est la règle, pas l'exception), vérifier la date de publication, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible (ex. HTTP 403, timeout) sans en inventer le contenu, et continuer avec les sources restantes plutôt que d'abandonner l'axe.
+
+Deux passes par axe :
+1. **Passe 24h** : ne retenir que les résultats postérieurs à `SEUIL_24H`.
+2. **Passe de repli** (uniquement si la passe 1 est vide pour cet axe) : rechercher, sur les mêmes sources élargies, l'information la plus récente disponible sans limite de date, en vue de la reprendre comme « Dernière information connue » (voir Fenêtre temporelle et étape 3). Ne jamais rejeter silencieusement un résultat ancien à ce stade — c'est justement celui-là qui comble l'axe.
 
 ### 3. Génération de la note du jour
 
@@ -126,6 +132,15 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
   </div>
 </section>
 ```
+
+Gabarit de repli, à utiliser à la place de `{FAITS_EN_HTML}` uniquement quand la passe 24h de l'axe est vide (voir « Repli si aucune nouveauté ») — les blocs Signaux faibles / Points d'alerte / confiance restent inchangés :
+
+```html
+<h4>Dernière information connue (hors fenêtre 24 h)</h4>
+<p class="repli-24h">Aucune nouveauté &lt; 24 h pour cet axe. Dernière information disponible : <strong>{RESUME_INFO}</strong> — publiée le {DATE_INFO_ORIGINALE}, source {SOURCE_INFO}. <em>[{STATUT_INFO}]</em></p>
+```
+
+`{STATUT_INFO}` reprend la même distinction que pour un fait établi (annonce officielle / bêta publique / roadmap non confirmée / rumeur). `{CONFIANCE_SECTION}` d'un axe en repli doit rester modeste (l'information n'est pas fraîche) — recommandé : 0,3–0,4 sauf si l'info de repli reste opérationnellement pertinente (ex. CVE toujours non patchée).
 
 `{CONFIANCE_SECTION_PCT}` et `{CONFIANCE_PCT}` sont la confiance (0,0–1,0) multipliée par 100, arrondie à l'entier (ex. 0,6 → `60`).
 
@@ -238,15 +253,17 @@ Veille tech publiée : {PAGES_URL}/{TARGET_FILE}#{NOTE_ID}
 
 ## Sources prioritaires par axe
 
-**Modèles IA :** https://intelligence-artificielle.com, https://www.usine-digitale.fr
+Ratissage large : interroger toutes les sources de l'axe (presse FR + newsrooms officiels éditeurs, plus fiables pour dater précisément une annonce), pas seulement les deux premières. Si une source est inaccessible, passer aux suivantes sans réduire l'axe à « aucune info ».
 
-**Outils IA :** https://www.journaldunet.com (JDN), https://www.lemondeinformatique.fr
+**Modèles IA :** https://intelligence-artificielle.com, https://www.usine-digitale.fr, https://www.actuia.com, https://www.blogdumoderateur.com/ia, https://www.lebigdata.fr — newsrooms officiels : https://www.anthropic.com/news, https://openai.com/news, https://blog.google/technology/ai, https://mistral.ai/news, https://ai.meta.com/blog — presse tech internationale en complément : https://techcrunch.com/category/artificial-intelligence, https://venturebeat.com/ai
 
-**Infra / Réseau :** https://www.lemagit.fr/actualites/Virtualisation-de-serveurs, https://www.silicon.fr, https://www.itpro.fr
+**Outils IA :** https://www.journaldunet.com (JDN), https://www.lemondeinformatique.fr, https://www.zdnet.fr, https://www.01net.com — newsrooms officiels : https://www.microsoft.com/en-us/microsoft-365/blog, https://github.blog/changelog, https://workspace.google.com/blog
 
-**Cybersécurité :** https://www.journaldunet.com (rubrique cybersécurité), https://www.silicon.fr, https://www.itpro.fr
+**Infra / Réseau :** https://www.lemagit.fr/actualites/Virtualisation-de-serveurs, https://www.silicon.fr, https://www.itpro.fr, https://www.01net.com, https://www.blocksandfiles.com, https://www.datacenterdynamics.com — communiqués éditeurs : pages presse/blog Synology, Dell, HP, Lenovo, VMware/Broadcom, Scale Computing
 
-**DATA :** https://www.lemondeinformatique.fr, https://www.silicon.fr, https://www.journaldunet.com
+**Cybersécurité :** https://www.journaldunet.com (rubrique cybersécurité), https://www.silicon.fr, https://www.itpro.fr, https://www.lemagit.fr/actualites/Cyberconformite, https://www.zataz.com — sources officielles CVE/alertes : https://www.cert.ssi.gouv.fr/alerte, https://www.cert.ssi.gouv.fr/avis, https://www.fortiguard.com/psirt — presse cybersécu internationale en complément : https://www.bleepingcomputer.com, https://thehackernews.com, https://www.darkreading.com
+
+**DATA :** https://www.lemondeinformatique.fr, https://www.silicon.fr, https://www.journaldunet.com, https://www.decideo.fr — newsrooms officiels : https://community.fabric.microsoft.com (blog Power BI / Fabric updates, dates précises), https://www.databricks.com/blog
 
 ---
 
