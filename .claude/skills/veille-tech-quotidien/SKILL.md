@@ -1,9 +1,10 @@
 ---
 name: veille-tech-quotidien
 description: >
-  Veille technologique automatisée quotidienne, limitée à 5 axes : Modèles IA,
-  Outils IA, Infra/Réseau, Cybersécurité, DATA. Conçue pour une exécution sans
-  supervision (Routine Claude Code planifiée à 08h00 UTC+11), pas pour un usage
+  Veille technologique automatisée quotidienne, limitée à 6 axes : Modèles IA,
+  Outils IA, Infra/Réseau, Cybersécurité, DATA, Mouvements IT (créations,
+  rachats, levées de fonds). Conçue pour une exécution sans supervision
+  (Routine Claude Code planifiée à 08h00 UTC+11), pas pour un usage
   conversationnel manuel. Distincte de `veille-marche` (10 axes, incluant les
   volets commerciaux NC) : ne pas fusionner les deux, ne pas publier sur la
   même page GitHub Pages.
@@ -19,7 +20,7 @@ Note quotidienne courte, publiée automatiquement sur une page GitHub Pages déd
 
 ---
 
-## Périmètre (5 axes, sous-ensemble de veille-marche)
+## Périmètre (6 axes, sous-ensemble de veille-marche)
 
 | # | Axe | Focus |
 |---|-----|-------|
@@ -28,6 +29,9 @@ Note quotidienne courte, publiée automatiquement sur une page GitHub Pages déd
 | 3 | Infra / Réseau | Scale Computing, VMware, Dell, HP, Lenovo, Synology, Wi-Fi 6/7 |
 | 4 | Cybersécurité | Fortinet (firmware, CVE, FortiOS), SASE, Zero Trust, EDR, CERT |
 | 5 | DATA | Power BI, Microsoft Fabric, Databricks, gouvernance données |
+| 6 | Mouvements IT | Créations d'entreprise IT, rachats/fusions, levées de fonds, gros mouvements de capitaux dans le secteur informatique (éditeurs, intégrateurs, hébergeurs, constructeurs) |
+
+L'axe 6 (Mouvements IT) couvre le secteur informatique au sens large (national/international) : il ne se substitue pas à l'axe « Concurrentielle NC » de `veille-marche`, qui reste le seul axe traitant spécifiquement des concurrents directs d'Office Plus en Nouvelle-Calédonie.
 
 Axes exclus volontairement (hors périmètre de cette veille quotidienne, restent dans `veille-marche` sur demande) : Concurrentielle NC, Client NC, Sectorielle NC, AO NC, Réglementation.
 
@@ -71,7 +75,9 @@ Toute information antérieure à `SEUIL_24H` est écartée (sauf signal faible n
 
 ### 2. Collecte par axe
 
-Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
+Pour chacun des 6 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
+
+Pour l'axe 6 (Mouvements IT) spécifiquement : vérifier le montant et la devise annoncés (à reporter tels quels, sans conversion approximative), le statut de l'opération (rumeur / signée / bouclée / validée par les autorités de la concurrence), et les parties prenantes exactes (acquéreur, cible, investisseurs). Une rumeur non confirmée par au moins une source ou un communiqué officiel reste un signal faible, jamais un fait établi.
 
 ### 3. Génération de la note du jour
 
@@ -91,6 +97,7 @@ NOTE_ID = note-tech-{YYYY-MM-DD}
     {SECTION_INFRA}
     {SECTION_CYBERSECURITE}
     {SECTION_DATA}
+    {SECTION_MOUVEMENTS_IT}
     <div class="confiance">
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:{CONFIANCE_PCT}%"></span></span>
@@ -109,6 +116,7 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
 | 3. Infra / Réseau | `axis-infra` |
 | 4. Cybersécurité | `axis-cyber` |
 | 5. DATA | `axis-data` |
+| 6. Mouvements IT | `axis-corporate` |
 
 ```html
 <section class="{AXIS_CLASS}">
@@ -133,7 +141,7 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
 
 Exécuter via `bash_tool` (adapter `{ARTICLE_HTML}` avec le bloc de l'étape 3) :
 
-**Important** : la mise en forme (CSS par thématique, légende de couleurs, barres de confiance) vit dans le `<head>` et le début du `<body>` de `veille-tech.html`, en dehors des marqueurs `NOTES-TECH` — le script ci-dessous ne touche jamais cette zone. Ne pas la régénérer sauf si `veille-tech.html` n'existe pas encore (squelette de secours ci-dessous), auquel cas reprendre le `<head>`/légende déjà déployés sur `https://poinde08-netizen.github.io/veille-officeplus/veille-tech.html` (vue source) pour ne pas perdre le style.
+**Important** : la mise en forme (CSS par thématique, légende de couleurs, barres de confiance) vit dans le `<head>` et le début du `<body>` de `veille-tech.html`, en dehors des marqueurs `NOTES-TECH` — le script ci-dessous ne touche jamais cette zone. Ne pas la régénérer sauf si `veille-tech.html` n'existe pas encore (squelette de secours ci-dessous), auquel cas reprendre le `<head>`/légende déjà déployés sur `https://poinde08-netizen.github.io/veille-officeplus/veille-tech.html` (vue source) pour ne pas perdre le style. Le `<head>` déployé définit déjà la classe `axis-corporate` (couleur ambre `--c-corporate`) et l'entrée de légende correspondante pour l'axe 6 ; si un jour le `<head>` doit être régénéré depuis zéro, reprendre ces définitions à l'identique.
 
 ```python
 import subprocess, os, tempfile, shutil, re
@@ -247,6 +255,8 @@ Veille tech publiée : {PAGES_URL}/{TARGET_FILE}#{NOTE_ID}
 **Cybersécurité :** https://www.journaldunet.com (rubrique cybersécurité), https://www.silicon.fr, https://www.itpro.fr
 
 **DATA :** https://www.lemondeinformatique.fr, https://www.silicon.fr, https://www.journaldunet.com
+
+**Mouvements IT :** https://www.decideur-it.fr, https://www.itespresso.fr, https://www.silicon.fr (rubrique Business/Deals), https://www.channelnews.fr
 
 ---
 
