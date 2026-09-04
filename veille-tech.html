@@ -229,6 +229,115 @@
   </div>
 </div>
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-09-05">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">05/09/2026 08:08 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Fait établi — OpenAI (annonce officielle), publiée le 3-4 septembre 2026, corroborée par des sources secondaires concordantes (Al Jazeera, GitHub Changelog officiel du 4 septembre 2026).</strong> Lancement de <strong>GPT-6 Astra</strong>, présenté par OpenAI comme son modèle le plus avancé et le mieux aligné à ce jour, devançant GPT-5.6 Sol et Claude Fable 5 d'Anthropic sur plusieurs benchmarks de référence (FrontierMath Tier 4, ARC-AGI 3, TerminalBench-4.0, HealthBench Pro). Déploiement progressif annoncé sur l'ensemble des plans ChatGPT dans les prochains jours.</li>
+      </ul>
+      <p><em>Note méthodologique :</em> l'accès direct à <code>openai.com/news</code> reste restreint (HTTP 403) au moment de la vérification ; le fait ci-dessus repose sur des sources secondaires datées et concordantes, pas sur la newsroom officielle elle-même.</p>
+      <h4>Signaux faibles</h4>
+      <p>Aucune annonce nouvelle datée dans la fenêtre sur les newsrooms officielles vérifiées directement : Anthropic (dernière publication le 1er septembre 2026, hors fenêtre), Mistral AI (dernière publication le 24 août 2026, hors fenêtre), Meta AI (dernière publication le 27 juillet 2026, hors fenêtre). Le blog Google AI/Gemini a été consulté mais n'affiche pas de date de publication par article — présence ou absence d'annonce dans la fenêtre non vérifiable formellement, à revérifier au prochain cycle.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Selon OpenAI, GPT-6 Astra serait le premier modèle de la société à franchir le seuil interne de sauvegarde « cyber critique » (capacité à découvrir des vulnérabilités inconnues et construire des chaînes d'exploitation). Information rapportée par plusieurs médias mais non vérifiée sur la source primaire directe — à confirmer au prochain cycle.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Fait établi — GitHub Changelog (officiel), publié le 04/09/2026.</strong> <strong>GPT-6 Astra</strong> (OpenAI) est désormais disponible comme modèle sélectionnable dans <strong>GitHub Copilot</strong>, aux côtés de Claude Fable 5.1 et Gemini 3.8 Flash intégrés les jours précédents (hors fenêtre, déjà couverts).</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Microsoft 365 Blog (officiel), article non horodaté précisément « PPCC 2026: Bringing AI and your business processes together » (Power Platform Community Conference) évoquant l'intégration de l'IA aux processus métier — pertinence confirmée mais horodatage exact dans la fenêtre non garanti, mentionné à titre de signal non confirmé.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Fait établi — avis officiel CERT-FR (ANSSI), publié le 4 septembre 2026 (CERTFR-2026-AVI-1114).</strong> Multiples vulnérabilités dans <strong>VMware Fusion</strong> et <strong>VMware Workstation</strong> (versions antérieures à 26H1u1) : CVE-2026-59346 et CVE-2026-59347, risque d'exécution de code arbitraire à distance. Correctif disponible en version 26H1u1 (bulletin VMware VMSA-2026-38288).</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Néant.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Postes utilisant VMware Fusion (Mac) ou VMware Workstation (virtualisation locale, souvent chez les équipes techniques/développement) à mettre à jour en priorité vers la version 26H1u1.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+        <span class="conf-value">0,85 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Fait établi — avis officiel CERT-FR (ANSSI), publié le 4 septembre 2026 (CERTFR-2026-AVI-1115).</strong> Multiples vulnérabilités dans <strong>SonicWall Network Security Manager On-Prem</strong> (versions antérieures à 4.3.1-R4) : CVE-2026-78327, CVE-2026-78328, CVE-2026-81939 — risques de contournement de politique de sécurité, exécution de code arbitraire à distance et élévation de privilèges (bulletin SonicWall SNWLID-2026-0015).</li>
+        <li><strong>Fait établi — avis officiel CERT-FR (ANSSI), publié le 4 septembre 2026 (CERTFR-2026-AVI-1112).</strong> Multiples vulnérabilités dans <strong>Google Chrome</strong> (versions antérieures à 152.0.7977.82 Linux/Windows, 152.0.7977.83 Mac) dont <strong>CVE-2026-85046</strong>, confirmée activement exploitée selon Google.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Néant.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li><strong>CVE-2026-85046 (Chrome) activement exploitée</strong> : navigateur très largement déployé en entreprise, mise à jour à prioriser sans délai sur l'ensemble du parc.</li>
+        <li>SonicWall NSM On-Prem (gestion de sécurité réseau, catégorie proche d'outils type FortiManager) exposé à un risque RCE : vérifier l'exposition si ce produit est déployé chez des clients.</li>
+        <li>Aucun nouvel avis CERT-FR ni PSIRT concernant spécifiquement Fortinet/FortiOS identifié dans cette fenêtre de 24 h — pas de nouvelle CVE Fortinet à signaler aujourd'hui.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,8 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li><strong>Fait établi — Databricks (blog officiel), publié le 4 septembre 2026.</strong> Présentation de <strong>Proteus</strong>, système de génération automatisée (agentique) de kernels GPU spécialisés : gains de performance démontrés jusqu'à 1,8–5,2× plus rapides que les meilleures implémentations vLLM disponibles, sur des modèles comme Qwen 3.5 122B.</li>
+        <li><strong>Fait établi — Databricks (blog officiel), publié le 4 septembre 2026.</strong> Article « Five ways marketers can use Genie One » : cinq cas d'usage de l'assistant conversationnel Genie (IA/BI Databricks) pour les équipes marketing sur des données métier gouvernées (performance de campagnes, attribution, insights clients, planification omnicanale, reporting), sans dépendance systématique aux équipes data/analystes.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Néant. (L'article Databricks du 3 septembre 2026 sur la gouvernance lakehouse — Unity Catalog / ontologie — a déjà été couvert dans la note du 04/09/2026 et n'est pas reconduit ici.)</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+        <span class="conf-value">0,85 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:77%"></span></span>
+      <span class="conf-value">0,77 / 1,0</span>
+    </div>
+  </div>
+</article>
 <article class="note-tech" id="note-tech-2026-09-04">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -335,7 +444,6 @@
     </div>
   </div>
 </article>
-
 <article class="note-tech" id="note-tech-2026-09-03">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -1450,89 +1558,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:26%"></span></span>
       <span class="conf-value">0,26 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-08-22">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">22/08/2026 08:09 UTC+11 — Fenêtre 24 h</span>
-  </div>
-  <div class="note-body">
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 22/08/2026 08:09 UTC+11 pour OpenAI, Anthropic, Google, Mistral ou Meta. intelligence-artificielle.com et usine-digitale.fr consultés par recherche, aucun contenu daté dans la fenêtre identifié.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p><strong>GitHub Copilot dans Microsoft Teams</strong> : GitHub (Microsoft) a publié le 21/08/2026 un changelog officiel annonçant le passage en <em>preview publique</em> du travail agentique partagé avec GitHub Copilot dans Microsoft Teams. Les utilisateurs peuvent mentionner « @GitHub » dans une conversation Teams pour lancer une session d'agent cloud, transformer des décisions de réunion en travail exécutable (session asynchrone dans un sandbox cloud sécurisé, poursuivie ensuite via terminal, application Copilot ou IDE). Une approbation supplémentaire peut être exigée par les administrateurs de dépôt pour toute pull request attribuée à cette intégration avant fusion. Disponible sur les plans GitHub Copilot payants ; consommation de crédits IA facturée à l'usage selon les budgets définis par l'organisation. Annonce officielle (source : GitHub Changelog).</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
-        <span class="conf-value">0,7 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 22/08/2026 08:09 UTC+11 pour Scale Computing, VMware, Dell, HP, Lenovo ou Synology.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Le CERT-FR a publié le 21/08/2026 dix avis de sécurité (source officielle, cert.ssi.gouv.fr). À noter en priorité : <strong>CERTFR-2026-AVI-1074</strong> — vulnérabilité dans Microsoft Entra ID avec exploitation active permettant une exécution de code à distance ; trois autres avis Microsoft (Office, Edge, produits Microsoft divers — atteinte à la confidentialité, contournement de politique de sécurité) ; <strong>CERTFR-2026-AVI-1070</strong> — vulnérabilités multiples dans Traefik (contournement de politique de sécurité) ; <strong>CERTFR-2026-AVI-1067</strong> — vulnérabilités IBM permettant exécution de code à distance et déni de service ; trois avis noyau Linux (Debian LTS, Debian, Ubuntu, Red Hat — élévation de privilèges, atteinte à l'intégrité/confidentialité des données). Aucune nouvelle CVE Fortinet/FortiOS publiée dans la fenêtre (les CVE FortiOS récentes identifiées par recherche — dont CVE-2026-24858, contournement SSO FortiCloud — sont antérieures au 21/08/2026 et déjà connues).</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>CERTFR-2026-AVI-1074 (Microsoft Entra ID) fait état d'une <strong>exploitation active</strong> — patch à prioriser pour les environnements Entra ID des clients Office Plus.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
-        <span class="conf-value">0,8 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information confirmée de moins de 24 h trouvée à la date du 22/08/2026 08:09 UTC+11.</p>
-      <h4>Signaux faibles</h4>
-      <p>Le « Power BI August 2026 Feature Summary » (Microsoft Fabric Community) couvre des mises à jour reporting, modélisation, connectivité des données, mobile, analytique embarquée et Copilot ; date de publication estimée autour du 20-21/08/2026 mais non confirmée avec certitude (accès direct à la page renvoyant une erreur HTTP 403) — classé en signal faible, non en fait établi, faute de confirmation précise de l'horodatage.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
-        <span class="conf-value">0,4 / 1,0</span>
-      </div>
-    </section>
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-      <span class="conf-value">0,5 / 1,0</span>
     </div>
   </div>
 </article>
