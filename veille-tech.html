@@ -229,6 +229,92 @@
   </div>
 </div>
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-09-08">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">08/09/2026 08:08 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 08/09/2026 08:08 UTC+11. (Les annonces majeures de la semaine — GPT-6 Astra d'OpenAI le 3/09, Claude Fable 5.1 / Mythos 5.1 d'Anthropic le 1er/09, Gemini 3.8 Flash de Google le 2/09, rachat de Hugging Face par Nvidia pour 12,93 Md$ le 3/09 — sortent toutes de la fenêtre glissante de 24 h.)</p>
+      <h4>Signaux faibles</h4>
+      <p>Néant.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 08/09/2026 08:08 UTC+11 pour Copilot M365, GitHub Copilot ou Gemini Workspace.</p>
+      <h4>Signaux faibles</h4>
+      <p>Roadmap non confirmée, non datée précisément : test en cours chez Microsoft d'un panneau Copilot Chat dans l'Explorateur de fichiers Windows, avec intégration à la recherche de la barre des tâches — prévu pour Windows 11 26H2 (octobre 2026). Signal non rattaché à la fenêtre 24 h, mentionné à titre de contexte.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Annonce officielle — CERT-FR, avis <strong>CERTFR-2026-AVI-1125</strong> (publié le 07/09/2026) : multiples vulnérabilités dans les produits VMware/Broadcom, portant sur <strong>Open Source RabbitMQ</strong> (versions 4.0.x &lt; 4.0.24, 4.1.x &lt; 4.1.15, 4.2.x &lt; 4.2.10, 4.3.x &lt; 4.3.5, et branches antérieures &lt; 3.13.19) et <strong>Tanzu for Valkey on Kubernetes</strong> (&lt; 13.5.0). Plus de 70 CVE référencées (2024–2026). Correctifs disponibles via les bulletins de sécurité Broadcom 38348 et 38350 à 38354 (publiés le 04/09/2026).</p>
+      <h4>Signaux faibles</h4>
+      <p>Non daté précisément : Scale Computing étend son partenariat edge avec Lenovo (SC//HyperCore et SC//Reliant Platform sur ThinkEdge SE100), dans la continuité de son positionnement comme alternative à VMware sur baies Dell VxRail. Contexte de marché, non rattaché à la fenêtre 24 h.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Périmètre de correctifs large (RabbitMQ + Tanzu Valkey) : recommandé de vérifier l'exposition des environnements Broadcom/VMware utilisant ces composants et de planifier l'application des correctifs de sécurité 38348/38350-38354.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,8 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Fait établi — CERT-FR, bulletin d'actualité <strong>CERTFR-2026-ACT-038</strong> (publié le 07/09/2026), signalant notamment :</p>
+      <p>— <strong>HPE Aruba Networking Fabric Composer</strong> : CVE-2026-76657 et CVE-2026-76658, CVSS <strong>10.0</strong> (gravité maximale) ;<br>
+      — <strong>Cisco NX-OS</strong> : CVE-2026-20212, CVSS 9.8 ;<br>
+      — JFrog Artifactory : CVE-2026-82329, CVSS 9.8 ; Tenable Security Center : CVE-2026-19626, CVSS 9.4 ; navigateurs Google Chrome (CVE-2026-85046, CVSS 8.8), Mozilla Firefox/Thunderbird (CVE-2026-84137, CVSS 9.8) et Microsoft Edge (CVE-2026-79090, CVSS 9.8).</p>
+      <h4>Signaux faibles</h4>
+      <p>Néant.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>CVSS 10.0 sur HPE Aruba Networking Fabric Composer (produit d'orchestration réseau) : à traiter en priorité absolue chez les clients équipés. Aucune nouvelle CVE Fortinet/FortiOS publiée dans la fenêtre 24 h (dernière connue : CVE-2026-24858, SSO FortiOS, déjà traitée et hors fenêtre) — mentionné pour mémoire, pas une alerte nouvelle.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+        <span class="conf-value">0,85 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 08/09/2026 08:08 UTC+11 pour Power BI, Microsoft Fabric, Databricks ou la gouvernance des données. Le récapitulatif mensuel « Fabric September 2026 Feature Summary » n'était pas encore publié au moment de la collecte.</p>
+      <h4>Signaux faibles</h4>
+      <p>Non daté précisément : bascule annoncée des connexions Power BI vers Databricks de l'ODBC vers l'ADBC (Arrow Database Connectivity) au cours de septembre 2026 — roadmap en cours de déploiement, non un événement du jour.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:61%"></span></span>
+      <span class="conf-value">0,61 / 1,0</span>
+    </div>
+  </div>
+</article>
 <article class="note-tech" id="note-tech-2026-09-07">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -312,7 +398,6 @@
     </div>
   </div>
 </article>
-
 <article class="note-tech" id="note-tech-2026-09-06">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -1461,100 +1546,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
       <span class="conf-value">0,45 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-08-25">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">2026-08-25 08:10 UTC+11 — Fenêtre 24 h</span>
-  </div>
-  <div class="note-body">
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 25/08/2026 08:10 UTC+11 pour OpenAI, Anthropic, Google, Mistral ou Meta. Recherches ciblées sans résultat daté dans le créneau strict ; intelligence-artificielle.com et usine-digitale.fr consultés par recherche.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant identifié dans la fenêtre.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul>
-        <li><strong>Anthropic met à jour Claude Tag (Slack)</strong> : l'agent lit désormais le contexte complet d'une conversation Slack plutôt que d'évaluer les messages isolément, ce qui améliorerait d'environ 30 % sa pertinence pour décider d'intervenir spontanément. Quatre comportements possibles : répondre directement, approfondir dans un fil, router vers un flux existant, ou rester silencieux. Citation attribuée à Anthropic : « An annoying agent is worse than an unhelpful one ». <em>[Annonce reprise par VentureBeat (24/08/2026) avec citation Anthropic ; non retrouvée sur l'index principal du newsroom officiel anthropic.com/news au moment de la collecte — à confirmer via source primaire]</em></li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p><em>Non daté avec précision dans la fenêtre</em> — récapitulatif mensuel Microsoft 365 Copilot d'août 2026 (59 changements cumulés sur Excel, PowerPoint, Word, Chat, Cowork et administration ; déploiement de GPT-5 et prise en charge de modèles Anthropic dans Copilot Chat), sans annonce ponctuelle confirmée dans les dernières 24 h.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
-        <span class="conf-value">0,45 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 25/08/2026 08:10 UTC+11 pour Scale Computing, VMware, Dell, HP, Lenovo ou Synology.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant identifié dans la fenêtre.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul>
-        <li><strong>CERTFR-2026-AVI-1076</strong> — Multiples vulnérabilités dans LibreNMS (versions antérieures à 26.8.0), publié le 24/08/2026 : atteinte à la confidentialité des données et contournement de politique de sécurité. Référence deux bulletins éditeur LibreNMS du 23/08/2026. Source primaire : cert.ssi.gouv.fr. <em>[Fait établi]</em></li>
-        <li><strong>CERTFR-2026-AVI-1075</strong> — Multiples vulnérabilités dans Metabase (versions &lt; 0.58.28, 0.59.x &lt; 0.59.25, 0.60.x &lt; 0.60.21, 0.61.x &lt; 0.61.15, 0.62.x &lt; 0.62.13, 0.63.x &lt; 0.63.10), publié le 24/08/2026 : injection SQL et atteinte à la confidentialité des données (CVE-2026-72898, CVE-2026-72899, CVE-2026-72900). Source primaire : cert.ssi.gouv.fr. <em>[Fait établi]</em></li>
-        <li>Journal du Net publie le 24/08/2026 une analyse détaillée de la cyberattaque de la DGFiP (usurpation d'identifiants d'agents/tiers habilités ; environ 350 000 particuliers et 250 000 comptes professionnels concernés, plus un volet cadastral touchant jusqu'à 433 485 particuliers et 1 082 professionnels, ainsi qu'un accès anormal au portail des successions vacantes). Le ministre David Amiel a présenté ses excuses et annoncé authentification renforcée généralisée avant fin 2026, réinitialisation des mots de passe des agents, restriction des accès aux applications sensibles et audit supervisé par l'ANSSI. <em>[L'article est nouveau (24/08/2026) mais les intrusions elles-mêmes datent de juin-juillet 2026, révélées publiquement le 12-13/08/2026 — fait établi pour la publication de l'article, pas pour un nouvel incident]</em></li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>Aucune nouvelle CVE Fortinet/FortiOS publiée dans la fenêtre stricte ; dernier bulletin identifié (FG-IR-26-162 et lot associé, dont CVE-2026-26035) date du 12-13/08/2026, hors fenêtre.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>L'affaire DGFiP illustre un risque directement transposable aux clients Office Plus : compromission par usurpation d'identifiants plutôt que par intrusion technique directe. Recommandation : vérifier la rotation des mots de passe administrateurs/agents et le déploiement du MFA sur les accès sensibles.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
-        <span class="conf-value">0,6 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 25/08/2026 08:10 UTC+11 pour Power BI, Microsoft Fabric ou Databricks.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant identifié dans la fenêtre ; le « Power BI August 2026 Feature Summary » déjà signalé les jours précédents continue de circuler mais reste hors fenêtre stricte (publication antérieure au 24/08/2026 08:10 UTC+11).</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:39%"></span></span>
-      <span class="conf-value">0,39 / 1,0</span>
     </div>
   </div>
 </article>
