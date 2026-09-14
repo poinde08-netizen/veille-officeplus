@@ -13,7 +13,7 @@ description: >
 
 Note quotidienne courte, publiée automatiquement sur une page GitHub Pages dédiée, distincte de la veille commerciale complète.
 
-**Fenêtre temporelle** : 24 heures glissantes (pas 48h — cadence quotidienne, pas de recouvrement voulu). Si aucune information récente pour un axe : `Aucune information de moins de 24 h trouvée à la date du [DATE] [HEURE UTC+11].`
+**Fenêtre temporelle** : 72 heures glissantes. Si aucune information récente pour un axe : `Aucune information de moins de 72 h trouvée à la date du [DATE] [HEURE UTC+11].`
 
 **Accumulation** : contrairement à `veille-marche` (qui remplace tout à chaque run), cette note s'ajoute en tête de la page à chaque exécution. Les 14 dernières notes sont conservées ; au-delà, la plus ancienne est retirée.
 
@@ -62,16 +62,16 @@ Exécuter via `bash_tool` :
 from datetime import datetime, timezone, timedelta
 utc11 = timezone(timedelta(hours=11))
 now = datetime.now(utc11)
-seuil = now - timedelta(hours=24)
+seuil = now - timedelta(hours=72)
 print(f"MAINTENANT={now.strftime('%Y-%m-%d %H:%M UTC+11')}")
-print(f"SEUIL_24H={seuil.strftime('%Y-%m-%d %H:%M UTC+11')}")
+print(f"SEUIL_72H={seuil.strftime('%Y-%m-%d %H:%M UTC+11')}")
 ```
 
-Toute information antérieure à `SEUIL_24H` est écartée (sauf signal faible non daté, explicitement marqué comme tel).
+Toute information antérieure à `SEUIL_72H` est écartée (sauf signal faible non daté, explicitement marqué comme tel).
 
 ### 2. Collecte par axe
 
-Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
+Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_72H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
 
 ### 3. Génération de la note du jour
 
@@ -83,7 +83,7 @@ NOTE_ID = note-tech-{YYYY-MM-DD}
 <article class="note-tech" id="{NOTE_ID}">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">{DATE} {HEURE UTC+11} — Fenêtre 24 h</span>
+    <span class="note-date">{DATE} {HEURE UTC+11} — Fenêtre 72 h</span>
   </div>
   <div class="note-body">
     {SECTION_MODELES_IA}
@@ -113,7 +113,7 @@ Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà p
 ```html
 <section class="{AXIS_CLASS}">
   <h3>[N]. [Axe]</h3>
-  <h4>Faits établis (&lt; 24 h)</h4>
+  <h4>Faits établis (&lt; 72 h)</h4>
   {FAITS_EN_HTML}
   <h4>Signaux faibles</h4>
   {SIGNAUX_EN_HTML}
@@ -252,7 +252,7 @@ Veille tech publiée : {PAGES_URL}/{TARGET_FILE}#{NOTE_ID}
 
 ## Règles de confiance
 
-- Recency stricte : 24h, pas 48h.
+- Recency stricte : 72h.
 - Distinguer fait établi / inférence / signal faible.
 - Distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur.
 - Ne jamais présenter une inférence comme un fait établi.
