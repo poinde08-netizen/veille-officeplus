@@ -11,6 +11,8 @@
     --c-infra:#0D9488;
     --c-cyber:#DC2626;
     --c-data:#059669;
+    --c-dsi:#D97706;
+    --c-conseil:#7C3AED;
     --bg:#f5f6f8;
     --card-bg:#ffffff;
     --text:#1a1d29;
@@ -75,6 +77,8 @@
   .legend-item.infra .legend-dot{background:var(--c-infra);}
   .legend-item.cyber .legend-dot{background:var(--c-cyber);}
   .legend-item.data .legend-dot{background:var(--c-data);}
+  .legend-item.dsi .legend-dot{background:var(--c-dsi);}
+  .legend-item.conseil .legend-dot{background:var(--c-conseil);}
 
   .note-tech{
     max-width:880px;
@@ -167,6 +171,53 @@
     padding:10px 12px;
   }
 
+  /* Format "par source" (à partir du 14/09/2026) */
+  .note-body section.source-block{
+    border-left-color:var(--border);
+  }
+  .note-body section.cat-ia{ border-left-color:var(--c-modeles); background:color-mix(in srgb, var(--c-modeles) 5%, transparent); }
+  .note-body section.cat-tech{ border-left-color:var(--c-infra); background:color-mix(in srgb, var(--c-infra) 5%, transparent); }
+  .note-body section.cat-dsi{ border-left-color:var(--c-dsi); background:color-mix(in srgb, var(--c-dsi) 5%, transparent); }
+  .note-body section.cat-conseil{ border-left-color:var(--c-conseil); background:color-mix(in srgb, var(--c-conseil) 5%, transparent); }
+  .cat-ia h3{color:var(--c-modeles);}
+  .cat-tech h3{color:var(--c-infra);}
+  .cat-dsi h3{color:var(--c-dsi);}
+  .cat-conseil h3{color:var(--c-conseil);}
+  .source-status{
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin:0 0 10px;
+    font-weight:600;
+  }
+  .source-status.status-new{color:var(--c-data);}
+  .source-status.status-none{color:var(--text-muted);}
+  .source-status.status-error{color:var(--c-cyber);}
+  ul.article-list{margin:0;padding-left:0;list-style:none;}
+  ul.article-list li{
+    margin:0 0 12px;
+    padding-bottom:10px;
+    border-bottom:1px dashed var(--border);
+  }
+  ul.article-list li:last-child{border-bottom:none;margin-bottom:0;}
+  ul.article-list a{
+    font-weight:600;
+    font-size:0.92rem;
+    color:var(--text);
+    text-decoration:none;
+  }
+  ul.article-list a:hover{text-decoration:underline;}
+  ul.article-list .art-date{
+    font-size:0.72rem;
+    color:var(--text-muted);
+    margin-left:6px;
+  }
+  ul.article-list p{
+    margin:4px 0 0;
+    font-size:0.88rem;
+    color:var(--text-muted);
+  }
+
   .conf-row{
     display:flex;
     align-items:center;
@@ -226,90 +277,173 @@
     <span class="legend-item infra"><span class="legend-dot"></span>Infra / Réseau</span>
     <span class="legend-item cyber"><span class="legend-dot"></span>Cybersécurité</span>
     <span class="legend-item data"><span class="legend-dot"></span>DATA</span>
+    <span class="legend-item dsi"><span class="legend-dot"></span>Décideurs IT / DSI</span>
+    <span class="legend-item conseil"><span class="legend-dot"></span>Conseil / Gestion de projet</span>
   </div>
 </div>
 <!-- NOTES-TECH -->
 <article class="note-tech" id="note-tech-2026-09-14">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">2026-09-14 08:07 UTC+11 — Fenêtre 24 h</span>
+    <span class="note-date">2026-09-14 13:39 UTC+11 — Fenêtre 24 h — Format par source (v2)</span>
   </div>
   <div class="note-body">
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-09-14 08:07 UTC+11.</p>
-      <h4>Signaux faibles</h4>
-      <p><em>Rumeur, non confirmée</em> — OpenAI envisagerait de ralentir la cadence de sortie de ses systèmes les plus avancés, selon des relais de presse du 13/09 (Journal du Net). Aucune annonce officielle d'OpenAI à ce stade.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun point d'alerte identifié sur cet axe dans la fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:35%"></span></span>
-        <span class="conf-value">0,35 / 1,0</span>
-      </div>
+
+    <section class="source-block cat-ia">
+      <h3>intelligence-artificielle.com</h3>
+      <p class="source-status status-new">Articles en Une (fraîcheur non datée par le site)</p>
+      <ul class="article-list">
+        <li><a href="https://intelligence-artificielle.com/jai-teste-gpt-6-astra-face-a-fable-5-1-pendant-100-heures-voici-mon-verdict/">J'ai testé GPT-6 Astra face à Fable 5.1 pendant 100 heures, voici mon verdict</a>
+          <p>Comparatif sur 15 scénarios : GPT-6 Astra l'emporte 10/15, plus fort sur les tâches techniques et moins cher (327 $ vs 513 $) ; Fable 5.1 domine le créatif/visuel. Pas de vainqueur universel, le choix dépend de l'usage.</p></li>
+        <li><a href="https://intelligence-artificielle.com/openai-devoile-lapi-agents-en-beta-publique-pour-deployer-des-agents-cloud-autonomes/">OpenAI dévoile l'API Agents en bêta publique</a>
+          <p>Nouvelle API pour créer et déployer des agents cloud autonomes en un seul appel, avec gestion automatisée du contexte et sous-agents parallélisés. Gratuite pendant la bêta.</p></li>
+        <li><a href="https://intelligence-artificielle.com/openai-et-samsung-unissent-leurs-forces-pour-developper-les-puces-ia-de-demain/">OpenAI et Samsung unissent leurs forces sur les puces IA</a>
+          <p>Partenariat pour concevoir un successeur à la puce Jalapeno, afin de réduire la dépendance aux fournisseurs externes face à l'explosion de la demande en composants IA.</p></li>
+      </ul>
     </section>
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-09-14 08:07 UTC+11.</p>
-      <h4>Signaux faibles</h4>
-      <p>Aucun signal faible distinct identifié sur cet axe dans la fenêtre (les sources consultées — JDN, Le Monde Informatique — ne référencent que des contenus antérieurs à 24 h sur Copilot M365, GitHub Copilot et Gemini Workspace).</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun point d'alerte identifié sur cet axe dans la fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-        <span class="conf-value">0,50 / 1,0</span>
-      </div>
+
+    <section class="source-block cat-ia">
+      <h3>usine-digitale.fr</h3>
+      <p class="source-status status-error">Source inaccessible (HTTP 403, homepage et rubrique testées) — contenu non consulté, non inventé.</p>
     </section>
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-09-14 08:07 UTC+11.</p>
-      <h4>Signaux faibles</h4>
-      <p>Aucun signal faible distinct identifié sur cet axe dans la fenêtre (LeMagIT, Silicon.fr et ITPro.fr ne référencent que des contenus Scale Computing / VMware / Dell / HP / Lenovo / Synology / Wi-Fi antérieurs à 24 h).</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun point d'alerte identifié sur cet axe dans la fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-        <span class="conf-value">0,50 / 1,0</span>
-      </div>
+
+    <section class="source-block cat-ia">
+      <h3>journaldunet.com</h3>
+      <p class="source-status status-new">Articles en Une (fraîcheur non datée par le site)</p>
+      <ul class="article-list">
+        <li><a href="https://www.journaldunet.com/intelligence-artificielle/1554581-iter-mise-sur-l-ia-de-microsoft-pour-accelerer-la-fusion-nucleaire/">ITER mise sur l'IA de Microsoft pour accélérer la fusion nucléaire</a>
+          <p>Les 2 000 employés du projet ITER utilisent M365 Copilot et Azure OpenAI Service pour simuler et modéliser les données du réacteur, accord formalisé depuis mars 2025.</p></li>
+        <li><a href="https://www.journaldunet.com/intelligence-artificielle/1554597-comment-les-entreprises-de-l-ia-organisent-le-chomage-generalise-dans-le-monde/">Comment les entreprises de l'IA organisent le chômage généralisé dans le monde</a>
+          <p>Des plateformes (Micro1, Outlier AI, Alignerr) recrutent des experts pour corriger les modèles ; l'IA aurait globalement créé plus d'emplois qu'elle n'en a détruits aux États-Unis.</p></li>
+        <li><a href="https://www.journaldunet.com/seo/1554585-l-ia-agentique-optimise-de-plus-en-plus-le-seo-local-des-reseaux-de-franchises/">L'IA agentique au service du SEO local des réseaux de franchises</a>
+          <p>Des enseignes comme Smoothie King automatisent leur présence en ligne multi-points de vente, sous supervision humaine constante.</p></li>
+      </ul>
     </section>
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>ITPro.fr (édition du 13/09) : « Attaques edge — les fournisseurs, nouvelle cible prioritaire des cybercriminels » : les attaquants privilégieraient désormais les écosystèmes fournisseurs plutôt que les vulnérabilités isolées.</p>
-      <h4>Signaux faibles</h4>
-      <p><em>Signal faible</em> — ITPro.fr (édition du 13/09) : « Shadow AI en France : les RSSI alertent » sur des agents IA non contrôlés accédant à des données sensibles sans supervision — tendance rapportée, pas d'incident documenté à ce stade.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucune nouvelle vulnérabilité Fortinet/FortiOS publiée dans les dernières 24 h. Dernier avis CERT-FR connu à ce jour : CERTFR-2026-AVI-1166 (11/09/2026, hors fenêtre) — multiples vulnérabilités FortiOS/FortiProxy pouvant permettre exécution de code arbitraire à distance, élévation de privilèges et déni de service ; à surveiller si un correctif ou une exploitation active était confirmé.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
-        <span class="conf-value">0,60 / 1,0</span>
-      </div>
+
+    <section class="source-block cat-tech">
+      <h3>lemondeinformatique.fr</h3>
+      <p class="source-status status-none">Aucun nouvel article dans les dernières 24 h — historique conservé</p>
+      <ul class="article-list">
+        <li><a href="https://www.lemondeinformatique.fr/actualites/lire-niryo-reprend-l-activite-medicale-de-bizlink-100779.html">Niryo reprend l'activité médicale de BizLink</a><span class="art-date">11/09</span>
+          <p>Niryo acquiert la division Healthcare Robotics de BizLink (technologies Orion/Pulsar, 35 salariés) et entre sur le marché médical.</p></li>
+        <li><a href="https://www.lemondeinformatique.fr/actualites/lire-ia-des-postes-supprimes-pourraient-etre-recrees-d-ici-2029-100777.html">IA : des postes supprimés pourraient être recréés d'ici 2029</a><span class="art-date">11/09</span>
+          <p>Gartner : 30 % des licenciements liés à l'IA pourraient donner lieu à des réembauches d'ici 2029, souvent à coût supérieur.</p></li>
+        <li><a href="https://www.lemondeinformatique.fr/actualites/lire-databricks-ameliore-la-recherche-des-agents-ia-100776.html">Databricks améliore la recherche des agents IA</a><span class="art-date">10/09</span>
+          <p>Lancement d'Adaptive Instructed-Retriever, qui réduit la latence de moitié en ne relançant une recherche que si nécessaire.</p></li>
+      </ul>
     </section>
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>ITPro.fr (édition du 13/09) : « Souveraineté des données — bâtir un stockage hybride » : les organisations doivent concilier architectures distribuées à vocation globale et exigences de résidence locale des données pour les charges de travail IA.</p>
-      <h4>Signaux faibles</h4>
-      <p>Aucun signal faible distinct identifié sur cet axe dans la fenêtre (les actualités Power BI / Microsoft Fabric / Databricks recensées — ex. amélioration de la recherche des agents IA par Databricks — sont antérieures à 24 h).</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun point d'alerte identifié sur cet axe dans la fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
-        <span class="conf-value">0,55 / 1,0</span>
-      </div>
+
+    <section class="source-block cat-tech">
+      <h3>lemagit.fr (virtualisation / infra)</h3>
+      <p class="source-status status-none">Aucun nouvel article dans les dernières 24 h — historique conservé</p>
+      <ul class="article-list">
+        <li><a href="https://www.lemagit.fr/actualites/366649604/Mistral-AI-et-Cloudera-sallient-autour-de-lIA-privee">Mistral AI et Cloudera s'allient autour de l'IA privée</a><span class="art-date">11/09</span>
+          <p>Partenariat pour déployer les modèles Mistral dans des environnements sécurisés (cloud/hybride/on-prem), ciblant les secteurs régulés.</p></li>
+        <li><a href="https://www.lemagit.fr/actualites/366650360/Quand-les-modeles-dAnthropic-sont-detournes-a-des-fins-malveillantes">Quand les modèles d'Anthropic sont détournés à des fins malveillantes</a><span class="art-date">11/09</span>
+          <p>Rapport Anthropic : l'IA générative abaisse la barrière entre acteurs étatiques et individuels pour les cyberattaques et campagnes d'influence.</p></li>
+        <li><a href="https://www.lemagit.fr/actualites/366650296/Lavenement-de-lIA-agentique-dans-le-cycle-dattaque">L'avènement de l'IA agentique dans le cycle d'attaque</a><span class="art-date">10/09</span>
+          <p>Des attaquants automatisent des cycles complets (campagne de vol de mots de passe montée en moins de 6h par un agent) et pratiquent le « LLMJacking ».</p></li>
+      </ul>
     </section>
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-      <span class="conf-value">0,50 / 1,0</span>
-    </div>
+
+    <section class="source-block cat-tech">
+      <h3>silicon.fr</h3>
+      <p class="source-status status-new">Articles en Une (dates non affichées — fraîcheur non garantie)</p>
+      <ul class="article-list">
+        <li><a href="https://www.silicon.fr/data-ia-1372/claude-prompts-systeme-229108">Comment les prompts système de Claude ont évolué en deux ans</a>
+          <p>Les prompts système d'Anthropic sont passés de &lt;1 000 à ~28 000 caractères entre Claude Haiku 3 et Claude Fable 5.1, avec un renforcement continu des garde-fous.</p></li>
+        <li><a href="https://www.silicon.fr/data-ia-1372/qui-est-jacob-coxon-le-chercheur-qui-accuse-lia-de-vouloir-nous-tuer-229102">Qui est Jacob Coxon, le chercheur qui accuse l'IA de vouloir nous tuer ?</a>
+          <p>Un chercheur de 27 ans, ex-Anthropic, démissionne en dénonçant une course à l'IA auto-améliorante sans garde-fous suffisants ; message vu 160 M de fois en deux jours.</p></li>
+        <li><a href="https://www.silicon.fr/cloud-1370/broadcom-vddk-vmware-229072">Broadcom complique la tâche pour les outils de migration VMware</a>
+          <p>Restriction d'accès à la bibliothèque VDDK aux seuls partenaires technologiques officiels, compliquant les migrations hors VMware.</p></li>
+      </ul>
+    </section>
+
+    <section class="source-block cat-tech">
+      <h3>itpro.fr</h3>
+      <p class="source-status status-new">Articles en Une (dates non affichées — fraîcheur non garantie)</p>
+      <ul class="article-list">
+        <li><span class="art-date">⚠️ inaccessible (HTTP 503, 2 tentatives)</span>
+          <p>« Agents fantômes en EMEA : l'IA s'emballe, les conseils d'administration s'inquiètent » — résumé non produit pour ne pas inventer le contenu.</p></li>
+        <li><a href="https://www.itpro.fr/lillusion-du-controle-a-lere-du-cloud-globalise">L'illusion du contrôle à l'ère du cloud globalisé</a>
+          <p>Le cloud crée une « dépendance structurelle » masquée par des interfaces simples ; l'IA accentue cette asymétrie (données hors UE, contrats unilatéraux).</p></li>
+      </ul>
+    </section>
+
+    <section class="source-block cat-dsi">
+      <h3>Alliancy.fr</h3>
+      <p class="source-status status-new">Articles récents (dates partiellement affichées)</p>
+      <ul class="article-list">
+        <li><a href="https://www.alliancy.fr/cyber-resilience-act-les-fabricants-du-numeriques-sous-la-regle-des-24-heures-b2357561-8fb0-4576-a02b-6c1d3bc10ed1">Cyber Resilience Act : les fabricants du numérique sous la règle des 24 heures</a><span class="art-date">11/09</span>
+          <p>Depuis le 11 septembre, les fabricants de produits numériques vendus dans l'UE doivent signaler sous 24h toute faille activement exploitée.</p></li>
+        <li><a href="https://www.alliancy.fr/pacte-numerique-et-ia-letat-veut-transformer-la-souverainete-en-commandes-fd1826c2-4546-43dc-814d-05da4782de53">Pacte numérique et IA : l'État veut transformer la souveraineté en commandes</a><span class="art-date">10/09</span>
+          <p>Signature d'un pacte doté de 200 M€ pour rapprocher les besoins IT de l'État de l'offre française (bureautique, cybersécurité).</p></li>
+        <li><a href="https://www.alliancy.fr/en-france-seuls-17-percent-des-salaries-se-sentent-pleinement-prepares-a-levolution-de-leur-metier-8ad06ad9-a757-413d-a537-13ec8440853a">Seuls 17 % des salariés se sentent prêts pour l'évolution de leur métier</a>
+          <p>Étude Cornerstone : 66 % des salariés ont vécu une forte transformation récente, mais le manque de coordination RH/IT freine la préparation.</p></li>
+      </ul>
+    </section>
+
+    <section class="source-block cat-dsi">
+      <h3>ITforBusiness.fr</h3>
+      <p class="source-status status-none">Aucun nouvel article dans les dernières 24 h — historique conservé</p>
+      <ul class="article-list">
+        <li><a href="https://www.itforbusiness.fr/laurence-houdeville-dgcl-lia-nest-pas-magique-107081">Laurence Houdeville (DGCL) : « L'IA n'est pas magique »</a><span class="art-date">11/09</span>
+          <p>Avant tout déploiement IA, il faut cartographier et qualifier son patrimoine de données ; retour d'expérience sur 7 millions d'actes annuels.</p></li>
+        <li><a href="https://www.itforbusiness.fr/vmware-explore-2026-lia-privee-pour-rendre-vmware-indispensable-107011">VMware Explore 2026 : l'IA privée pour rendre VMware indispensable</a><span class="art-date">10/09</span>
+          <p>Broadcom lance VMware Private AI Cloud (AI Factory, AgentMinder) pour unifier infra, gouvernance des agents IA et sécurité.</p></li>
+        <li><a href="https://www.itforbusiness.fr/apres-une-fuite-de-donnees-le-vrai-danger-commence-lusurpation-didentite-des-services-publics-107042">Après une fuite de données, l'usurpation d'identité des services publics</a><span class="art-date">10/09</span>
+          <p>88 % des organisations n'ont pas activé DMARC en protection maximale, facilitant le phishing après des fuites de données massives.</p></li>
+      </ul>
+    </section>
+
+    <section class="source-block cat-dsi">
+      <h3>Solutions Numériques</h3>
+      <p class="source-status status-none">Aucun nouvel article dans les dernières 24 h — historique conservé (source remplace CIO.fr, injoignable — HTTP 503 persistant)</p>
+      <ul class="article-list">
+        <li><a href="https://www.solutions-numeriques.com/des-centaines-dagents-ia-utilises-pour-compromettre-pres-de-400-organisations-via-papercut/">Des centaines d'agents IA utilisés pour compromettre 400 organisations via PaperCut</a><span class="art-date">11/09</span>
+          <p>Un groupe probablement russophone a déployé des centaines d'agents IA pour exploiter automatiquement des failles PaperCut, compromettant 440 instances dans 48 pays (dont 31 françaises).</p></li>
+        <li><a href="https://www.solutions-numeriques.com/apres-le-piratage-dimpots-gouv-fr-la-cnil-va-controler-la-dgfip/">Après le piratage d'impots.gouv.fr, la CNIL va contrôler la DGFiP</a><span class="art-date">11/09</span>
+          <p>Suite au vol de données touchant 678 000 personnes cet été, la CNIL évalue les mesures de sécurité de la DGFiP ; mise en demeure ou sanction possible.</p></li>
+        <li><a href="https://www.solutions-numeriques.com/avis-dexpert-entre-turla-et-chat-control-leurope-sanctionne-lespionnage-russe-tout-en-desarmant-sa-propre-defense/">Avis d'expert — Entre Turla et Chat Control, l'Europe sanctionne l'espionnage russe tout en désarmant sa propre défense</a><span class="art-date">10/09</span>
+          <p>La France/UE attribue la campagne d'espionnage Turla au FSB russe, tout en négociant Chat Control 2.0 qui affaiblirait le chiffrement protégeant ces mêmes communications.</p></li>
+      </ul>
+    </section>
+
+    <section class="source-block cat-conseil">
+      <h3>Consultor.fr</h3>
+      <p class="source-status status-none">Aucun nouvel article dans les dernières 24 h — historique conservé</p>
+      <ul class="article-list">
+        <li><a href="https://www.consultor.fr/articles/mckinsey-pourrait-devoir-verser-plus-de-100meur-en-cas-de-condamnation-pour-blanchiment-de-fraude-fiscale">McKinsey pourrait devoir verser plus de 100 M€ (fraude fiscale)</a><span class="art-date">11/09</span>
+          <p>Le PNF a saisi 65,2 M€ sur les comptes belges de McKinsey ; une amende de 34 M€ supplémentaires est possible.</p></li>
+        <li><a href="https://www.consultor.fr/articles/avec-najlaa-katthabi-simon-kucher-transperce-le-plafond-de-verre">Simon-Kucher : Najlaa Khattabi transperce le plafond de verre</a><span class="art-date">10/09</span>
+          <p>Son arrivée porte le partnership parisien à 9 femmes sur 17 associés, une première pour le cabinet.</p></li>
+        <li><a href="https://www.consultor.fr/articles/un-recrutement-et-deux-promotions-internes-le-partnership-de-cmi-passe-de-14-a-17-associes">CMI : partnership de 14 à 17 associés</a><span class="art-date">09/09</span>
+          <p>Deux promotions internes et un recrutement (ex-INDEFI) accompagnent l'ambition de plateforme européenne du cabinet (Madrid, Milan).</p></li>
+      </ul>
+    </section>
+
+    <section class="source-block cat-conseil">
+      <h3>Manager GO!</h3>
+      <p class="source-status status-none">Aucun nouvel article dans les dernières 24 h — historique conservé</p>
+      <ul class="article-list">
+        <li><a href="https://www.manager-go.com/vente/tableau-de-bord-commercial.htm">Tableau de bord commercial : le construire et l'exploiter</a><span class="art-date">06/09</span>
+          <p>Méthode en 6 étapes pour bâtir un tableau de bord commercial actionnable, avec 5 KPI essentiels et erreurs courantes à éviter.</p></li>
+        <li><a href="https://www.manager-go.com/gestion-de-projet/dossiers-methodes/elaborer-un-cdc">Cahier des charges, exemple simple à utiliser</a><span class="art-date">04/09</span>
+          <p>Guide en 6 rubriques (contexte, objectifs, périmètre, fonctionnalités, budget, délais) pour formaliser un besoin projet, modèle téléchargeable.</p></li>
+      </ul>
+    </section>
+
+    <section class="source-block cat-conseil">
+      <h3>PMI France</h3>
+      <p class="source-status status-none">Aucun nouvel article dans les dernières 24 h — historique conservé</p>
+      <ul class="article-list">
+        <li><a href="https://pmi-france.org/blog/la-masterclass-monday-deployer-des-agents-ia-dans-votre-entreprise-a900">Masterclass monday.com : déployer des agents IA dans votre entreprise</a><span class="art-date">03/09</span>
+          <p>Webinaire sur les 4 composants d'un agent IA (instructions, outils, mémoire, déclencheurs) et leur gouvernance en entreprise.</p></li>
+        <li><a href="https://pmi-france.org/blog/deux-regards-une-meme-conquete-le-pgmp-a899">Deux regards, une même conquête : le PgMP !</a><span class="art-date">31/08</span>
+          <p>Témoignages croisés de deux nouveaux certifiés PgMP en France (une cinquantaine de titulaires au total), retour sur l'examen de 4h.</p></li>
+      </ul>
+    </section>
+
   </div>
 </article>
 
