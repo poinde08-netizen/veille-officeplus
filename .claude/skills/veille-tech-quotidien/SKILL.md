@@ -1,8 +1,9 @@
 ---
 name: veille-tech-quotidien
 description: >
-  Veille technologique automatisée quotidienne, limitée à 5 axes : Modèles IA,
-  Outils IA, Infra/Réseau, Cybersécurité, DATA. Conçue pour une exécution sans
+  Veille technologique automatisée quotidienne, organisée par source (13 sites :
+  5 axes tech — Modèles IA, Outils IA, Infra/Réseau, Cybersécurité, DATA — plus
+  décideurs IT/DSI et conseil/gestion de projet). Conçue pour une exécution sans
   supervision (Routine Claude Code planifiée à 08h00 UTC+11), pas pour un usage
   conversationnel manuel. Distincte de `veille-marche` (10 axes, incluant les
   volets commerciaux NC) : ne pas fusionner les deux, ne pas publier sur la
@@ -13,23 +14,32 @@ description: >
 
 Note quotidienne courte, publiée automatiquement sur une page GitHub Pages dédiée, distincte de la veille commerciale complète.
 
-**Fenêtre temporelle** : 24 heures glissantes (pas 48h — cadence quotidienne, pas de recouvrement voulu). Si aucune information récente pour un axe : `Aucune information de moins de 24 h trouvée à la date du [DATE] [HEURE UTC+11].`
+**Format (v2, depuis le 14/09/2026)** : la note est organisée **par source**, pas par axe thématique. Pour chaque site de la liste, on relève les articles actuellement en Une, on les résume en 2-3 phrases avec un lien vers l'article original, et on indique la fraîcheur :
+- Si un article est clairement daté de moins de 24 h : le lister normalement avec sa date.
+- Si rien n'est confirmé daté de moins de 24 h pour une source : afficher le bandeau `Aucun nouvel article dans les dernières 24 h — historique conservé` puis lister quand même les derniers articles connus de cette source (ne jamais laisser une section vide).
+- Si une source est inaccessible (403, 503, DNS...) après 2 tentatives : l'indiquer explicitement (`Source inaccessible (HTTP {code}) — contenu non consulté, non inventé`), ne jamais inventer de contenu à sa place.
+- Si une date de publication n'est pas affichée par le site (fréquent sur certains sites) : lister l'article quand même mais préciser `dates non affichées — fraîcheur non garantie` en tête de section plutôt que d'affirmer une fraîcheur non vérifiée.
 
-**Accumulation** : contrairement à `veille-marche` (qui remplace tout à chaque run), cette note s'ajoute en tête de la page à chaque exécution. Les 14 dernières notes sont conservées ; au-delà, la plus ancienne est retirée.
+**Fenêtre temporelle** : 24 heures glissantes (pas 48h — cadence quotidienne, pas de recouvrement voulu), calculée comme en étape 1.
+
+**Accumulation** : contrairement à `veille-marche` (qui remplace tout à chaque run), cette note s'ajoute en tête de la page à chaque exécution. Les 14 dernières notes sont conservées ; au-delà, la plus ancienne est retirée. Si une note existe déjà pour la date du jour (ré-exécution le même jour), elle est **remplacée** (même ID, pas de doublon) plutôt que dupliquée.
 
 ---
 
-## Périmètre (5 axes, sous-ensemble de veille-marche)
+## Périmètre (13 sources, en 4 catégories)
 
-| # | Axe | Focus |
-|---|-----|-------|
-| 1 | Modèles IA | OpenAI, Anthropic, Google, Mistral, Meta, benchmarks LLM |
-| 2 | Outils IA | Copilot M365, GitHub Copilot, Gemini Workspace, IA métier |
-| 3 | Infra / Réseau | Scale Computing, VMware, Dell, HP, Lenovo, Synology, Wi-Fi 6/7 |
-| 4 | Cybersécurité | Fortinet (firmware, CVE, FortiOS), SASE, Zero Trust, EDR, CERT |
-| 5 | DATA | Power BI, Microsoft Fabric, Databricks, gouvernance données |
+| Catégorie | Sources | Classe CSS |
+|---|---|---|
+| Modèles IA / Outils IA | intelligence-artificielle.com, usine-digitale.fr, journaldunet.com | `cat-ia` |
+| Infra / Cybersécurité / DATA | lemondeinformatique.fr, lemagit.fr (rubrique virtualisation), silicon.fr, itpro.fr | `cat-tech` |
+| Décideurs IT / DSI | Alliancy.fr, ITforBusiness.fr, Solutions Numériques | `cat-dsi` |
+| Conseil / Gestion de projet | Consultor.fr, Manager GO!, PMI France | `cat-conseil` |
+
+Axes de fond couverts par les sources tech (indicatif, ne structure plus la note) : Modèles IA (OpenAI, Anthropic, Google, Mistral, Meta, benchmarks LLM), Outils IA (Copilot M365, GitHub Copilot, Gemini Workspace, IA métier), Infra/Réseau (Scale Computing, VMware, Dell, HP, Lenovo, Synology, Wi-Fi), Cybersécurité (Fortinet, CVE, SASE, Zero Trust, EDR, CERT-FR), DATA (Power BI, Microsoft Fabric, Databricks, gouvernance données).
 
 Axes exclus volontairement (hors périmètre de cette veille quotidienne, restent dans `veille-marche` sur demande) : Concurrentielle NC, Client NC, Sectorielle NC, AO NC, Réglementation.
+
+**Historique des sources** : `CIO.fr` a été retiré (HTTP 503 persistant sur plusieurs tentatives, y compris à plusieurs jours d'intervalle) et remplacé par `Solutions Numériques` (même catégorie décideurs IT). Si `CIO.fr` redevient accessible, ne pas le rajouter sans validation explicite de l'utilisateur — la liste des 13 sources ci-dessus fait foi.
 
 ---
 
@@ -67,11 +77,15 @@ print(f"MAINTENANT={now.strftime('%Y-%m-%d %H:%M UTC+11')}")
 print(f"SEUIL_24H={seuil.strftime('%Y-%m-%d %H:%M UTC+11')}")
 ```
 
-Toute information antérieure à `SEUIL_24H` est écartée (sauf signal faible non daté, explicitement marqué comme tel).
+### 2. Collecte par source
 
-### 2. Collecte par axe
+Pour chacune des 13 sources : récupérer la page d'accueil (ou la rubrique pertinente), relever les articles actuellement en Une (titre, date si affichée, URL complète de l'article), puis pour chaque article à conserver (3 à 6 par source, les plus pertinents pour un DSI/dirigeant IT d'Office Plus) aller chercher la page de l'article et en produire un résumé de 2-3 phrases (sujet, faits clés, conclusion) en français, factuel, sans invention.
 
-Pour chacun des 5 axes : rechercher, vérifier la date de publication, rejeter silencieusement tout résultat antérieur à `SEUIL_24H`, classer par pertinence décroissante, distinguer fait établi / inférence / signal faible, et pour chaque axe distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur. Signaler toute source inaccessible sans en inventer le contenu.
+Classer chaque source :
+- **Nouveau** : au moins un article clairement daté de moins de 24 h → lister ces articles (les autres articles de la page peuvent être ajoutés à titre de contexte si pertinent, avec leur date).
+- **Rien de nouveau** : aucun article confirmé daté de moins de 24 h → bandeau `status-none` + lister les derniers articles connus de cette source (historique).
+- **Dates non affichées** : le site ne montre pas de date exploitable → bandeau `status-new` avec la mention « dates non affichées — fraîcheur non garantie », lister les articles en Une tels quels.
+- **Inaccessible** : après 2 tentatives (codes HTTP 403/404/503, erreur DNS...) → bandeau `status-error`, ne rien lister, ne rien inventer.
 
 ### 3. Génération de la note du jour
 
@@ -86,54 +100,35 @@ NOTE_ID = note-tech-{YYYY-MM-DD}
     <span class="note-date">{DATE} {HEURE UTC+11} — Fenêtre 24 h</span>
   </div>
   <div class="note-body">
-    {SECTION_MODELES_IA}
-    {SECTION_OUTILS_IA}
-    {SECTION_INFRA}
-    {SECTION_CYBERSECURITE}
-    {SECTION_DATA}
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:{CONFIANCE_PCT}%"></span></span>
-      <span class="conf-value">{CONFIANCE} / 1,0</span>
-    </div>
+    {BLOC_SOURCE_1}
+    {BLOC_SOURCE_2}
+    ...
+    {BLOC_SOURCE_13}
   </div>
 </article>
 ```
 
-Chaque section utilise une classe `axis-*` dédiée (reprise par le CSS déjà présent dans le `<head>` de `veille-tech.html` pour distinguer visuellement chaque thématique — ne pas retirer ce `<head>` lors des publications, le script de l'étape 4 ne touche que le bloc entre les marqueurs) :
-
-| Axe | Classe |
-|---|---|
-| 1. Modèles IA | `axis-modeles` |
-| 2. Outils IA | `axis-outils` |
-| 3. Infra / Réseau | `axis-infra` |
-| 4. Cybersécurité | `axis-cyber` |
-| 5. DATA | `axis-data` |
+Chaque source utilise le gabarit suivant, avec la classe de catégorie (`cat-ia`, `cat-tech`, `cat-dsi` ou `cat-conseil` — voir tableau du Périmètre) reprise par le CSS déjà présent dans le `<head>` de `veille-tech.html` (ne pas retirer ce `<head>` lors des publications, le script de l'étape 4 ne touche que le bloc entre les marqueurs) :
 
 ```html
-<section class="{AXIS_CLASS}">
-  <h3>[N]. [Axe]</h3>
-  <h4>Faits établis (&lt; 24 h)</h4>
-  {FAITS_EN_HTML}
-  <h4>Signaux faibles</h4>
-  {SIGNAUX_EN_HTML}
-  <h4 class="alerte">Points d'alerte</h4>
-  {ALERTES_EN_HTML}
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:{CONFIANCE_SECTION_PCT}%"></span></span>
-    <span class="conf-value">{CONFIANCE_SECTION} / 1,0</span>
-  </div>
+<section class="source-block {CATEGORIE_CLASS}">
+  <h3>{NOM_SOURCE}</h3>
+  <p class="source-status {status-new|status-none|status-error}">{MESSAGE_STATUT}</p>
+  <ul class="article-list">
+    <li><a href="{URL_ARTICLE}">{TITRE_ARTICLE}</a><span class="art-date">{DATE_SI_CONNUE}</span>
+      <p>{RESUME_2_3_PHRASES}</p></li>
+    ...
+  </ul>
 </section>
 ```
 
-`{CONFIANCE_SECTION_PCT}` et `{CONFIANCE_PCT}` sont la confiance (0,0–1,0) multipliée par 100, arrondie à l'entier (ex. 0,6 → `60`).
+Pour une source inaccessible, omettre `<ul class="article-list">` et ne garder que `<h3>` + `<p class="source-status status-error">`.
 
-### 4. Publication — accumulation, pas remplacement
+### 4. Publication — accumulation avec remplacement du jour, pas duplication
 
 Exécuter via `bash_tool` (adapter `{ARTICLE_HTML}` avec le bloc de l'étape 3) :
 
-**Important** : la mise en forme (CSS par thématique, légende de couleurs, barres de confiance) vit dans le `<head>` et le début du `<body>` de `veille-tech.html`, en dehors des marqueurs `NOTES-TECH` — le script ci-dessous ne touche jamais cette zone. Ne pas la régénérer sauf si `veille-tech.html` n'existe pas encore (squelette de secours ci-dessous), auquel cas reprendre le `<head>`/légende déjà déployés sur `https://poinde08-netizen.github.io/veille-officeplus/veille-tech.html` (vue source) pour ne pas perdre le style.
+**Important** : la mise en forme (CSS par catégorie, légende de couleurs, styles des blocs source/liste d'articles) vit dans le `<head>` et le début du `<body>` de `veille-tech.html`, en dehors des marqueurs `NOTES-TECH` — le script ci-dessous ne touche jamais cette zone. Ne pas la régénérer sauf si `veille-tech.html` n'existe pas encore (squelette de secours ci-dessous), auquel cas reprendre le `<head>`/légende déjà déployés sur `https://poinde08-netizen.github.io/veille-officeplus/veille-tech.html` (vue source) pour ne pas perdre le style.
 
 ```python
 import subprocess, os, tempfile, shutil, re
@@ -189,11 +184,15 @@ try:
     if MARKER_START not in html or MARKER_END not in html:
         raise ValueError("Markers NOTES-TECH introuvables ou incomplets dans veille-tech.html")
 
-    # Extraire les articles existants, ajouter le nouveau en tête, tronquer à MAX_NOTES
+    # Extraire les articles existants, retirer une éventuelle note du même jour
+    # (ré-exécution), ajouter le nouveau en tête, tronquer à MAX_NOTES
     bloc_pattern = re.compile(re.escape(MARKER_START) + r"(.*?)" + re.escape(MARKER_END), re.DOTALL)
     match = bloc_pattern.search(html)
     contenu_existant = match.group(1)
     articles_existants = re.findall(r"<article class=\"note-tech\".*?</article>", contenu_existant, re.DOTALL)
+
+    note_id = nouvel_article.split('id="')[1].split('"')[0]
+    articles_existants = [a for a in articles_existants if f'id="{note_id}"' not in a]
 
     articles = [nouvel_article] + articles_existants
     articles = articles[:MAX_NOTES]
@@ -208,7 +207,6 @@ try:
     subprocess.run(["git", "config", "user.name", "Office Plus Veille Tech"], cwd=workdir, check=True)
     subprocess.run(["git", "add", TARGET_FILE], cwd=workdir, check=True)
 
-    note_id = nouvel_article.split('id="')[1].split('"')[0]
     subprocess.run(["git", "commit", "-m", f"veille-tech: {note_id}"], cwd=workdir, check=True)
 
     result = subprocess.run(["git", "push"], cwd=workdir, capture_output=True, text=True)
@@ -236,28 +234,38 @@ Veille tech publiée : {PAGES_URL}/{TARGET_FILE}#{NOTE_ID}
 
 ---
 
-## Sources prioritaires par axe
+## Sources (13, par catégorie)
 
-**Modèles IA :** https://intelligence-artificielle.com, https://www.usine-digitale.fr
+**Modèles IA / Outils IA :**
+- https://intelligence-artificielle.com
+- https://www.usine-digitale.fr
+- https://www.journaldunet.com
 
-**Outils IA :** https://www.journaldunet.com (JDN), https://www.lemondeinformatique.fr
+**Infra / Cybersécurité / DATA :**
+- https://www.lemondeinformatique.fr
+- https://www.lemagit.fr/actualites/Virtualisation-de-serveurs
+- https://www.silicon.fr
+- https://www.itpro.fr
 
-**Infra / Réseau :** https://www.lemagit.fr/actualites/Virtualisation-de-serveurs, https://www.silicon.fr, https://www.itpro.fr
+**Décideurs IT / DSI :**
+- https://www.alliancy.fr
+- https://www.itforbusiness.fr
+- https://www.solutions-numeriques.com
 
-**Cybersécurité :** https://www.journaldunet.com (rubrique cybersécurité), https://www.silicon.fr, https://www.itpro.fr
-
-**DATA :** https://www.lemondeinformatique.fr, https://www.silicon.fr, https://www.journaldunet.com
+**Conseil / Gestion de projet :**
+- https://www.consultor.fr
+- https://www.manager-go.com
+- https://pmi-france.org (blog)
 
 ---
 
 ## Règles de confiance
 
-- Recency stricte : 24h, pas 48h.
-- Distinguer fait établi / inférence / signal faible.
-- Distinguer annonce officielle / bêta publique / roadmap non confirmée / rumeur.
-- Ne jamais présenter une inférence comme un fait établi.
-- Classer les sources par pertinence décroissante.
-- Confiance par section + confiance globale (0,0 à 1,0).
+- Recency stricte : 24h, pas 48h — mais une source sans nouvel article n'est jamais laissée vide : historique conservé + bandeau explicite.
+- Ne jamais inventer le contenu d'une source inaccessible.
+- Ne jamais inventer une date de publication non affichée par le site — le signaler plutôt.
+- Chaque article résumé doit être accompagné du lien complet vers l'article original.
+- Résumés factuels (sujet, faits clés, conclusion), en français, 2-3 phrases.
 
 ---
 
