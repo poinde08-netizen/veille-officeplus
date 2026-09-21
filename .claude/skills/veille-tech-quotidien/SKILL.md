@@ -25,11 +25,13 @@ Note quotidienne courte, publiée automatiquement sur une page GitHub Pages déd
 |---|-----|-------|
 | 1 | Modèles IA | OpenAI, Anthropic, Google, Mistral, Meta, benchmarks LLM |
 | 2 | Outils IA | Copilot M365, GitHub Copilot, Gemini Workspace, IA métier |
-| 3 | Infra / Réseau | Scale Computing, VMware, Dell, HP, Lenovo, Synology, Wi-Fi 6/7 |
+| 3 | Infra / Réseau | Virtualisation serveur (Nutanix, Broadcom/VMware, Microsoft Hyper-V/Azure Local, Red Hat, SUSE, Citrix, Proxmox, Scale Computing, Vates/XCP-ng, VergeIO, Platform9, Sangfor, H3C, IDT System, Oracle, Canonical), Dell, HP, Lenovo, Synology, Wi-Fi 6/7 |
 | 4 | Cybersécurité | Fortinet (firmware, CVE, FortiOS), SASE, Zero Trust, EDR, CERT |
 | 5 | DATA | Power BI, Microsoft Fabric, Databricks, gouvernance données |
 
 Axes exclus volontairement (hors périmètre de cette veille quotidienne, restent dans `veille-marche` sur demande) : Concurrentielle NC, Client NC, Sectorielle NC, AO NC, Réglementation.
+
+**Virtualisation serveur** : périmètre calé sur le Gartner Magic Quadrant for Server Virtualization Platforms (Leaders : Nutanix, Microsoft, Broadcom/VMware, Red Hat ; Visionaries : SUSE, H3C Technologies, IDT System, Sangfor Technologies, Platform9 ; Challengers : HPE, Oracle, Canonical ; Niche Players : Proxmox, Vates, VergeIO, Scale Computing, Citrix). Rechercher en priorité les mises à jour produit (versions, CVE, licensing), changements de positionnement (nouveau Magic Quadrant publié) et mouvements de marché (rachats, partenariats) pour ces éditeurs — pas seulement Scale Computing/VMware comme avant.
 
 ---
 
@@ -242,7 +244,7 @@ Veille tech publiée : {PAGES_URL}/{TARGET_FILE}#{NOTE_ID}
 
 **Outils IA :** https://www.journaldunet.com (JDN), https://www.lemondeinformatique.fr
 
-**Infra / Réseau :** https://www.lemagit.fr/actualites/Virtualisation-de-serveurs, https://www.silicon.fr, https://www.itpro.fr
+**Infra / Réseau :** https://www.lemagit.fr/actualites/Virtualisation-de-serveurs, https://www.silicon.fr, https://www.itpro.fr, éditeurs/constructeurs directement (newsroom Nutanix, Broadcom/VMware, Red Hat, SUSE, Citrix, Proxmox, Scale Computing) pour les annonces produit non reprises par la presse généraliste
 
 **Cybersécurité :** https://www.journaldunet.com (rubrique cybersécurité), https://www.silicon.fr, https://www.itpro.fr
 
