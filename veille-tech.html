@@ -282,6 +282,104 @@
   </div>
 </div>
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-09-29">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">29 septembre 2026 08:14 UTC+11 — Fenêtre 24 h</span>
+  </div>
+  <div class="note-body">
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>Anthropic a lancé Claude Sonnet 5.5 le 28 septembre 2026 : tarifs inchangés par rapport à Sonnet 5 (2 $/M tokens en entrée, 10 $/M en sortie), génération annoncée jusqu'à 30 % plus rapide et jusqu'à 30 % moins coûteuse par tâche, disponible sur AWS, Google Cloud et Microsoft Azure sous l'identifiant claude-sonnet-5-5, avec rétention nulle des données. Annonce officielle, largement reprise. (Sources : anthropic.com, techcrunch.com, siliconangle.com — 28/09/2026)</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Anthropic indique que Claude Haiku 5.5 rejoindra la famille Claude 5.5 « dans les prochaines semaines » — roadmap annoncée, non confirmée comme événement daté.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant dans la fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,8 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>GitHub a unifié le 28 septembre 2026 Copilot Chat (github.com, GitHub Mobile) et l'agent cloud GitHub Copilot en une seule expérience Copilot, activée par défaut, avec une politique de configuration unique remplaçant les politiques distinctes précédentes. (Source : GitHub Changelog, 28/09/2026)</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Les « approbations assistées » entrent en aperçu public pour les sessions d'agent Copilot (approbation automatique des appels d'outils à faible risque, confirmation demandée au-delà) — déploiement en cours, généralisation non datée précisément.</li>
+        <li>Hors fenêtre stricte (25/09/2026, à re-suivre) : Microsoft a dévoilé une refonte de Copilot M365 en trois piliers Home / Code / Autopilot, avec déploiement de Home et Code annoncé « dans les prochaines semaines » et Autopilot en préversion privée fin septembre.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant dans la fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <p>Aucune information de moins de 24 h trouvée à la date du 29 septembre 2026 08:14 UTC+11 concernant Scale Computing, VMware, Dell, HP, Lenovo, Synology ou le Wi-Fi 6/7 sur les sources prioritaires (LeMagIT, Silicon.fr, iTPro.fr).</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Tendance de fond non datée avec précision dans la fenêtre : les publications trimestrielles récentes de Dell et HPE (clôturées début septembre 2026) affichent une forte croissance des revenus datacenter tirée par la demande IA (HPE : 12,2 Md$ de chiffre d'affaires au T3, +34 % sur un an) — mentionné à titre de contexte, pas un événement des dernières 24 h.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:35%"></span></span>
+        <span class="conf-value">0,35 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>Citrix a confirmé le 28 septembre 2026 deux failles zero-day critiques dans NetScaler ADC et NetScaler Gateway : CVE-2026-88771 (exécution de commandes arbitraires par un attaquant non authentifié) et CVE-2026-88772 (débordement de mémoire tampon menant à exécution de code à distance ou déni de service), toutes deux notées CVSS 9,5/10, avec exploitation active déjà observée sur des déploiements non corrigés. La CISA a ajouté le jour même les deux CVE à son catalogue KEV. Les correctifs d'août seuls (14.1-73.32, 13.1-63.21) ne protègent pas contre ces failles ; mise à jour requise vers 14.1-73.37+ ou 13.1-64.23+ (et variantes FIPS correspondantes). (Sources : bulletin Citrix, IT-Connect.fr 28/09/2026 10:09, catalogue CISA KEV)</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Néant identifié de nouveau dans la fenêtre stricte, au-delà du suivi Citrix ci-dessus.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Organisations utilisant NetScaler ADC/Gateway : vérifier en urgence le niveau de correctif appliqué — la mise à jour d'août seule est insuffisante face à ces deux failles, risque de compromission immédiate en l'absence de remédiation.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+        <span class="conf-value">0,85 / 1,0</span>
+      </div>
+    </section>
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Faits établis (&lt; 24 h)</h4>
+      <ul>
+        <li>En marge de l'ouverture de FabCon Europe 2026 à Barcelone (28 septembre au 1er octobre), Microsoft a annoncé plusieurs nouveautés Microsoft Fabric le 28 septembre 2026 : Database Hub (aperçu, supervision et gouvernance unifiées des charges SQL, CosmosDB, PostgreSQL et Fabric Database), passage en disponibilité générale des Fabric data agents (« analystes virtuels » appliqués à des données de domaine), et disponibilité générale de Fabric local MCP (serveur open-source connectant des assistants IA comme GitHub Copilot directement à Fabric). (Sources : MSDynamicsWorld, blog Bismart — 28/09/2026)</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Néant identifié de nouveau dans la fenêtre stricte.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Néant.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
+        <span class="conf-value">0,65 / 1,0</span>
+      </div>
+    </section>
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:67%"></span></span>
+      <span class="conf-value">0,67 / 1,0</span>
+    </div>
+  </div>
+</article>
 <article class="note-tech" id="note-tech-2026-09-28">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -1433,98 +1531,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:35%"></span></span>
       <span class="conf-value">0,35 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-09-15">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">2026-09-15 08:08 UTC+11 — Fenêtre 24 h</span>
-  </div>
-  <div class="note-body">
-
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul class="article-list">
-        <li><a href="https://www.journaldunet.com/intelligence-artificielle/1554683-gpt-6-astra-vs-claude-fable-5-1-quel-est-le-meilleur-modele/">GPT-6 Astra vs Claude Fable 5.1 : quel est le meilleur modèle ?</a>
-          <p>Comparatif technique JDN : GPT-6 Astra devance sur les maths, les agents pilotant ordinateur/navigateur et les tâches courtes à fort volume ; Claude Fable 5.1 domine sur l'écriture, les documents longs et l'analyse fine. Fenêtre de contexte ~1M tokens et tarification API identiques pour les deux ; les benchmarks internes d'OpenAI favorisent Astra, l'évaluateur indépendant Artificial Analysis favorise Fable 5.1.</p></li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>usine-digitale.fr inaccessible (HTTP 403) — contenu non consulté, non inventé. Aucun autre élément daté avec certitude dans la fenêtre sur intelligence-artificielle.com (articles en Une non datés ou antérieurs au 14/09 08h08).</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-        <span class="conf-value">0,5 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-09-15 08:08 UTC+11 (journaldunet.com et lemondeinformatique.fr consultés — rien de neuf sur Copilot M365, GitHub Copilot, Gemini Workspace ou IA métier dans la fenêtre).</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:20%"></span></span>
-        <span class="conf-value">0,2 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul class="article-list">
-        <li><a href="https://www.silicon.fr/cloud-1370/gestion-conteneurs-magic-quadrant-2026-229130">Gestion des conteneurs : l'effet de lock-in demeure</a>
-          <p>Magic Quadrant 2026 de la gestion de conteneurs : 7 leaders identifiés (Alibaba Cloud, AWS, Google, Huawei, Microsoft, Red Hat, SUSE). Le lock-in persiste même chez les leaders, via l'intégration verticale ou les add-ons propriétaires.</p></li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>itpro.fr — « Attaques edge : les fournisseurs, nouvelle cible prioritaire des cybercriminels » (date de publication non confirmée, non consulté en détail — signalé sans être daté avec certitude). LeMagIT : actualités Broadcom/VMware (VCF sur ARM, plateforme d'inférence) et résultats serveurs Dell/HPE/Lenovo repérés, mais datés du 02 au 07/09 — antérieurs à la fenêtre de 24 h, donc écartés.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
-        <span class="conf-value">0,4 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul class="article-list">
-        <li><a href="https://www.silicon.fr/data-ia-1372/microsoft-degaine-son-code-de-conduite-pour-ia-229139">Microsoft dégaine (aussi) son « Code de conduite » pour l'IA</a>
-          <p>Publié le 14/09 (annonce officielle) : Microsoft publie un code de conduite pour le développement responsable de ses modèles MAI, deux jours après l'appel d'Anthropic à ralentir la course aux capacités. Consultation publique ouverte pour six semaines.</p></li>
-        <li><a href="https://www.journaldunet.com/cybersecurite/1554779-ransomware-j-ai-dirige-trois-cellules-de-crise-l-attaquant-n-etait-jamais-le-probleme/">Ransomware : j'ai dirigé trois cellules de crise, l'attaquant n'était jamais le problème</a>
-          <p>Retour d'expérience : en cellule de crise, l'enjeu réel est d'arrêter l'hémorragie et d'estimer le temps de survie sans systèmes, pas la question de payer la rançon ; reconstruire le SI est compliqué tant que l'attaquant conserve des comptes admin valides.</p></li>
-        <li><a href="https://www.journaldunet.com/cybersecurite/1554773-exclu-les-ambitions-de-l-irn-acces-aux-pme-plus-de-consultants-europeanisation/">Info JDN. L'indice de résilience numérique va s'élargir aux PME et à toute l'Europe</a>
-          <p>L'association aDRI (créatrice de l'IRN en 2025) veut simplifier les critères pour les PME/collectivités et déployer l'indice à l'échelle européenne via les caisses d'épargne.</p></li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>Aucun nouvel avis CERT-FR concernant Fortinet dans la fenêtre 24 h (dernier avis identifié : CERTFR-2026-AVI-1166, daté du 11/09, donc hors fenêtre). Fortinet tient son « SASE Summit 2026 » le 15/09 — événement à venir, non une actualité publiée.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Aucun signal de compromission critique nouveau identifié dans la fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
-        <span class="conf-value">0,6 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <p>Aucune information de moins de 24 h trouvée à la date du 2026-09-15 08:08 UTC+11 (lemondeinformatique.fr, silicon.fr et journaldunet.com consultés — rien de neuf sur Power BI, Microsoft Fabric, Databricks ou gouvernance des données dans la fenêtre).</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:20%"></span></span>
-        <span class="conf-value">0,2 / 1,0</span>
-      </div>
-    </section>
-
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:38%"></span></span>
-      <span class="conf-value">0,38 / 1,0</span>
     </div>
   </div>
 </article>
