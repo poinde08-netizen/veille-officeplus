@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Veille technologique quotidienne — Office Plus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --c-modeles:#4F46E5;
@@ -13,6 +16,12 @@
     --c-data:#059669;
     --c-dsi:#D97706;
     --c-conseil:#7C3AED;
+    --c-ia-ent:#C026D3;
+    --c-souverain:#0369A1;
+    --c-agents:#BE185D;
+    --c-esn:#4D7C0F;
+    --c-regl:#475569;
+    --c-ao:#92400E;
     --bg:#f5f6f8;
     --card-bg:#ffffff;
     --text:#1a1d29;
@@ -34,7 +43,7 @@
     padding:0 16px 48px;
     background:var(--bg);
     color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family:"Raleway",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     line-height:1.5;
   }
   .page-header{
@@ -265,12 +274,100 @@
   }
   .confiance .conf-bar{max-width:220px;}
   .confiance .conf-fill{background:linear-gradient(90deg,var(--c-cyber),var(--c-data));}
+
+  /* Axes IA en entreprise (à partir du 08/10/2026) */
+  .note-body section.axis-ia-ent{ border-left-color:var(--c-ia-ent); background:color-mix(in srgb, var(--c-ia-ent) 5%, transparent); }
+  .axis-ia-ent h3{color:var(--c-ia-ent);}
+  .axis-ia-ent .conf-fill{background:var(--c-ia-ent);}
+  .legend-item.ia-ent .legend-dot{background:var(--c-ia-ent);}
+  .note-body section.axis-souverain{ border-left-color:var(--c-souverain); background:color-mix(in srgb, var(--c-souverain) 5%, transparent); }
+  .axis-souverain h3{color:var(--c-souverain);}
+  .axis-souverain .conf-fill{background:var(--c-souverain);}
+  .legend-item.souverain .legend-dot{background:var(--c-souverain);}
+  .note-body section.axis-agents{ border-left-color:var(--c-agents); background:color-mix(in srgb, var(--c-agents) 5%, transparent); }
+  .axis-agents h3{color:var(--c-agents);}
+  .axis-agents .conf-fill{background:var(--c-agents);}
+  .legend-item.agents .legend-dot{background:var(--c-agents);}
+  .note-body section.axis-esn{ border-left-color:var(--c-esn); background:color-mix(in srgb, var(--c-esn) 5%, transparent); }
+  .axis-esn h3{color:var(--c-esn);}
+  .axis-esn .conf-fill{background:var(--c-esn);}
+  .legend-item.esn .legend-dot{background:var(--c-esn);}
+  .note-body section.axis-regl{ border-left-color:var(--c-regl); background:color-mix(in srgb, var(--c-regl) 5%, transparent); }
+  .axis-regl h3{color:var(--c-regl);}
+  .axis-regl .conf-fill{background:var(--c-regl);}
+  .legend-item.regl .legend-dot{background:var(--c-regl);}
+  .note-body section.axis-ao{ border-left-color:var(--c-ao); background:color-mix(in srgb, var(--c-ao) 5%, transparent); }
+  .axis-ao h3{color:var(--c-ao);}
+  .axis-ao .conf-fill{background:var(--c-ao);}
+  .legend-item.ao .legend-dot{background:var(--c-ao);}
+
+  /* Synthèse 5 jours, rappels, mises à jour */
+  .synthese-5j{
+    margin:16px 0;
+    padding:14px 16px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:var(--bg);
+  }
+  .synthese-5j h3{margin:0 0 8px;font-size:1.05rem;}
+  .synthese-5j ul{margin:0;padding-left:20px;}
+  .synthese-5j li{margin:0 0 4px;font-size:0.92rem;}
+  .note-body section ul.rappel li{
+    font-size:0.82rem;
+    color:var(--text-muted);
+    margin:0 0 3px;
+  }
+  .maj{
+    display:inline-block;
+    font-size:0.68rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    padding:1px 7px;
+    border-radius:999px;
+    background:color-mix(in srgb, var(--c-dsi) 18%, transparent);
+    color:var(--c-dsi);
+    margin-right:6px;
+  }
+  .note-body section li a{color:var(--text);}
+  .art-date{font-size:0.72rem;color:var(--text-muted);margin-left:6px;}
+
+  /* Dossier hebdomadaire */
+  .note-hebdo{
+    max-width:880px;
+    margin:24px auto;
+    background:var(--card-bg);
+    border:2px solid var(--c-souverain);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 1px 3px rgba(0,0,0,0.06);
+  }
+  .note-hebdo .note-header{
+    background:linear-gradient(90deg, rgba(3,105,161,0.12), rgba(192,38,211,0.10));
+  }
+  .badge-hebdo{background:var(--c-souverain);color:#fff;}
+  table.hypotheses{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.85rem;
+    margin:8px 0;
+  }
+  table.hypotheses th, table.hypotheses td{
+    border:1px solid var(--border);
+    padding:6px 8px;
+    text-align:left;
+    vertical-align:top;
+  }
+  table.hypotheses th{background:var(--bg);font-weight:600;}
+  @media (max-width:600px){
+    table.hypotheses{display:block;overflow-x:auto;}
+  }
 </style>
 </head>
 <body>
 <div class="page-header">
   <h1>Veille technologique quotidienne — Office Plus</h1>
-  <p class="subtitle">Note automatisée, fenêtre glissante de 24 h, publiée chaque matin. Les 14 dernières notes sont conservées.</p>
+  <p class="subtitle">Note automatisée, fenêtre glissante de 5 jours avec dédoublonnage, publiée chaque matin. Dossier hebdomadaire le lundi. Les 14 dernières notes et les 12 derniers dossiers sont conservés.</p>
   <div class="legend">
     <span class="legend-item modeles"><span class="legend-dot"></span>Modèles IA</span>
     <span class="legend-item outils"><span class="legend-dot"></span>Outils IA</span>
@@ -279,8 +376,16 @@
     <span class="legend-item data"><span class="legend-dot"></span>DATA</span>
     <span class="legend-item dsi"><span class="legend-dot"></span>Décideurs IT / DSI</span>
     <span class="legend-item conseil"><span class="legend-dot"></span>Conseil / Gestion de projet</span>
+    <span class="legend-item ia-ent"><span class="legend-dot"></span>IA en entreprise</span>
+    <span class="legend-item souverain"><span class="legend-dot"></span>Infra IA souveraine</span>
+    <span class="legend-item agents"><span class="legend-dot"></span>Agents et protocoles</span>
+    <span class="legend-item esn"><span class="legend-dot"></span>Marché ESN</span>
+    <span class="legend-item regl"><span class="legend-dot"></span>Réglementation IA</span>
+    <span class="legend-item ao"><span class="legend-dot"></span>AO et financements</span>
   </div>
 </div>
+<!-- DOSSIERS-HEBDO -->
+<!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
 <article class="note-tech" id="note-tech-2026-10-08">
   <div class="note-header">
