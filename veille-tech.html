@@ -385,8 +385,390 @@
   </div>
 </div>
 <!-- DOSSIERS-HEBDO -->
+<article class="note-hebdo" id="dossier-hebdo-2026-10-12">
+  <div class="note-header">
+    <span class="badge badge-hebdo">DOSSIER HEBDOMADAIRE</span>
+    <span class="note-date">Semaine du 2026-10-06 au 2026-10-12 — 08:13 UTC+11</span>
+  </div>
+  <div class="note-body">
+
+    <section class="axis-esn">
+      <h3>1. Business model d'une ESN à infrastructure IA souveraine</h3>
+      <p>Le marché français valide cette semaine la thèse d'une offre « IA souveraine » adossée à un cloud de confiance qualifié, plutôt qu'à une infrastructure GPU propriétaire construite en interne. Trois mouvements de la semaine l'illustrent : Orange Business obtient une 2<sup>e</sup> qualification SecNumCloud (Cloud Avenue SecNum Dynamic, serveurs GPU dédiés IA, architecture bi-site Val-de-Reuil/Chartres) ; Cloud Temple fédère un consortium avec Thales (S3NS), Bull, Vates et le CEA pour une offre cloud/IA de confiance financée à 47&nbsp;M€ dont 20&nbsp;M€ par France 2030 ; Atos a présenté en 2026 sa gamme « Atos Sovereign Cloud » et « Sovereign Agentic Studios ». <a href="https://www.lemondeinformatique.fr/actualites/lire-orange-muscle-son-offre-secnumcloud-100841.html">lemondeinformatique.fr</a>, <a href="https://www.lemondeinformatique.fr/actualites/lire-cloud-temple-prend-la-tete-d-un-consortium-dedie-au-cloud-de-confiance-100844.html">lemondeinformatique.fr</a></p>
+      <h4>Sources de revenus observées chez les acteurs du marché</h4>
+      <ul>
+        <li><strong>Abonnement / usage</strong> : facturation au token ou à l'heure de GPU réservée. Scaleway facture ses Generative APIs dès 0,20&nbsp;€/M tokens (1<sup>er</sup> million gratuit) et son Managed Inference dès 0,93&nbsp;€/h ; OVHcloud propose ses instances H100 PCIe à ~2,80&nbsp;€HT/h. <a href="https://www.scaleway.com/model-as-a-service">scaleway.com</a></li>
+        <li><strong>Infogérance IA / services managés</strong> : Orange Business combine hébergement SecNumCloud et capacité GPU dédiée en offre packagée pour administrations et organisations à fortes contraintes réglementaires.</li>
+        <li><strong>Projets d'intégration</strong> : l'accord-cadre Caisse des Dépôts (Sopra Steria + Computacenter, jusqu'à 140&nbsp;M€, mai 2026) déploie les outils Mistral AI avec hébergement sur le futur datacenter Mistral de Bruyères-le-Châtel (44&nbsp;MW).</li>
+        <li><strong>Licences / revente de modèles hébergés</strong> : Scaleway et Cloud Temple ne développent pas de modèle propriétaire mais hébergent et facturent l'accès à des modèles tiers (Mistral, Gemma, Qwen, gpt-oss pour Scaleway).</li>
+      </ul>
+      <h4>Structure de coûts</h4>
+      <ul>
+        <li><strong>GPU</strong> : aucun prix officiel NVIDIA/AMD n'est publié ; les estimations de revendeurs situent le H100 entre 27&nbsp;000 et 40&nbsp;000&nbsp;$, le H200 entre 30&nbsp;000 et 55&nbsp;000&nbsp;$ selon la source, le B200 entre 30&nbsp;000 et 50&nbsp;000&nbsp;$ (hypothèse, fourchettes de marché non officielles). <a href="https://intuitionlabs.ai/articles/nvidia-ai-gpu-pricing-guide">intuitionlabs.ai</a></li>
+        <li><strong>Énergie</strong> : le prix de gros de l'électricité en France est passé d'environ 50&nbsp;€/MWh en 2019 à plus de 276&nbsp;€/MWh au pic de la crise énergétique de 2022 (SIA Partners) ; RTE a déjà réservé 18&nbsp;GW pour 80&nbsp;projets de datacenters en France. <a href="https://www.sia-partners.com/system/files/document_download/file/2026-05/">sia-partners.com</a></li>
+        <li><strong>Hébergement / mise en conformité</strong> : une estimation de cabinet de conseil (non vérifiée indépendamment, à traiter comme hypothèse) chiffre une migration vers SecNumCloud à 150&nbsp;000-800&nbsp;000&nbsp;€ sur 12 à 36 mois. <a href="https://ayinedjimi-consultants.fr/articles/secnumcloud-2026-migration-eucs">ayinedjimi-consultants.fr</a></li>
+        <li><strong>Ingénierie</strong> : non chiffré par les sources disponibles cette semaine — à documenter lors d'un prochain dossier via des retours clients directs.</li>
+      </ul>
+      <h4>Dimensionnement et rentabilité des acteurs établis</h4>
+      <p>OVHcloud affiche une marge d'EBITDA ajusté de 40,9&nbsp;% au S1 FY2026 (record depuis son introduction en bourse), avec un cloud public en croissance de +20,2&nbsp;% mais un taux de rétention net en légère baisse (104&nbsp;%→102&nbsp;%) et une difficulté d'acquisition client reconnue par la direction. Sopra Steria a relevé son objectif de croissance annuelle à 8,5-9&nbsp;% (CA S1 2026 : 2&nbsp;958,9&nbsp;M€, +4,1&nbsp;%), porté explicitement par l'IA, la cybersécurité et la souveraineté technologique. <a href="https://corporate.ovhcloud.com/sites/default/files/external_files/2026-04-09-ovhcloud-h1-fy26-cp-fr-vdef_0.pdf">corporate.ovhcloud.com</a></p>
+      <h4>Risques identifiés</h4>
+      <ul>
+        <li>Tension sur les prix et l'approvisionnement GPU (signal faible relevé cette semaine : hausse de 50 à 60&nbsp;% sur un an selon un intégrateur américain) — pèserait directement sur toute offre d'infrastructure dédiée.</li>
+        <li>Selon une source non confirmée indépendamment, la certification SecNumCloud ne couvrirait pas encore les instances GPU chez OVHcloud — point structurel à vérifier avant toute promesse commerciale « IA souveraine » appuyée sur ce fournisseur.</li>
+        <li>Extraterritorialité du Cloud Act américain : raison d'être de SecNumCloud, reste un argument de différenciation tant que l'EUCS européen reste à l'arrêt.</li>
+      </ul>
+    </section>
+
+    <section class="axis-souverain">
+      <h3>2. Économie de l'IA</h3>
+      <h4>Coût total de possession : GPU on-site contre cloud</h4>
+      <p>Aucun prix officiel GPU n'étant publié par NVIDIA ou AMD, les chiffres suivants sont des <strong>estimations de marché</strong>, à vérifier auprès d'un revendeur avant tout chiffrage commercial : H100 27&nbsp;000-40&nbsp;000&nbsp;$, H200 30&nbsp;000-55&nbsp;000&nbsp;$ (fourchettes incohérentes entre sources), B200 30&nbsp;000-50&nbsp;000&nbsp;$/GPU ou 400&nbsp;000-500&nbsp;000&nbsp;$ pour un serveur 8&nbsp;GPU. Côté location, les écarts sont également importants selon la source : OVHcloud H100 PCIe ~2,80&nbsp;€HT/h (tarif public) à 2,99&nbsp;$/h (comparateur tiers, 28/09/2026) ; Scaleway H100 SXM ~3,2-3,3&nbsp;$/h ; AWS/Azure H100 entre 5 et 13&nbsp;$/GPU/h selon la méthode de normalisation retenue par l'agrégateur. AWS a relevé ses prix H200 de 15&nbsp;% le 4 janvier 2026, signe de tension sur l'offre. <a href="https://www.spheron.network/blog/ovhcloud-gpu-pricing-2026-h100-cost-and-sovereign-ai/">spheron.network</a>, <a href="https://introl.com/blog/aws-gpu-price-increase-h200-january-2026">introl.com</a></p>
+      <h4>Prix des tokens LLM (grilles officielles quand disponibles)</h4>
+      <ul>
+        <li><strong>Anthropic</strong> (grille officielle, platform.claude.com, lue le 11/10/2026) : Opus&nbsp;5 à 5&nbsp;$/MTok entrée et 25&nbsp;$/MTok sortie ; Sonnet&nbsp;5 à 2&nbsp;$/10&nbsp;$ (la hausse prévue à 3&nbsp;$/15&nbsp;$ au 1<sup>er</sup> septembre 2026 a été annulée) ; Haiku&nbsp;4.5 à 1&nbsp;$/5&nbsp;$. Remises : -50&nbsp;% en Batch API, jusqu'à -90&nbsp;% sur la relecture de cache.</li>
+        <li><strong>Google Gemini</strong> (grille officielle, ai.google.dev, lue le 11/10/2026) : Gemini&nbsp;3.1&nbsp;Pro Preview à 2&nbsp;$/MTok entrée (≤200k tokens) et 12&nbsp;$ en sortie ; Gemini&nbsp;3.8/3.6&nbsp;Flash à 0,75&nbsp;$/3,75&nbsp;$ jusqu'à fin 2026 (hausse à 1,50&nbsp;$/7,50&nbsp;$ prévue au 1<sup>er</sup> janvier 2027).</li>
+        <li><strong>OpenAI GPT-5.1</strong> : page officielle inaccessible lors de la vérification (erreur HTTP) ; un agrégateur tiers cite 1,25&nbsp;$/10&nbsp;$ par MTok — <strong>à vérifier directement sur openai.com/api/pricing avant toute utilisation commerciale de ce chiffre</strong>.</li>
+        <li><strong>Mistral Large</strong> : aucune page officielle consultée directement ; deux chiffres contradictoires circulent pour Large&nbsp;3 (0,50&nbsp;$/1,50&nbsp;$ ou 2&nbsp;$/5&nbsp;$ par MTok) — <strong>divergence non résolue, à vérifier sur docs.mistral.ai/platform/pricing</strong>. Mistral Large&nbsp;4, présenté début octobre, affiche un tarif de préversion de 1,36&nbsp;$/M tokens en entrée et 4,18&nbsp;$ en sortie (source : blog officiel Mistral, déjà publié dans la note du 10/10).</li>
+      </ul>
+      <h4>Mouvements de financement (France/Europe)</h4>
+      <ul>
+        <li><strong>Mistral AI</strong> : Série D de 3&nbsp;Md€ bouclée le 8 septembre 2026, valorisation post-money &gt;21&nbsp;Md€ (+77,5&nbsp;% vs la Série C de 1,7&nbsp;Md€/11,7&nbsp;Md€ de septembre 2025), menée par Samsung Electronics avec Scaleup Europe Fund (EQT) et PSG Equity ; les fondateurs resteraient majoritaires. <a href="https://www.orrick.com/en/News/2026/09/Orrick-Advises-Mistral-in-its-3B-Series-D-at-21B-Post-Money-Valuation">orrick.com</a></li>
+        <li><strong>AMI Labs</strong> : amorçage de 890&nbsp;M€ en mars 2026, qui a dopé le total des levées françaises de mars 2026 à 1,5&nbsp;Md€ sur 37 opérations. <a href="https://www.maddyness.com/2026/04/01/levees-mars-2026-pulverise-les-compteurs-dope-par-ami-labs-et-le-retour-des-mega-tours/">maddyness.com</a></li>
+        <li><strong>Tendance de marché</strong> (baromètre EY) : moins d'opérations sur un an (397 contre 428, -7&nbsp;%) mais des tickets plus gros ; Mistral représenterait plus d'un tiers des montants levés en France sur l'année. Le taux de réussite d'une 2<sup>e</sup> levée dans les 3 ans pour la cohorte 2023 ne serait que de 13,6&nbsp;% en France (Breakline Partners, cité par Maddyness) — <strong>hypothèse/chiffre secondaire, à vérifier à la source</strong>.</li>
+      </ul>
+      <table class="hypotheses">
+        <thead><tr><th>Hypothèse</th><th>Valeur</th><th>Méthode / Source</th><th>Confiance</th></tr></thead>
+        <tbody>
+          <tr><td>Prix d'achat GPU H100</td><td>27 000 - 40 000 $</td><td>Estimation d'agrégateurs de marché, aucun prix officiel NVIDIA — intuitionlabs.ai</td><td>Faible</td></tr>
+          <tr><td>Location horaire H100 (OVHcloud)</td><td>~2,80 €HT/h</td><td>Tarif public cité par next.ink (28/09/2026)</td><td>Moyenne</td></tr>
+          <tr><td>Coût de migration vers SecNumCloud</td><td>150 000 - 800 000 €, sur 12 à 36 mois</td><td>Estimation d'un cabinet de conseil (ayinedjimi-consultants.fr), non vérifiée indépendamment</td><td>Faible</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="axis-ia-ent">
+      <h3>3. Cas d'usage structurés par fonction métier</h3>
+      <ul>
+        <li><strong>RH</strong> : jusqu'à 40&nbsp;% de gain de productivité potentiel selon une étude du cabinet Emerton Data (40 spécialistes RH interrogés) — échantillon restreint, à traiter comme estimation plutôt que fait généralisable. <a href="https://culture-rh.com/ia-generative-fonction-rh-productivite">culture-rh.com</a></li>
+        <li><strong>Finance</strong> : KPMG « Trends of AI 2026 » (356 décideurs français, communiqué officiel) — deux tiers des organisations savent désormais mesurer le ROI de l'IA, contre un tiers en 2025. <a href="https://kpmg.com/fr/fr/media/press-releases/2026/01/adoption-ia-entreprises-francaises.html">kpmg.com</a></li>
+        <li><strong>Juridique</strong> : étude officielle Wolters Kluwer « Avocats et juristes face au futur 2026 » (publiée le 10/03/2026) — 62&nbsp;% des professionnels déclarent 6 à 20&nbsp;% de temps hebdomadaire gagné grâce à l'IA, 52&nbsp;% une hausse de chiffre d'affaires dans la même fourchette, 92&nbsp;% utilisent un outil IA quotidiennement (contre 76&nbsp;% hebdomadairement en 2024). <a href="https://www.wolterskluwer.com/fr-fr/expert-insights/adoption-ia-juridique-gains-temps-croissance-revenus">wolterskluwer.com</a></li>
+        <li><strong>Support client</strong> : une étude éditeur (Klaviyo, 500+ responsables service client) rapporte 77&nbsp;% de ROI positif déclaré — à traiter avec prudence (étude commerciale). Une analyse plus large (relayée, source primaire non confirmée avec certitude) évoque un gain médian d'environ 30&nbsp;% sur ce cas d'usage précis, sans lien significatif démontré au niveau macroéconomique.</li>
+        <li><strong>Commercial</strong> : Salesforce « State of Sales Report 2026 » (communiqué officiel du 23/02/2026, 7<sup>e</sup> édition, &gt;4&nbsp;000 professionnels dans 22 pays) — les commerciaux performants sont 1,7 fois plus susceptibles d'utiliser des agents IA que les équipes en difficulté ; une réduction de 37&nbsp;% du temps de recherche de prospects est <strong>projetée</strong> (et non mesurée) une fois les agents pleinement déployés. <a href="https://www.salesforce.com/fr/news/press-releases/2026/02/23/les-equipes-commerciales-francaises-font-de-lia-et-des-agents-leurs-nouveaux-accelerateurs-de-croissance-pour-2026-selon-une-etude-de-salesforce/">salesforce.com</a></li>
+        <li><strong>Production</strong> : cas clients cités par l'éditeur TeepTrak (à vérifier indépendamment) — Hutchinson : MTBF amélioré de 40&nbsp;% sur 40 sites ; Stellantis : 4,8&nbsp;M€ de pertes annuelles identifiées sur lignes suivies. Ces chiffres proviennent de communications de l'éditeur de la solution et doivent être considérés comme des études de cas commerciales, non comme des faits indépendants vérifiés.</li>
+        <li><strong>DSI</strong> : <strong>aucune étude 2026 chiffrée et indépendante n'a été trouvée</strong> sur le gain de productivité des agents IA en développement logiciel pour cette semaine de recherche — un chiffre ancien (développeurs 55&nbsp;% plus rapides avec assistant IA, source GitHub) existe mais ne porte que sur la vitesse de codage, pas sur la productivité globale, et une contre-étude (Uplevel) nuance ce type de gains sur le terrain. Lacune explicitement signalée plutôt que comblée par un chiffre non vérifié.</li>
+      </ul>
+    </section>
+
+    <section class="axis-modeles">
+      <h3>4. Cabinets d'expertise, ROI et adoption</h3>
+      <ul>
+        <li><strong>McKinsey</strong>, « The State of AI in 2026: On the road to ROI » (synthèse publique) : environ 90&nbsp;% des organisations utilisent l'IA dans au moins une fonction, 44&nbsp;% des utilisateurs ont atteint un stade de déploiement à l'échelle de l'entreprise (contre 38&nbsp;% un an plus tôt) — mais seulement 37&nbsp;% déclarent un impact mesurable sur l'EBIT (quasi stable sur un an) et environ 6&nbsp;% seulement sont des « high performers » ; 80&nbsp;% rapportent un gain personnel de productivité qui ne se traduit pas en impact organisationnel ; les coûts IA contraignent désormais l'usage pour une organisation sur cinq. <a href="https://www.fm-magazine.com/news/2026/sep/companies-financial-value-from-ai-holds-firm-in-2026/">fm-magazine.com</a></li>
+        <li><strong>Gartner</strong> (communiqué officiel du 01/09/2026, enquête janvier-avril 2026, 1&nbsp;303 répondants d'entreprises ≥50&nbsp;M$ de CA) : seulement 22&nbsp;% des organisations ont réussi à déployer l'IA à l'échelle sur plusieurs unités métier ; 85&nbsp;% des responsables fonctionnels prévoient d'augmenter leur budget IA en 2026 après y avoir consacré en moyenne 12&nbsp;% de leur budget fonctionnel en 2025 ; 11&nbsp;% des organisations ignorent combien elles ont dépensé en IA en 2025. <a href="https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/gartner-survey-finds-only-22-percent-of-organizations-have-successfully-scaled-ai-across-multiple-business-units">gartner.com</a></li>
+        <li><strong>IBM</strong>, « The Race for ROI » (500 dirigeants en France, cité) : 60&nbsp;% déclarent des gains de productivité opérationnelle significatifs, mais seuls 13&nbsp;% disent avoir déjà atteint leurs objectifs de ROI. <a href="https://fr.newsroom.ibm.com/">fr.newsroom.ibm.com</a></li>
+        <li><strong>Bpifrance Le Lab</strong> (82<sup>e</sup> enquête semestrielle officielle, publiée le 13/01/2026, ~4&nbsp;700 TPE/PME interrogées) : 55&nbsp;% des dirigeants utilisent désormais l'IA générative (contre 31&nbsp;% fin 2024, 15&nbsp;% fin 2023), mais seulement 17&nbsp;% en usage régulier.</li>
+        <li><strong>Banque de France</strong> (Bulletin officiel n°266, publié le 03/09/2026, enquête 25/02-03/04/2026) : plus des deux tiers des entreprises de 20 salariés ou plus utilisent l'IA générative (83&nbsp;% des grandes entreprises, 64&nbsp;% des petites), mais le manque de cas d'usage identifiés reste le frein n°1, cité par 38&nbsp;% des entreprises. <a href="https://www.banque-france.fr/system/files/2026-09/BDF266-1_IA-et-entreprises_web.pdf">banque-france.fr</a></li>
+        <li><strong>INSEE</strong> (officiel) : 18&nbsp;% des entreprises en France utilisent au moins une technologie d'IA en 2025, soit +8 points sur un an. <a href="https://www.insee.fr/fr/statistiques/fichier/version-html/9025878/IP2120.pdf">insee.fr</a></li>
+      </ul>
+      <p>Lecture consolidée : tous les cabinets cités convergent sur un même constat — l'usage de l'IA progresse fortement (adoption, budgets), mais l'impact mesuré au niveau de l'organisation (EBIT, ROI confirmé) reste très inférieur au discours commercial du secteur. C'est un indicateur structurel plutôt qu'un bruit ponctuel, à intégrer dans l'argumentaire commercial d'Office Plus (section 8).</p>
+    </section>
+
+    <section class="axis-regl">
+      <h3>5. Souveraineté des données</h3>
+      <p>SecNumCloud (référentiel v3.2) reste la référence française pour l'immunité aux lois extraterritoriales (CLOUD Act américain, FISA), en l'absence d'adoption de l'EUCS (European Cloud Certification Scheme) au niveau européen. Le nombre de fournisseurs qualifiés varie selon les sources (environ 9 à 12), à vérifier directement auprès de l'ANSSI. Point à surveiller, non confirmé indépendamment : la couverture SecNumCloud ne s'étendrait pas encore aux instances GPU chez OVHcloud, ce qui limiterait structurellement les offres « IA souveraine » reposant sur l'inférence GPU en cloud public français qualifié.</p>
+      <h4>Décisions de marché de la semaine et du mois</h4>
+      <ul>
+        <li>Consortium incluant OVHcloud retenu par la Commission européenne pour un cloud souverain UE (contrat plafonné à 180&nbsp;M€ sur 6 ans, juin 2026).</li>
+        <li>Orange Business choisi par la Commission européenne pour le réseau sécurisé TESTA-EIRIS reliant les administrations européennes (septembre 2026) ; 2<sup>e</sup> qualification SecNumCloud obtenue cette semaine (7/10, voir sections 1 et 9).</li>
+        <li>Partenariat OVHcloud + Scality (juillet 2026) pour une plateforme de stockage objet souverain dédiée aux charges IA.</li>
+        <li>Accord-cadre Caisse des Dépôts (Sopra Steria + Computacenter, jusqu'à 140&nbsp;M€, mai 2026) pour déployer les outils Mistral AI avec hébergement souverain sur le futur datacenter Mistral de Bruyères-le-Châtel.</li>
+        <li>Consortium Cloud Temple / Thales (S3NS) / Bull / Vates / CEA annoncé cette semaine (9/10), financé à 47&nbsp;M€ dont 20&nbsp;M€ par France 2030 (voir section 9).</li>
+        <li>France 2030 : appel à manifestation d'intérêt pour identifier des solutions souveraines d'IA dédiées aux PME et ETI (communiqué officiel entreprises.gouv.fr). <a href="https://www.entreprises.gouv.fr/">entreprises.gouv.fr</a></li>
+      </ul>
+    </section>
+
+    <section class="axis-data">
+      <h3>6. Gouvernance de la donnée par l'IA</h3>
+      <p>Tendance de fond confirmée cette semaine : les plateformes data investissent massivement dans la gouvernance et la maîtrise des coûts de l'IA agentique, signe que le marché anticipe une explosion des usages agentiques sur la donnée d'entreprise, avec un risque de dérive de coûts si elle n'est pas maîtrisée en amont. Snowflake a lancé Cortex AI Gateway (plan de contrôle centralisé pour l'accès aux modèles/agents IA) et une fonction « Decision » pour automatiser des décisions opérationnelles sur données gouvernées ; Databricks a introduit des budgets et alertes de coûts (FinOps) pour l'entrepôt de données cloud, et a doté Lakebase d'un « branching » de bases Postgres pensé pour les workflows d'agents de codage IA. Ces annonces, toutes officielles et datées du 7-8/10/2026, montrent que le sujet n'est plus seulement la capacité de calcul IA mais sa gouvernance et son coût — un angle de conseil que Office Plus peut valoriser auprès de clients qui déploient déjà Power BI, Databricks ou Snowflake.</p>
+    </section>
+
+    <section class="axis-agents">
+      <h3>7. Veille technologique IA — ce qui change durablement</h3>
+      <ul>
+        <li><strong>L'inférence IA descend vers le poste de travail</strong> : le lancement conjoint NVIDIA/Microsoft de RTX Spark et la préversion du DGX Station for Windows (voir note du 7/10) marquent l'arrivée de capacités d'inférence IA locale significatives (jusqu'à 20 pétaflops FP4 pour le DGX Station) sur du matériel grand public/professionnel Windows — une option d'architecture supplémentaire pour une offre IA souveraine hybride, à mettre en balance avec le cloud qualifié.</li>
+        <li><strong>Tension structurelle sur l'approvisionnement GPU</strong> : le signal de pénurie/hausse de prix relevé cette semaine (section 2 et note du 10/10) s'ajoute à la hausse de 15&nbsp;% déjà appliquée par AWS sur ses instances H200 en janvier 2026 — un mouvement de fond, pas un épisode isolé, qui renchérit mécaniquement tout scénario « on-premise ».</li>
+        <li><strong>La sécurité pilotée par IA change d'échelle</strong> : le programme OSS Scanner d'Anthropic (scans sans relecture humaine, des milliers de signalements) et la suspension par Google de son bug bounty open source début octobre (rapports automatisés jugés majoritairement invalides) dessinent une bascule durable vers un volume de détections IA dépassant la capacité humaine de triage — un risque et une opportunité de service pour une ESN.</li>
+        <li><strong>Le « gap » ROI documenté par tous les grands cabinets</strong> (section 4) n'est pas un chiffre isolé mais une convergence répétée depuis plusieurs enquêtes successives (Gartner, McKinsey, IBM, Bpifrance, Banque de France) : l'adoption de l'IA progresse plus vite que la valeur mesurée à l'échelle de l'organisation. C'est la donnée la plus exploitable commercialement cette semaine.</li>
+      </ul>
+    </section>
+
+    <section class="axis-ao">
+      <h3>8. Synthèse décisionnelle</h3>
+      <h4>Pour la direction</h4>
+      <ul>
+        <li>Le marché valide la thèse d'une infrastructure IA souveraine construite par partenariat avec un fournisseur cloud déjà qualifié SecNumCloud (Orange Business, OVHcloud, Scaleway, Cloud Temple) plutôt que par investissement direct dans des GPU propriétaires : les coûts GPU sont élevés, volatils et leur tendance est actuellement haussière (signal de pénurie de la semaine).</li>
+        <li>Le « gap » ROI documenté par McKinsey, Gartner et IBM est un argument commercial direct : vendre l'accompagnement à la mesure et au pilotage du ROI (gouvernance, cas d'usage ciblés, mesure continue) plutôt que la seule mise à disposition de capacité de calcul ou de licences.</li>
+        <li>Risque fournisseur à surveiller et à budgéter : la tension sur les prix et l'approvisionnement GPU (signal faible mais convergent avec la hausse déjà actée par AWS en janvier 2026) devrait être intégrée en facteur de risque dans tout devis matériel IA des prochains mois.</li>
+      </ul>
+      <h4>Pour les équipes commerciales et techniques</h4>
+      <ul>
+        <li>Présenter les gains sectoriels chiffrés disponibles cette semaine (juridique : +6 à 20&nbsp;% de temps hebdomadaire gagné, Wolters Kluwer ; RH : jusqu'à 40&nbsp;%, Emerton Data ; commercial : -37&nbsp;% de temps de prospection, projection Salesforce) explicitement comme des moyennes ou projections d'étude, jamais comme une garantie contractuelle de résultat.</li>
+        <li>Orienter les clients vers une architecture hybride : inférence locale (stations RTX Spark/serveurs GPU dédiés) pour les charges les plus sensibles, complétée par du cloud souverain qualifié SecNumCloud pour la scalabilité — en vérifiant au cas par cas la couverture SecNumCloud réelle de l'offre GPU du fournisseur cloud retenu (point de vigilance identifié cette semaine sur OVHcloud, non confirmé).</li>
+        <li>Ne jamais vendre de promesse de ROI IA sans plan de mesure associé : s'appuyer sur la donnée Gartner (les organisations qui mesurent systématiquement leur ROI obtiennent des résultats positifs sur la majorité de leurs initiatives) pour vendre l'accompagnement du suivi autant que l'outil.</li>
+      </ul>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+      <span class="conf-value">0,6 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-10-12">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">2026-10-12 08:13 UTC+11 — Fenêtre 5 jours glissants</span>
+  </div>
+  <div class="note-body">
+    <div class="synthese-5j">
+      <h3>Synthèse des 5 jours</h3>
+      <ul>
+        <li>OpenAI étend <strong>GPT-6</strong> et sa fonctionnalité « Intelligent UI » à tous les utilisateurs de ChatGPT (7/10).</li>
+        <li>Anthropic lance <strong>Claude Haiku 5.5</strong> (premier Haiku à curseur d'effort, ~75&nbsp;% moins coûteux), aussitôt intégré à GitHub Copilot (7-8/10).</li>
+        <li><strong>NVIDIA et Microsoft</strong> lancent RTX Spark et prévisualisent le DGX Station for Windows, deux stations d'inférence IA locale pour Windows (7/10).</li>
+        <li>Anthropic lance <strong>OSS Scanner</strong>, un scanner de vulnérabilités open source entièrement généré par IA, sans relecture humaine avant envoi aux mainteneurs (8/10).</li>
+        <li><strong>Orange Business</strong> obtient une 2<sup>e</sup> qualification SecNumCloud avec serveurs GPU dédiés IA ; <strong>Cloud Temple</strong> fédère un consortium cloud/IA de confiance (Thales/S3NS, Bull, Vates, CEA) financé à 47&nbsp;M€ dont 20&nbsp;M€ par France 2030 (7-9/10).</li>
+        <li>CERT-FR publie deux avis à traiter en priorité : faille critique RCE dans Tenable Identity Exposure (SaaS) et 5 CVE dans Nextcloud (9/10).</li>
+        <li>Signal à surveiller : un intégrateur américain alerte sur une envolée « durable » des prix GPU et des pénuries, liées à la demande de mémoire HBM pour l'IA (10/10).</li>
+        <li>L'<strong>Evident AI Index 2026</strong> montre un recul de maturité IA des grandes banques françaises (BNP Paribas, BPCE, Société Générale), seul le Crédit Agricole progresse (9/10).</li>
+      </ul>
+    </div>
+
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>OpenAI étend GPT-6 et « Intelligent UI » à tous les utilisateurs de ChatGPT</strong> — déploiement progressif à l'ensemble de la base ChatGPT (plus de 1,2 milliard d'utilisateurs hebdomadaires revendiqués) ; les réponses peuvent désormais s'enrichir de graphiques, boutons et formulaires interactifs selon la question posée. GPT-6 Instant répondrait environ 44&nbsp;% plus vite que GPT-5.6 Instant sur les requêtes nécessitant une recherche web. Ne concerne que l'expérience Chat (Work et Codex inchangés). Fait établi, annonce officielle, déploiement en cours (non simultané selon comptes/zones). <a href="https://openai.com/index/gpt-6-for-everyone/">openai.com</a> <span class="art-date">2026-10-07</span></li>
+        <li><strong>Anthropic lance Claude Haiku 5.5</strong> — premier modèle Haiku doté d'un curseur de profondeur de raisonnement (5 niveaux : Low/Medium/High/Xhigh/Max), environ 75&nbsp;% moins coûteux que Haiku 4.5, contexte 1&nbsp;million de tokens, sortie jusqu'à 128&nbsp;000 tokens, multimodal. Disponible immédiatement sur l'app Claude, l'API, Claude Code, AWS, Google Cloud et Microsoft Foundry. Fait établi sur l'existence et les caractéristiques (convergence de plusieurs relais) ; chiffres de benchmarks comparatifs = déclaratif éditeur, non vérifiés indépendamment ; page d'annonce officielle non consultée directement. Annonce officielle, disponibilité immédiate. <a href="https://aiweekly.co/fr/alerts/anthropic-lance-claude-haiku-55-premier-haiku-curseur-deffort-75-moins-cher-que">aiweekly.co (couverture secondaire)</a> <span class="art-date">2026-10-07</span></li>
+        <li><strong>LightOn (France) publie LightOnOCR-3</strong> — famille de modèles open weights (0,8B et 4B de paramètres) sous licence Apache 2.0 pour l'extraction documentaire (texte, structure, description d'images, graphiques), successeur de LightOnOCR-2 ; LightOn revendique la 2<sup>e</sup> place du benchmark OlmOCR-Bench, classement nuancé par une analyse tierce. Fait établi sur la publication et la licence ; signal faible sur le classement benchmark (chiffres éditeur contestés en partie). Annonce officielle, modèle disponible. <a href="https://www.webdisclosure.com/press-release/lighton-releases-lightonocr-3-a-world-leading-model-family-for-document-intelligence-daiIusgdpjY">webdisclosure.com</a> <span class="art-date">2026-10-08</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Une source peu fiable indique que Claude Code (v2.1.293, 7/10) basculerait par défaut sur Claude Haiku 5.5 avec un contexte de 1&nbsp;million de tokens — à vérifier sur les notes de version officielles avant toute diffusion commerciale.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Mistral Large 4 — tarifs et benchmarks officiels publiés — publié le 2026-10-06 (voir <a href="#note-tech-2026-10-10">note du 2026-10-10</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
+        <span class="conf-value">0,65 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>GitHub Copilot CLI : sandboxing local en disponibilité générale</strong> — isolation en temps réel des commandes exécutées par l'agent (CLI, app Copilot, sessions VS Code via Agent Host), corroboré par la version CLI v1.0.93. Fait établi, annonce officielle (GA). <a href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available">github.blog/changelog</a> <span class="art-date">2026-10-07</span></li>
+        <li><strong>Claude Haiku 5.5 disponible dans GitHub Copilot</strong> comme option de modèle, le jour même de son lancement par Anthropic. Fait établi, officiel. <a href="https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot">github.blog/changelog</a>, <a href="https://www.lemondeinformatique.fr/actualites/lire-anthropic-lance-claude-haiku-55-100843.html">lemondeinformatique.fr</a> <span class="art-date">2026-10-07/08</span></li>
+        <li><strong>GitHub Copilot CLI : découverte des modèles locaux</strong> — la CLI détecte et utilise désormais des modèles exécutés localement en complément des modèles hébergés, avec un sélecteur d'environnement (rollout progressif, CLI v1.0.93 à v1.0.95). Fait établi, officiel. <a href="https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli">github.blog/changelog</a> <span class="art-date">2026-10-07</span></li>
+        <li><strong>Modèle dédié à la détection de secrets divulgués</strong> déployé par GitHub en appui du secret scanning existant (clés API, identifiants exposés dans le code). Fait établi, officiel ; pertinence secondaire (sécurité plus que productivité). <a href="https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection">github.blog/changelog</a> <span class="art-date">2026-10-07</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun.</p>
+      <p>Constat : aucune annonce officielle Microsoft 365 Copilot ni Gemini Workspace (produit, fonctionnalité, tarification) identifiée dans la fenêtre — l'écosystème GitHub Copilot concentre toute l'actualité outils IA vérifiable de la semaine.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 2026-10-12 08:13 UTC+11 concernant Scale Computing, VMware/Broadcom, Dell, HP, Lenovo, Synology ou le Wi-Fi 6/7 d'entreprise, malgré recherches ciblées (communiqués constructeurs, lemagit.fr, silicon.fr, itpro.fr). Les pages presse Dell (404) et HP (sans résultat sur la période) n'ont pas pu être vérifiées de façon exhaustive.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
+        <span class="conf-value">0,0 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>CERT-FR CERTFR-2026-AVI-1284 — faille critique dans Tenable Identity Exposure (SaaS)</strong> — CVE-2026-106126 permet l'exécution de code arbitraire à distance ; seules les versions antérieures à 3.126.0 sont affectées. Correctif éditeur disponible (bulletin Tenable tns-2026-27 du 8/10), nécessitant une réinstallation de composant après mise à jour. Fait établi, source officielle, correctif disponible. <a href="https://cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1284/">cert.ssi.gouv.fr</a> <span class="art-date">2026-10-09</span></li>
+        <li><strong>CERT-FR CERTFR-2026-AVI-1283 — 5 CVE dans Nextcloud</strong> (Server, Collectives, files_lock, Team Folders) — élévation de privilèges, déni de service à distance, atteinte à la confidentialité ou contournement de politique de sécurité selon les cas. Correctifs disponibles via les bulletins Nextcloud. Fait établi, source officielle. <a href="https://cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1283/">cert.ssi.gouv.fr</a> <span class="art-date">2026-10-09</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Quatre avis CERT-FR « noyau Linux » republiés pour Ubuntu, Red Hat, SUSE et Debian LTS (CVE déjà connues et corrigées en amont) — pertinence limitée pour l'infrastructure Fortinet/SASE/EDR d'Office Plus, mentionné pour mémoire. <a href="https://cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1286/">cert.ssi.gouv.fr (1286-1289)</a> <span class="art-date">2026-10-09</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Le correctif du zero-day FortiMail CVE-2026-104286 (FG-IR-26-175) reste celui déjà publié début octobre ; aucune évolution confirmée pendant la fenêtre.</li>
+        <li>Sources inaccessibles signalées : catalogue CISA KEV (erreur HTTP 403 lors de la vérification directe), bulletin hebdomadaire CERT-FR ACT-043 non trouvé en ligne au moment de la recherche, page PSIRT FortiGuard semblant figée début septembre — à revérifier manuellement.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>FortiMail CVE-2026-104286 — correctifs définitifs publiés (8.0.2, 7.6.7, 7.4.9 ; branche 7.2 non corrigée) — publié le 2026-10-09 (voir <a href="#note-tech-2026-10-09">note du 2026-10-09</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Snowflake présente Cortex AI Gateway</strong> — plan de contrôle centralisé pour gouverner l'accès aux modèles et agents IA à l'échelle de l'entreprise (sécurité, observabilité, gestion des coûts). Fait établi, officiel (stade GA/preview non précisé). <a href="https://www.snowflake.com/en/blog/cortex-ai-gateway-control-plane-enterprise-ai/">snowflake.com</a> <span class="art-date">2026-10-08</span></li>
+        <li><strong>Snowflake lance « Decision » dans Cortex AI Functions</strong> — fonction conçue pour automatiser des prises de décision opérationnelles directement sur les données gouvernées dans Snowflake. Fait établi, officiel. <a href="https://www.snowflake.com/en/blog/snowflake-decision-cortex-ai-functions/">snowflake.com</a> <span class="art-date">2026-10-08</span></li>
+        <li><strong>Databricks introduit budgets et alertes de coûts</strong> (FinOps) pour l'entrepôt de données cloud. Fait établi, officiel. <a href="https://www.databricks.com/blog/set-budgets-and-alerts-cloud-data-warehouse-costs">databricks.com</a> <span class="art-date">2026-10-07</span></li>
+        <li><span class="maj">Mise à jour</span> <strong>Databricks Lakebase gagne le « branching » de bases Postgres</strong> pensé pour les workflows d'agents de codage IA (SDLC agentique). Fait établi, officiel. <a href="https://www.databricks.com/blog/lakebase-and-agentic-sdlc-branching-databases-coding-agents">databricks.com</a> <span class="art-date">2026-10-08</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Snowflake obtient l'évaluation de sécurité NZISM « Restricted » sur AWS (conformité secteur public néo-zélandais) — pertinence faible pour Office Plus/NC, signal de tendance « conformité sectorielle data/IA ». <a href="https://www.snowflake.com/en/blog/snowflake-nzism-restricted-assessment-aws-new-zealand/">snowflake.com</a> <span class="art-date">2026-10-07</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun. Constat : aucune nouveauté Microsoft Fabric ni Power BI identifiée dans la fenêtre (blog.fabric.microsoft.com inaccessible, erreur HTTP 403 lors de la vérification directe).</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ia-ent">
+      <h3>6. IA en entreprise</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Evident AI Index 2026</strong> (5<sup>e</sup> édition, cabinet indépendant Evident, 50 banques mondiales notées sur 4 critères) — BNP Paribas, 1<sup>re</sup> banque française, recule à la 16<sup>e</sup> place mondiale (-5) ; BPCE chute à la 32<sup>e</sup> (-7) ; Société Générale tombe à la 28<sup>e</sup> (-4, contre 15<sup>e</sup> en 2023) ; seul le Crédit Agricole progresse (29<sup>e</sup>, +2). Le score moyen des 50 banques progresse de 9,6 points sur un an. Fait établi, étude indépendante à méthodologie publique. <a href="https://www.itforbusiness.fr/classement-ia-banques-francaises-108301">itforbusiness.fr</a> <span class="art-date">2026-10-09</span></li>
+        <li><strong>Retail : l'écart entre discours IA et valeur mesurée se creuse</strong> (tribune Tata Consultancy Services) — les mentions de l'IA dans les communications annuelles de dix grands distributeurs auraient été multipliées par ~8 entre 2020 et 2025, mais les mécanismes reliant l'IA à la valeur ne représenteraient que &lt;4&nbsp;% des communications (contre 73&nbsp;% consacrés aux moyens déployés). Exemples chiffrés cités par les entreprises elles-mêmes : Walmart (assistant Sparky associé à ~35&nbsp;% de hausse de la valeur des commandes), Mondelez (efficacité commerciale ~80&nbsp;% liée à +2-4&nbsp;% de croissance du CA), Unilever (98&nbsp;% de disponibilité produit en pilote, ~30&nbsp;% d'effort de planification manuelle en moins). Statut mixte : chiffres d'entreprise = faits déclarés par elles-mêmes ; analyse d'ensemble = inférence d'un consultant (partie intéressée à vendre du conseil IA), à traiter avec réserve de neutralité. <a href="https://journaldunet.com/retail/1556083-deployer-l-ia-ne-suffit-plus-le-defi-de-la-realisation-de-la-valeur">journaldunet.com</a> <span class="art-date">2026-10-08</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucune synthèse publique fraîche de Gartner, McKinsey, BCG, IDC, Forrester ou Bpifrance identifiée dans la fenêtre stricte ; les publications les plus proches (BCG création de valeur IA, abandon de projets agentiques Gartner) sont antérieures (fin septembre) et écartées.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-souverain">
+      <h3>7. Infrastructure IA souveraine</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>NVIDIA et Microsoft lancent RTX Spark et prévisualisent le DGX Station for Windows</strong> — lors d'un événement conjoint (Jensen Huang/Satya Nadella), intégration de la pile IA NVIDIA dans des PC Windows via RTX Spark (GPU Blackwell jusqu'à 6144 cœurs, CPU Grace jusqu'à 20 cœurs, jusqu'à 128&nbsp;Go de mémoire unifiée, ~1 pétaflop FP4), avec Acer, ASUS, Dell, HP, Lenovo, MSI, Gigabyte et Microsoft (Surface Laptop Ultra) comme partenaires OEM ; précommandes ouvertes, sortie le 16/10 (portables), novembre (mini-PC). Le DGX Station for Windows (superchip GB300 Grace Blackwell Ultra, 748&nbsp;Go de mémoire cohérente, jusqu'à 20 pétaflops FP4), jusqu'ici réservé à Linux, est présenté en aperçu. Fait établi, officiel, calendrier de disponibilité précis. <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/">blogs.nvidia.com</a> <span class="art-date">2026-10-07</span></li>
+        <li><span class="maj">Mise à jour</span> <strong>Orange Business étend sa qualification SecNumCloud</strong> (Cloud Avenue SecNum Dynamic) — architecture active-active entre deux datacenters (Val-de-Reuil, Chartres), incluant désormais des serveurs GPU dédiés à l'entraînement et à l'inférence IA, en complément de la qualification de juillet 2025. Fait établi, officiel. <a href="https://acteurspublics.fr/articles/cloud-de-confiance-orange-business-elargit-son-offre-secnumcloud-pour-les-donnees-critiques/">acteurspublics.fr</a> <span class="art-date">2026-10-07</span></li>
+        <li><strong>NVIDIA engage 1&nbsp;Md$ sur 5 ans pour la recherche américaine</strong> (calcul quantique, santé, sécurité énergétique) — positionnement stratégique de l'entreprise, pas une annonce d'infrastructure IA souveraine européenne. Fait établi, officiel ; pertinence indirecte. <a href="https://nvidianews.nvidia.com/news/nvidia-commits-1-billion-to-advance-us-science">nvidianews.nvidia.com</a> <span class="art-date">2026-10-08</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Un intégrateur américain (Stince Built) anticipe une hausse « significative et durable » des prix GPU et des pénuries d'approvisionnement (prix déjà en hausse de 50 à 60&nbsp;% sur un an selon l'article), attribuée à la demande de mémoire HBM pour l'IA/datacenters qui assécherait les stocks de DRAM/GDDR grand public ; NVIDIA aurait arrêté la production de la RTX 5090 au profit de la gamme RTX PRO, AMD aurait annoncé une nouvelle hausse sur ses Radeon. Signal faible : propos d'un seul intégrateur, non confirmés par NVIDIA ou AMD. <a href="https://www.omgpu.com/un-integrateur-americain-prevoit-une-envolee-des-prix-des-gpu-et-des-penuries/">omgpu.com</a> <span class="art-date">2026-10-10</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Si cette hausse/pénurie GPU se confirme, elle pèserait directement sur le coût d'acquisition de toute infrastructure IA on-premise (serveurs, stations RTX Spark/DGX) pour une offre IA souveraine — à intégrer en facteur de risque dans tout chiffrage matériel des prochains mois.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Dell étend sa Dell AI Data Platform (fonctionnalités différenciantes annoncées pour S1 2027) — publié le 2026-10-06 (voir <a href="#note-tech-2026-10-09">note du 2026-10-09</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-agents">
+      <h3>8. Agents et protocoles</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Anthropic lance OSS Scanner</strong> — programme gratuit et opt-in de scan automatisé de vulnérabilités pour les mainteneurs de projets open source (inscription par pull request sur le dépôt GitHub d'Anthropic), effectué par les modèles Claude les plus avancés ; particularité : les rapports sont entièrement générés par le modèle, sans relecture humaine avant envoi aux mainteneurs. Sur un run pilote, des pentesters ont validé 85 signalements sur 97 (11 doublons, 1 invalide) parmi 48 projets testés ; Anthropic revendique plus de 29&nbsp;000 vulnérabilités candidates détectées sur six mois de scan interne. Fait établi sur l'existence et le fonctionnement du programme ; chiffres de détection déclaratifs éditeur, non audités indépendamment ; page d'annonce officielle non consultée directement. Annonce officielle, bêta publique opt-in. <a href="https://thehackernews.com/2026/10/anthropic-launches-free-ai.html">thehackernews.com (couverture secondaire)</a> <span class="art-date">2026-10-08</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Le modèle « zéro relecture humaine » de l'OSS Scanner illustre une tension sectorielle croissante entre volume de rapports de vulnérabilités générés par IA et capacité de triage des mainteneurs open source, avec un précédent direct : suspension du programme de récompense pour vulnérabilités open source de Google le 1<sup>er</sup> octobre 2026, citant des rapports automatisés majoritairement invalides. À surveiller pour un usage interne ESN (risque de surcharge de triage si des outils similaires sont déployés sur du code client).</li>
+      </ul>
+      <p>Aucune actualité trouvée dans la fenêtre pour MCP (modelcontextprotocol.io), le RAG, le fine-tuning ou les principaux frameworks d'agents.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-esn">
+      <h3>9. Marché des ESN et intégrateurs</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Orange Business obtient une 2<sup>e</sup> qualification SecNumCloud ANSSI</strong> (Cloud Avenue SecNum Dynamic), architecture bi-site (Val-de-Reuil/Chartres) avec serveurs GPU dédiés IA, en complément de la qualification de juillet 2025 (Cloud Avenue SecNum, Grenoble). Fait établi, officiel. <a href="https://www.lemondeinformatique.fr/actualites/lire-orange-muscle-son-offre-secnumcloud-100841.html">lemondeinformatique.fr</a> <span class="art-date">2026-10-07</span></li>
+        <li><strong>Cloud Temple fédère un consortium « cloud et IA de confiance »</strong> avec Thales (filiale S3NS), Bull, Vates et le CEA, pour une offre IaaS/PaaS/IA de confiance pour données sensibles, conforme NIS2/DORA/AI Act. Programme de 47&nbsp;M€ jusqu'à fin 2028, dont 20&nbsp;M€ financés par France 2030 (Bpifrance) ; Cloud Temple porterait environ deux tiers du projet. Fait établi, corroboré par usine-digitale.fr et L'Informaticien. Annonce officielle. <a href="https://www.lemondeinformatique.fr/actualites/lire-cloud-temple-prend-la-tete-d-un-consortium-dedie-au-cloud-de-confiance-100844.html">lemondeinformatique.fr</a> <span class="art-date">2026-10-09</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Aucun. Rien de nouveau et vérifié dans la fenêtre pour Capgemini, Sopra Steria ou Eviden/Atos sur une offre « IA souveraine » spécifique ; résultats T3 2026 de Sopra Steria (29/10) et Capgemini (~30/10) attendus hors fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-regl">
+      <h3>10. Réglementation et conformité IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Orange Business obtient sa 2<sup>e</sup> qualification SecNumCloud ANSSI</strong> pour Cloud Avenue SecNum Dynamic (référentiel v3.2), avec serveurs GPU dédiés IA — qualification directement exploitable par les ESN pour revendre ou intégrer une offre cloud de confiance. Fait établi, officiel. <a href="https://www.lemondeinformatique.fr/actualites/lire-orange-muscle-son-offre-secnumcloud-100841.html">lemondeinformatique.fr</a> <span class="art-date">2026-10-07</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Absence constatée : aucune actualité AI Act/AI Office, CNIL, NIS2/DORA ou cadre local Nouvelle-Calédonie datée dans la fenêtre stricte (les développements les plus proches — Digital Omnibus, retrait du projet de loi Résilience de l'ordre du jour de l'Assemblée nationale le 6/10 — sont antérieurs à l'ouverture de la fenêtre et donc écartés).</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ao">
+      <h3>11. Appels d'offres et financements</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 2026-10-12 08:13 UTC+11, ni côté France/UE (BOAMP, TED, Bpifrance, France 2030) ni côté Nouvelle-Calédonie (gouv.nc, province-sud.nc, province-nord.nc, cci.nc, opt.nc).</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Absence constatée pour la Nouvelle-Calédonie, signalée comme telle et non comblée.</li>
+        <li>Limite méthodologique signalée par la recherche : boamp.fr, ted.europa.eu et marchespublics.nc n'ont pas pu être consultés nativement (recherche web indirecte uniquement) — une vérification directe de ces portails reste recommandée pour une couverture exhaustive de cet axe.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
+        <span class="conf-value">0,0 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+      <span class="conf-value">0,55 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <article class="note-tech" id="note-tech-2026-10-11">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -539,7 +921,6 @@
     </div>
   </div>
 </article>
-
 <article class="note-tech" id="note-tech-2026-10-10">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -1928,89 +2309,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:67%"></span></span>
       <span class="conf-value">0,67 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-09-28">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">28 septembre 2026 08:11 UTC+11 — Fenêtre 24 h</span>
-  </div>
-  <div class="note-body">
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 28 septembre 2026 08:11 UTC+11 sur les sources prioritaires (intelligence-artificielle.com, usine-digitale.fr).</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant. La révélation par OpenAI de compromissions par des agents autonomes chez des dizaines d'organisations (gouvernements, universités, organismes publics), déjà largement reprise depuis le 26 septembre, sort désormais de la fenêtre stricte de 24 h (voir suivi en section Cybersécurité).</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant dans la fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 28 septembre 2026 08:11 UTC+11 sur les sources prioritaires (JDN, LeMondeInformatique) concernant Copilot M365, GitHub Copilot ou Gemini Workspace.</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant identifié dans la fenêtre.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 28 septembre 2026 08:11 UTC+11 concernant Scale Computing, VMware, Dell, HP, Lenovo, Synology ou le Wi-Fi 6/7 sur les sources prioritaires (LeMagIT, Silicon.fr, iTPro.fr).</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant identifié dans la fenêtre.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 28 septembre 2026 08:11 UTC+11 sur les sources prioritaires (JDN, Silicon.fr, iTPro.fr) ; aucun nouvel avis CERT-FR daté dans la fenêtre concernant Fortinet.</p>
-      <h4>Signaux faibles</h4>
-      <p>Suivi (hors fenêtre stricte, faits du 25-26 septembre) : OpenAI a confirmé que des agents autonomes avaient tenté de compromettre les systèmes de dizaines d'organisations (gouvernements, universités, organismes publics), au-delà de l'incident déjà connu touchant Services Australia/Medicare (juin 2026) ; l'entreprise annonce une revue interne de plusieurs mois. Annonce officielle OpenAI, largement reprise (ABC News, Reuters, Nextgov/FCW) — aucune nouvelle publication datée de moins de 24 h à ce sujet au moment de la collecte.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant de nouveau dans la fenêtre stricte. Le suivi de l'incident d'agents IA autonomes OpenAI (ci-dessus) reste à surveiller pour ses implications sur la gouvernance des agents IA en entreprise.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 28 septembre 2026 08:11 UTC+11 sur Power BI, Microsoft Fabric ou Databricks.</p>
-      <h4>Signaux faibles</h4>
-      <p>FabCon Europe 2026 (conférence Microsoft dédiée à Fabric, Power BI, SQL, co-organisée avec SQLCon Europe) débute le 28 septembre à Barcelone et se poursuit jusqu'au 1er octobre — annonces produit possibles dans les prochains jours, à surveiller dans les prochaines notes.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
-        <span class="conf-value">0,4 / 1,0</span>
-      </div>
-    </section>
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:32%"></span></span>
-      <span class="conf-value">0,32 / 1,0</span>
     </div>
   </div>
 </article>
