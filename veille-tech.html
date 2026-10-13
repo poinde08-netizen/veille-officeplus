@@ -527,6 +527,226 @@
 
 <!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-10-14">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">14 octobre 2026 08:12 UTC+11 — Fenêtre 5 jours glissants</span>
+  </div>
+  <div class="note-body">
+    <div class="synthese-5j">
+      <h3>Synthèse des 5 jours</h3>
+      <ul>
+        <li>Faille critique FortiSandbox (CVSS 9.6, non authentifiée) et deux nouvelles CVE (Ivanti Connect Secure, Microsoft Windows) ajoutées au catalogue CISA KEV, confirmant une exploitation active.</li>
+        <li>Gemini 4 Argon passe en disponibilité générale, à la fois dans l'app Gemini et dans GitHub Copilot.</li>
+        <li>Anthropic lance en bêta Claude Dashboards (tableaux de bord en langage naturel) et Claude Motion (animations par code généré).</li>
+        <li>Infrastructures IA souveraines : NVIDIA ouvre son architecture Vera Rubin à l'Open Compute Project, Microsoft/Azure dévoile sa puce Maia 300 (disponibilité visée 2027).</li>
+        <li>Étude Numeum-KPMG : les ESN françaises prévoient de multiplier par 2,5 la part de leur CA liée à l'IA d'ici 3 ans ; SCC France consolide sa 2<sup>e</sup> place du classement sectoriel.</li>
+        <li>Volet RGPD du Digital Omnibus : le Conseil de l'UE examine un mandat qui faciliterait l'usage de données pseudonymisées pour l'entraînement de modèles IA — issue incertaine.</li>
+        <li>Étude Banque de France / HEC Paris (LIFT) : l'IA générative pèserait sur l'embauche des jeunes diplômés (recul de 28 à 42&nbsp;% des embauches en CDI dans les métiers les plus exposés).</li>
+        <li>Nouvel avis CERT-FR (NetApp StorageGRID) et poursuite de la vague de vulnérabilités critiques Fortinet.</li>
+      </ul>
+    </div>
+
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Gemini 4 Argon disponible dans l'app Gemini (sortie de la préversion restreinte)</strong> — Google étend Gemini 4 Argon aux abonnés Google AI Pro et Ultra, avec un raisonnement présenté comme plus direct sur les tâches complexes ; l'interface de codage agentique « Antigravity » est intégrée à l'app macOS, un « mode tâches » permet un travail en arrière-plan, et plus de 40 intégrations tierces (Instacart, OpenTable, Adobe, Shopify...) sont ajoutées. Fait établi, annonce officielle. <a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/">blog.google</a> <span class="art-date">2026-10-13</span></li>
+        <li><span class="maj">Mise à jour</span> <strong>Mistral présente les poids ouverts de Large 4 comme argument de souveraineté</strong> — l'auto-hébergement permettrait l'indépendance dans les secteurs sensibles (défense), objectif affiché de 1&nbsp;GW de calcul en Europe d'ici 2030 ; des analystes nuancent, l'indépendance restant limitée par la dépendance aux puces NVIDIA et aux capitaux étrangers (levée de 3&nbsp;Md€ menée par Samsung Electronics). Fait établi sur l'annonce, signal faible sur la portée réelle de l'argument. <a href="https://www.usine-digitale.fr/intelligence-artificielle/">usine-digitale.fr</a> <span class="art-date">2026-10-12</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>OpenAI reconnaîtrait un chiffre d'affaires annualisé proche de 50&nbsp;Md$, nettement sous les 70&nbsp;Md$ anticipés par certains investisseurs (FT/Bloomberg relayés, non confirmé officiellement par OpenAI) — écart en partie lié à des méthodes de comptabilisation différentes de celles d'Anthropic. Point d'alerte à suivre pour la soutenabilité économique du secteur. <a href="https://siecledigital.fr/2026/10/09/le-chiffre-daffaires-dopenai-seme-le-doute-a-wall-street-sur-la-rentabilite-de-lia/">siecledigital.fr</a> <span class="art-date">2026-10-08/09</span></p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>GPT-6 et « Intelligent UI » dans ChatGPT — publié le 7-8/10 (voir <a href="#note-tech-2026-10-13">note du 13 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,70 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Gemini 4 Argon en disponibilité générale dans GitHub Copilot</strong> — déployé dans VS Code, Visual Studio, Copilot CLI, l'agent de code cloud, l'app mobile, JetBrains, Xcode et Eclipse pour les plans Pro+, Max, Business et Enterprise ; facturation au tarif fournisseur (usage-based), activé par défaut sauf désactivation par un administrateur Business/Enterprise. Fait établi, annonce officielle (GA). <a href="https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/">github.blog/changelog</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>Google reporte le déploiement des « Skills » (remplaçant les Gems) dans Google Workspace</strong> — le lancement progressif dans l'app Gemini se poursuit (fin visée mi-novembre), mais le calendrier promis pour Workspace (Rapid puis Scheduled Release) est repoussé « jusqu'à nouvel ordre », sans nouvelle date annoncée. Fait établi, annonce officielle avec report de calendrier — point de vigilance pour les clients qui attendent cette fonctionnalité. <a href="https://workspaceupdates.googleblog.com/2026/10/an-update-on-launch-of-skills-in-gemini-app-and-workspace.html">workspaceupdates.googleblog.com</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>Course aux « Decision Models » (IA métier de décision)</strong> — OpenAI (Decisions API), AWS (Strands Decider), Cloudflare (Clef) et Microsoft (Microsoft-Decision-1) lancent des modèles spécialisés dans l'arbitrage entre options prédéfinies (classification, routage, détection de fraude), à faible coût/latence vs un LLM généraliste ; Liquid AI, Perplexity et Snowflake annoncés comme suiveurs. Fait établi, annonces officielles convergentes — catégorie de marché émergente. <a href="https://www.itforbusiness.fr/modeles-de-decision-microsoft-cloudflare-108385">itforbusiness.fr</a> <span class="art-date">2026-10-12</span></li>
+        <li><strong>GitHub Copilot : durcissement de la gouvernance entreprise</strong> — nouveau contrôle admin <code>forceRemoteSettingsRefresh</code> (le client doit revérifier la politique serveur à chaque démarrage, sinon blocage) et exigence d'une version client minimale pour activer la sandbox locale. Fait établi, amélioration officielle mineure, surtout pertinente pour les DSI clientes. <a href="https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/">github.blog/changelog</a> <span class="art-date">2026-10-13</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucune nouveauté vérifiable sur le blog officiel Microsoft 365 Copilot dans la fenêtre stricte (dernière entrée confirmée des release notes datée du 6/10, hors fenêtre).</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,80 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information nouvelle et vérifiée publiée dans la fenêtre des 5 derniers jours sur cet axe (Scale Computing, VMware/Broadcom, Dell, HP, Lenovo, Wi-Fi 6/7), malgré vérification croisée de LeMagIT (rubrique Virtualisation de serveurs, article par article), Silicon.fr et ITpro.fr.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Synology DiskStation neo+ — disponibilité européenne annoncée en octobre 2026 — publié le 8-13/10 (voir <a href="#note-tech-2026-10-13">note du 13 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li><strong>FortiSandbox : faille critique (CVSS 9.6), contrôle d'accès et gestion de session défaillants</strong> — avis Fortinet FG-IR-26-185 (CVE-2026-107656), non authentifiée, touche FortiSandbox et FortiSandbox PaaS versions 5.0.0-5.0.6 et 4.4.0-4.4.9 (PaaS 4.4 : toutes versions) ; 5.2 non affecté. Correctifs : 5.0.7 / 4.4.10. Fortinet indique « Known Exploited : No » à ce jour, mais le profil (critique, non authentifié) justifie une application rapide. Fait établi, bulletin officiel. <a href="https://www.fortiguard.com/psirt/FG-IR-26-185">fortiguard.com/psirt</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>CVE-2026-104935 (Ivanti Connect Secure) ajoutée au catalogue CISA KEV</strong> — contournement d'authentification par usurpation, exploitation active confirmée par la CISA. Fait établi, source officielle (CVE très récente, pas encore de couverture presse ni de fiche NVD détaillée au moment de la recherche). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">cisa.gov</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>CVE-2026-96951 (Microsoft Windows) ajoutée au catalogue CISA KEV</strong> — injection de commande, exploitation active confirmée le même jour. Fait établi, source officielle, même réserve sur la fraîcheur de la CVE. <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">cisa.gov</a> <span class="art-date">2026-10-13</span></li>
+      </ul>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>CERT-FR CERTFR-2026-AVI-1295 — NetApp StorageGRID</strong> — déni de service à distance (CVE-2026-22056) ; versions affectées 12.1.x &lt; 12.1.0.1 et &lt; 12.0.0.8. Fait établi, source officielle. <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1295/">cert.ssi.gouv.fr</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>FortiAnalyzer / FortiManager : injection SQL authentifiée (gravité élevée)</strong> — lectures/écritures de fichiers arbitraires (CVE-2025-46773, FG-IR-26-178). Pas d'exploitation active signalée. Fait établi, bulletin officiel. <a href="https://www.fortiguard.com/psirt">fortiguard.com/psirt</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>FortiManager : exécution de commandes arbitraires via le démon fgfmsd</strong> — CVE-2026-106171 (FG-IR-26-177), gravité moyenne, authentifiée. Fait établi, bulletin officiel. <a href="https://www.fortiguard.com/psirt">fortiguard.com/psirt</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>FortiSandbox : contournement d'authentification de l'API Fabric</strong> — clé cryptographique codée en dur (CVE-2026-106172, FG-IR-26-179), gravité moyenne, non authentifiée. Fait établi, bulletin officiel. <a href="https://www.fortiguard.com/psirt">fortiguard.com/psirt</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>FortiOS : déni de service dans l'interface graphique</strong> — verrouillage inapproprié (CVE-2026-106174, FG-IR-26-181), gravité moyenne, non authentifiée. Fait établi, bulletin officiel. <a href="https://www.fortiguard.com/psirt">fortiguard.com/psirt</a> <span class="art-date">2026-10-13</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucune annonce produit datée spécifiquement SASE, Zero Trust ou EDR au-delà des avis ci-dessus ; Silicon.fr et ITpro.fr n'ont livré aucun article daté et identifiable sur la cybersécurité dans la fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+        <span class="conf-value">0,85 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information nouvelle et vérifiée publiée dans la fenêtre sur Power BI, Microsoft Fabric, Databricks ou Snowflake, malgré vérification directe des blogs officiels (Fabric : dernier billet le 8/10, hors fenêtre ; Databricks : dernières entrées au 2 et 5/10 ; Snowflake : rien identifié depuis mai-juin) et des rubriques data de LeMagIT, LeMondeInformatique et Silicon.fr.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Databricks : fédération Workday Data Connect, chargement massif Lakebase Postgres, gouvernance du « shadow AI » — publié le 8-12/10 (voir <a href="#note-tech-2026-10-13">note du 13 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ia-ent">
+      <h3>6. IA en entreprise</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Assises de la sécurité (Monaco) : l'IA avantage d'abord les attaquants, selon plusieurs RSSI</strong> — Fabrice Bru (président du Cesin) alerte sur un possible « tsunami » dans les 18 prochains mois ; chez Covéa, 12 vulnérabilités « catastrophiques » traitées en 2026 contre 2 sur toute l'année 2025, toutes découvertes grâce à l'IA ; chez FDJ United, le volume de rapports de bug bounty a triplé depuis mai 2026. Fait établi, témoignages directs et chiffres d'entreprises nommées. <a href="https://www.itforbusiness.fr/assises-de-la-securite-ia-avantage-attaque-108452">itforbusiness.fr</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>Étude Banque de France / HEC Paris (LIFT) : l'IA générative pèse sur l'embauche des jeunes</strong> — depuis novembre 2022, les métiers les plus exposés à l'IA générative comptent ~75&nbsp;000 embauches en CDI de moins par an chez les 21-29 ans ; en mars 2026, recul de 28&nbsp;% des embauches dans ces métiers (7,5&nbsp;% dans les métiers moins exposés), 42&nbsp;% chez les jeunes développeurs/ingénieurs. Les chercheurs nuancent : l'IA seule n'explique pas toute la baisse. Fait établi, étude officielle. <a href="https://www.lemondeinformatique.fr/actualites/lire-ia-generative-75-000-cdi-en-moins-par-an-pour-les-jeunes-100848.html">lemondeinformatique.fr</a> <span class="art-date">2026-10-12</span></li>
+        <li><strong>IA à l'hôpital : dossier sur les usages concrets déjà déployés</strong> — quatre usages identifiés : libérer du temps médical (20-30&nbsp;% du temps des médecins est administratif), anticiper les flux de patients, affiner les diagnostics, accélérer la recherche. Fait établi (partiellement sous paywall, détails de déploiement non vérifiables intégralement). <a href="https://www.itforbusiness.fr/ia-hopital-temps-medical-imagerie-recherche-108418">itforbusiness.fr</a> <span class="art-date">2026-10-12</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Chronique : les gains de productivité IA cacheraient une charge de travail supplémentaire (« écart porté », « effacement d'une charge utile ») — inférence/opinion d'expert, pas une étude chiffrée indépendante (<a href="https://www.journaldunet.com/intelligence-artificielle/1556401-ia-en-entreprise-les-gains-de-productivite-ne-disent-pas-tout/">journaldunet.com</a>, 12/10).</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>Une chronique défend l'idée que les entreprises n'organisant pas la supervision de multiples agents IA par salarié prennent un risque existentiel pour leur pérennité — ton alarmiste, sans donnée chiffrée indépendante à l'appui, à relayer avec prudence. <a href="https://www.journaldunet.com/intelligence-artificielle/1556407-des-dizaines-d-agents-ia-par-salarie-les-entreprises-qui-refusent-ne-survivront-pas/">journaldunet.com</a> <span class="art-date">2026-10-12</span></p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,70 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-souverain">
+      <h3>7. Infrastructure IA souveraine</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Microsoft/Azure dévoile son accélérateur IA Maia 300</strong> — présenté comme plus performant que les puces d'autres hyperscalers sur le papier, mais toujours en retrait par rapport aux GPU AMD et NVIDIA ; disponibilité visée 2027. Fait établi, annonce officielle (produit dévoilé, disponibilité commerciale encore en roadmap). <a href="https://www.lemagit.fr/actualites/366652083/Puces-IA-lhyperscaler-Azure-presente-son-nouveau-Maia-300">lemagit.fr</a> <span class="art-date">2026-10-12</span></li>
+        <li><span class="maj">Mise à jour</span> <strong>NVIDIA ouvre l'architecture Vera Rubin (MGX 1.2) à l'Open Compute Project</strong> — à l'OCP Global Summit (San Jose, 12-15/10), NVIDIA transmet à l'OCP les designs de ses racks/plateaux Vera Rubin (refroidissement liquide, racks jusqu'à 250&nbsp;kW, variante « Vera CPU rack » pour agents IA) ; NVIDIA, AMD, Google et Meta publient aussi la spec Open Data Center v0.7 et une spec de résilience réseau électrique. Annonces associées : switches Spectrum-6 (Meta), transceiver optique (Cisco), protocole Falcon (Google). Fait établi, annonce officielle. <a href="https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin/">blogs.nvidia.com</a> <span class="art-date">2026-10-12</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucun résultat de sélection connu pour le consortium AION (candidature à l'AI Gigafactory européenne, attendu fin 2026) ; aucune annonce produit confirmée de Dell, HPE, Lenovo ou Supermicro à l'OCP Global Summit avec une source primaire datée dans la fenêtre (uniquement listés comme sponsors/participants).</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,80 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-agents">
+      <h3>8. Agents et protocoles</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Anthropic lance Claude Dashboards et Claude Motion (bêta)</strong> — Dashboards construit des tableaux de bord en langage naturel à partir de données d'entreprise connectées (Redshift, BigQuery, Databricks, Snowflake, Salesforce...), chaque chiffre étant traçable vers sa requête source, avec contrôle d'accès par permissions utilisateur ; Motion génère des animations courtes via du code modifiable, pas un modèle vidéo. Fait établi, bêta publique (Team/Enterprise). <a href="https://www.thestar.com.my/tech/tech-news/2026/10/09/anthropic-launches-dashboard-animation-tools-for-claude">thestar.com.my</a> <span class="art-date">2026-10-08/09</span></li>
+        <li><strong>Google intègre l'interface de codage agentique Antigravity et un « mode tâches » dans l'app Gemini</strong> — accès à Antigravity sur macOS, bascule chat/« mode tâches » permettant à l'agent de travailler en arrière-plan, connexions à plus de 40 applications tierces pour exécuter des tâches concrètes. Fait établi, annonce officielle (disponibilité élargie Pro/Ultra). <a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/">blog.google</a> <span class="art-date">2026-10-13</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucune mise à jour de la spécification MCP (dépôt GitHub modelcontextprotocol/modelcontextprotocol) ni nouvel incident de sécurité d'agent IA daté précisément dans la fenêtre (dernière révision stable MCP : 28/07/2026 ; édition 2026 de l'OWASP Top 10 for LLM Applications : fin août/début septembre — l'un et l'autre hors fenêtre).</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-esn">
+      <h3>9. Marché des ESN et intégrateurs</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>SCC France consolide sa 2<sup>e</sup> place au classement Numeum/KPMG « Grand Angle ESN &amp; ICT 2026 »</strong> — 3,28&nbsp;Md€ de CA (+12,1&nbsp;%), écart réduit à 919&nbsp;M€ avec le leader Capgemini ; l'entreprise annonce vouloir accroître ses investissements IA/agentiques. Fait établi, communiqué officiel. <a href="https://france.scc.com/scc-france/nos-actualites/scc-france-consolide-sa-2e-place-au-classement-grand-angle-esn-">france.scc.com</a> <span class="art-date">2026-10-13</span></li>
+        <li><strong>Étude Numeum-KPMG : l'IA bouscule le modèle économique des ESN</strong> — les ESN/ICT françaises prévoient de multiplier par 2,5 la part de leur CA liée à l'IA d'ici 3 ans ; 37&nbsp;% déclarent des gains de productivité delivery &gt;20&nbsp;% ; 80&nbsp;% des dirigeants citent les acteurs « AI-native » à bas coût comme menace principale ; un tiers envisage une facturation à la valeur créée. Fait établi, étude sectorielle (publiée le 6-8/10, couverture du 9/10). <a href="https://www.blogdumoderateur.com/facturation-recrutements-comment-ia-bouscule-modele-esn/">blogdumoderateur.com</a> <span class="art-date">2026-10-09</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <p>Aucune offre « IA souveraine » spécifique de Capgemini, Sopra Steria, Eviden ou Orange Business datée précisément dans la fenêtre, malgré recherches ciblées par entreprise.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-regl">
+      <h3>10. Réglementation et conformité IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Volet RGPD du Digital Omnibus : le Conseil de l'UE prépare un mandat qui touche directement l'IA</strong> — un projet de mandat du Conseil (document 13886/26, daté du 2/10) modifierait l'article 4(1) du RGPD (données personnelles vis-à-vis des « entraîneurs de modèles d'IA ») et introduirait un article 88 bis fondant sur l'intérêt légitime le traitement lié au développement/exploitation d'un système d'IA, avec un garde-fou (le développement d'une IA « ne constitue pas en soi » un intérêt légitime). Vote des ambassadeurs (Coreper) attendu le 11/10. Fait établi sur le projet ; roadmap non confirmée sur l'adoption (Parlement et trilogue restent à venir). <a href="https://ppc.land/eu-council-draft-cuts-cookie-re-prompt-wait-from-6-months-to-4/">ppc.land</a> <span class="art-date">2026-10-09</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <p>À surveiller pour les clients traitant des données personnelles dans des projets IA : l'issue du compromis Conseil/Parlement pourrait assouplir ou, au contraire, encadrer plus strictement la base légale « intérêt légitime » pour l'IA.</p>
+      <h4>Signaux faibles</h4>
+      <p>Aucune nouveauté côté AI Office/Commission (la guidance sur la classification « haut risque » reste au stade de consultation), côté ANSSI/SecNumCloud, ni côté gouvernement de la Nouvelle-Calédonie, dans la fenêtre.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,60 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ao">
+      <h3>11. Appels d'offres et financements</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information nouvelle et vérifiée publiée dans la fenêtre : aucun appel d'offres numérique/IA identifié en Nouvelle-Calédonie après vérification directe (province Sud, province Nord, OPT-NC, CCI-NC), et aucune nouvelle publication BOAMP, TED ou Bpifrance/France 2030 spécifique à l'IA (la 2<sup>e</sup> vague de lauréats « Pionniers de l'IA » date du 18/06/2026, hors fenêtre).</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>France 2030/Bpifrance financent le consortium cloud souverain de Cloud Temple (20&nbsp;M€) — publié le 9-12/10 (voir <a href="#note-tech-2026-10-13">note du 13 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:69%"></span></span>
+      <span class="conf-value">0,69 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <article class="note-tech" id="note-tech-2026-10-13">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -747,7 +967,6 @@
     </div>
   </div>
 </article>
-
 <article class="note-tech" id="note-tech-2026-10-12">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -2338,99 +2557,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:42%"></span></span>
       <span class="conf-value">0,42 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-09-30">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">30 septembre 2026 08:16 UTC+11 — Fenêtre 24 h</span>
-  </div>
-  <div class="note-body">
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul>
-        <li>OpenAI a lancé GPT-6.1 Sol le 29 septembre 2026, une semaine après GPT-6 Sol : amélioration annoncée sur le codage agentique, l'usage d'ordinateur et les tâches professionnelles, disponible immédiatement pour les utilisateurs Plus, Pro, Business, Enterprise et Edu dans ChatGPT Work et Codex, ainsi que via l'API sous l'identifiant gpt-6.1-sol. Tarifs API inchangés (2 $/M tokens en entrée, 10 $/M en sortie), coût du cache d'entrée réduit à 0,10 $/M, support bêta multi-agents ajouté à l'API Responses. Un nouveau palier Pro à 500 $/mois avec « Astra Ultrafast » a été annoncé en parallèle. Annonce officielle. (Sources : thenextweb.com, pulse2.com, kingy.ai — 29/09/2026)</li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Fuite journalistique d'un projet de prospectus confidentiel en vue d'une introduction en bourse d'Anthropic : valorisation visée supérieure à 2 000 Md$, chiffre d'affaires 2025 d'environ 4,6 Md$ pour une perte d'environ 42 Md$, engagements futurs d'infrastructure cloud/calcul d'environ 518 Md$ sur dix ans avec plusieurs partenaires dont Google et Amazon. Information non confirmée officiellement par Anthropic à ce stade — à traiter comme rumeur/fuite, pas comme fait établi. (Source : techstartups.com — 29/09/2026)</li>
-      </ul>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant dans la fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
-        <span class="conf-value">0,65 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 30 septembre 2026 08:16 UTC+11 concernant Copilot M365, GitHub Copilot ou Gemini Workspace sur les sources prioritaires (JDN, LeMondeInformatique).</p>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Hors fenêtre stricte (25/09/2026, pour mémoire) : la refonte de Copilot M365 en trois piliers Home / Code / Autopilot annoncée par Microsoft poursuit son déploiement progressif — aucun nouvel élément daté dans les dernières 24 h.</li>
-      </ul>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <p>Aucune information de moins de 24 h trouvée à la date du 30 septembre 2026 08:16 UTC+11 concernant Scale Computing, VMware, Dell, HP, Lenovo, Synology ou le Wi-Fi 6/7 sur les sources prioritaires (LeMagIT, Silicon.fr, iTPro.fr).</p>
-      <h4>Signaux faibles</h4>
-      <p>Néant identifié dans la fenêtre.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul>
-        <li>Nouveaux éléments d'enquête publiés le 29 septembre 2026 sur l'exploitation active des zero-day Citrix NetScaler ADC/Gateway (CVE-2026-88771, CVE-2026-88772, déjà signalées le 28/09) : découverte de deux outils inédits utilisés par les attaquants — un webshell PHP baptisé « WHIPSHOT », déguisé en fichiers portant des extensions .deb/.sig/.css pour exécuter des commandes en se fondant dans le trafic légitime, et un outil de tunneling Python baptisé « SLAPSHOT » permettant de rebondir depuis l'appliance compromise vers le réseau interne. Les attaquants modifient les permissions de /bin/sh pour conserver un accès root et altèrent la configuration des serveurs web pour masquer leur activité. Secteurs touchés : gouvernement, finance, éducation, juridique, services professionnels, en Amérique du Nord et en Europe ; exploitation en cours depuis début septembre. (Source : BleepingComputer, 29/09/2026)</li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>Néant identifié de nouveau dans la fenêtre stricte, au-delà du suivi Citrix ci-dessus.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Organisations utilisant NetScaler ADC/Gateway : la vérification en urgence du niveau de correctif (versions ≥ 14.1-73.37 / 13.1-64.23) reste prioritaire — les attaquants disposent désormais d'un outillage de persistance et de tunneling dédié et documenté, ce qui aggrave le risque en l'absence de remédiation complète (patch + recherche de compromission).</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
-        <span class="conf-value">0,8 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <h4>Faits établis (&lt; 24 h)</h4>
-      <ul>
-        <li>Lors du keynote d'ouverture de FabCon Europe 2026 à Barcelone (29 septembre 2026 matin, heure locale), Microsoft a dévoilé Fabric IQ, une couche d'intelligence partagée reliant les données d'entreprise sur OneLake, les métriques certifiées des modèles sémantiques Power BI et le contexte opérationnel, destinée à alimenter Microsoft Copilot avec un contexte métier gouverné. Power BI reçoit une capacité de création d'applications « agentique » : description en langage naturel, génération, aperçu/édition en temps réel, publication vers Fabric et écriture de données (data write-back) ; les Fabric Apps et bases de données associées (jusqu'à 1 Go par application) sont incluses sans coût supplémentaire pour les clients Power BI Pro et Premium par utilisateur. Autres annonces associées : agents autonomes d'ingénierie des données (migrations, optimisation ETL), extension du Database Hub (SQL Server, Azure SQL, PostgreSQL, Cosmos DB), intégration bidirectionnelle OneLake/Salesforce Data Cloud, disponibilité de SQL Server sur Azure Local pour les besoins de souveraineté. (Source : blog Microsoft Azure — annonces FabCon/SQLCon Barcelone, 29/09/2026)</li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <p>Néant identifié de nouveau dans la fenêtre stricte.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <p>Néant.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
-        <span class="conf-value">0,65 / 1,0</span>
-      </div>
-    </section>
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:54%"></span></span>
-      <span class="conf-value">0,54 / 1,0</span>
     </div>
   </div>
 </article>
