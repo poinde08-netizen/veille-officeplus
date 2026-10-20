@@ -636,6 +636,163 @@
 </article>
 <!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-10-21">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">21 octobre 2026 08:13 UTC+11 — Fenêtre 5 jours glissants</span>
+  </div>
+  <div class="note-body">
+    <div class="synthese-5j">
+      <h3>Synthèse des 5 jours</h3>
+      <ul>
+        <li>Mistral AI lance Voxtral 3, nouvelle famille de modèles vocaux (transcription, synthèse, agents vocaux temps réel) avec SDK bâti sur LiveKit.</li>
+        <li>Faille critique BeyondTrust Remote Support (CVE-2026-102764, CVSS 9.3) ajoutée au catalogue KEV de la CISA : exploitation active par un acteur d'espionnage lié à la Chine depuis fin août.</li>
+        <li>Fortinet : nouvelle vulnérabilité CLI (CVE-2025-61624, FortiOS/FortiPAM/FortiProxy/FortiSwitchManager) ajoutée au catalogue KEV de la CISA.</li>
+        <li>CERT-FR publie sept nouveaux avis les 19 et 20 octobre, dont Stormshield Network Security et Juniper Session Smart Router.</li>
+        <li>CISA ajoute aussi au catalogue KEV quatre CVE Plex Media Server ainsi que des failles Siemens Software Center et EG Secure Solutions SiteGuard.</li>
+        <li>GTC Berlin (20-22 octobre) : keynote de Jensen Huang attendue aujourd'hui en fin de journée, aucune annonce confirmée à l'heure de cette note.</li>
+        <li>Microsoft annonce une mise à jour de Copilot Notebooks (délégation de tâches, automatisations programmées), partiellement en préversion Frontier ; date de publication exacte non confirmée auprès de Microsoft.</li>
+      </ul>
+    </div>
+<section class="axis-modeles">
+  <h3>1. Modèles IA</h3>
+  <h4>Nouveautés</h4>
+  <ul>
+    <li><strong>Mistral AI lance Voxtral 3</strong> — nouvelle famille de modèles de reconnaissance et de synthèse vocale (transcription dans plus de 50 langues avec identification des locuteurs, synthèse dans plus de 35 langues et 50 dialectes), accompagnée d'un SDK pour agents vocaux construit sur LiveKit (latence inférieure à une seconde par tour). Disponible via l'API Mistral hébergée dans l'UE ou en déploiement sur infrastructure propre. <a href="https://mistral.ai/news/voxtral-3">Mistral AI</a> <span class="art-date">20 octobre 2026</span></li>
+  </ul>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+    <span class="conf-value">0,85 / 1,0</span>
+  </div>
+</section>
+<section class="axis-outils">
+  <h3>2. Outils IA</h3>
+  <h4>Nouveautés</h4>
+  <ul>
+    <li><strong>Microsoft 365 Copilot Notebooks : mise à jour d'octobre</strong> — délégation de tâches simples (gestion des références, synthèse de projet, création/modification d'un fichier Word, Excel ou PowerPoint) et automatisations programmées (ex. synthèse quotidienne, rapport hebdomadaire) annoncées pour Copilot Notebooks. La délégation de tâches et le choix du modèle sont pour l'instant réservés au programme Frontier (préversion) ; les automatisations programmées sont annoncées « dans les prochaines semaines ». Information de bêta publique/roadmap, sourcée uniquement par la presse spécialisée (Windows Report et relais), date exacte de publication non confirmée auprès de Microsoft. <a href="https://windowsreport.com/?p=1512038">Windows Report</a> <span class="art-date">courant octobre 2026, date précise non confirmée</span></li>
+  </ul>
+  <h4>Signaux faibles</h4>
+  <ul>
+    <li>GitHub Universe 2026 est annoncé au Fort Mason Center de San Francisco les 28 et 29 octobre 2026 ; aucun contenu de keynote n'est encore publié. <span class="art-date">évènement à venir</span></li>
+  </ul>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>
+<section class="axis-infra">
+  <h3>3. Infra / Réseau</h3>
+  <h4>Nouveautés</h4>
+  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>
+<section class="axis-cyber">
+  <h3>4. Cybersécurité</h3>
+  <h4>Nouveautés</h4>
+  <ul>
+    <li><strong>BeyondTrust Remote Support : faille critique ajoutée au catalogue KEV de la CISA</strong> — CVE-2026-102764 (CVSS 9.3), un contournement d'authentification permettant des opérations sur fichiers à distance, est exploitée depuis fin août par un acteur d'espionnage soupçonné d'être lié à la Chine (attribution Mandiant/Google). BeyondTrust a corrigé ses instances SaaS le 8 octobre ; les instances auto-hébergées doivent être patchées manuellement si les mises à jour automatiques sont désactivées. <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> <span class="art-date">20 octobre 2026 (ajout KEV), faille divulguée le 15 octobre</span></li>
+    <li><strong>Fortinet : nouvelle CVE ajoutée au catalogue KEV</strong> — CVE-2025-61624, une vulnérabilité de traversée de répertoire dans l'interpréteur de ligne de commande de FortiOS, FortiPAM, FortiProxy et FortiSwitchManager (admin authentifié avec droits lecture-écriture), a été ajoutée au catalogue KEV de la CISA. Les correctifs existent depuis avril 2026 (FG-IR-26-122) ; les versions FortiOS 6.4/7.0/7.2 et FortiPAM antérieures à 1.7 n'ont pas de correctif direct et doivent migrer. <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> <span class="art-date">16 octobre 2026</span></li>
+    <li><strong>CERT-FR : sept nouveaux avis les 19 et 20 octobre</strong> — vulnérabilités multiples dans Stormshield Network Security, Juniper Networks Session Smart Router, les produits F5, Roundcube Webmail, Microsoft Edge et Mattermost Server (deux avis), ainsi que dans Laravel. <a href="https://cert.cyber.gouv.fr/avis/">CERT-FR</a> <span class="art-date">19-20 octobre 2026</span></li>
+    <li><strong>CISA KEV : quatre CVE Plex Media Server</strong> — CVE-2026-96652, -96654, -96655 et -96656 ajoutées au catalogue des vulnérabilités à exploitation active connue. <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> <span class="art-date">20 octobre 2026</span></li>
+    <li><strong>CISA KEV : Siemens Software Center et EG Secure Solutions SiteGuard</strong> — CVE-2026-110936 (Siemens Software Center) et CVE-2026-106931 (EG Secure Solutions SiteGuard Server Edition) ajoutées au catalogue. <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> <span class="art-date">20 octobre 2026</span></li>
+  </ul>
+  <h4 class="alerte">Points d'alerte</h4>
+  <ul>
+    <li>BeyondTrust Remote Support : exploitation active confirmée par un acteur étatique (espionnage) depuis fin août 2026 ; les clients en auto-hébergement sans mise à jour automatique restent exposés tant qu'ils n'ont pas appliqué le correctif manuellement.</li>
+  </ul>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:90%"></span></span>
+    <span class="conf-value">0,9 / 1,0</span>
+  </div>
+</section>
+<section class="axis-data">
+  <h3>5. DATA</h3>
+  <h4>Nouveautés</h4>
+  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>
+<section class="axis-ia-ent">
+  <h3>6. IA en entreprise</h3>
+  <h4>Nouveautés</h4>
+  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>
+<section class="axis-souverain">
+  <h3>7. Infrastructure IA souveraine</h3>
+  <h4>Nouveautés</h4>
+  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
+  <h4>Rappel des jours précédents</h4>
+  <ul class="rappel">
+    <li>GTC Berlin (20-22 octobre) : keynote de Jensen Huang prévue aujourd'hui, 21 octobre, 11h-13h CEST (environ 20h-22h UTC+11) — publié le 20 octobre (voir <a href="#note-tech-2026-10-20">note du 20 octobre</a>)</li>
+  </ul>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>
+<section class="axis-agents">
+  <h3>8. Agents et protocoles</h3>
+  <h4>Nouveautés</h4>
+  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>
+<section class="axis-esn">
+  <h3>9. Marché des ESN et intégrateurs</h3>
+  <h4>Nouveautés</h4>
+  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>
+<section class="axis-regl">
+  <h3>10. Réglementation et conformité IA</h3>
+  <h4>Nouveautés</h4>
+  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>
+<section class="axis-ao">
+  <h3>11. Appels d'offres et financements</h3>
+  <h4>Nouveautés</h4>
+  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11. Pour la Nouvelle-Calédonie, aucun appel d'offres ou financement lié à l'IA n'a été identifié cette semaine sur les sources consultées (marchespublics.nc, gouv.nc, province-sud.nc, province-nord.nc, cci.nc) ; cette absence d'information est signalée comme telle, sans être comblée.</p>
+  <div class="conf-row">
+    <span class="conf-label">Confiance section</span>
+    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+    <span class="conf-value">0,5 / 1,0</span>
+  </div>
+</section>    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+      <span class="conf-value">0,6 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <article class="note-tech" id="note-tech-2026-10-20">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
