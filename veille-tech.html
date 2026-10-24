@@ -636,6 +636,252 @@
 </article>
 <!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-10-25">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">25 octobre 2026 08:18 UTC+11 — Fenêtre 5 jours glissants</span>
+  </div>
+  <div class="note-body">
+    <div class="synthese-5j">
+      <h3>Synthèse des 5 jours</h3>
+      <ul>
+        <li>GitHub Copilot arrive dans Microsoft Teams via les notifications : en mentionnant <code>@GitHub</code>, Copilot peut analyser un bug, proposer un correctif et ouvrir une pull request sans quitter la conversation.</li>
+        <li>GitHub élargit son API de métriques d'usage Copilot à des outils tiers comme OpenCode, pour un suivi consolidé de l'adoption au-delà de l'écosystème GitHub natif.</li>
+        <li>Mise à jour — les DSX POD de NVIDIA (data centers IA préfabriqués) sont détaillés : déploiement annoncé en 14 jours contre 4 à 6 mois habituellement, conteneur de 28 tonnes.</li>
+        <li>Mise à jour — OpenShell (NVIDIA), architecture « zero trust » pour la sécurité des agents IA, atteint la version 0.1.5 avec plus de 100 fournisseurs engagés et des déploiements documentés chez Microsoft et Red Hat.</li>
+        <li>Aucune nouveauté confirmée sur les modèles IA propriétaires (OpenAI, Anthropic, Google DeepMind, Mistral AI) cette semaine ; des rumeurs contradictoires et non vérifiées évoquent un éventuel « GPT-6 » et un « Gemini 4 », à ne pas traiter comme des faits.</li>
+        <li>Cybersécurité, infra/réseau, DATA, IA en entreprise, marché des ESN, réglementation et appels d'offres : aucune nouveauté confirmée dans la fenêtre de 5 jours.</li>
+        <li>Point d'alerte à surveiller : la CVE-2026-107656 (Fortinet, interface de gestion web, critique) reste hors fenêtre (13 octobre) mais mériterait un suivi en cas d'exploitation active signalée.</li>
+        <li>Source inaccessible lors des vérifications de cette note : cyber.gouv.fr/actualites (ANSSI).</li>
+      </ul>
+    </div>
+
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-25 08:18 UTC+11.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Des sources secondaires concordantes mais non vérifiées à la source évoquent un lancement « GPT-6 » chez OpenAI début octobre, puis un rapport distinct selon lequel une version « GPT-6.1 Astra » aurait été suspendue pour raisons de sécurité — les deux récits se contredisent et aucun des deux n'est confirmé par une source primaire OpenAI. Rumeur, non confirmé.</li>
+        <li>Une disponibilité de « Gemini 4 » depuis le 13 octobre est évoquée par une source secondaire, contredite par un article antérieur présentant un lancement possible seulement fin 2026. Hors fenêtre et non confirmé par Google. Rumeur, non confirmé.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Mistral AI s'associe à NVIDIA pour l'IA appliquée à l'ingénierie industrielle — publié le 21 octobre (voir <a href="#note-tech-2026-10-23">note du 23 octobre</a>)</li>
+        <li>Mistral AI lance Voxtral 3 — publié le 20 octobre (voir <a href="#note-tech-2026-10-23">note du 23 octobre</a>)</li>
+        <li>NVIDIA dévoile une nouvelle famille de modèles ouverts à la keynote GTC Berlin — publié le 21 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>GitHub Copilot arrive dans Microsoft Teams via les notifications</strong> — en mentionnant <code>@GitHub</code> sur une notification dans Teams, Copilot peut désormais analyser un bug signalé, proposer un correctif et ouvrir une pull request sans quitter la conversation. L'application « GitHub » remplace l'ancienne « GitHub notifications », retirée le 16 novembre 2026 ; les utilisateurs doivent réinstaller l'app et reconnecter leur compte. Fait établi, annonce officielle. <a href="https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams">GitHub Changelog</a> <span class="art-date">23 octobre 2026</span></li>
+        <li><strong>GitHub élargit son API de métriques d'usage Copilot à des outils tiers</strong> — l'API de métriques d'usage Copilot s'ouvre à des outils externes comme OpenCode, permettant un suivi consolidé de l'adoption au-delà de l'écosystème GitHub natif. Fait établi, annonce officielle. <a href="https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode">GitHub Changelog</a> <span class="art-date">23 octobre 2026</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Plusieurs mises à jour de Microsoft 365 Copilot évoquées par des sources secondaires (nouvelle page d'accueil, édition de fichiers Office en marge d'une conversation, amélioration de Copilot Notebooks) ne sont confirmées par aucune page officielle Microsoft datée dans la fenêtre. Non retenues comme fait.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>GitHub Copilot in Visual Studio : mise à jour de septembre — publié le 22 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>GitHub ajoute des comparatifs sectoriels au tableau de bord d'impact Copilot — publié le 22 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>Gemini dans Google Sheets disponible sur iOS, avec analyse de données BigQuery en langage naturel — publié le 23 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>Google Meet étend la traduction vocale en temps réel à 63 langues — publié le 23 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>Gemini lance un nouveau centre de personnalisation — publié le 23 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-25 08:18 UTC+11.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Biomemory lance DNA Shield, premier service commercial d'archivage sur ADN synthétique — publié le 21 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-25 08:18 UTC+11. Les avis CERT-FR et CISA KEV du 23 octobre, déjà publiés dans la note du 24 octobre, n'ont pas d'évolution significative justifiant une republication.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>CVE-2026-107656 (FortiGuard, critique, interface de gestion web Fortinet) : avis publié le 13 octobre, donc hors fenêtre des 5 jours, mais à surveiller pour une éventuelle exploitation active signalée ultérieurement.</li>
+        <li>Source inaccessible lors de la vérification : cyber.gouv.fr/actualites (ANSSI), page vide au moment de la consultation. Contenu non inventé.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>CISA ajoute deux vulnérabilités à exploitation active au catalogue KEV — publié le 23 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>CERT-FR publie dix nouveaux avis le 23 octobre — publié le 23 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>CERT-FR : sept nouveaux avis le 22 octobre — publié le 22 octobre (voir <a href="#note-tech-2026-10-23">note du 23 octobre</a>)</li>
+        <li>CERT-FR : neuf nouveaux avis le 21 octobre — publié le 21 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+        <li>CERT-FR : sept nouveaux avis les 19 et 20 octobre — publié le 19-20 octobre (voir <a href="#note-tech-2026-10-21">note du 21 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-25 08:18 UTC+11.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Snowflake se rapproche de Bleu et d'Orange Business pour héberger Cortex — publié le 19 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>Couchbase décline les briques de son Data Plane en services managés — publié le 20 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+        <li>Salesforce acquiert Loops pour renforcer l'analytique agentique de Tableau — publié le 20 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+        <li>Veeam lance iResOps, outil de gouvernance de la donnée issu du rachat de Securiti — publié le 19 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ia-ent">
+      <h3>6. IA en entreprise</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-25 08:18 UTC+11.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>SAP et l'IA : l'éditeur et ses clients n'ont pas encore trouvé la formule idéale — publié le 22 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>Zoom ouvre sa « couche de contexte » aux assistants IA tiers — publié le 23 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-souverain">
+      <h3>7. Infrastructure IA souveraine</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong><span class="maj">Mise à jour</span> DSX POD de NVIDIA : détails techniques des data centers IA préfabriqués</strong> — complète la note du 22 octobre. Architecture présentée à la GTC Berlin : sept racks Vera Rubin NVL72, deux racks Spectrum-X et un rack d'alimentation regroupés dans un conteneur de 28 tonnes, déployable en 14 jours selon NVIDIA contre 4 à 6 mois pour une mise en service classique. Efficacité réelle et accessibilité budgétaire non démontrées sur le terrain à ce stade. Fait établi (annonce officielle), déploiement effectif non vérifié. <a href="https://www.lemagit.fr/actualites/366652349/DSX-Pod-Nvidia-se-lance-dans-la-conception-de-data-centers-prefabriques">LeMagIT</a> <span class="art-date">22 octobre 2026</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Aucune annonce datée trouvée côté OVHcloud, Scaleway, 3DS Outscale ou S3NS dans la fenêtre, au-delà de ce qui est déjà publié (Bleu, Azure Local). Aucune nouvelle annonce GPU NVIDIA/AMD/Intel datée d'octobre 2026 identifiée au-delà des éléments déjà connus.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Mise à jour — le cloud souverain Bleu (Orange-Capgemini) passe en disponibilité générale — publié le 22 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>Shadow (groupe Synfonium) reconvertit ses PC gamers en cloud IA — publié le 22 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>Rainbow (Alcatel-Lucent Enterprise) ajoute des fonctions d'IA hébergées en Europe — publié le 22 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>GTC Berlin : Jensen Huang confirme Vera Rubin en pleine production et dévoile les « AI factories » conteneurisées DSX POD — publié le 21 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+        <li>Microsoft étoffe l'IA d'Azure Local sans lever les doutes sur sa souveraineté — publié le 21 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
+        <span class="conf-value">0,65 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-agents">
+      <h3>8. Agents et protocoles</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong><span class="maj">Mise à jour</span> OpenShell (NVIDIA) : détails techniques et premiers déploiements</strong> — complète la note du 22 octobre. Le framework open source « zero trust » pour la sécurité des agents IA atteint la version 0.1.5, sous licence Apache 2.0, avec plus de 100 fournisseurs engagés et des déploiements documentés chez Microsoft et Red Hat. Coût et charge de gestion jugés élevés par les premiers retours ; le composant « Sentry » n'est pas encore disponible. Fait établi, annonce officielle. <a href="https://www.lemagit.fr/actualites/366652636/Avec-OpenShell-Nvidia-applique-la-logique-zero-trust-aux-agents-IA">LeMagIT</a> <span class="art-date">23 octobre 2026</span></li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>GitHub ajoute les skills, agents et serveurs MCP personnalisés à l'API de métriques d'usage — publié le 22 octobre (voir <a href="#note-tech-2026-10-24">note du 24 octobre</a>)</li>
+        <li>Anthropic donne le standard ouvert Agent Skills à l'Agentic AI Foundation — publié le 22 octobre (voir <a href="#note-tech-2026-10-23">note du 23 octobre</a>)</li>
+        <li>NVIDIA présente OpenShell, une architecture de référence pour la sécurité des agents — publié le 21 octobre (voir <a href="#note-tech-2026-10-22">note du 22 octobre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
+        <span class="conf-value">0,65 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-esn">
+      <h3>9. Marché des ESN et intégrateurs</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-25 08:18 UTC+11.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-regl">
+      <h3>10. Réglementation et conformité IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-25 08:18 UTC+11.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>La consultation publique de la CNIL sur l'anonymisation et le web scraping appliqués à l'IA, déjà ouverte, se clôture le 30 octobre 2026 — à surveiller pour une synthèse la semaine prochaine. Aucune information nouvelle sur l'AI Act (prochain jalon identifié début décembre 2026, hors fenêtre), ni sur NIS2/DORA, ni sur le cadre local de Nouvelle-Calédonie.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ao">
+      <h3>11. Appels d'offres et financements</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-25 08:18 UTC+11. Pour la Nouvelle-Calédonie : aucun appel d'offres lié à l'IA identifié ; absence confirmée, non comblée.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:25%"></span></span>
+        <span class="conf-value">0,25 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
+      <span class="conf-value">0,45 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <article class="note-tech" id="note-tech-2026-10-24">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -853,7 +1099,6 @@
     </div>
   </div>
 </article>
-
 <article class="note-tech" id="note-tech-2026-10-23">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -3464,158 +3709,6 @@
         <li>Absence constatée pour la Nouvelle-Calédonie, signalée comme telle et non comblée.</li>
         <li>Limite méthodologique signalée par la recherche : boamp.fr, ted.europa.eu et marchespublics.nc n'ont pas pu être consultés nativement (recherche web indirecte uniquement) — une vérification directe de ces portails reste recommandée pour une couverture exhaustive de cet axe.</li>
       </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
-        <span class="conf-value">0,0 / 1,0</span>
-      </div>
-    </section>
-
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
-      <span class="conf-value">0,55 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-10-11">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">11 octobre 2026 08:12 UTC+11 — Fenêtre 5 jours glissants</span>
-  </div>
-  <div class="note-body">
-    <div class="synthese-5j">
-      <h3>Synthèse des 5 jours</h3>
-      <ul>
-        <li>Anthropic publie une mise à jour de sa politique d'usage, effective le 12 novembre 2026 (8 octobre).</li>
-        <li>GitHub Copilot pour JetBrains gagne un modèle par défaut imposable par l'administrateur et un contrôle de désactivation du démarrage automatique des serveurs MCP (10 octobre).</li>
-        <li>CERT-FR publie neuf nouveaux avis en deux jours (8-9 octobre) : Cisco, IBM, Nextcloud, Tenable et le noyau Linux de quatre distributions.</li>
-        <li>Analyse publiée le 6 octobre sur les clouds souverains français : Bleu et S3NS reposent sur des technologies de hyperscalers sous licence, OVHcloud et Scaleway revendiquent une souveraineté logicielle complète.</li>
-        <li>Aucune nouveauté confirmée cette semaine sur les axes DATA, IA en entreprise, agents et protocoles, marché des ESN, réglementation IA : recherches menées mais infructueuses dans la fenêtre de 5 jours.</li>
-        <li>Aucune information sur la Nouvelle-Calédonie dans la fenêtre de 5 jours.</li>
-      </ul>
-    </div>
-
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>Anthropic met à jour sa politique d'usage</strong> — La nouvelle version, qui entrera en vigueur le 12 novembre 2026, consolide les règles contre les campagnes trompeuses et les activités artificielles coordonnées, recentre la section électorale sur la protection des processus démocratiques, précise les interdictions liées aux armes et à la surveillance, ajoute des exigences pour les usages à haut risque impliquant du matériel capable d'actions physiques autonomes, et interdit les comportements abusifs prolongés envers les modèles. Annonce officielle. <a href="https://www.anthropic.com/news/2026-usage-policy-update">Anthropic</a> <span class="art-date">8 octobre 2026</span></li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
-        <span class="conf-value">0,85 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>GitHub Copilot pour JetBrains : nouveaux contrôles et chat amélioré</strong> — Les administrateurs d'entreprise peuvent désormais imposer un modèle par défaut pour les nouvelles conversations et désactiver le démarrage automatique des serveurs MCP. Côté chat, l'action « Fix » sur un diagnostic ouvre directement un chat en ligne pour corriger le problème, les messages sont regroupés par tour avec des actions de copie et de modification, et la gestion multi-compte est clarifiée. Annonce officielle (changelog GitHub). <a href="https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains">GitHub Changelog</a> <span class="art-date">10 octobre 2026</span></li>
-        <li><strong>GitHub Copilot — publication hebdomadaire</strong> — Récapitulatif des évolutions livrées la semaine du 5 octobre sur l'ensemble des IDE pris en charge par Copilot. Annonce officielle, contenu détaillé non vérifié au-delà du titre. <a href="https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5">GitHub Changelog</a> <span class="art-date">9 octobre 2026</span></li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
-        <span class="conf-value">0,75 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 11 octobre 2026 08:12 UTC+11.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
-        <span class="conf-value">0,0 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>CERT-FR — vague d'avis du 8 et 9 octobre</strong> — Neuf avis publiés en deux jours : CERTFR-2026-AVI-1282 (multiples vulnérabilités Cisco, 8 octobre), CERTFR-2026-AVI-1291 (multiples vulnérabilités IBM, 9 octobre), CERTFR-2026-AVI-1283 (multiples vulnérabilités Nextcloud, 9 octobre), CERTFR-2026-AVI-1284 (vulnérabilité dans les produits Tenable, 9 octobre), et CERTFR-2026-AVI-1286 à 1289 (multiples vulnérabilités du noyau Linux pour Ubuntu, Red Hat, SUSE et Debian LTS, 9 octobre). Avis officiels CERT-FR, détail des CVE non vérifié individuellement. <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1291/">CERT-FR</a> <a href="https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1282/">CERT-FR</a> <span class="art-date">8-9 octobre 2026</span></li>
-      </ul>
-      <h4 class="alerte">Points d'alerte</h4>
-      <ul>
-        <li>Aucun nouvel avis PSIRT FortiGuard identifié dans la fenêtre de 5 jours ; le dernier avis visible lors de la consultation datait du 8 septembre 2026, ce qui peut refléter un défaut d'indexation de la page plutôt qu'une absence réelle de publication. À revérifier directement sur fortiguard.com/psirt.</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
-        <span class="conf-value">0,75 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 11 octobre 2026 08:12 UTC+11.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
-        <span class="conf-value">0,0 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-ia-ent">
-      <h3>6. IA en entreprise</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 11 octobre 2026 08:12 UTC+11. Les études disponibles (KPMG, Zoho, DataCamp, Siparex/Bpifrance) datent de janvier à août 2026 et sont hors fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
-        <span class="conf-value">0,0 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-souverain">
-      <h3>7. Infrastructure IA souveraine</h3>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li><strong>Analyse comparative Bleu / S3NS / OVHcloud / Scaleway</strong> — Un comparatif publié par un prestataire tiers (Qovery) décrit Bleu (coentreprise Orange-Capgemini) et S3NS (Thales majoritaire, Google Cloud minoritaire) comme des entités de droit français exploitant sous licence des technologies de hyperscalers américains, vendues par contrats d'entreprise sans grille tarifaire publique. OVHcloud (OpenStack) et Scaleway (KVM, pile logicielle propre) y sont présentés comme revendiquant une souveraineté technologique plus complète. Article d'analyse d'un acteur commercial tiers, pas une annonce officielle des entités citées ; aucune confirmation NVIDIA/OVHcloud/Scaleway sur une actualité GPU propre dans la fenêtre. <a href="https://www.qovery.com/blog/bleu-s3ns-scaleway-french-trusted-cloud-saas-scaleup-2026">Qovery</a> <span class="art-date">6 octobre 2026</span></li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
-        <span class="conf-value">0,4 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-agents">
-      <h3>8. Agents et protocoles</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 11 octobre 2026 08:12 UTC+11.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
-        <span class="conf-value">0,0 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-esn">
-      <h3>9. Marché des ESN et intégrateurs</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 11 octobre 2026 08:12 UTC+11.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
-        <span class="conf-value">0,0 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-regl">
-      <h3>10. Réglementation et conformité IA</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 11 octobre 2026 08:12 UTC+11.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
-        <span class="conf-value">0,0 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-ao">
-      <h3>11. Appels d'offres et financements</h3>
-      <p>Aucune information nouvelle confirmée dans la fenêtre de 5 jours. La recherche sur BOAMP (portail de recherche dynamique) n'a pas pu être interrogée directement par la collecte automatisée ; source à consulter manuellement pour les AO France métropolitaine. Pour la Nouvelle-Calédonie : aucune information trouvée à la date du 11 octobre 2026 08:12 UTC+11.</p>
       <div class="conf-row">
         <span class="conf-label">Confiance section</span>
         <span class="conf-bar"><span class="conf-fill" style="width:0%"></span></span>
