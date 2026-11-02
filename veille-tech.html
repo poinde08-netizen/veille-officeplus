@@ -865,6 +865,184 @@
 </article>
 <!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-11-03">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">03/11/2026 08:13 UTC+11 — Fenêtre 5 jours glissants</span>
+  </div>
+  <div class="note-body">
+    <div class="synthese-5j">
+      <h3>Synthèse des 5 jours</h3>
+      <ul>
+        <li>CERT-FR alerte sur l'exploitation active de 3 CVE affectant Ivanti Connect Secure — action prioritaire pour les accès VPN exposés.</li>
+        <li>CERT-FR publie 8 autres avis le 2 novembre (Synology, QNAP QNE, Microsoft Edge ~50 CVE, Visual Studio, Traefik, Belden macmon/NRSW, Tenable Identity Exposure, Redmine) — maintenance courante, aucune autre exploitation active signalée.</li>
+        <li>Google Vids (Google Workspace) permet désormais de créer un avatar personnalisé à partir d'une image importée.</li>
+        <li>Paris Infraweek 2026 (Paris Europlace) s'ouvre le 2 novembre avec un mini-sommet consacré aux infrastructures pour l'IA — aucune décision ni chiffre communiqué à ce stade.</li>
+        <li>La rumeur d'un correctif de durcissement critique Fortinet (FortiOS/FortiManager/FortiAnalyzer), divulgation complète annoncée pour le 10 novembre, reste non confirmée par FortiGuard PSIRT.</li>
+        <li>Semaine très calme sur Modèles IA, DATA, IA en entreprise, Infra/Réseau, Agents/protocoles et Marché des ESN : aucune nouveauté vérifiable et datée dans la fenêtre stricte.</li>
+        <li>L'échéance du 2 novembre évoquée par la presse pour le marquage des contenus générés par IA (AI Act, article 50) est désormais passée sans confirmation officielle trouvée sur EUR-Lex ou le site de l'AI Office.</li>
+        <li>Aucun appel d'offres ou financement lié à l'IA identifié en Nouvelle-Calédonie, comme les semaines précédentes.</li>
+      </ul>
+    </div>
+
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 03/11/2026 08:13 UTC+11 : silence confirmé des grands éditeurs (OpenAI, Anthropic, Google DeepMind, Mistral AI, Meta AI, Hugging Face) sur ce créneau précis ; la page d'actualité OpenAI était inaccessible (HTTP 403) au moment de la collecte.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
+        <span class="conf-value">0,15 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Google Vids : création d'un avatar personnalisé à partir d'une image importée</strong> — la fonctionnalité permet de générer un avatar numérique personnalisé pour les vidéos produites par IA dans Google Vids (Google Workspace). <a href="https://workspaceupdates.googleblog.com/2026/11/create-a-custom-avatar-google-vids.html">Google Workspace Updates</a> <span class="art-date">2026-11-02</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Microsoft Ignite 2026 se tiendra du 17 au 20 novembre à San Francisco ; les thèmes annoncés évoquent Microsoft 365 Copilot, « Agent Factory » et un plan de contrôle « Agent 365 », mais aucune annonce produit n'est confirmée à ce stade. <strong>Roadmap non confirmée</strong>. <a href="https://www.uctoday.com/events/microsoft-ignite-2026/">UC Today</a> <span class="art-date">2026-11-02</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 03/11/2026 08:13 UTC+11 : silence confirmé de Scale Computing, Dell, HPE, Lenovo, Synology (hors avis de sécurité, voir axe 4) et Broadcom/VMware sur ce créneau précis.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
+        <span class="conf-value">0,15 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Ivanti Connect Secure : trois vulnérabilités activement exploitées</strong> — CVE-2026-104935, CVE-2026-111357 et CVE-2026-118527 affectent les versions antérieures à 22.8R2.6, 25.1.1.3 et 25.1.3.1, permettant exécution de code à distance, élévation de privilèges et contournement de sécurité. Ivanti confirme une exploitation active ; correctifs disponibles depuis le 13 octobre 2026. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1442/">CERT-FR</a> <span class="art-date">2026-11-02</span></li>
+        <li><strong>Produits Synology (Mail Station, PHP, Calendar) : exécution de code arbitraire à distance</strong> — CVE-2026-109618 et CVE-2026-109619, correctifs disponibles via le bulletin Synology SA_26_14 du 31 octobre 2026. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1435/">CERT-FR</a> <span class="art-date">2026-11-02</span></li>
+        <li><strong>QNAP QNE (ADRA) : exécution de code arbitraire à distance</strong> — même paire de CVE que Synology (CVE-2026-109618, CVE-2026-109619), versions antérieures à 1.0.7.q327 concernées. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1437/">CERT-FR</a> <span class="art-date">2026-11-02</span></li>
+        <li><strong>Microsoft Edge : une cinquantaine de vulnérabilités corrigées</strong> — environ 50 CVE dans les versions antérieures à 153.0.4234.46 et 156.0.4314.56 ; aucune exploitation active signalée par l'éditeur. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1440/">CERT-FR</a> <span class="art-date">2026-11-02</span></li>
+        <li><strong>Cinq autres avis CERT-FR du 2 novembre</strong> — Microsoft Visual Studio (AVI-1441), Traefik (AVI-1439), Belden macmon et NRSW (AVI-1438), Tenable Identity Exposure (AVI-1436), Redmine (AVI-1434) : maintenance courante, aucune exploitation active signalée dans ces cinq avis. <a href="https://cert.cyber.gouv.fr/avis/">CERT-FR</a> <span class="art-date">2026-11-02</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Ivanti Connect Secure : exploitation active confirmée sur 3 CVE — action prioritaire pour tout client exposant un accès VPN/ICS Ivanti sur Internet.</li>
+        <li>Aucun avis CERT-FR daté du 3 novembre n'était disponible au moment de la collecte (décalage horaire avec la France) ; FortiGuard PSIRT n'a publié aucun avis plus récent que le 13 octobre 2026.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Rumeur non confirmée d'un correctif de durcissement critique Fortinet (FortiOS/FortiManager/FortiAnalyzer), divulgation complète annoncée pour le 10 novembre — publié le 2 novembre (voir <a href="#note-tech-2026-11-02">note du 2 novembre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,8 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Snowflake ouvre son événement virtuel mondial « Expedition 2026 » (3-6 novembre) avec un échange entre son PDG Sridhar Ramaswamy et Satya Nadella (Microsoft) sur l'IA agentique en production ; de nouvelles fonctionnalités de gouvernance et d'intégration des données sont annoncées sans détail produit confirmé à ce stade. <strong>Roadmap non confirmée</strong>. <a href="https://www.snowflake.com/en/news/press-releases/snowflake-agentic-transformation-expedition-2026-speaker-satya-nadella/">Snowflake</a> <span class="art-date">2026-11-03</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ia-ent">
+      <h3>6. IA en entreprise</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 03/11/2026 08:13 UTC+11 : aucune étude ou cas d'usage nouvellement publié par un cabinet (Gartner, McKinsey, BCG, IDC, Forrester, Bpifrance) n'a pu être daté dans la fenêtre stricte.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
+        <span class="conf-value">0,15 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-souverain">
+      <h3>7. Infrastructure IA souveraine</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Paris Infraweek 2026 : mini-sommet sur les infrastructures pour l'IA</strong> — la 10<sup>e</sup> édition de la Paris Infraweek, organisée par Paris Europlace, s'est ouverte le 2 novembre avec un mini-sommet consacré l'après-midi aux infrastructures pour l'intelligence artificielle, dans un contexte de financement massif des data centers et GPU en Europe. Aucune décision ni chiffre communiqué à ce stade. <a href="https://www.tresor.economie.gouv.fr/Evenements/2026/11/02/journee-inaugurale-de-la-paris-infraweek-2026-1oeme-edition">Ministère de l'Économie</a> <span class="art-date">2026-11-02</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
+        <span class="conf-value">0,45 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-agents">
+      <h3>8. Agents et protocoles</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 03/11/2026 08:13 UTC+11 : aucune annonce officielle datée sur modelcontextprotocol.io, son dépôt GitHub, ou les principaux frameworks d'agents dans la fenêtre stricte.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:10%"></span></span>
+        <span class="conf-value">0,1 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-esn">
+      <h3>9. Marché des ESN et intégrateurs</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 03/11/2026 08:13 UTC+11 pour Capgemini, Sopra Steria, Eviden, Orange Business ou Numeum.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
+        <span class="conf-value">0,15 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-regl">
+      <h3>10. Réglementation et conformité IA</h3>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>L'échéance du 2 novembre évoquée par la presse spécialisée pour le marquage des contenus générés par IA (article 50 de l'AI Act) est désormais passée ; aucune confirmation officielle (EUR-Lex, AI Office) trouvée dans la fenêtre pour en attester l'entrée en vigueur effective — point à vérifier manuellement avant toute communication client. Aucune actualité réglementaire spécifique à la Nouvelle-Calédonie, comme les semaines précédentes.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Incertitude sur l'échéance du marquage des contenus IA (2 novembre vs 2 décembre 2026, selon les sources) — publié le 2 novembre (voir <a href="#note-tech-2026-11-02">note du 2 novembre</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:25%"></span></span>
+        <span class="conf-value">0,25 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ao">
+      <h3>11. Appels d'offres et financements</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 03/11/2026 08:13 UTC+11 : aucun appel d'offres lié à l'IA ou au numérique identifié en Nouvelle-Calédonie (BOAMP, gouv.nc, marchespublics.nc, province-sud.nc, province-nord.nc, cci.nc, opt.nc), ni nouveau dispositif France 2030/Bpifrance daté de la semaine.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Absence confirmée d'AO IA en Nouvelle-Calédonie dans la fenêtre — signalé comme un vide, non comblé, comme les semaines précédentes.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+      <span class="conf-value">0,3 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <article class="note-tech" id="note-tech-2026-11-02">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -3753,237 +3931,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
       <span class="conf-value">0,55 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-10-20">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">20 octobre 2026 08:13 UTC+11 — Fenêtre 5 jours glissants</span>
-  </div>
-  <div class="note-body">
-    <div class="synthese-5j">
-      <h3>Synthèse des 5 jours</h3>
-      <ul>
-        <li>Journée calme : la quasi-totalité des 11 axes n'a produit aucune nouveauté vérifiable au-delà de ce qui était déjà publié cette semaine (recherches ciblées menées sur chaque axe, sans résultat daté dans la fenêtre).</li>
-        <li>NVIDIA ouvre GTC Berlin (20-22 octobre, STATION Berlin) ; la journée d'ateliers a commencé aujourd'hui, la keynote de Jensen Huang est attendue demain 21 octobre à 11h-13h CEST au Tempodrom — aucune annonce produit confirmée à l'heure de la rédaction.</li>
-        <li>Plusieurs médias (Bloomberg relayé par Hurriyet Daily News, aiweekly.co, letsdatascience.com) convergent sur un montant de 2&nbsp;Md$ d'investissements européens supplémentaires annoncés par Jensen Huang à Paris le 13 octobre, en plus des 8&nbsp;Md$ déjà investis en Europe sur l'année écoulée ; le détail des bénéficiaires n'était pas encore officialisé par NVIDIA à la date de ces articles. Information non confirmée par un communiqué officiel.</li>
-        <li>Les axes Outils IA, Infra/Réseau, DATA, IA en entreprise, Agents et protocoles, Marché des ESN, Réglementation et Appels d'offres n'ont produit aucune nouveauté vérifiable dans la fenêtre ; pour l'axe Agents et protocoles, l'ensemble des rappels précédents est désormais hors fenêtre de 5 jours (aucune information récente à rappeler).</li>
-        <li>Des sources secondaires se contredisent sur le calendrier des obligations « haut risque » de l'AI Act après le paquet Digital Omnibus (2 décembre 2026 évoqué par certaines, obligations déjà en vigueur depuis le 2 août 2026 selon d'autres) ; à vérifier auprès du texte officiel, non traité comme fait établi.</li>
-        <li>Absence persistante d'information vérifiable sur le numérique/l'IA en Nouvelle-Calédonie pour cette fenêtre (portails gouv.nc et province-sud.nc consultés).</li>
-        <li>Confiance globale faible à modérée (0,3/1,0) : journée dominée par l'absence de nouveauté plutôt que par des faits nouveaux solides.</li>
-      </ul>
-    </div>
-
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>Anthropic crée un fonds d'intérêt public doté de 5&nbsp;% de ses actions — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>Anthropic ouvre un accès approfondi à des évaluateurs indépendants (METR, SecureBio, Accenture) — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>Anthropic présente des indicateurs financiers T3, IPO désormais visée après les élections de mi-mandat américaines — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-    <li>Mistral AI lance Timestral — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-    <li>Anthropic ouvre un bureau à Singapour et signe un protocole d'accord avec le gouvernement singapourien — publié le 15 octobre (voir <a href="#note-tech-2026-10-15">note du 15 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
-        <span class="conf-value">0,45 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>GitHub généralise « AI Scan » pour les pull requests — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>GitHub Copilot dans Slack/Teams : support multi-dépôts — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>Gmail Live arrive sur mobile pour les clients Workspace payants — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-    <li>Gmail AI Inbox étendu aux utilisateurs Workspace payants — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-    <li>Autofix agentique pour les alertes de scan de code — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
-        <span class="conf-value">0,4 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>Barclays dégrade Dell et HPE malgré un carnet de commandes IA record de 95&nbsp;Md$ chez Dell — publié le 18 octobre (voir <a href="#note-tech-2026-10-18">note du 18 octobre</a>)</li>
-    <li>Synology Solution Day Asie : stockage PAS7700 et « espace de travail IA », sans nouveauté produit ni calendrier européen — publié le 18 octobre (voir <a href="#note-tech-2026-10-18">note du 18 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
-        <span class="conf-value">0,15 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11. Recherches ciblées sans résultat sur CERT-FR, CISA KEV et FortiGuard PSIRT pour cette fenêtre (un correctif FortiMail CVE-2026-104286 identifié est daté du 1er octobre, hors fenêtre).</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>Databricks publie une méthode de détection de malwares npm par LLM — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>CISA ajoute 4 vulnérabilités à exploitation active au catalogue KEV (PAN-OS, Cisco Secure Email Gateway, Ahsay AhsayCBS) — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>CERT-FR publie 10 nouveaux avis le 16 octobre — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-    <li>CISA ajoute 2 nouvelles CVE au catalogue KEV — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-    <li>CERT-FR publie 10 nouveaux avis le 15 octobre — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
-        <span class="conf-value">0,45 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>Databricks : disponibilité générale des transactions Lakehouse et requêtes géospatiales jusqu'à 38 fois plus rapides — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>Power BI Desktop : restriction d'enregistrement OneDrive/SharePoint à partir d'octobre 2026 — publié le 18 octobre (voir <a href="#note-tech-2026-10-18">note du 18 octobre</a>)</li>
-    <li>Databricks positionné « Visionnaire » au Magic Quadrant Gartner Analytics &amp; BI 2026 — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-    <li>Databricks lance « Predictive AI Functions » — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-    <li>Snowflake généralise « Data Mirroring » — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:35%"></span></span>
-        <span class="conf-value">0,35 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-ia-ent">
-      <h3>6. IA en entreprise</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11. Recherches ciblées menées sur Gartner, McKinsey, BCG et IDC : aucune publication officielle datée de la fenêtre identifiée (les chiffres circulant sur le web datent de janvier, mai et novembre 2025, hors fenêtre).</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>Étude Capgemini Research Institute sur l'IA agentique dans le secteur automobile — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
-        <span class="conf-value">0,15 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-souverain">
-      <h3>7. Infrastructure IA souveraine</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>GTC Berlin débute aujourd'hui (20 octobre), keynote Jensen Huang demain</strong> — la conférence NVIDIA se tient du 20 au 22 octobre à STATION Berlin ; le 20 octobre est une journée d'ateliers techniques (CUDA, IA agentique, robotique, modèles ouverts, IA physique), la keynote de Jensen Huang étant programmée le 21 octobre, 11h-13h CEST, au Tempodrom (diffusion en direct, sans inscription). Aucune annonce produit n'a été publiée à l'heure de la rédaction. Fait établi (programme), annonce officielle NVIDIA. <a href="https://www.nvidia.com/en-eu/gtc/faq/">nvidia.com/gtc/faq</a> <span class="art-date">consulté le 2026-10-20</span></li>
-        <li><strong>Signal à confirmer — NVIDIA évoquerait 2&nbsp;Md$ d'investissements IA supplémentaires en Europe</strong> — plusieurs médias financiers (Hurriyet Daily News, aiweekly.co, letsdatascience.com, sourcés à Bloomberg) rapportent que Jensen Huang a annoncé à Paris le 13 octobre un projet d'investissement de 2&nbsp;Md$ dans l'écosystème IA européen, en complément des 8&nbsp;Md$ déjà investis sur l'année écoulée, avec un détail des bénéficiaires attendu « dans la semaine ». Aucun communiqué officiel NVIDIA ni annonce chiffrée par bénéficiaire n'a été retrouvé à ce stade : à vérifier, notamment lors de la keynote du 21 octobre. Inférence probable, sources secondaires convergentes, non confirmée officiellement. <a href="https://www.hurriyetdailynews.com/nvidia-plans-2-billion-in-new-european-ai-investments-228101">hurriyetdailynews.com</a> <span class="art-date">2026-10-13, rapporté le 2026-10-14/15</span></li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>NVIDIA confirme le programme officiel de GTC Berlin (20-22 octobre) — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>Mise à jour — précisions sur les investissements de Jensen Huang (NVIDIA) à Paris : Doctolib, Genesis AI, Pigment, Entalpic — publié le 19 octobre (voir <a href="#note-tech-2026-10-19">note du 19 octobre</a>)</li>
-    <li>NVIDIA investit dans l'écosystème IA français — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-    <li>Snowflake et Orange Business annoncent une collaboration « IA souveraine pour la France » — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-    <li>Snowflake et Bleu (cloud de confiance Microsoft/Orange/Capgemini) s'associent — publié le 16 octobre (voir <a href="#note-tech-2026-10-16">note du 16 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
-        <span class="conf-value">0,45 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-agents">
-      <h3>8. Agents et protocoles</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11.</li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Contexte général (non daté dans la fenêtre) : plusieurs éditeurs de sécurité (Zenity, JFrog) soulignent que l'adoption du Model Context Protocol dépasse la gouvernance mise en place par les entreprises, avec trois risques récurrents cités — serveurs MCP malveillants exfiltrant des données, découverte dynamique d'outils élargissant la surface d'attaque, injection de prompt via les résultats d'outils. Signal faible, non vérifié comme actualité de la semaine.</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
-        <span class="conf-value">0,15 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-esn">
-      <h3>9. Marché des ESN et intégrateurs</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11.</li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Aucune nouvelle annonce officielle d'offre « IA souveraine » de Capgemini, Sopra Steria ou Orange Business identifiée cette semaine dans des recherches ciblées. Le classement Numeum/KPMG 2025 des ESN françaises (Capgemini 1er à 4,38&nbsp;Md€, suivi de SCC France, Accenture, Sopra Steria puis Orange Business) ressort à nouveau dans les recherches mais reste une information déjà connue (publiée le 14 octobre, désormais hors fenêtre) ; non republiée en détail pour éviter la redite.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>L'IA générative pousse les ESN à revoir leur organisation plutôt que leurs outils (tribune Experteam) — publié le 18 octobre (voir <a href="#note-tech-2026-10-18">note du 18 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:25%"></span></span>
-        <span class="conf-value">0,25 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-regl">
-      <h3>10. Réglementation et conformité IA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11. La prochaine échéance confirmée de l'AI Act reste le 2 décembre 2026 (interdictions sur les contenus intimes non consentis et pédocriminels, fin de la période de transition sur le marquage des contenus IA), hors fenêtre de 5 jours.</li>
-      </ul>
-      <h4>Points d'alerte</h4>
-      <ul>
-        <li class="alerte">Des sources secondaires se contredisent sur le calendrier des obligations « haut risque » (annexe III) de l'AI Act après le paquet Digital Omnibus : certaines évoquent un report au 2 décembre 2027, d'autres affirment que ces obligations sont pleinement exécutoires depuis le 2 août 2026. Aucune de ces sources n'est le texte officiel du Digital Omnibus ou du Journal officiel de l'UE. À vérifier avant toute communication client ; non traité comme fait établi dans cette note.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-    <li>CNIL : consultation publique sur l'anonymisation et le web scraping pour l'IA générative, échéance 30 octobre — publié le 18 octobre (voir <a href="#note-tech-2026-10-18">note du 18 octobre</a>)</li>
-    <li>Rumeur non vérifiée d'un arrêté donnant une portée contraignante à SecNumCloud v3.2 — publié le 18 octobre (voir <a href="#note-tech-2026-10-18">note du 18 octobre</a>)</li>
-    <li>Huit États américains poursuivent OpenAI pour les risques de ChatGPT chez les mineurs — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-    <li>La FTC préparerait des demandes d'enquête formelles visant OpenAI, Anthropic et le groupe de recherche METR — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-    <section class="axis-ao">
-      <h3>11. Appels d'offres et financements</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-      <li>Aucune information de moins de 5 jours trouvée à la date du 2026-10-20 08:13 UTC+11. Côté Nouvelle-Calédonie, aucun appel d'offres lié à l'IA n'a été identifié sur les portails consultés (gouv.nc, province-sud.nc) — absence constatée, non comblée.</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
-        <span class="conf-value">0,15 / 1,0</span>
-      </div>
-    </section>
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-      <span class="conf-value">0,3 / 1,0</span>
     </div>
   </div>
 </article>
