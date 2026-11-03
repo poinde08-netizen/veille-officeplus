@@ -865,6 +865,213 @@
 </article>
 <!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-11-04">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">04/11/2026 08:14 UTC+11 — Fenêtre 5 jours glissants</span>
+  </div>
+  <div class="note-body">
+    <div class="synthese-5j">
+      <h3>Synthèse des 5 jours</h3>
+      <ul>
+        <li>CERT-FR publie 5 nouveaux avis le 3 novembre (NetApp ONTAP, Xen, GLPI, Android, PostgreSQL/psqlODBC) ; CISA ajoute au catalogue KEV une faille WordPress Core activement exploitée.</li>
+        <li>GitHub Copilot débarque dans l'IDE agentique JetBrains Air, et Dependabot gère désormais les dépendances d'agents IA via l'Agent Package Manager.</li>
+        <li>Snowflake dévoile lors d'« Expedition 2026 » une salve d'annonces sur la gouvernance de la donnée par l'IA (Business Ontology, Cortex AI Gateway, agents CoCo/CoWork) ; Databricks généralise Lakebase Postgres sur Google Cloud.</li>
+        <li>Oracle introduit une facturation à la tâche pour ses agents IA, relançant le débat sur le coût réel de l'IA agentique pour les DSI.</li>
+        <li>Bull (Atos) et Schwarz Digits (STACKIT) signent un accord-cadre préliminaire pour un cloud IA souverain européen.</li>
+        <li>Ai2 publie StateBench, un nouveau benchmark montrant les limites des meilleurs LLM sur le suivi d'état dans les longs documents.</li>
+        <li>Semaine calme sur les axes Marché des ESN, Réglementation et Appels d'offres : aucune nouveauté vérifiable dans la fenêtre stricte.</li>
+        <li>La rumeur non confirmée d'un correctif de durcissement critique Fortinet, divulgation complète attendue le 10 novembre, reste sans confirmation officielle de FortiGuard PSIRT.</li>
+      </ul>
+    </div>
+
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Ai2 publie StateBench, un benchmark du suivi d'état dans les longs documents</strong> — Ce benchmark à quatre niveaux de difficulté évalue la capacité des LLM à suivre l'évolution des entités dans de longs documents. Les modèles de pointe testés (Gemini 3.8 Flash, Claude Opus 5.5, GPT-6 Sol, Luna) réussissent les cas simples, mais leur précision tombe à 13&nbsp;% ou moins sur les cas les plus difficiles ; les architectures récurrentes/hybrides généralisent mieux que les transformeurs classiques sur cette tâche. <a href="https://huggingface.co/blog/allenai/statebench">Hugging Face Blog (Ai2)</a> <span class="art-date">2026-11-03</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>NVIDIA documente « MonsterHouse », une installation vocale interactive construite sur sa pile Nemotron ouverte (ASR, LLM Nemotron 3.5 Bolt, synthèse vocale Magpie TTS, animation Audio2Face-3D) ; il s'agit d'une démonstration d'usage et non d'une nouvelle sortie de modèle. <strong>Signal faible</strong>. <a href="https://huggingface.co/blog/nvidia/nemotron-halloween">Hugging Face Blog (NVIDIA)</a> <span class="art-date">2026-10-30</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
+        <span class="conf-value">0,45 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>GitHub Copilot disponible dans l'IDE agentique JetBrains Air</strong> — L'intégration, via l'Agent Client Protocol, permet de déléguer des tâches de code, d'ouvrir des sessions parallèles avec contexte projet et d'exécuter des tâches cloud isolées (Air Teams) consommant le forfait Copilot plutôt que des crédits JetBrains AI. <a href="https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air">GitHub Changelog</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>Dependabot prend en charge l'Agent Package Manager (APM)</strong> — Dependabot peut désormais ouvrir des PR de mise à jour pour les dépendances déclarées dans un fichier <code>apm.yml</code> (gestionnaire de paquets pour skills/prompts/instructions d'agents IA), avec régénération du lockfile associé ; disponibilité générale sur github.com, arrivée prévue sur GHES 3.24. <a href="https://github.blog/changelog/2026-11-03-dependabot-version-updates-support-agent-package-manager">GitHub Changelog</a> <span class="art-date">2026-11-03</span></li>
+        <li><span class="maj">Mise à jour</span> <strong>Google Vids : le déploiement de l'avatar personnalisé est mis en pause</strong> — Google a ajouté une note indiquant que le déploiement de la fonctionnalité d'avatar personnalisé (annoncée le 2 novembre) est suspendu, sans nouvelle date de calendrier. Première mention : voir <a href="#note-tech-2026-11-03">note du 3 novembre</a>. <a href="https://workspaceupdates.googleblog.com/2026/11/create-a-custom-avatar-google-vids.html">Google Workspace Updates</a> <span class="art-date">2026-11-03</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>VMware Cloud Foundation Telco : plateforme unifiée pour les opérateurs télécoms</strong> — Broadcom/VMware lance VCF Telco, qui remplace le Telco Cloud Platform autonome et permet de faire tourner sur une même infrastructure VCF les fonctions réseau (VNF/CNF), les charges IT classiques et les charges IA, avec haute disponibilité, sécurité renforcée, automatisation par API et isolation multi-locataires. <a href="https://blogs.vmware.com/cloud-foundation/2026/11/02/introducing-vmware-cloud-foundation-telco/">Blog VMware (Broadcom)</a> <span class="art-date">2026-11-02</span></li>
+        <li><strong>VMware vSphere Kubernetes Service 3.8 : automatisation, sécurité et gestion des hôtes GPU</strong> — VKS 3.8 simplifie les montées de version, désactive SSH sur les nœuds, aligne les politiques d'admission sur les recommandations CISA/NSA/CIS et évite que les composants de contrôle Kubernetes occupent des hôtes GPU coûteux. <strong>Roadmap non confirmée</strong> pour l'allocation dynamique des GPU NVIDIA entre équipes, annoncée pour une version ultérieure. <a href="https://blogs.vmware.com/cloud-foundation/2026/11/02/vks-3-8-advancing-ai-modern-workloads-private-cloud/">Blog VMware (Broadcom)</a> <span class="art-date">2026-11-02</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>CISA KEV : ajout d'une faille WordPress Core activement exploitée (CVE-2026-119977)</strong> — Vulnérabilité de type « race condition » (Time-of-check Time-of-use) permettant à un attaquant non authentifié d'exécuter du code sur le serveur pendant la fenêtre de mise à niveau, via des chemins de staging prévisibles et accessibles sur le web. Exploitation active confirmée par CISA ; échéance de remédiation fixée au 6 novembre 2026. <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>Multiples vulnérabilités dans Google Android</strong> — Bulletin de sécurité Android de novembre 2026 (patch du 1ᵉʳ novembre) corrigeant une douzaine de CVE permettant exécution de code à distance, élévation de privilèges et atteinte à la confidentialité. Aucune exploitation active signalée par CERT-FR à ce stade. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1443/">CERT-FR</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>Multiples vulnérabilités dans GLPI</strong> — L'outil ITSM GLPI, très répandu en France, corrige 3 failles (contournement de politique de sécurité, injection XSS indirecte, élévation de privilèges) dans les versions antérieures à 11.0.10 et 10.0.28. Aucune exploitation active signalée. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1444/">CERT-FR</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>Multiples vulnérabilités dans le pilote PostgreSQL ODBC (psqlODBC)</strong> — 11 CVE corrigées dans les versions antérieures à 18.00.0006, permettant notamment des injections SQL et des contournements de politique de sécurité. Aucune exploitation active signalée. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1445/">CERT-FR</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>Multiples vulnérabilités dans Xen</strong> — Deux vulnérabilités (CVE-2026-102703, CVE-2026-102704) affectant les versions non corrigées de Xen (>4.6), pouvant compromettre la confidentialité et l'intégrité des données hébergées. Aucune exploitation active mentionnée. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1447/">CERT-FR</a> <span class="art-date">2026-11-03</span></li>
+        <li><span class="maj">Mise à jour</span> <strong>PHP2Shell : NetApp ONTAP également concerné par les CVE-2026-109618/109619</strong> — CERT-FR publie un avis spécifique pour NetApp ONTAP 9 (versions 9.12.x à 9.19.x non corrigées), confirmant que les mêmes vulnérabilités critiques PHP déjà suivies depuis fin octobre (déjà vues sur Palo Alto PAN-OS, Synology et QNAP) permettent aussi l'exécution de code arbitraire à distance sur ce produit. Première mention de ces CVE : voir <a href="#note-tech-2026-10-27">note du 27 octobre</a>. <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1446/">CERT-FR</a> <span class="art-date">2026-11-03</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>WordPress Core (CVE-2026-119977) : exploitation active confirmée par CISA — action prioritaire pour tout site WordPress client en cours de mise à niveau, échéance de remédiation CISA au 6 novembre 2026.</li>
+        <li>Aucun nouveau bulletin FortiGuard PSIRT identifié dans la fenêtre ; le prochain lot de correctifs Fortinet est attendu le 10 novembre 2026 (deuxième mardi du mois).</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Rumeur non confirmée d'un correctif de durcissement critique Fortinet (FortiOS/FortiManager/FortiAnalyzer), divulgation complète annoncée pour le 10 novembre — voir <a href="#note-tech-2026-11-03">note du 3 novembre</a></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+        <span class="conf-value">0,85 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Snowflake généralise CoCo Cloud Agents (événement Expedition 2026)</strong> — Agents exécutés dans des conteneurs isolés gérés par Snowflake, pouvant continuer après déconnexion de l'ingénieur ; CoCo Restricted Session Scope et CoCo Automations s'exécutent dans le périmètre de gouvernance, de lignage et de catalogue existant, avec validation Write-Audit-Publish avant mise en production sur tables Iceberg. <a href="https://www.snowflake.com/en/news/press-releases/expedition-2026-autonomous-data-engineering/">Snowflake</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>Snowflake : Business Ontology et Cortex AI Gateway, gouvernance de la donnée par l'IA</strong> — Business Ontology (prochainement en préversion publique) dans Horizon Catalog fixe des définitions métier opposables aux agents IA, prioritaires sur les inférences automatiques ; Cortex AI Gateway devient le point d'entrée unique appliquant aux agents (y compris via MCP) les mêmes politiques d'accès qu'aux utilisateurs humains. <strong>Roadmap non confirmée</strong> pour les fonctions encore en préversion privée (Cortex Sandboxes, détection d'abus d'agents, routage dynamique de modèles). <a href="https://www.snowflake.com/en/news/press-releases/expedition-2026-business-ontology-ai-gateway/">Snowflake</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>Snowflake annonce des agents permanents « Bots » (CoCo / CoWork)</strong> — Ces agents opèrent sous les droits d'accès et le périmètre gouverné de l'utilisateur, avec piste d'audit et profils d'administration imposant routage et accès. <strong>Préversion privée</strong> pour les Bots ; disponibilité générale pour certains composants associés (Automations, Async Agent API, partage de Skills). <a href="https://www.snowflake.com/en/news/press-releases/expedition-2026-coco-cowork/">Snowflake</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>Databricks généralise Lakebase Postgres sur Google Cloud</strong> — Base Postgres serverless entièrement gérée, disponible en 5 régions Google Cloud, avec gouvernance unifiée (contrôle d'accès, lignage, audit) via Unity Catalog appliquée de façon cohérente aux données opérationnelles, analytiques et IA ; connectivité privée en bêta via Private Service Connect. <a href="https://www.databricks.com/blog/lakebase-postgres-now-generally-available-google-cloud">Databricks</a> <span class="art-date">2026-11-02</span></li>
+        <li><strong>Databricks : contraintes UNIQUE en préversion publique sur Unity Catalog</strong> — Nouvelles contraintes <code>UNIQUE</code> (Databricks SQL / Runtime 18.2+) documentant des règles de qualité des données au niveau du schéma, non appliquées à l'écriture par défaut ; Databricks revendique des gains de performance jusqu'à 12x sur ses propres benchmarks internes (chiffre non vérifié de façon indépendante). <strong>Bêta publique</strong>. <a href="https://www.databricks.com/blog/declare-and-optimize-unique-constraints-databricks">Databricks</a> <span class="art-date">2026-11-03</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ia-ent">
+      <h3>6. IA en entreprise</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Oracle instaure une facturation à la tâche pour ses agents IA</strong> — En complément des licences classiques par utilisateur, Oracle facturera ses clients Fusion Applications à la tâche effectuée par ses agents IA, décision annoncée lors de son investor day du 28 octobre, dans l'objectif d'augmenter les revenus tirés des clients existants et de soutenir ses investissements cloud. <a href="https://www.lemondeinformatique.fr/actualites/lire-oracle-veut-facturer-l-ia-a-la-tache-100892.html">Le Monde Informatique</a> <span class="art-date">2026-11-02</span></li>
+        <li><strong>L'agentique, ou comment les éditeurs IT ponctionnent les budgets des DSI</strong> — Plusieurs grands éditeurs (Oracle, Microsoft, SAP, Salesforce, ServiceNow) ajoutent une facturation à la consommation liée aux agents IA à leurs abonnements classiques, rendant la facture IT moins prévisible et risquant de transférer une partie des gains de productivité vers les éditeurs ; l'article s'appuie sur des prévisions de coûts d'inférence et de ROI de Gartner. <strong>Inférence</strong> sur l'effet net pour les DSI, fait établi sur le constat des annonces d'éditeurs. <a href="https://www.itforbusiness.fr/facturation-agents-ia-editeurs-budgets-it-109264">IT for Business</a> <span class="art-date">2026-11-03</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-souverain">
+      <h3>7. Infrastructure IA souveraine</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Bull (Atos) et Schwarz Digits (STACKIT) s'allient sur un cloud IA souverain européen</strong> — Les deux groupes ont signé un accord-cadre préliminaire pour construire, avec STACKIT, une infrastructure européenne de cloud et d'IA souveraine destinée aux entreprises et administrations ; Bull apporterait son expertise serveurs IA/HPC, Schwarz Digits l'infrastructure cloud. Aucun engagement commercial ferme ni chiffrage précisé à ce stade. <a href="https://www.silicon.fr/cloud-1370/bull-et-schwarz-digits-se-rapprochent-sur-un-cloud-ia-souverain-230089">Silicon.fr</a> <span class="art-date">2026-11-03</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>OpenAI envisagerait d'acheter des puces TPU à Google Cloud pour ses datacenters Stargate, afin de diversifier son approvisionnement au-delà des GPU NVIDIA ; un analyste souligne un gain de levier de négociation mais un coût d'ingénierie et de portage logiciel significatif. <strong>Rumeur non confirmée officiellement</strong>. <a href="https://www.lemagit.fr/actualites/366653276/Lidee-discutable-dOpenAI-dacheter-des-puces-a-Google-Cloud">LeMagIT</a> <span class="art-date">2026-11-02</span></li>
+        <li>VMware/Broadcom publie un billet de communication (non un communiqué produit) défendant le cloud privé sur VMware Cloud Foundation comme réponse aux coûts imprévus de l'IA en production, citant une étude IDC selon laquelle 89&nbsp;% des organisations auraient connu des coûts IA imprévus après mise en production (chiffre non vérifié de façon indépendante). <a href="https://blogs.vmware.com/cloud-foundation/2026/11/03/when-production-ai-hits-a-wall-private-cloud-is-the-way-through/">Blog VMware (Broadcom)</a> <span class="art-date">2026-11-03</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
+        <span class="conf-value">0,45 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-agents">
+      <h3>8. Agents et protocoles</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Le SDK Ruby officiel du Model Context Protocol atteint le niveau Tier 1</strong> — Le SDK Ruby du MCP est promu « Tier 1 » dans le système de classification des SDK du protocole : support intégral de la spécification MCP du 28 juillet 2026 et 100&nbsp;% de réussite aux tests de conformité sur les deux versions de spec évaluées. <a href="https://blog.modelcontextprotocol.io/posts/ruby-sdk-tier-1/">Blog Model Context Protocol</a> <span class="art-date">2026-10-30</span></li>
+        <li><strong>CWE-bench v2 : benchmark de correction de vulnérabilités par agents IA</strong> — Collinear AI publie ce benchmark évaluant la capacité d'un agent IA à détecter et corriger une faille de sécurité réelle dans un dépôt open source sans casser les fonctionnalités existantes (100 tâches publiques, 91 CWE couverts). Gemini 4 Argon arrive en tête avec 67,8&nbsp;% de réussite au premier essai, mais échoue encore sur 19&nbsp;% des tâches après plusieurs tentatives. <a href="https://huggingface.co/blog/cwe-bench">Hugging Face Blog (Collinear AI)</a> <span class="art-date">2026-11-03</span></li>
+        <li><strong>La plateforme hébergée OpenAI Evals passe en lecture seule</strong> — Le produit « Evals » hébergé d'OpenAI (tableau de bord + API) est passé en lecture seule le 31 octobre, avant un arrêt complet prévu le 30 novembre 2026 ; seul le dépôt open source séparé <code>openai/evals</code> reste utilisable. OpenAI recommande une migration vers des outils tiers, décrite comme nécessitant de recréer chaque évaluation. <a href="https://developers.openai.com/docs/deprecations">OpenAI (page de dépréciation)</a> <span class="art-date">2026-10-31</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Clients utilisant la plateforme Evals hébergée d'OpenAI : prévoir la migration vers un outil tiers avant l'arrêt complet du service le 30 novembre 2026.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-esn">
+      <h3>9. Marché des ESN et intégrateurs</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 04/11/2026 08:14 UTC+11 pour Capgemini, Sopra Steria, Eviden, Orange Business ou Numeum.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
+        <span class="conf-value">0,15 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-regl">
+      <h3>10. Réglementation et conformité IA</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 04/11/2026 08:14 UTC+11 : aucune actualité réglementaire spécifique à la Nouvelle-Calédonie, comme les semaines précédentes.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Incertitude sur l'échéance du marquage des contenus IA (2 novembre vs 2 décembre 2026 selon les sources, article 50 de l'AI Act), toujours sans confirmation officielle trouvée sur EUR-Lex ou le site de l'AI Office — voir <a href="#note-tech-2026-11-03">note du 3 novembre</a></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:20%"></span></span>
+        <span class="conf-value">0,2 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ao">
+      <h3>11. Appels d'offres et financements</h3>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 04/11/2026 08:14 UTC+11 : aucun appel d'offres lié à l'IA ou au numérique identifié en Nouvelle-Calédonie (BOAMP, gouv.nc, province-sud.nc, province-nord.nc, cci.nc, opt.nc), ni nouveau dispositif France 2030/Bpifrance daté de la semaine.</p>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Absence confirmée d'AO IA en Nouvelle-Calédonie dans la fenêtre — signalé comme un vide, non comblé, comme les semaines précédentes.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:47%"></span></span>
+      <span class="conf-value">0,47 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <article class="note-tech" id="note-tech-2026-11-03">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -1042,7 +1249,6 @@
     </div>
   </div>
 </article>
-
 <article class="note-tech" id="note-tech-2026-11-02">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -3777,160 +3983,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
       <span class="conf-value">0,6 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-10-21">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">21 octobre 2026 08:13 UTC+11 — Fenêtre 5 jours glissants</span>
-  </div>
-  <div class="note-body">
-    <div class="synthese-5j">
-      <h3>Synthèse des 5 jours</h3>
-      <ul>
-        <li>CERT-FR publie sept nouveaux avis les 19 et 20 octobre, dont Stormshield Network Security et Juniper Session Smart Router.</li>
-        <li>CISA ajoute au catalogue KEV quatre CVE Plex Media Server ainsi que des failles Siemens Software Center et EG Secure Solutions SiteGuard (six vulnérabilités au total le 20 octobre).</li>
-        <li>GTC Berlin (20-22 octobre) : keynote de Jensen Huang attendue aujourd'hui en fin de journée, aucune annonce confirmée à l'heure de cette note.</li>
-        <li>Microsoft annonce une mise à jour de Copilot Notebooks (délégation de tâches, automatisations programmées), partiellement en préversion Frontier ; date de publication exacte non confirmée auprès de Microsoft.</li>
-        <li>Aucune nouveauté vérifiable dans la fenêtre pour les modèles IA, l'infrastructure IA souveraine, le DATA, l'IA en entreprise, les ESN, la réglementation et les appels d'offres/financements : absence signalée explicitement plutôt que comblée.</li>
-      </ul>
-    </div>
-<section class="axis-modeles">
-  <h3>1. Modèles IA</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-outils">
-  <h3>2. Outils IA</h3>
-  <h4>Nouveautés</h4>
-  <ul>
-    <li><strong>Microsoft 365 Copilot Notebooks : mise à jour d'octobre</strong> — délégation de tâches simples (gestion des références, synthèse de projet, création/modification d'un fichier Word, Excel ou PowerPoint) et automatisations programmées (ex. synthèse quotidienne, rapport hebdomadaire) annoncées pour Copilot Notebooks. La délégation de tâches et le choix du modèle sont pour l'instant réservés au programme Frontier (préversion) ; les automatisations programmées sont annoncées « dans les prochaines semaines ». Information de bêta publique/roadmap, sourcée uniquement par la presse spécialisée (Windows Report et relais), date exacte de publication non confirmée auprès de Microsoft. <a href="https://windowsreport.com/?p=1512038">Windows Report</a> <span class="art-date">courant octobre 2026, date précise non confirmée</span></li>
-  </ul>
-  <h4>Signaux faibles</h4>
-  <ul>
-    <li>GitHub Universe 2026 est annoncé au Fort Mason Center de San Francisco les 28 et 29 octobre 2026 ; aucun contenu de keynote n'est encore publié. <span class="art-date">évènement à venir</span></li>
-  </ul>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-infra">
-  <h3>3. Infra / Réseau</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-cyber">
-  <h3>4. Cybersécurité</h3>
-  <h4>Nouveautés</h4>
-  <ul>
-    <li><strong>CERT-FR : sept nouveaux avis les 19 et 20 octobre</strong> — vulnérabilités multiples dans Stormshield Network Security, Juniper Networks Session Smart Router, les produits F5, Roundcube Webmail, Microsoft Edge et Mattermost Server (deux avis), ainsi que dans Laravel. <a href="https://cert.cyber.gouv.fr/avis/">CERT-FR</a> <span class="art-date">19-20 octobre 2026</span></li>
-    <li><strong>CISA KEV : quatre CVE Plex Media Server</strong> — CVE-2026-96652, -96654, -96655 et -96656 ajoutées au catalogue des vulnérabilités à exploitation active connue (chaîne « Plex2Shell », utilisée pour installer des mineurs de cryptomonnaie et des proxies ; mise à jour recommandée pour toute instance exposée sur internet). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> <span class="art-date">20 octobre 2026</span></li>
-    <li><strong>CISA KEV : Siemens Software Center et EG Secure Solutions SiteGuard</strong> — CVE-2026-110936 (Siemens Software Center, contournement par chargement latéral de DLL, exploitation active confirmée par Siemens ProductCERT, correctif en version 4.0.9.8) et CVE-2026-106931 (EG Secure Solutions SiteGuard Server Edition, injection de commandes) ajoutées au catalogue. <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> <span class="art-date">20 octobre 2026</span></li>
-  </ul>
-  <h4>Rappel des jours précédents</h4>
-  <ul class="rappel">
-    <li>CISA ajoute 2 CVE au catalogue KEV le 16 octobre : BeyondTrust Remote Support (CVE-2026-102764, CVSS 9.3, exploitation active par un acteur d'espionnage soupçonné d'être lié à la Chine depuis fin août) et Fortinet (CVE-2025-61624, FortiOS/FortiPAM/FortiProxy/FortiSwitchManager) — publié le 17 octobre (voir <a href="#note-tech-2026-10-17">note du 17 octobre</a>)</li>
-  </ul>
-  <h4 class="alerte">Points d'alerte</h4>
-  <ul>
-    <li>Plex Media Server (« Plex2Shell ») et Siemens Software Center font l'objet d'une exploitation active confirmée : priorité de correctif pour toute instance exposée.</li>
-  </ul>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
-    <span class="conf-value">0,85 / 1,0</span>
-  </div>
-</section>
-<section class="axis-data">
-  <h3>5. DATA</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-ia-ent">
-  <h3>6. IA en entreprise</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-souverain">
-  <h3>7. Infrastructure IA souveraine</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
-  <h4>Rappel des jours précédents</h4>
-  <ul class="rappel">
-    <li>GTC Berlin (20-22 octobre) : keynote de Jensen Huang prévue aujourd'hui, 21 octobre, 11h-13h CEST (environ 20h-22h UTC+11) — publié le 20 octobre (voir <a href="#note-tech-2026-10-20">note du 20 octobre</a>)</li>
-  </ul>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-agents">
-  <h3>8. Agents et protocoles</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-esn">
-  <h3>9. Marché des ESN et intégrateurs</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-regl">
-  <h3>10. Réglementation et conformité IA</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11.</p>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>
-<section class="axis-ao">
-  <h3>11. Appels d'offres et financements</h3>
-  <h4>Nouveautés</h4>
-  <p>Aucune information de moins de 5 jours trouvée à la date du 21 octobre 2026 08:13 UTC+11. Pour la Nouvelle-Calédonie, aucun appel d'offres ou financement lié à l'IA n'a été identifié cette semaine sur les sources consultées (marchespublics.nc, gouv.nc, province-sud.nc, province-nord.nc, cci.nc) ; cette absence d'information est signalée comme telle, sans être comblée.</p>
-  <div class="conf-row">
-    <span class="conf-label">Confiance section</span>
-    <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-    <span class="conf-value">0,5 / 1,0</span>
-  </div>
-</section>    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
-      <span class="conf-value">0,55 / 1,0</span>
     </div>
   </div>
 </article>
