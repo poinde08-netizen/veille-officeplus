@@ -1,10 +1,11 @@
 ---
 name: veille-tech-quotidien
 description: >
-  Veille technologique et IA en entreprise, automatisée, publiée sur GitHub
+  Veille technologique et IA métiers, automatisée, publiée sur GitHub
   Pages : note quotidienne (11 axes, fenêtre de 5 jours glissants avec
   dédoublonnage) et dossier hebdomadaire de fond (business model d'ESN à IA
-  souveraine, économie de l'IA, cas d'usage, ROI, souveraineté des données).
+  souveraine, économie de l'IA, cas d'usage IA en logistique, commerce et
+  négoce, ROI, souveraineté des données).
   Conçue pour une exécution sans supervision (Routine Claude Code planifiée à
   08h00 UTC+11), pas pour un usage conversationnel manuel. Distincte de
   `veille-marche` (volets commerciaux NC) : ne pas fusionner les deux, ne pas
@@ -33,12 +34,27 @@ La confidentialité n'est pas un critère de ce projet : la page est publique, c
 | 3 | Infra / Réseau | Scale Computing, VMware, Dell, HP, Lenovo, Synology, Wi-Fi 6/7 | `axis-infra` |
 | 4 | Cybersécurité | Fortinet (firmware, CVE, FortiOS), SASE, Zero Trust, EDR, CERT-FR | `axis-cyber` |
 | 5 | DATA | Power BI, Microsoft Fabric, Databricks, Snowflake, gouvernance de la donnée par l'IA (catalogage automatique, qualité, lignage, lakehouse souverain) | `axis-data` |
-| 6 | IA en entreprise | Cas d'usage déployés, retours d'expérience, cabinets d'expertise et de conseil, études d'adoption | `axis-ia-ent` |
+| 6 | IA métiers : logistique, commerce, négoce | Cas d'usage IA ciblés par secteur (voir le détail ci-dessous), tendances nouvelles, optimisations métiers | `axis-ia-ent` |
 | 7 | Infrastructure IA souveraine | GPU et accélérateurs (NVIDIA, AMD, Intel), inférence sur site, LLM open weights déployables localement, serveurs IA, clouds souverains (OVHcloud, Scaleway, 3DS Outscale, S3NS, Bleu) | `axis-souverain` |
 | 8 | Agents et protocoles | Agents IA, MCP, RAG, fine-tuning, évaluation et observabilité des LLM, sécurité des agents (injection de prompt, fuite de données) | `axis-agents` |
 | 9 | Marché des ESN et intégrateurs | Offres « IA souveraine » et annonces de Capgemini, Sopra Steria, Eviden, Orange Business, cabinets de conseil, Numeum | `axis-esn` |
 | 10 | Réglementation et conformité IA | AI Act (calendrier d'application), RGPD appliqué à l'IA, CNIL, SecNumCloud, NIS2, DORA, cadre local Nouvelle-Calédonie | `axis-regl` |
 | 11 | Appels d'offres et financements | Programmes français et européens de soutien à l'IA, commande publique IA, AO en Nouvelle-Calédonie | `axis-ao` |
+
+### Détail de l'axe 6 — IA métiers : logistique, commerce, négoce
+
+Cet axe remplace la veille générale « IA en entreprise ». Il ne retient que les cas d'usage rattachables à l'un des quatre secteurs suivants, plus les tendances émergentes. Un cas d'usage sans lien avec ces secteurs est écarté, sauf s'il est directement transposable à une PME de ces secteurs.
+
+- **Logistique et supply chain** : prévision de la demande, planification des approvisionnements, optimisation des entrepôts (implantation, préparation de commandes, picking), optimisation des tournées et du transport, suivi de flotte, prévision des délais, transit et douane, gestion des litiges et des retours.
+- **Commerce et négoce** : prévision des ventes, prévision des achats et réapprovisionnement automatique, gestion des stocks et des ruptures, tarification dynamique et marges, sourcing et évaluation des fournisseurs, analyse des devis et des offres, relances et recouvrement, saisie automatisée des commandes et des factures.
+- **Grande distribution (grande surface)** : assortiment et planogrammes, prévision par magasin et par rayon, promotions, démarque inconnue et pertes, encaissement et caisses automatiques, vision par caméra en rayon, programmes de fidélité et personnalisation, media retail.
+- **Commerce de proximité (petite surface)** : outils IA accessibles à un commerce indépendant ou une TPE (gestion de stock, prévision simple, catalogue et fiches produits, relation client, caisse et ERP intégrant de l'IA).
+- **Tendances nouvelles** : agents IA d'achat et de commande, commerce agentique (agents qui achètent pour le compte du client), IA générative pour catalogues et fiches produits, prévision probabiliste et modèles de fondation pour séries temporelles, jumeaux numériques de la chaîne logistique, IA embarquée sur terminaux mobiles et scanners (inventaire, traçabilité), copilotes intégrés aux ERP.
+- **Autres cas d'usage du jour** : tout cas d'usage IA nouvellement annoncé, concernant ces secteurs ou transposable à une PME de ces secteurs (facturation, service client, comptabilité fournisseurs, etc.).
+
+Transposition à la Nouvelle-Calédonie : lorsqu'une source existe, relever ce qui concerne les importateurs, la distribution locale et la logistique insulaire. En l'absence de source, ne rien inventer et le signaler.
+
+Chaque cas d'usage publié suit ce gabarit (voir l'étape 4) : secteur et fonction, description factuelle, gain annoncé (valeur chiffrée ou « non chiffré »), type de source (retour client vérifié, communiqué d'éditeur, étude indépendante), maturité (annonce, pilote, production), lien vers la source. Un gain chiffré issu d'un communiqué d'éditeur est signalé comme non vérifié de façon indépendante.
 
 Axes exclus (restent dans `veille-marche` sur demande) : concurrence, clients et secteurs de Nouvelle-Calédonie hors IA.
 
@@ -50,8 +66,8 @@ Publié le lundi (fuseau UTC+11), en plus de la note quotidienne. Contenu :
 
 1. **Business model d'une ESN à infrastructure IA souveraine** : sources de revenus (abonnement, infogérance IA, projets, licences), structure de coûts (GPU, énergie, hébergement, ingénierie), dimensionnement, risques, comparaison avec les offres concurrentes relevées dans la semaine.
 2. **Économie de l'IA** : coût total de possession sur site contre cloud, prix des tokens, tarification des GPU, mouvements de financement du secteur.
-3. **Cas d'usage structurés par fonction métier** (finance, RH, juridique, support, commerce, production, DSI) avec le gain annoncé et la source.
-4. **Cabinets d'expertise, retour sur investissement et adoption** : synthèses publiques de Gartner, McKinsey, BCG, IDC, Forrester, Bpifrance, baromètres PME.
+3. **Cas d'usage IA en logistique, commerce et négoce** : cas de la semaine regroupés par fonction (prévision des ventes, prévision des achats, stocks, entrepôt et transport, tarification, grande distribution, commerce de proximité), avec le gain annoncé, la maturité et la source ; tendances nouvelles de la semaine ; transposabilité à une PME calédonienne.
+4. **Cabinets d'expertise, retour sur investissement et adoption** dans ces secteurs : synthèses publiques de Gartner, McKinsey, BCG, Capgemini Research Institute, IDC, Forrester, Bpifrance, baromètres PME et fédérations du commerce.
 5. **Souveraineté des données** : tendances, doctrine (cloud de confiance, SecNumCloud, extraterritorialité), décisions de marché.
 6. **Gouvernance de la donnée par l'IA** : tendances de fond.
 7. **Veille technologique IA** : ce qui change durablement (architectures, matériel, protocoles), à distinguer du bruit de la semaine.
@@ -181,6 +197,8 @@ Chaque section :
 
 - Le bloc « Rappel des jours précédents » liste une ligne par élément (5 au plus par axe), sans résumé détaillé. Il est omis si l'axe n'a rien à rappeler.
 - Une « mise à jour » est signalée dans `<li>` par `<span class="maj">Mise à jour</span>`.
+- Axe 6 : chaque cas d'usage suit ce gabarit :
+  `<li><strong>{secteur} / {fonction}</strong> — {description factuelle}. Gain annoncé : {valeur ou « non chiffré »} ({type de source}). Maturité : {annonce | pilote | production}. <a href="{URL}">{source}</a> <span class="art-date">{date}</span></li>`
 - Les blocs « Signaux faibles » et « Points d'alerte » sont omis s'ils sont vides.
 - `{CONFIANCE_SECTION_PCT}` et `{CONFIANCE_PCT}` sont la confiance (0,0–1,0) multipliée par 100, arrondie à l'entier.
 - Cible de volume : 25 Ko maximum par note, pour garder la page chargeable avec 14 notes.
@@ -200,7 +218,7 @@ DOSSIER_ID = dossier-hebdo-{YYYY-MM-DD}
   <div class="note-body">
     <section class="axis-esn"><h3>1. Business model d'une ESN à IA souveraine</h3>...</section>
     <section class="axis-souverain"><h3>2. Économie de l'IA</h3>...</section>
-    <section class="axis-ia-ent"><h3>3. Cas d'usage par fonction métier</h3>...</section>
+    <section class="axis-ia-ent"><h3>3. Cas d'usage IA : logistique, commerce, négoce</h3>...</section>
     <section class="axis-modeles"><h3>4. Cabinets d'expertise, ROI et adoption</h3>...</section>
     <section class="axis-regl"><h3>5. Souveraineté des données</h3>...</section>
     <section class="axis-data"><h3>6. Gouvernance de la donnée par l'IA</h3>...</section>
@@ -326,7 +344,12 @@ Privilégier les sources primaires (éditeur, régulateur, dépôt de code) puis
 
 **5. DATA** : blogs Microsoft Fabric / Power BI, Databricks, Snowflake ; https://www.lemondeinformatique.fr, https://www.silicon.fr.
 
-**6. IA en entreprise** : synthèses publiques de Gartner, McKinsey, BCG, IDC, Forrester, Bpifrance ; https://www.lemondeinformatique.fr, https://www.journaldunet.com, https://www.itforbusiness.fr.
+**6. IA métiers : logistique, commerce, négoce** :
+- presse spécialisée commerce et distribution : https://www.lsa-conso.fr, https://www.retaildive.com ;
+- presse spécialisée supply chain : https://www.supplychainmagazine.fr, https://www.supplychaindive.com ;
+- éditeurs de planification et de gestion (communiqués et blogs) : SAP, Oracle, Microsoft Dynamics 365, Blue Yonder, Kinaxis, o9 Solutions, Manhattan Associates, Odoo, EBP, Sage ;
+- études et synthèses publiques : Gartner (supply chain), McKinsey, BCG, Capgemini Research Institute, Bpifrance, Fédération du e-commerce et de la vente à distance (https://www.fevad.com), Fédération du commerce et de la distribution (https://www.fcd.asso.fr) ;
+- presse IT généraliste en complément : https://www.lemondeinformatique.fr, https://www.journaldunet.com, https://www.itforbusiness.fr.
 
 **7. Infrastructure IA souveraine** : blog NVIDIA ; pages presse d'OVHcloud, Scaleway, 3DS Outscale, S3NS, Bleu ; fabricants de serveurs (Dell, HP, Lenovo, Supermicro) ; https://www.lemagit.fr.
 
