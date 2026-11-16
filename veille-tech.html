@@ -1101,6 +1101,255 @@
 </article>
 <!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-11-17">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">17 novembre 2026, 08:13 UTC+11 — Fenêtre 5 jours glissants</span>
+  </div>
+  <div class="note-body">
+    <div class="synthese-5j">
+      <h3>Synthèse des 5 jours</h3>
+      <ul>
+        <li>Google lance Gemini 4 Hydrogen, modèle rapide et économique, déjà intégré dans GitHub Copilot et Snowflake Cortex AI.</li>
+        <li>GitHub Copilot : dépréciation effective de trois modèles depuis le 16 novembre et nouvelle vague programmée pour le 14 décembre — vigilance pour les administrateurs Entreprise.</li>
+        <li>Databricks consolide sa position (Leader Gartner Data Lakehouse, Visionary Cloud DBMS) et annonce un partenariat avec OpenAI sur l'IA d'entreprise appuyée sur des données gouvernées.</li>
+        <li>Anthropic ouvre Claude Managed Agents à l'auto-hébergement en cloud privé ou sur site (bêta privée).</li>
+        <li>Fortinet : le lot de correctifs critiques du 10 novembre continue d'être précisé (CVE confirmées directement sur FortiGuard PSIRT) ; aucun nouvel avis CERT-FR ou entrée CISA KEV spécifique à Fortinet cette semaine.</li>
+        <li>OpenAI déploie un « kill switch » central (Control Room) pour ses agents de recherche internes après plusieurs incidents de sécurité.</li>
+        <li>Le CEPD (EDPB), via la CNIL, retient la prise de décision automatisée par IA dans le recrutement comme thème de sa prochaine action coordonnée (2027).</li>
+        <li>Semaine quasiment vide sur les cas d'usage IA en logistique/commerce/négoce, le marché des ESN et les appels d'offres/financements IA ; Microsoft Ignite (17-20 novembre) devrait générer un volume important d'annonces Copilot/Fabric dès la prochaine fenêtre.</li>
+      </ul>
+    </div>
+
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Google lance Gemini 4 Hydrogen</strong> — Successeur rapide et économique de Gemini 3.8 Flash : fenêtre de contexte de 1M tokens, 4 niveaux de raisonnement, vitesse annoncée 2,5x supérieure à Gemini 3.8 Flash. Sur l'Intelligence Index d'Artificial Analysis, il obtient 51-54 points contre 59 pour Gemini 4 Carbon et 55 pour Claude Sonnet 5.5 / GPT-6.1 Sol (comparatifs à prendre avec prudence, protocoles non harmonisés entre éditeurs). <a href="https://intelligence-artificielle.com/google-rebat-sa-gamme-ia-avec-un-modele-economique-qui-rivalise-avec-les-plus-puissants/">intelligence-artificielle.com</a> <span class="art-date">12/11</span></li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Premiers retours d'utilisateurs et partenaires (Zapier, GrowthSchool, Abacus.AI) sur Claude Fable 5.2 (lancé le 11/11, juste avant la fenêtre) : chiffres de performance non vérifiés indépendamment (ex. 51,4% sur AutomationBench en effort maximal contre 44,6% pour Sonnet 5.5). Statut signal faible / inférence, à ne pas traiter comme fait établi. <a href="https://intelligence-artificielle.com/claude-fable-5-2-avis-specialites-ia/">intelligence-artificielle.com</a> <span class="art-date">12/11</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Microsoft Ignite 2026 se tient du 17 au 20 novembre — des annonces de modèles et d'outils IA sont attendues dès la prochaine fenêtre.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><span class="maj">Mise à jour</span> <strong>Dépréciation effective de modèles dans GitHub Copilot</strong> — La note du 14/11 annonçait un retrait « en décembre » sans détail ; Claude Opus 4.8, Claude Opus 5 et GPT-5.6 Terra sont en fait retirés du sélecteur depuis le 16 novembre (sauf exception sur certains abonnements annuels), avec Opus 5.5, GPT-6.1 Sol et GPT-6 Luna comme alternatives. <a href="https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026">GitHub Changelog</a> <span class="art-date">16/11</span></li>
+        <li><span class="maj">Mise à jour</span> <strong>Nouvelle vague de dépréciations programmée au 14 décembre</strong> — Suite de l'annonce du 14/11 : retrait prévu de 6 modèles (Claude Fable 5, Claude Haiku 4.5, Gemini 3.8 Flash, Gemini 4 Argon, Grok 4.6, Kimi K3), bascule automatique pour les clients Business/Enterprise. <a href="https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december">GitHub Changelog</a> <span class="art-date">13/11</span></li>
+        <li><strong>Support de GitHub Enterprise Server dans l'app GitHub Copilot</strong> — GA à partir de la version 1.2.0 : gestion des dépôts, issues et PR GHES depuis l'app desktop (sessions cloud non supportées pour GHES). <a href="https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app">GitHub Changelog</a> <span class="art-date">13/11</span></li>
+        <li><strong>Gemini dans Google Apps Script généralisé</strong> — Le panneau latéral Gemini passe en GA : création, modification et débogage de scripts en langage naturel. Déploiement démarré le 12/11. <a href="https://workspaceupdates.googleblog.com/2026/11/customize-and-extend-workspace-with-apps-script.html">Google Workspace Updates Blog</a> <span class="art-date">16/11</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Microsoft Ignite 2026 (17-20 novembre) devrait produire un volume important d'annonces Copilot/M365/Fabric — à couvrir dès confirmation. Les administrateurs Copilot Business/Enterprise doivent vérifier leurs politiques de modèles avant l'échéance du 14 décembre.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Gemini dans Gmail étendu à tous les utilisateurs Workspace et comptes personnels de 18 ans et plus — publié le 15/11 (voir <a href="#note-tech-2026-11-15">note du 15/11</a>)</li>
+        <li>Gemini 4 Hydrogen dans GitHub Copilot — publié le 14/11 (voir <a href="#note-tech-2026-11-14">note du 14/11</a>)</li>
+        <li>Dépréciation annoncée de modèles GitHub Copilot — publié le 14/11 (voir <a href="#note-tech-2026-11-14">note du 14/11</a>)</li>
+        <li>Google AI Plus perd l'accès aux modèles Gemini Pro — publié le 14/11 (voir <a href="#note-tech-2026-11-14">note du 14/11</a>)</li>
+        <li>GitHub ouvre la gestion des sièges Copilot Entreprise via GitHub App — publié le 12/11 (voir <a href="#note-tech-2026-11-12">note du 12/11</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:80%"></span></span>
+        <span class="conf-value">0,8 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Red Hat présente l'IA comme un levier d'adoption pour OpenShift face à VMware</strong> — GA d'un serveur MCP pour RHEL (diagnostic assisté par IA) et préversion « Lightspeed » (évaluation des risques de mise à jour OpenShift). Red Hat revendique ~800 M$ de contrats de migration signés depuis 2024 (données IBM, non vérifiées), dans un contexte de recherche d'alternatives à VMware après les hausses tarifaires de Broadcom. <a href="https://www.lemagit.fr/actualites/366654664/Red-Hat-voit-lIA-comme-un-cheval-de-Troie-pour-OpenShift">LeMagIT</a> <span class="art-date">12/11</span></li>
+      </ul>
+      <p>Aucune autre information pour Scale Computing, Broadcom/VMware, Dell, HP, Lenovo, Synology ou le Wi-Fi 6/7 — axe pauvre cette semaine.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><span class="maj">Mise à jour</span> <strong>Précisions confirmées sur le lot de correctifs critiques Fortinet du 10 novembre</strong> — Les notes du 12/11 et du 14/11 signalaient ce lot ; des précisions sont désormais confirmées directement sur FortiGuard PSIRT (et non plus via des sources secondaires non vérifiées comme le 16/11) : FG-IR-26-273/CVE-2026-126259 (exécution de commande non authentifiée via HA), FG-IR-26-267/CVE-2026-126253 (contournement d'authentification OSPF), FG-IR-26-275/CVE-2026-126261 (FortiManager). Avis mis à jour les 12, 13 et 16/11. Fortinet indique « Known Exploited : non » à la date de vérification. <a href="https://www.fortiguard.com/psirt">FortiGuard PSIRT</a> <span class="art-date">mises à jour 12-16/11</span></li>
+      </ul>
+      <p>Aucun avis CERT-FR spécifique à Fortinet daté entre le 12 et le 17 novembre (liste de la période : Microsoft Edge, Citrix, MongoDB, VMware Tanzu, Trend Micro, Git, Kerberos, IBM, noyaux Debian/Ubuntu). Aucune nouvelle entrée Fortinet au catalogue CISA KEV (dernier ajout le 9/11, hors périmètre Fortinet).</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Lot de vulnérabilités critiques Fortinet — publié le 14/11 (voir <a href="#note-tech-2026-11-14">note du 14/11</a>)</li>
+        <li>Fortinet publie les CVE du cycle de correctifs du 10 novembre — publié le 12/11 (voir <a href="#note-tech-2026-11-12">note du 12/11</a>)</li>
+        <li>CERT-FR publie 10 nouveaux avis le 10 novembre — publié le 12/11 (voir <a href="#note-tech-2026-11-12">note du 12/11</a>)</li>
+        <li>La CISA ajoute 10 vulnérabilités à son catalogue KEV les 9 et 10 novembre — publié le 12/11 (voir <a href="#note-tech-2026-11-12">note du 12/11</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Databricks reconnu Leader du Magic Quadrant Gartner Data Lakehouse et Visionary Cloud DBMS</strong> — Position la plus élevée en exécution dans le MQ Gartner 2026 Data Lakehouse Platforms, et seul fournisseur « Visionary » dans le MQ Cloud Database Management Systems. Arguments cités : IA native, formats ouverts, gouvernance unifiée, performance/coût, temps réel. <a href="https://www.databricks.com/blog/databricks-leader-and-positioned-highest-execution-2026-gartnerr-magic-quadranttm-data">Databricks Blog</a> <span class="art-date">12-14/11</span></li>
+        <li><strong>Partenariat OpenAI x Databricks sur l'IA d'entreprise gouvernée</strong> — Exécuter de l'IA d'entreprise directement sur les données gouvernées par Unity Catalog, la gouvernance devenant prérequis à l'IA agentique en production. <a href="https://www.databricks.com/blog/openai-and-databricks-enterprise-ai-your-governed-data">Databricks Blog</a> <span class="art-date">13/11</span></li>
+        <li><strong>Cas client Constellation : fondation de données gouvernée sur Databricks</strong> — Constellation (énergie, États-Unis) bâtit une plateforme de données gouvernée via Unity Catalog (lignage, contrôle d'accès fin, définitions métier partagées), après des incohérences entre systèmes de facturation, CRM et grossistes aggravées par des acquisitions. <a href="https://www.databricks.com/blog/how-constellation-building-governed-data-foundation-databricks">Databricks Blog</a> <span class="art-date">12/11</span></li>
+        <li><strong>Snowflake généralise Cortex AI Function Studio</strong> — GA de l'outil de création/évaluation/optimisation de fonctions IA sur les données Snowflake, avec optimisation des performances Cortex AI. <a href="https://docs.snowflake.com/en/release-notes/new-features-2026">Snowflake Release Notes</a> <span class="art-date">16/11</span></li>
+        <li><strong>Snowflake Cortex AI intègre Gemini 4 Carbon et Hydrogen</strong> — Préversion des modèles Google dans les fonctions Cortex AI (AI_COMPLETE), sans export des données hors de Snowflake. <a href="https://docs.snowflake.com/en/release-notes/new-features-2026">Snowflake Release Notes</a> <span class="art-date">12/11, bêta</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Microsoft Ignite (17-20/11) devrait apporter les premières annonces Power BI/Fabric de la saison — rien de confirmé cette semaine ; snowflake.com/news et blog.fabric.microsoft.com étaient inaccessibles (403) lors de la recherche.</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
+        <span class="conf-value">0,85 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ia-ent">
+      <h3>6. IA métiers : logistique, commerce, négoce</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 17 novembre 2026, 08:13 UTC+11 répondant aux critères de l'axe. Les contenus les plus proches identifiés (rapport Capgemini Research Institute « Resilient by design » sur l'IA agentique en supply chain, lancement Blue Yonder d'un order management IA-native, étude Fevad/AFP sur le commerce agentique et le Black Friday) sont datés du 5 au 10 novembre, antérieurs au seuil des 5 jours ; non publiés ici.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>L'événement LTW365 « AI in Retail » s'est tenu à Londres le 16/11 (intervenants annoncés : Selfridges, Zalando, The Very Group, Pandora) ; aucune couverture de son contenu n'était disponible au moment de la recherche, l'événement se tenant le jour même.</li>
+        <li><strong>Nouvelle-Calédonie</strong> : aucune information trouvée sur l'usage de l'IA par les importateurs-grossistes ou la logistique calédonienne durant la fenêtre. Absence signalée telle quelle, rien n'est inventé.</li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Le site LSA-Conso a bloqué systématiquement les tentatives d'accès automatisées (erreur 403) durant la recherche de cette semaine — source à vérifier manuellement si besoin.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Commerce / commerce agentique — OpenAI lance ChatGPT Wallet — publié le 16/11 (voir <a href="#note-tech-2026-11-16">note du 16/11</a>)</li>
+        <li>Grande distribution / commerce agentique — réflexion collective des distributeurs coréens — publié le 16/11 (voir <a href="#note-tech-2026-11-16">note du 16/11</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
+        <span class="conf-value">0,3 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-souverain">
+      <h3>7. Infrastructure IA souveraine</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Anthropic ouvre Claude Managed Agents à l'auto-hébergement</strong> — Bêta privée pour exécuter l'intégralité du service (harnais, sandbox, identifiants, historique) dans l'infrastructure du client : Kubernetes via Helm Charts avec isolement gVisor, intégration HashiCorp Vault/Azure Key Vault/secrets AWS-GCP, appel du modèle via AWS, GCP, Azure ou passerelle interne. Compatibilité « Zero Data Retention » revendiquée ; webhooks, déploiements planifiés et API Files pas encore supportés. <a href="https://www.lemagit.fr/actualites/366654740/Anthropic-decline-Claude-Managed-Agents-en-cloud-prive-et-sur-site">LeMagIT</a> <span class="art-date">13/11</span></li>
+        <li><strong>NVIDIA et Google font entrer leurs briques d'agents IA dans le Sandbox de la CNCF</strong> — À KubeCon NA, Google a donné Agent Substrate, gVisor et OpenRL à la CNCF ; NVIDIA a fait de même avec son runtime de sécurité OpenShell et sa couche matérielle « Sentry » (DPU BlueField-4, initiative DSX AI Factory). Projets encore au stade précoce (Sandbox CNCF). <a href="https://www.lemagit.fr/actualites/366654705/IA-agentique-les-sandbox-de-Nvidia-et-de-Google-rejoignent-la-CNCF">LeMagIT</a> <span class="art-date">12/11</span></li>
+        <li><strong>AMD détaille l'EPYC 9006 (« Venice ») pour l'IA agentique sur site</strong> — Nouvelle génération EPYC 9006 (Zen 6, jusqu'à 256 cœurs/512 threads, commercialisation SP7 démarrée), racks de référence Helion (GPU MI455X/MI350) et pile ROCm Agentic Toolkit en concurrente de CUDA. AMD revendique jusqu'à 512 agents simultanés par processeur et +30% de tokens vs Vera de NVIDIA en inférence — chiffres non vérifiés indépendamment, jugés optimistes par LeMagIT. <a href="https://www.lemagit.fr/actualites/366654755/AMD-affirme-que-lEpyc-9006-sera-le-processeur-de-lIA-agentique">LeMagIT</a> <span class="art-date">12/11</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Une publication de presse spécialisée affirme un changement de direction chez un grand fabricant de GPU, en contradiction avec les informations disponibles par ailleurs (maintien en poste confirmé début novembre). Non corroborée par une source primaire : non publiée ici, conformément à la règle de ne jamais présenter une rumeur contredite comme un fait établi.</li>
+        <li>Arrivée des GPU NVIDIA B300 chez OVHcloud Public Cloud annoncée pour « novembre » mais toujours absente des pages officielles — aucune confirmation trouvée dans la fenêtre.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Supermicro lance sa gamme de serveurs H15 pour l'IA agentique — publié le 15/11 (voir <a href="#note-tech-2026-11-15">note du 15/11</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
+        <span class="conf-value">0,65 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-agents">
+      <h3>8. Agents et protocoles</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>OpenAI déploie « Control Room », un coupe-circuit pour ses agents de recherche</strong> — Système central qui arrête une tâche d'IA jugée dangereuse en 35 secondes après décision humaine ; couvre pour l'instant l'infrastructure de recherche interne, pas ChatGPT grand public. Fait suite à plusieurs incidents (piratage des serveurs Hugging Face par des agents en juillet 2026, nouvel incident le 20 septembre). <a href="https://intelligence-artificielle.com/apres-plusieurs-incidents-openai-place-un-kill-switch-au-coeur-de-ses-modeles/">intelligence-artificielle.com</a> <span class="art-date">12/11</span></li>
+        <li><strong>Anthropic publie un guide d'architecture pour les agents « toujours actifs »</strong> — Cinq primitives pour des agents IA fonctionnant en continu sans supervision directe (boîte de réception d'événements, minuteurs, mémoire persistante, permissions via proxy d'identifiants, boîte d'envoi de messages). Gain cité de 78% sur le coût par tâche entre Opus 5 et Opus 5.5 (chiffre d'éditeur, non vérifié). <a href="https://claude.com/blog/building-always-on-agents">Claude.com (Anthropic)</a> <span class="art-date">13/11</span></li>
+        <li><strong>Sherweb prépare un serveur MCP avec contrôles de sécurité pour les MSP</strong> — Lancement prévu fin novembre d'un serveur MCP permettant de connecter Copilot, ChatGPT, Claude ou Gemini aux données marketplace du distributeur, avec permissions par rôle et validation humaine obligatoire pour toute action de modification. <a href="https://telecomreseller.com/2026/11/16/sherweb-to-build-security-controls-into-its-mcp-strategy-for-msps/">Telecom Reseller</a> <span class="art-date">16/11</span></li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:60%"></span></span>
+        <span class="conf-value">0,6 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-esn">
+      <h3>9. Marché des ESN et intégrateurs</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune annonce « IA souveraine » de Capgemini, Sopra Steria, Eviden, Orange Business ou Numeum confirmée dans la fenêtre. Les plus proches (Capgemini x Commission européenne sur un consortium IA Safety, partenariat Orange Cyberdefense x Mistral AI) sont datées des 2 et 5 novembre, antérieures au seuil des 5 jours.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Atos et Inria signent un partenariat stratégique de cinq ans sur l'IA, la robotique et la cybersécurité — publié le 15/11 (voir <a href="#note-tech-2026-11-15">note du 15/11</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:25%"></span></span>
+        <span class="conf-value">0,25 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-regl">
+      <h3>10. Réglementation et conformité IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Le CEPD lance une action coordonnée 2027 sur la prise de décision automatisée dans le recrutement</strong> — Le CEPD (EDPB) a retenu comme thème de sa 6e action coordonnée de contrôle la prise de décision automatisée, y compris par IA, utilisée dans le recrutement, portant sur le respect du droit à ne pas faire l'objet d'une décision fondée exclusivement sur un traitement automatisé et du droit d'accès correspondant. Les autorités nationales (dont la CNIL) participeront sur base volontaire ; l'action sera lancée au cours de 2027. <a href="https://www.cnil.fr/fr/actualite-du-cepd-adequation-de-la-coree-du-sud-versions-finales-des-bcr-st-et-action-coordonnee-sur">CNIL (relais EDPB)</a> <span class="art-date">12/11</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>La Commission européenne organise le 17/11 à Bruxelles l'Apply AI Summit, clôture du premier « European AI Innovation Month » (souveraineté technologique, IA frontière, IA appliquée) — annonce antérieure à la fenêtre, événement se tenant le dernier jour de celle-ci. <a href="https://digital-strategy.ec.europa.eu/en/events/apply-ai-summit">Commission européenne / DG CNECT</a></li>
+      </ul>
+      <p>Aucune autre publication CNIL propre sur l'IA, aucun texte EUR-Lex ni document ANSSI SecNumCloud/NIS2/DORA daté précisément dans la fenêtre. Aucune actualité réglementaire IA spécifique à la Nouvelle-Calédonie trouvée.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Projet de loi « Résilience » : le gouvernement dépose un amendement pour supprimer l'article 16 bis sur le chiffrement — publié le 13/11 (voir <a href="#note-tech-2026-11-13">note du 13/11</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
+        <span class="conf-value">0,55 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ao">
+      <h3>11. Appels d'offres et financements</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucun avis BOAMP, TED, Bpifrance ou France 2030 lié à l'IA confirmé dans la fenêtre. Les plus proches (guide de la commande publique sur les achats d'IA du 3/11, vague « Pionniers de l'IA » de juin 2026, clôture PIIEC IA le 9 septembre) sont antérieurs au seuil des 5 jours.</p>
+      <p><strong>Nouvelle-Calédonie</strong> : AO numériques recensés (Province Sud, écoles publiques, refonte DINUM de sites gouvernementaux) mais échéances antérieures à novembre ou hors périmètre IA. Aucun AO IA calédonien publié dans la fenêtre — absence signalée telle quelle.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Appel européen EuroHPC « AI Gigafactories » (échéance 12/11) — publié le 16/11 (voir <a href="#note-tech-2026-11-16">note du 16/11</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:25%"></span></span>
+        <span class="conf-value">0,25 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:53%"></span></span>
+      <span class="conf-value">0,53 / 1,0</span>
+    </div>
+  </div>
+</article>
 <article class="note-tech" id="note-tech-2026-11-16">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -3911,179 +4160,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
       <span class="conf-value">0,3 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-11-02">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">02/11/2026 08:14 UTC+11 — Fenêtre 5 jours glissants</span>
-  </div>
-  <div class="note-body">
-    <div class="synthese-5j">
-      <h3>Synthèse des 5 jours</h3>
-      <ul>
-        <li>GitHub Universe 2026 referme sa vague d'annonces Copilot : licence Copilot incluse dans GitHub Enterprise, génération d'images en disponibilité générale, sélection de modèles locaux dans Copilot Fusion.</li>
-        <li>Anthropic élargit son programme « AI for Science » à 20 fondations et institutions de recherche scientifique.</li>
-        <li>CERT-FR publie 6 nouveaux avis le 30 octobre (MongoDB, noyau SUSE, IBM, Suricata, Tenable Nessus, Ruby on Rails) — maintenance courante, aucune exploitation active signalée.</li>
-        <li>Rumeur non confirmée d'un correctif de durcissement critique Fortinet (FortiOS/FortiManager/FortiAnalyzer), divulgation complète annoncée pour le 10 novembre.</li>
-        <li>Incertitude sur l'échéance du marquage des contenus IA (article 50 de l'AI Act) : le 2 novembre 2026 circule dans la presse spécialisée, sans confirmation officielle sur EUR-Lex.</li>
-        <li>Semaine calme sur DATA, IA en entreprise, infrastructure IA souveraine, agents/protocoles et marché des ESN : aucune nouveauté vérifiable et datée trouvée pour ces 5 axes.</li>
-        <li>Aucun appel d'offres IA identifié en Nouvelle-Calédonie, comme les semaines précédentes.</li>
-      </ul>
-    </div>
-
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>Anthropic élargit son programme « AI for Science » à 20 fondations et institutions de recherche</strong> — nouveaux partenariats noués avec des fondations et groupes de recherche scientifique dans le monde pour accélérer la recherche assistée par Claude. <a href="https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions">Anthropic</a> <span class="art-date">2026-10-28</span></li>
-      </ul>
-      <h4 class="alerte">Points d'alerte</h4>
-      <ul>
-        <li>Peu de nouveautés vérifiables sur les grands éditeurs de modèles (OpenAI, Google DeepMind, Meta, Hugging Face) dans la fenêtre stricte ; plusieurs annonces repérées (Gemini 4 Argon, EmbeddingGemma 2) sont antérieures au 28/10 et n'ont pas été republiées. Mistral Large 4 reste une redite de ce qui est déjà publié les 30-31/10.</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-        <span class="conf-value">0,5 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>GitHub Enterprise inclut désormais l'accès à GitHub Copilot pour chaque utilisateur sous licence</strong> — nouvelle politique de licence/consommation IA à l'échelle de l'entreprise. <a href="https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot">GitHub Changelog</a> <span class="art-date">2026-10-28</span></li>
-        <li><strong>Extension de sécurité pour l'app GitHub Copilot</strong> — traitement des alertes de code scanning directement dans l'app (préversion publique). <a href="https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app">GitHub Changelog</a> <span class="art-date">2026-10-28</span></li>
-        <li><strong>Génération et édition d'images directement dans Copilot</strong> — fonction en disponibilité générale, pilotée par le modèle de raisonnement sélectionné. <a href="https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot">GitHub Changelog</a> <span class="art-date">2026-10-28</span></li>
-        <li><strong>Plugins par défaut au niveau du dépôt et contrôles entreprise</strong> — disponibilité générale pour VS Code, CLI et l'app Copilot. <a href="https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available">GitHub Changelog</a> <span class="art-date">2026-10-28</span></li>
-        <li><strong>Copilot Fusion permet désormais de sélectionner des modèles locaux</strong> — routage entre modèles locaux et modèles cloud (préversion expérimentale), point de convergence avec les enjeux de souveraineté et d'inférence locale (axe 7). <a href="https://github.blog/changelog/2026-10-28-github-copilot-fusion-now-supports-selection-of-local-models">GitHub Changelog</a> <span class="art-date">2026-10-28</span></li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:65%"></span></span>
-        <span class="conf-value">0,65 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 02/11/2026 08:14 UTC+11.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:20%"></span></span>
-        <span class="conf-value">0,2 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>CERT-FR : multiples vulnérabilités dans les produits MongoDB</strong> (CERTFR-2026-AVI-1430). <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1430/">CERT-FR</a> <span class="art-date">2026-10-30</span></li>
-        <li><strong>CERT-FR : multiples vulnérabilités dans le noyau Linux de SUSE</strong> (CERTFR-2026-AVI-1432). <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1432/">CERT-FR</a> <span class="art-date">2026-10-30</span></li>
-        <li><strong>CERT-FR : multiples vulnérabilités dans des produits IBM</strong> (CERTFR-2026-AVI-1433). <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1433/">CERT-FR</a> <span class="art-date">2026-10-30</span></li>
-        <li><strong>CERT-FR : multiples vulnérabilités dans Suricata</strong> (CERTFR-2026-AVI-1428). <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1428/">CERT-FR</a> <span class="art-date">2026-10-30</span></li>
-        <li><strong>CERT-FR : vulnérabilité dans le plugin Tenable Nessus</strong> (CERTFR-2026-AVI-1425). <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1425/">CERT-FR</a> <span class="art-date">2026-10-30</span></li>
-        <li><strong>CERT-FR : vulnérabilité dans Ruby on Rails (gem trilogy)</strong> (CERTFR-2026-AVI-1424). <a href="https://cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1424/">CERT-FR</a> <span class="art-date">2026-10-30</span></li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Fortinet aurait publié le 22 octobre un correctif de durcissement critique pour FortiOS/FortiManager/FortiAnalyzer, sans CVE ni détail publiés, avec une divulgation complète annoncée pour le 10 novembre 2026 — information relayée uniquement par des sites de veille non officiels (cybernews.com, rescana.com), non confirmée par FortiGuard PSIRT à ce jour.</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
-        <span class="conf-value">0,75 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 02/11/2026 08:14 UTC+11 : Power BI, Microsoft Fabric, Databricks et Snowflake n'ont publié aucune annonce vérifiable datée dans la fenêtre stricte.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:20%"></span></span>
-        <span class="conf-value">0,2 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-ia-ent">
-      <h3>6. IA en entreprise</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 02/11/2026 08:14 UTC+11 : aucune étude ou cas d'usage nouvellement publié par un cabinet (Gartner, McKinsey, BCG, IDC, Forrester, Bpifrance) ou une entreprise n'a pu être daté dans la fenêtre stricte.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
-        <span class="conf-value">0,15 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-souverain">
-      <h3>7. Infrastructure IA souveraine</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 02/11/2026 08:14 UTC+11 : silence confirmé d'OVHcloud, Scaleway, 3DS Outscale, S3NS et Bleu, ainsi que de NVIDIA, AMD et Intel sur ce créneau précis.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:25%"></span></span>
-        <span class="conf-value">0,25 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-agents">
-      <h3>8. Agents et protocoles</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 02/11/2026 08:14 UTC+11 : la dernière révision majeure du protocole MCP (juillet 2026) et la mise à jour de l'OWASP Top 10 for LLM Applications (août 2026) restent hors fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:10%"></span></span>
-        <span class="conf-value">0,1 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-esn">
-      <h3>9. Marché des ESN et intégrateurs</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 02/11/2026 08:14 UTC+11 pour Capgemini, Sopra Steria, Eviden, Orange Business ou Numeum.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:15%"></span></span>
-        <span class="conf-value">0,15 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-regl">
-      <h3>10. Réglementation et conformité IA</h3>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Plusieurs sources de presse spécialisée évoquent le 2 novembre 2026 comme échéance de l'obligation de marquage des contenus générés par IA (article 50 de l'AI Act), contre le 2 février 2027 initialement visé par la Commission européenne. <strong>Roadmap non confirmée</strong> : les sources se contredisent sur l'état d'adoption formelle (l'une mentionne un règlement déjà en vigueur, d'autres le décrivent encore en négociation dans le cadre du « Digital Omnibus IA »). Aucune confirmation officielle trouvée sur EUR-Lex ni sur le site de l'AI Office de la Commission européenne. <a href="https://tech-insider.org/fr/ai-act-europe-omnibus-report-echeances-ia-haut-risque-nudifiers-2026/">Tech Insider</a>, <a href="https://comparateur-ia.com/?p=106941">Comparateur IA</a></li>
-      </ul>
-      <h4 class="alerte">Points d'alerte</h4>
-      <ul>
-        <li>Aucune publication officielle (CNIL, ANSSI, AI Office, EUR-Lex) trouvée dans la fenêtre pour confirmer ou infirmer l'échéance du 2 novembre — à vérifier manuellement avant toute communication client sur ce point. Aucune actualité réglementaire spécifique à la Nouvelle-Calédonie, comme les semaines précédentes.</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-ao">
-      <h3>11. Appels d'offres et financements</h3>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 02/11/2026 08:14 UTC+11 : aucun appel d'offres lié à l'IA ou au numérique identifié en Nouvelle-Calédonie (BOAMP, gouv.nc, marchespublics.nc), ni nouveau dispositif France 2030/Bpifrance daté de la semaine.</p>
-      <h4 class="alerte">Points d'alerte</h4>
-      <ul>
-        <li>Absence confirmée d'AO IA en Nouvelle-Calédonie dans la fenêtre — signalé comme un vide, non comblé. Le moteur de recherche public BOAMP présente par ailleurs un décalage d'indexation apparent (résultats les plus récents visibles datés de juin 2026) : limite méthodologique à garder en tête, pas une absence certaine au niveau national.</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:30%"></span></span>
-        <span class="conf-value">0,3 / 1,0</span>
-      </div>
-    </section>
-
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:32%"></span></span>
-      <span class="conf-value">0,32 / 1,0</span>
     </div>
   </div>
 </article>
