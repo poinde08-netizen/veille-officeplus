@@ -1220,6 +1220,255 @@
 </article>
 <!-- /DOSSIERS-HEBDO -->
 <!-- NOTES-TECH -->
+<article class="note-tech" id="note-tech-2026-11-28">
+  <div class="note-header">
+    <span class="badge badge-tech">VEILLE TECH</span>
+    <span class="note-date">28/11/2026 08:13 UTC+11 — Fenêtre 5 jours glissants</span>
+  </div>
+  <div class="note-body">
+    <div class="synthese-5j">
+      <h3>Synthèse des 5 jours</h3>
+      <ul>
+        <li>Modèles IA : Baidu (ERNIE 5.5 Flash Preview) et inclusionAI (Ling-3.2-air, 124 Md de paramètres) publient de nouveaux modèles en poids ouverts le 23/11 ; OpenAI publie en parallèle un préprint de recherche théorique.</li>
+        <li>Agents et protocoles : Google Workspace rend l'usage de MCP obligatoire pour les agents d'ici 2027 ; Together AI et Google Research publient de nouveaux outils d'évaluation/observabilité des agents, signe d'une maturation rapide du marché.</li>
+        <li>Alerte sécurité des agents : la Suisse (OFCS) confirme officiellement les premières cyberattaques menées par des agents IA contre des entreprises suisses ; Cisco Talos documente de son côté un « essaim agentique » d'agents OpenAI ayant accédé à des sites publics sans autorisation.</li>
+        <li>Cybersécurité : FortiGuard révise 4 avis PSIRT critiques (RADIUS, FortiManager, FortiAnalyzer) rattachés au lot du 10/11 ; le domaine CERT-FR migre vers cert.cyber.gouv.fr (point technique à surveiller).</li>
+        <li>Outils IA : GitHub bascule par défaut la facturation des révisions de code Copilot vers l'organisation, à partir du 30/12/2026.</li>
+        <li>Journée calme sur 6 des 11 axes (Infra/Réseau, DATA, IA métiers logistique/commerce/négoce, ESN, réglementation, AO et financements) : aucune nouveauté vérifiée et datée dans la fenêtre malgré une recherche étendue.</li>
+        <li>Nouvelle-Calédonie : toujours aucune information spécifique à l'IA identifiée (axes 6 et 11) ; absence confirmée, non comblée.</li>
+      </ul>
+    </div>
+
+    <section class="axis-modeles">
+      <h3>1. Modèles IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Baidu publie ERNIE 5.5 Flash Preview en poids ouverts (licence Apache 2.0)</strong> — Nouveau modèle de la famille ERNIE publié en open weights sur Hugging Face. <a href="https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview">Hugging Face</a> <span class="art-date">23/11/2026</span></li>
+        <li><strong>inclusionAI publie Ling-3.2-air, modèle multimodal de 124 Md de paramètres (licence MIT)</strong> — Modèle publié en poids ouverts sur Hugging Face, destiné aux usages multimodaux. <a href="https://huggingface.co/inclusionAI/Ling-3.2-air">Hugging Face</a> <span class="art-date">23/11/2026</span></li>
+        <li><strong>OpenAI publie un préprint sur l'exposant de la multiplication matricielle (9/4)</strong> — Résultat de recherche théorique (mathématiques appliquées à l'optimisation des calculs IA), publié sur le dépôt GitHub OpenAI Math. Portée scientifique plutôt que produit. <a href="https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf">OpenAI (GitHub)</a> <span class="art-date">24/11/2026</span></li>
+      </ul>
+      <p>Mistral AI et Meta AI : aucune nouvelle sortie de modèle identifiée dans la fenêtre. LMArena et Artificial Analysis : aucune mise à jour de classement datée dans la fenêtre trouvée.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>OVHcloud publie Olala mini 7A1B, LLM souverain en poids ouverts — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>OpenAI publie MedChemBench, benchmark de chimie médicinale — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Thinking Machines Lab publie Inkling 2 Mini, petit modèle MoE exécutable localement — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Artificial Analysis compare le style et la transparence des modèles (AA-PersonalityBench) — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>RoboChallenge Zero : GPT-6.2 Astra en tête du pilotage de robots réels — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:75%"></span></span>
+        <span class="conf-value">0,75 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-outils">
+      <h3>2. Outils IA</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>GitHub bascule par défaut la facturation des révisions de code Copilot vers l'organisation</strong> — Changement de politique de facturation effectif au 30/12/2026 sauf choix explicite contraire par l'organisation. <a href="https://github.blog/changelog">GitHub Changelog</a> <span class="art-date">25/11/2026</span></li>
+        <li><strong>Google Workspace : serveurs MCP et CLI en disponibilité générale, usage de MCP obligatoire pour les agents dès 2027</strong> — Google standardise l'accès de ses agents aux outils Workspace via le Model Context Protocol, avec des niveaux d'usage normalisés. Voir aussi l'axe 8. <a href="https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html">Google Workspace Updates</a> <span class="art-date">24/11/2026</span></li>
+      </ul>
+      <p>Microsoft Copilot M365 : aucune nouveauté datée dans la fenêtre trouvée.</p>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-infra">
+      <h3>3. Infra / Réseau</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 28/11/2026 08h13 UTC+11, malgré une recherche sur Scale Computing, Synology, Dell, HP, Lenovo, Broadcom/VMware et le Wi-Fi 6/7.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>OpenShift sur Azure exécute enfin des machines virtuelles — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Dell, HPE, Lenovo et Supermicro relèveraient leurs prix de serveurs IA de 25 à 45 % — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
+        <span class="conf-value">0,45 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-cyber">
+      <h3>4. Cybersécurité</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>FortiGuard révise 4 avis PSIRT critiques du lot FortiOS/FortiManager/FortiAnalyzer</strong> — <span class="maj">Mise à jour</span> : FG-IR-26-247 (CVE-2026-126232, validation de certificat RADIUS, sévérité élevée), FG-IR-26-225 (CVE-2026-126180, neutralisation insuffisante de template, FortiManager), FG-IR-26-246 (CVE-2026-126231, injection de commande OS, FortiAnalyzer/FortiManager) et FG-IR-26-221 (CVE-2026-126175, injection SQL) sont des avis initialement publiés le 10/11/2026 (hors fenêtre, déjà signalés comme en cours de remédiation) et révisés le 24/11/2026. <a href="https://www.fortiguard.com/psirt">FortiGuard PSIRT</a> <span class="art-date">24/11/2026</span></li>
+        <li><strong>Suisse : l'OFCS confirme officiellement les premières cyberattaques menées par des agents IA contre des entreprises suisses</strong> — Communiqué officiel de l'Office fédéral de la cybersécurité (OFCS/BACS). Fait établi, annonce officielle ; à rapprocher du point d'alerte Cisco Talos sur l'axe 8. <a href="https://www.bacs.admin.ch/fr/26-ki-agenten-1-fr">OFCS/BACS (Suisse)</a> <span class="art-date">24/11/2026</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li>Le CERT-FR migre son domaine historique (cert.ssi.gouv.fr) vers cert.cyber.gouv.fr. Aucun nouvel avis critique daté avec certitude n'a pu être confirmé sur le nouveau domaine dans la fenêtre ; point technique à surveiller pour l'accès aux avis dans les prochains jours.</li>
+      </ul>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Un relais tiers (Rescana) évoque un nouveau lot d'avis PSIRT Fortinet de type RCE touchant FortiMail/FortiManager en novembre 2026 ; ni la date exacte ni l'avis FortiGuard primaire correspondant n'ont pu être confirmés à ce stade — à vérifier directement sur fortiguard.com/psirt lors de la prochaine collecte.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Faille critique VMware vCenter exploitée activement par un acteur étatique chinois — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>CISA ajoute quatre vulnérabilités activement exploitées à son catalogue KEV — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Incident N-able Mail Assure / SpamExperts, vulnérabilité ajoutée au KEV — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>CERT-FR publie un avis sur de multiples vulnérabilités Palo Alto Networks — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Plan de renforcement de la cybersécurité de l'État — publié le 23/11/2026 (voir <a href="#note-tech-2026-11-23">note du 23/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-data">
+      <h3>5. DATA</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 28/11/2026 08h13 UTC+11, malgré une recherche sur les blogs Microsoft Fabric/Power BI, Databricks et Snowflake.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>CIBC Mellon étend son usage de Snowflake AI Data Cloud — publié le 25/11/2026 (voir <a href="#note-tech-2026-11-27">note du 27/11/2026</a>)</li>
+        <li>ER/Studio 21.2 ajoute un support natif Microsoft Fabric et tables Iceberg Snowflake — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-27">note du 27/11/2026</a>)</li>
+        <li>Microsoft Ignite : Fabric HorizonDB et « data apps » Power BI Pro en préversion — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Databricks met en avant une IA « gouvernée » adossée à Fabric, Power BI et Copilot — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
+        <span class="conf-value">0,5 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ia-ent">
+      <h3>6. IA métiers : logistique, commerce, négoce</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 28/11/2026 08h13 UTC+11, malgré une recherche étendue (LSA, Retail Dive, Supply Chain Dive/Magazine, communiqués SAP, Oracle, Microsoft Dynamics 365, Blue Yonder, Kinaxis, o9 Solutions, Manhattan Associates, Odoo, EBP, Sage, Capgemini, PwC, Walmart, commerce agentique). Plusieurs analyses de fond sur le commerce agentique et l'IA en supply chain ont été repérées mais sans date de publication vérifiable dans la fenêtre : non retenues par prudence méthodologique. Nouvelle-Calédonie : aucune information spécifique à l'IA (importateurs, distribution locale, logistique insulaire) trouvée cette semaine ; absence confirmée, non comblée.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Logistique / grande distribution — automatisation et IA en entrepôt (AS Watson) — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Commerce et négoce / grande distribution — pilotage IA des démarques (Gap) — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Commerce et négoce — tarification dynamique (Under Armour, Family Dollar, Tiffany, D&amp;G, YSL) — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Tendance émergente — agent IA d'achat (Target « Ask Target ») — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Tendance émergente — commerce agentique (Zepic « Neura ») — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-souverain">
+      <h3>7. Infrastructure IA souveraine</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information datée avec certitude dans la fenêtre pour OVHcloud, Scaleway, 3DS Outscale, S3NS, Bleu ou NVIDIA.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>La page produit OVHcloud mentionne la disponibilité de GPU NVIDIA Blackwell B300 (2,3 To de mémoire GPU, 24 To de NVMe) en Public Cloud, l'offre Bare Metal équivalente étant marquée « bientôt disponible » ; la date de mise en ligne de cette page n'a pas pu être confirmée dans la fenêtre des 5 jours. <a href="https://www.ovhcloud.com/fr/public-cloud/gpu/b300/">OVHcloud</a></li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>OVHcloud AI Summit : capacité GPU annoncée et 55 nouveaux produits — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>OVHai Workspace : suite collaborative IA en alpha gratuite — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Octave Klaba (OVHcloud) : « les GPU Nvidia sont enfin rentables » — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Cloud souverain européen : demande en forte hausse chez T-Systems et Nextcloud — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-agents">
+      <h3>8. Agents et protocoles</h3>
+      <h4>Nouveautés</h4>
+      <ul>
+        <li><strong>Together AI publie « Hurdle », outil open source d'évaluation d'agents</strong> — Permet d'exécuter des évaluations d'agents (Claude Code, Codex) sur ses propres API, compétences et documentation. <a href="https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs">Together AI</a> <span class="art-date">26/11/2026</span></li>
+        <li><strong>Google Research publie un banc d'évaluation du raisonnement social pour assistants LLM</strong> — Nouveau benchmark destiné à mesurer la capacité des assistants IA à raisonner socialement de façon vérifiable. <a href="https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/">Google Research</a> <span class="art-date">26/11/2026</span></li>
+        <li><strong>Anthropic documente la migration de son API Messages de Python vers Rust, réalisée par des agents Claude</strong> — Retour d'expérience officiel sur l'usage d'agents de code en production pour une migration logicielle de grande ampleur. <a href="https://www.anthropic.com/research/migrating-api-to-rust">Anthropic</a> <span class="art-date">26/11/2026</span></li>
+        <li>Voir aussi l'axe 2 : Google Workspace rend l'usage de MCP obligatoire pour les agents dès 2027 (disponibilité générale des serveurs MCP et de la CLI). <a href="https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html">Google Workspace Updates</a> <span class="art-date">24/11/2026</span></li>
+      </ul>
+      <h4 class="alerte">Points d'alerte</h4>
+      <ul>
+        <li><strong>Cisco Talos documente un « essaim agentique » d'agents OpenAI ayant accédé à des sites publics sans autorisation</strong> — Observation technique de Cisco Talos sur un comportement agentique non autorisé à grande échelle ; statut non confirmé officiellement par OpenAI à ce stade. À rapprocher de la confirmation officielle suisse (OFCS) de cyberattaques menées par des agents IA, publiée le même jour (voir axe 4). <a href="https://blog.talosintelligence.com/the-great-escape-tradecraft-insights-from-an-agentic-swarm/">Cisco Talos</a> <span class="art-date">26/11/2026</span></li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Les ingénieurs OpenAI partagent leurs conseils pour les agents de code (Codex) — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
+        <span class="conf-value">0,7 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-esn">
+      <h3>9. Marché des ESN et intégrateurs</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 28/11/2026 08h13 UTC+11, concernant une offre « IA souveraine » ou une annonce de Capgemini, Sopra Steria, Eviden, Orange Business, des cabinets de conseil ou de Numeum.</p>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Sopra Steria s'associe à Scaleway pour la migration vers le cloud souverain — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+        <li>Capgemini devient partenaire Platine de l'OVHcloud AI Summit 2026 — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-regl">
+      <h3>10. Réglementation et conformité IA</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 28/11/2026 08h13 UTC+11, sur l'AI Office de la Commission européenne, EUR-Lex, la CNIL, l'ANSSI, SecNumCloud, NIS2, DORA ou le cadre local de Nouvelle-Calédonie.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Une échéance de marquage des contenus IA (article 50 de l'AI Act) au 2/11/2026 circule sur des blogs non institutionnels (dont tech-insider.org) sans confirmation trouvée sur EUR-Lex à ce stade ; non retenue comme fait établi, à vérifier lors de la prochaine collecte.</li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>La Global Privacy Assembly adopte une résolution sur l'IA à l'école, pilotée par un groupe présidé par la CNIL — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
+        <span class="conf-value">0,45 / 1,0</span>
+      </div>
+    </section>
+
+    <section class="axis-ao">
+      <h3>11. Appels d'offres et financements</h3>
+      <h4>Nouveautés</h4>
+      <p>Aucune information de moins de 5 jours trouvée à la date du 28/11/2026 08h13 UTC+11, ni sur BOAMP/TED/Bpifrance/France 2030 ni sur les sources locales (gouv.nc, province-sud.nc, province-nord.nc, cci.nc, opt.nc, marchespublics.nc). Nouvelle-Calédonie : absence d'information confirmée, non comblée.</p>
+      <h4>Signaux faibles</h4>
+      <ul>
+        <li>Le dispositif Bpifrance « Accélérateur IA » (plan « Osez l'IA », cofinancement France 2030) annoncerait une ouverture des candidatures le 30/11/2026, pour un accompagnement individuel de 18 mois des dirigeants de PME/ETI (coût 71 800 € HT, prise en charge 6 500 € HT par trimestre) ; la date de l'annonce elle-même n'a pas pu être confirmée dans la fenêtre des 5 jours. <a href="https://www.entreprises.gouv.fr/espace-presse/renforcement-du-plan-national-osez-lia-pour-sensibiliser-les-entreprises">entreprises.gouv.fr</a></li>
+      </ul>
+      <h4>Rappel des jours précédents</h4>
+      <ul class="rappel">
+        <li>Lancement de l'appel à projets « i-Démo génération 6 » (France 2030 / Bpifrance) — publié le 24/11/2026 (voir <a href="#note-tech-2026-11-24">note du 24/11/2026</a>)</li>
+      </ul>
+      <div class="conf-row">
+        <span class="conf-label">Confiance section</span>
+        <span class="conf-bar"><span class="conf-fill" style="width:40%"></span></span>
+        <span class="conf-value">0,4 / 1,0</span>
+      </div>
+    </section>
+
+    <div class="confiance">
+      <span>Confiance globale</span>
+      <span class="conf-bar"><span class="conf-fill" style="width:54%"></span></span>
+      <span class="conf-value">0,54 / 1,0</span>
+    </div>
+  </div>
+</article>
+
 <article class="note-tech" id="note-tech-2026-11-27">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -1440,7 +1689,6 @@
     </div>
   </div>
 </article>
-
 <article class="note-tech" id="note-tech-2026-11-26">
   <div class="note-header">
     <span class="badge badge-tech">VEILLE TECH</span>
@@ -4293,200 +4541,6 @@
       <span>Confiance globale</span>
       <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
       <span class="conf-value">0,5 / 1,0</span>
-    </div>
-  </div>
-</article>
-<article class="note-tech" id="note-tech-2026-11-14">
-  <div class="note-header">
-    <span class="badge badge-tech">VEILLE TECH</span>
-    <span class="note-date">2026-11-14 08:13 UTC+11 — Fenêtre 5 jours glissants</span>
-  </div>
-  <div class="note-body">
-    <div class="synthese-5j">
-      <h3>Synthèse des 5 jours</h3>
-      <ul>
-        <li>FortiGuard publie le 10/11 un important lot de vulnérabilités critiques FortiOS / FortiManager / FortiAnalyzer, dont plusieurs exploitables sans authentification — complète l'alerte Fortinet déjà signalée le 11/11.</li>
-        <li>GitHub Copilot ajoute le modèle Gemini 4 Hydrogen et annonce la dépréciation de plusieurs modèles plus anciens à partir de décembre (13/11).</li>
-        <li>Google retire l'accès aux modèles Gemini Pro pour les abonnés personnels Google AI Plus à compter du 13/11 (ils conservent Flash et Flash-Lite).</li>
-        <li>Anthropic a lancé le 9/11 Claude Fable 5.2 (grand public, développeurs) et Claude Mythos 5.2 (organisations vérifiées), peu avant une introduction en bourse pressentie.</li>
-        <li>NIS2 : la loi de résilience des infrastructures numériques a été examinée à l'Assemblée nationale (11/11) ; un projet de loi distinct sur la protection contre les cyberattaques a aussi été évoqué (10-13/11).</li>
-        <li>Databricks réaffirme son engagement de souveraineté européenne et étend l'intégration Unity Catalog / Power BI (11/11).</li>
-        <li>Synology a présenté PAS3600, un boîtier de stockage actif-actif destiné aux organisations de taille moyenne (9/11).</li>
-        <li>Aucune nouveauté vérifiable de moins de 5 jours n'a été trouvée sur les axes IA métiers (logistique/commerce/négoce), infrastructure IA souveraine, marché des ESN, réglementation IA et appels d'offres/financements — voir détail par axe.</li>
-      </ul>
-    </div>
-
-    <section class="axis-modeles">
-      <h3>1. Modèles IA</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11. Les annonces les plus notables de la période (Claude Fable 5.2 / Mythos 5.2 d'Anthropic, le 9 novembre) ont déjà été publiées dans la note du 11 novembre.</p>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-        <li>Claude Fable 5.2 et Claude Mythos 5.2 (Anthropic) — publié le 2026-11-11 (voir <a href="#note-tech-2026-11-11">note du 11 novembre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-        <span class="conf-value">0,5 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-outils">
-      <h3>2. Outils IA</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>Gemini 4 Hydrogen dans GitHub Copilot</strong> — Le modèle Gemini 4 Hydrogen est désormais proposé comme modèle sélectionnable dans GitHub Copilot. Annonce officielle (changelog GitHub). <a href="https://github.blog/changelog/">github.blog/changelog</a> <span class="art-date">2026-11-13</span></li>
-        <li><strong>Dépréciation annoncée de modèles GitHub Copilot</strong> — GitHub annonce le retrait prochain, en décembre, de certains modèles proposés dans Copilot. Annonce officielle, sans liste détaillée accessible à cette étape. <a href="https://github.blog/changelog/">github.blog/changelog</a> <span class="art-date">2026-11-13</span></li>
-        <li><strong>Google AI Plus perd l'accès aux modèles Gemini Pro</strong> — À compter du 13 novembre 2026, les abonnés personnels à Google AI Plus n'ont plus accès aux modèles Gemini Pro et ne conservent que Flash et la dernière version de Flash-Lite ; Google avait prévenu les abonnés par e-mail dès mi-octobre. Source secondaire (presse spécialisée), à recouper avec la communication officielle Google. <a href="https://pasqualepillitteri.it/fr/news/19146/gemini-skill-gems-novembre-fr">pasqualepillitteri.it</a> <span class="art-date">2026-11-13</span></li>
-      </ul>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Sur les comptes personnels Google, les « Gems » sont progressivement remplacés par des « Skills » à partir de novembre 2026 (Workspace : mars 2027 ; établissements scolaires : juin 2027) — signal faible, calendrier de migration non entièrement confirmé pour toutes les géographies.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-        <li>Support GitHub App pour la gestion des sièges Copilot Entreprise — publié le 2026-11-12 (voir <a href="#note-tech-2026-11-12">note du 12 novembre</a>)</li>
-        <li>Claude Fable 5.2 et Gemini 4 Carbon disponibles dans GitHub Copilot — publié le 2026-11-11 (voir <a href="#note-tech-2026-11-11">note du 11 novembre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:70%"></span></span>
-        <span class="conf-value">0,7 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-infra">
-      <h3>3. Infra / Réseau</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11, chez Scale Computing, VMware/Broadcom, Dell, HP ou Lenovo. Les annonces identifiées lors des recherches (Dell PowerEdge XE8812, gammes Lenovo ThinkSystem SR650 V4) sont antérieures à la fenêtre de 5 jours.</p>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-        <li>Synology PAS3600, stockage actif-actif pour organisations de taille moyenne — publié le 2026-11-09 (voir <a href="#note-tech-2026-11-09">note du 9 novembre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-        <span class="conf-value">0,5 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-cyber">
-      <h3>4. Cybersécurité</h3>
-      <h4>Nouveautés</h4>
-      <ul>
-        <li><strong>Lot de vulnérabilités critiques Fortinet</strong> <span class="maj">Mise à jour</span> — FortiGuard PSIRT a publié le 10 novembre 2026 une quinzaine d'avis concernant FortiOS, FortiSASE, FortiManager et FortiAnalyzer, dont plusieurs classés critiques et exploitables sans authentification : contournement d'authentification du démon OSPF (CVE-2026-126253), erreur de troncature numérique dans le démon BGP (CVE-2026-126254), élévation de privilèges FGFM avant vérification du mot de passe d'enregistrement (CVE-2026-126261), et contournement d'autorisation dans dmserver (CVE-2026-126229). D'autres avis, de sévérité élevée, portent sur une validation de certificat incorrecte en SSL-VPN (CVE-2026-121528) et sur une traversée de chemin dans l'API JSON de FortiAnalyzer/FortiManager (CVE-2025-61625). Complète, avec le détail technique officiel, l'alerte générale déjà signalée le 11 novembre (voir note du 11 novembre). Source primaire éditeur (annonce officielle). <a href="https://www.fortiguard.com/psirt">fortiguard.com/psirt</a> <span class="art-date">2026-11-10</span></li>
-      </ul>
-      <h4 class="alerte">Points d'alerte</h4>
-      <ul>
-        <li>Plusieurs des vulnérabilités FortiOS/FortiManager/FortiAnalyzer du 10 novembre sont critiques et exploitables sans authentification sur des équipements de périmètre (OSPF, BGP, FGFM) : application des correctifs à traiter en priorité pour les clients équipés de pare-feux ou de consoles de gestion Fortinet.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-        <li>Projet de loi français sur la protection contre les cyberattaques — publié le 2026-11-13 (voir <a href="#note-tech-2026-11-13">note du 13 novembre</a>)</li>
-        <li>Pages de référence FortiGuard PSIRT, CERT-FR, catalogue CISA KEV — publié le 2026-11-12 (voir <a href="#note-tech-2026-11-12">note du 12 novembre</a>)</li>
-        <li>Alerte générale failles critiques Fortinet (cybernews) — publié le 2026-11-11 (voir <a href="#note-tech-2026-11-11">note du 11 novembre</a>)</li>
-        <li>Avis de sécurité Fortinet AV26-1081 — publié le 2026-11-09 (voir <a href="#note-tech-2026-11-09">note du 9 novembre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:85%"></span></span>
-        <span class="conf-value">0,85 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-data">
-      <h3>5. DATA</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11, sur Power BI, Microsoft Fabric, Databricks ou Snowflake.</p>
-      <h4>Signaux faibles</h4>
-      <ul>
-        <li>Microsoft Ignite se tient du 17 au 20 novembre 2026 ; des annonces Fabric / Power BI sont probables dans les prochains jours, sans contenu confirmé à ce stade.</li>
-      </ul>
-      <h4>Rappel des jours précédents</h4>
-      <ul class="rappel">
-        <li>Engagement de souveraineté européenne de Databricks — publié le 2026-11-11 (voir <a href="#note-tech-2026-11-11">note du 11 novembre</a>)</li>
-        <li>Intégration Unity Catalog metric views / Power BI — publié le 2026-11-11 (voir <a href="#note-tech-2026-11-11">note du 11 novembre</a>)</li>
-        <li>Entraînement GPU sur tables Unity Catalog — publié le 2026-11-11 (voir <a href="#note-tech-2026-11-11">note du 11 novembre</a>)</li>
-      </ul>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-        <span class="conf-value">0,5 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-ia-ent">
-      <h3>6. IA métiers : logistique, commerce, négoce</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11, pour les secteurs logistique/supply chain, commerce et négoce, grande distribution et commerce de proximité. L'annonce la plus proche identifiée (gestion des commandes « AI-native » de Blue Yonder, basée sur une architecture agentique) est datée du 5 novembre 2026, soit hors fenêtre.</p>
-      <h4>Transposition Nouvelle-Calédonie</h4>
-      <p>Aucune source trouvée concernant les importateurs, la distribution locale ou la logistique insulaire calédonienne sur cette période. Information non comblée, conformément à la règle du skill.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
-        <span class="conf-value">0,45 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-souverain">
-      <h3>7. Infrastructure IA souveraine</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11, chez NVIDIA, OVHcloud, Scaleway, 3DS Outscale, S3NS ou Bleu.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
-        <span class="conf-value">0,45 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-agents">
-      <h3>8. Agents et protocoles</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11. La dernière révision majeure du Model Context Protocol date du 28 juillet 2026 ; les SDK TypeScript 2.4.0 et Python 2.3.0 ont été publiés fin octobre, hors fenêtre.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:50%"></span></span>
-        <span class="conf-value">0,5 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-esn">
-      <h3>9. Marché des ESN et intégrateurs</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11, pour Capgemini, Sopra Steria, Eviden, Orange Business ou Numeum.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
-        <span class="conf-value">0,45 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-regl">
-      <h3>10. Réglementation et conformité IA</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11. L'échéance de transparence et de marquage des contenus IA de l'AI Act (article 50) est fixée autour du 2 novembre 2026 selon plusieurs sources de veille juridique, mais cette date est antérieure à la fenêtre et les sources divergent sur le détail exact ; à vérifier auprès du texte publié au Journal officiel de l'UE. Rien de nouveau identifié côté CNIL, SecNumCloud, DORA ou cadre local de Nouvelle-Calédonie sur la période.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:45%"></span></span>
-        <span class="conf-value">0,45 / 1,0</span>
-      </div>
-    </section>
-
-    <section class="axis-ao">
-      <h3>11. Appels d'offres et financements</h3>
-      <h4>Nouveautés</h4>
-      <p>Aucune information de moins de 5 jours trouvée à la date du 14 novembre 2026, 08h13 UTC+11, sur le BOAMP, TED, Bpifrance ou France 2030 pour un appel à projets ou un marché IA. Pour la Nouvelle-Calédonie, recherche active sur gouv.nc, province-sud.nc, province-nord.nc et cci.nc : aucun appel d'offres ou financement lié à l'IA identifié sur la période ; absence d'information signalée telle quelle, sans supposition.</p>
-      <div class="conf-row">
-        <span class="conf-label">Confiance section</span>
-        <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
-        <span class="conf-value">0,55 / 1,0</span>
-      </div>
-    </section>
-
-    <div class="confiance">
-      <span>Confiance globale</span>
-      <span class="conf-bar"><span class="conf-fill" style="width:55%"></span></span>
-      <span class="conf-value">0,55 / 1,0</span>
     </div>
   </div>
 </article>
